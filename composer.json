@@ -18,18 +18,23 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git"
         }
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/preserve-paths": "^0.1.4",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/core-vendor-hardening": "^9",
-        "cweagans/composer-patches": "^1.6",
-        "drupal-composer/preserve-paths": "^0.1.4",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^1.1",
+        "rhodeislandecms/ecms_profile": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "minimum-stability": "dev",
@@ -71,7 +76,8 @@
             "locations": {
                 "web-root": "docroot"
             }
-        }
+        },
+        "enable-patching": "true"
     },
     "require-dev": {
         "phpunit/phpunit": "^8",

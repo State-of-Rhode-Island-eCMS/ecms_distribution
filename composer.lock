@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4ebcf0a8ea35e74b7a2da6b617e494d",
+    "content-hash": "f3c114b1e13564e16f1a80eaa2cc9233",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3367,6 +3367,88 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "rhodeislandecms/ecms_profile",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
+                "reference": "d14a42c45d20dbe546e93c08eb81b989c3b46f26"
+            },
+            "require": {
+                "composer/installers": "^1.9",
+                "cweagans/composer-patches": "^1.6",
+                "drupal-composer/preserve-paths": "^0.1.4",
+                "drupal/core-composer-scaffold": "^9",
+                "drupal/core-project-message": "^9",
+                "drupal/core-recommended": "^9",
+                "drupal/core-vendor-hardening": "^9",
+                "drush/drush": "^10.0",
+                "zaporylie/composer-drupal-optimizations": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8",
+                "symfony/phpunit-bridge": "^5.1"
+            },
+            "type": "drupal-profile",
+            "extra": {
+                "installer-types": [
+                    "bower-asset",
+                    "npm-asset"
+                ],
+                "installer-paths": {
+                    "web/core": [
+                        "type:drupal-core"
+                    ],
+                    "web/libraries/{$name}": [
+                        "type:drupal-library",
+                        "type:bower-asset",
+                        "type:npm-asset"
+                    ],
+                    "web/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "web/profiles/contrib/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "web/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/contrib/{$name}": [
+                        "type:drupal-drush"
+                    ]
+                },
+                "patches": [],
+                "preserve-paths": [],
+                "drupal-scaffold": []
+            },
+            "scripts": {
+                "develop": [
+                    "scripts/develop.sh"
+                ],
+                "clean-config": [
+                    "scripts/clean-config.sh"
+                ],
+                "post-package-install": [
+                    "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+                ],
+                "post-package-update": [
+                    "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Oomph, Inc.",
+                    "email": "devops@oomphinc.com",
+                    "homepage": "https://www.oomphinc.com/"
+                }
+            ],
+            "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
+            "time": "2020-08-20T13:33:56+00:00"
         },
         {
             "name": "stack/builder",
@@ -8227,7 +8309,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
