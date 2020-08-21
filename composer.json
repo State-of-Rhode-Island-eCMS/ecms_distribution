@@ -1,0 +1,88 @@
+{
+    "name": "rhodeislandeecms/ecms_distribution",
+    "description": "The State of Rhode Island eCMS Drupal distribution.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oomph, Inc.",
+            "email": "devops@oomphinc.com",
+            "homepage": "https://www.oomphinc.com/"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/core-vendor-hardening": "^9",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/preserve-paths": "^0.1.4",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/coder": "^8.3",
+        "drupal/coffee": "^1.0",
+        "drupal/config_split": "^1.5",
+        "drupal/devel": "^4.0",
+        "drupal/honeypot": "^2.0",
+        "drupal/seckit": "^2.0",
+        "drupal/view_unpublished": "^1.0",
+        "drush/drush": "^10.0",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+        ],
+        "post-update-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+        ],
+        "test:php": [
+            "vendor/bin/phpunit"
+        ],
+        "validate:php": [
+            "vendor/bin/phpcs"
+        ]
+    },
+    "extra": {
+        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {},
+        "preserve-paths": [],
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot"
+            }
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8",
+        "symfony/phpunit-bridge": "^5.1"
+    }
+}

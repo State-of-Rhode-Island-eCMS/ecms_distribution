@@ -1,0 +1,42 @@
+# Drupal
+/docroot/*.*
+/docroot/core
+/docroot/libraries
+/docroot/modules/contrib
+/docroot/themes/contrib
+/docroot/profiles/contrib
+
+/docroot/sites/*
+!/docroot/sites/default
+/docroot/sites/default/*
+!/docroot/sites/default/settings.php
+
+/config/**/.htaccess
+
+# Ignore the configuration directory as it is not needed.
+/config
+
+# Drush
+/drush/contrib
+
+# Compiled assets
+/docroot/**/*.css
+/docroot/**/*.js
+!/docroot/**/*.es6.js
+/docroot/**/*.map
+
+# Project dependencies
+/node_modules
+/vendor
+
+# Project test results
+/tests/**/results
+.phpunit.result.cache
+
+# Lando
+/drupal8.*.gz
+/.lando.local.yml
+/.gitattributes
+
+# PHPStorm
+/.idea
