@@ -1,0 +1,31 @@
+# Builds Drupal and deploys to Acquia.
+---
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  build:
+    name: Build Drupal
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Retrieve the infrastructure repo
+        env:
+          INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
+        run: ./oomph-actions/retrieve-infra-repo.sh master
+
+      - name: Build the Drupal application
+        run: ./oomph-infrastructure/oomph-action build-drupal.yml
+
+      - name: Upload the build archive
+        uses: actions/upload-artifact@v1
+        with:
+          name: build.tar.gz
+          path: /tmp/build.tar.gz
