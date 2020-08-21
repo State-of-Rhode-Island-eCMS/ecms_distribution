@@ -41,3 +41,10 @@ tooling:
   security-check:
     service: appserver
     cmd: "php vendor/sensiolabs/security-checker/security-checker security:check composer.lock"
+  # Acquia Site Factory commands
+  acsf-init:
+    service: appserver
+    cmd: "cd $LANDO_MOUNT && /app/vendor/bin/drush --include=/app/docroot/modules/contrib/acsf/acsf_init acsf-init --yes"
+  acsf-verify:
+    service: appserver
+    cmd: "cd $LANDO_MOUNT && /app/vendor/bin/drush --include=/app/docroot/modules/contrib/acsf/acsf_init acsf-init-verify"
