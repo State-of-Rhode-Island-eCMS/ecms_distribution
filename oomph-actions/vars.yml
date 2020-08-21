@@ -1,0 +1,38 @@
+# Ansible variables for use with Oomph CI/CD actions
+---
+# Save build artifacts
+archive_build: yes
+
+# Disable non-Lando Composer and NPM
+install_composer: no
+run_composer_install: no
+run_npm_install: no
+
+# Use Lando for build process
+use_lando: yes
+run_lando_composer_install: yes
+# Disable the standard Oomph lando npm install.
+run_lando_npm_install: no
+
+# Use pre-installed Docker EE
+lando_install_prereqs: no
+lando_docker_ce: no
+
+# Run the ACSF init commands to prepare for Site Factory.
+extra_build_commands:
+  - "lando acsf-init"
+  - "lando acsf-init-verify"
+
+# Acquia deployment.
+# You must define the following variables in your project variables file:
+#   acquia_repo_name
+#   acquia_repo_hostname
+#   acquia_repo_user
+#   acquia_target_branch
+# You must provide the following environment variables:
+#   ACQUIA_SSH_KEY
+# You may define these optional variables in your project variables file:
+#   acquia_force_push (default: no)
+#   acquia_deploy_build_artifact (default: no)
+#   acquia_deploy_build_artifact_files (default: "{{ drupal_deploy_files }}")
+#   acquia_deploy_build_artifact_msg (default: "Oomph Actions automated build and commit process")
