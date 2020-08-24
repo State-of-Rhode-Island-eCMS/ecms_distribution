@@ -11,15 +11,19 @@ const fileArgs = require('yargs').argv;
 // Directories to search SCSS files to compile. By default, node-sass does not
 // compile files that begin with _.
 const scssFilePaths = [
-  "web/modules/custom/**/*.scss",
-  "web/themes/custom/**/*.scss",
+  "docroot/modules/custom/**/*.scss",
+  "docroot/themes/custom/**/*.scss",
+  "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.scss",
+  "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.scss",
 ];
 
 // Directories to search ES6 JavaScript files to compile. Files will be compiled
 // to a .js file extension.
 const javascriptFilePaths = [
-  "web/modules/custom/**/*.es6.js",
-  "web/themes/custom/**/*.es6.js",
+  "docroot/modules/custom/**/*.es6.js",
+  "docroot/themes/custom/**/*.es6.js",
+  "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.es6.js",
+  "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.es6.js",
 ];
 
 // Default task.

@@ -1,7 +1,7 @@
 {
   "name": "drupal-scaffold",
   "version": "1.0.0",
-  "description": "A Drupal 8 scaffold project",
+  "description": "A Drupal 9 scaffold project.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oomphinc/drupal-scaffold.git"
