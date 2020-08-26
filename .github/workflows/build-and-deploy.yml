@@ -30,60 +30,59 @@ jobs:
           name: build.tar.gz
           path: /tmp/build.tar.gz
 
-    # Deploy the dev and staging branches to Acquia
-    branch_deploy:
-      name: Deploy environment branches
-      needs: build
-      runs-on: ubuntu-18.04
-      if: github.ref == 'refs/heads/development' || github.ref == 'refs/heads/staging'
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+  # Deploy all branches to Acquia
+  branch_deploy:
+    name: Deploy environment branches
+    needs: build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Retrieve the infrastructure repo
-          env:
-            INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
-          run: ./oomph-actions/retrieve-infra-repo.sh master
+      - name: Retrieve the infrastructure repo
+        env:
+          INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
+        run: ./oomph-actions/retrieve-infra-repo.sh master
 
-        - name: Retrieve the build artifact
-          uses: actions/download-artifact@v1
-          with:
-            name: build.tar.gz
-            path: /tmp/
+      - name: Retrieve the build artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: build.tar.gz
+          path: /tmp/
 
-        - name: Expand the build artifact
-          run: tar -xzf /tmp/build.tar.gz
+      - name: Expand the build artifact
+        run: tar -xzf /tmp/build.tar.gz
 
-        - name: Deploy to Acquia
-          env:
-            ACQUIA_SSH_KEY: ${{ secrets.ACQUIA_SSH_KEY }}
-          run: ./oomph-infrastructure/oomph-action deploy-acquia.yml -e "acquia_target_branch=${GITHUB_REF:11}"
+      - name: Deploy to Acquia
+        env:
+          ACQUIA_SSH_KEY: ${{ secrets.ACQUIA_SSH_KEY }}
+        run: ./oomph-infrastructure/oomph-action deploy-acquia.yml -e "acquia_target_branch=${GITHUB_REF:11}"
 
-    # Deploy tags to Acquia
-    tag_deploy:
-      name: Deploy tags
-      needs: build
-      runs-on: ubuntu-18.04
-      if: startsWith(github.ref, 'refs/tags/')
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+  # Deploy tags to Acquia
+  tag_deploy:
+    name: Deploy tags
+    needs: build
+    runs-on: ubuntu-18.04
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Retrieve the infrastructure repo
-          env:
-            INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
-          run: ./oomph-actions/retrieve-infra-repo.sh master
+      - name: Retrieve the infrastructure repo
+        env:
+          INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
+        run: ./oomph-actions/retrieve-infra-repo.sh master
 
-        - name: Retrieve the build artifact
-          uses: actions/download-artifact@v1
-          with:
-            name: build.tar.gz
-            path: /tmp/
+      - name: Retrieve the build artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: build.tar.gz
+          path: /tmp/
 
-        - name: Expand the build artifact
-          run: tar -xzf /tmp/build.tar.gz
+      - name: Expand the build artifact
+        run: tar -xzf /tmp/build.tar.gz
 
-        - name: Deploy to Acquia
-          env:
-            ACQUIA_SSH_KEY: ${{ secrets.ACQUIA_SSH_KEY }}
-          run: ./oomph-infrastructure/oomph-action deploy-acquia.yml -e "acquia_target_branch=master"
+      - name: Deploy to Acquia
+        env:
+          ACQUIA_SSH_KEY: ${{ secrets.ACQUIA_SSH_KEY }}
+        run: ./oomph-infrastructure/oomph-action deploy-acquia.yml -e "acquia_target_branch=master"
