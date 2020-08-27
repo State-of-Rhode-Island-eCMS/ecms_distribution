@@ -21,7 +21,6 @@
         },
         {
             "type": "git",
-            "no-api": true,
             "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git"
         }
     ],
