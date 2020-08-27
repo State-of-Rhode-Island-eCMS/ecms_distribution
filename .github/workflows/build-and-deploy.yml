@@ -21,12 +21,6 @@ jobs:
           INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
         run: ./oomph-actions/retrieve-infra-repo.sh master
 
-      - name: Prepare access to the profile and patternlab repositories
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.ECMS_PROFILE_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-
       - name: Build the Drupal application
         run: ./oomph-infrastructure/oomph-action build-drupal.yml
 
