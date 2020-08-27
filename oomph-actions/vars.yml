@@ -20,6 +20,7 @@ lando_docker_ce: no
 
 # Run the ACSF init commands to prepare for Site Factory.
 extra_build_commands:
+  - "lando drush -y site-install ecms_profile"
   - "lando acsf-init"
   - "lando acsf-init-verify"
 
