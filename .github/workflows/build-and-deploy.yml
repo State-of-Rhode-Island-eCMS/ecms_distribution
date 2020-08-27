@@ -23,9 +23,9 @@ jobs:
 
       - name: Prepare access to the profile and patternlab repositories
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.ECMS_PACKAGES_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          eval "$(ssh-agent -s)"
+          ssh-add - <<< "${{ secrets.ECMS_PROFILE_DEPLOY_KEY }}"
+          ssh-add - <<< "${{ secrets.ECMS_PATTERNLAB_DEPLOY_KEY }}"
 
       - name: Build the Drupal application
         run: ./oomph-infrastructure/oomph-action build-drupal.yml
