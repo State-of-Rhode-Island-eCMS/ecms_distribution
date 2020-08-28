@@ -24,6 +24,9 @@ extra_build_commands:
   - "lando acsf-init"
   - "lando acsf-init-verify"
 
+# Use docroot instead of web
+drupal_docroot: "{{ drupal_deploy_dest }}/docroot"
+
 # Acquia deployment.
 # You must define the following variables in your project variables file:
 #   acquia_repo_name
