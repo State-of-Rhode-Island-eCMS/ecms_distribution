@@ -18,14 +18,8 @@ run_lando_npm_install: no
 lando_install_prereqs: no
 lando_docker_ce: no
 
-# Add specific drupal_deploy_files.
-drupal_deploy_files:
-  - config
-  - vendor
-  - "{{ drupal_docroot | dirname }}"
-  - composer.json
-  - composer.lock
-  - hooks
+# Append the hooks directory to the deploy files variable.
+drupal_deploy_files: "{{ drupal_deploy_files + [ hooks ] }}"
 
 # Run the ACSF init commands to prepare for Site Factory.
 extra_build_commands:
