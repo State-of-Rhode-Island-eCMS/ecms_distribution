@@ -32,8 +32,8 @@ extra_build_commands:
   # Ensure the profile installs.
   - "lando drush -y site-install ecms_acquia"
   - "lando gulp validate"
-  - "lando xdebug-on"
   - "lando phpcs"
+  - "lando xdebug-on"
   - "lando phpunit"
   - "lando xdebug-off"
   # After running validation/tests, remove dev dependencies
@@ -53,7 +53,7 @@ acquia_repo_hostname: "svn-2398.enterprise-g1.hosting.acquia.com"
 acquia_repo_user: "riecms"
 
 # You may define these optional variables in your project variables file:
-#   acquia_force_push (default: no)
+cquia_force_push: yes
 acquia_deploy_build_artifact: yes
 #   acquia_deploy_build_artifact_files (default: "{{ drupal_deploy_files }}")
 #   acquia_deploy_build_artifact_msg (default: "Oomph Actions automated build and commit process")
