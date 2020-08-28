@@ -21,10 +21,17 @@ lando_docker_ce: no
 # Run the ACSF init commands to prepare for Site Factory.
 extra_build_commands:
   - "lando drush -y site-install ecms_acquia"
+  - "lando gulp validate"
+  - "lando phpcs"
+  - "lando phpunit"
+  # After running validation/tests, remove dev dependencies
+  - "lando npm install --only=production"
+  - "lando composer install --optimize-autoloader --no-dev --no-ansi --no-interaction --no-progress"
+  # Configure the codebase for Acquia Site Factory
   - "lando acsf-init"
   - "lando acsf-init-verify"
 
-# Use docroot instead of web
+# Use docroot instead of web for Acquia.
 drupal_docroot: "{{ drupal_deploy_dest }}/docroot"
 
 # Acquia deployment.
