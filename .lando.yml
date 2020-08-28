@@ -4,7 +4,7 @@ recipe: drupal9
 config:
   php: "7.3"
   webroot: docroot
-  xdebug: true
+  xdebug: false
   database: mariadb:10.3
 
 events:
