@@ -19,5 +19,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIG-28: Updated the lock file to include ecms_profile requirements.
 
 ### Security
