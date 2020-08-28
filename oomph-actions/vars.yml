@@ -48,14 +48,12 @@ drupal_docroot: "{{ drupal_deploy_dest }}/docroot"
 
 # Acquia deployment.
 # You must define the following variables in your project variables file:
-#   acquia_repo_name
-#   acquia_repo_hostname
-#   acquia_repo_user
-#   acquia_target_branch
-# You must provide the following environment variables:
-#   ACQUIA_SSH_KEY
+acquia_repo_name: "riecms.git"
+acquia_repo_hostname: "svn-2398.enterprise-g1.hosting.acquia.com"
+acquia_repo_user: "riecms"
+
 # You may define these optional variables in your project variables file:
 #   acquia_force_push (default: no)
-#   acquia_deploy_build_artifact (default: no)
+acquia_deploy_build_artifact: yes
 #   acquia_deploy_build_artifact_files (default: "{{ drupal_deploy_files }}")
 #   acquia_deploy_build_artifact_msg (default: "Oomph Actions automated build and commit process")
