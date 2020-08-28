@@ -53,7 +53,7 @@ acquia_repo_hostname: "svn-2398.enterprise-g1.hosting.acquia.com"
 acquia_repo_user: "riecms"
 
 # You may define these optional variables in your project variables file:
-cquia_force_push: yes
+acquia_force_push: yes
 acquia_deploy_build_artifact: yes
 #   acquia_deploy_build_artifact_files (default: "{{ drupal_deploy_files }}")
 #   acquia_deploy_build_artifact_msg (default: "Oomph Actions automated build and commit process")
