@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3c114b1e13564e16f1a80eaa2cc9233",
+    "content-hash": "11e9b219834ce2af4e8c7262eff223ae",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2138,6 +2138,68 @@
                 "drupal"
             ],
             "time": "2020-08-02T22:04:44+00:00"
+        },
+        {
+            "name": "drupal/mysql56",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/mysql56.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mysql56-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "8ed8ba9445d2b9a26957c4cb3ddcc92eb09dac3b"
+            },
+            "require": {
+                "drupal/core": "~9.0.0-beta3"
+            },
+            "type": "library",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1591127007",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "installer-name": "mysql"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\Driver\\Database\\mysql\\": ""
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TravisCarden",
+                    "homepage": "https://www.drupal.org/user/236758"
+                },
+                {
+                    "name": "acquia",
+                    "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "balsama",
+                    "homepage": "https://www.drupal.org/user/223087"
+                },
+                {
+                    "name": "effulgentsia",
+                    "homepage": "https://www.drupal.org/user/78040"
+                }
+            ],
+            "description": "MySQL 5.6 Driver for Drupal 9.0.",
+            "homepage": "https://www.drupal.org/project/mysql56",
+            "support": {
+                "source": "https://git.drupalcode.org/project/mysql56"
+            }
         },
         {
             "name": "drupal/openid_connect",
