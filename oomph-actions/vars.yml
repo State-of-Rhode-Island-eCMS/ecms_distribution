@@ -10,7 +10,7 @@ run_npm_install: no
 
 # Use Lando for build process
 use_lando: yes
-run_lando_composer_install: yes
+run_lando_composer_install: no
 # Disable the standard Oomph lando npm install.
 run_lando_npm_install: no
 
@@ -20,6 +20,7 @@ lando_docker_ce: no
 
 # Run the ACSF init commands to prepare for Site Factory.
 extra_build_commands:
+  # Ensure the profile installs.
   - "lando drush -y site-install ecms_acquia"
   - "lando gulp validate"
   - "lando phpcs"
