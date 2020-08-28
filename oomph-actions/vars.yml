@@ -23,8 +23,10 @@ extra_build_commands:
   # Ensure the profile installs.
   - "lando drush -y site-install ecms_acquia"
   - "lando gulp validate"
+  - "lando xdebug-on"
   - "lando phpcs"
   - "lando phpunit"
+  - "lando xdebug-off"
   # After running validation/tests, remove dev dependencies
   - "lando npm install --only=production"
   - "lando composer install --optimize-autoloader --no-dev --no-ansi --no-interaction --no-progress"
