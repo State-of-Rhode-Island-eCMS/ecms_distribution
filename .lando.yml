@@ -48,3 +48,15 @@ tooling:
   acsf-verify:
     service: appserver
     cmd: "cd $LANDO_MOUNT && /app/vendor/bin/drush --include=/app/docroot/modules/contrib/acsf/acsf_init acsf-init-verify"
+
+  # Xdebug toggle switches.
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for apache.
+    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for apache.
+    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    user: root

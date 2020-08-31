@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIG-12: Added the secrets.php post settings hook.
+- RIG-28: Added the automated ci/cid workflow to push to Acquia.
 
 ### Changed
 
@@ -19,5 +20,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIG-28: Updated the lock file to include ecms_profile requirements.
 
 ### Security

@@ -32,6 +32,7 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/core-vendor-hardening": "^9",
+        "drupal/mysql56": "^1.0",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "rhodeislandecms/ecms_profile": "dev-master",
@@ -40,7 +41,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "discard-changes": true
     },
     "scripts": {
         "post-install-cmd": [

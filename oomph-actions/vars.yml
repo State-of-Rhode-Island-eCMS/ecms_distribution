@@ -10,7 +10,7 @@ run_npm_install: no
 
 # Use Lando for build process
 use_lando: yes
-run_lando_composer_install: yes
+run_lando_composer_install: no
 # Disable the standard Oomph lando npm install.
 run_lando_npm_install: no
 
@@ -18,21 +18,42 @@ run_lando_npm_install: no
 lando_install_prereqs: no
 lando_docker_ce: no
 
+# Append the hooks directory to the deploy files variable.
+drupal_deploy_files:
+  - composer.json
+  - composer.lock
+  - docroot
+  - factory-hooks
+  - hooks
+  - vendor
+
 # Run the ACSF init commands to prepare for Site Factory.
 extra_build_commands:
+  # Ensure the profile installs.
+  - "lando drush -y site-install ecms_acquia"
+  - "lando gulp validate"
+  - "lando phpcs"
+  - "lando xdebug-on"
+  - "lando phpunit"
+  - "lando xdebug-off"
+  # After running validation/tests, remove dev dependencies
+  - "lando npm install --only=production"
+  - "lando composer install --optimize-autoloader --no-dev --no-ansi --no-interaction --no-progress"
+  # Configure the codebase for Acquia Site Factory
   - "lando acsf-init"
   - "lando acsf-init-verify"
 
+# Use docroot instead of web for Acquia.
+drupal_docroot: "{{ drupal_deploy_dest }}/docroot"
+
 # Acquia deployment.
 # You must define the following variables in your project variables file:
-#   acquia_repo_name
-#   acquia_repo_hostname
-#   acquia_repo_user
-#   acquia_target_branch
-# You must provide the following environment variables:
-#   ACQUIA_SSH_KEY
+acquia_repo_name: "riecms.git"
+acquia_repo_hostname: "svn-2398.enterprise-g1.hosting.acquia.com"
+acquia_repo_user: "riecms"
+
 # You may define these optional variables in your project variables file:
-#   acquia_force_push (default: no)
-#   acquia_deploy_build_artifact (default: no)
+acquia_force_push: yes
+acquia_deploy_build_artifact: yes
 #   acquia_deploy_build_artifact_files (default: "{{ drupal_deploy_files }}")
 #   acquia_deploy_build_artifact_msg (default: "Oomph Actions automated build and commit process")
