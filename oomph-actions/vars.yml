@@ -20,12 +20,12 @@ lando_docker_ce: no
 
 # Append the hooks directory to the deploy files variable.
 drupal_deploy_files:
-  - config
-  - vendor
-  - docroot
-  - hooks
   - composer.json
   - composer.lock
+  - docroot
+  - factory-hooks
+  - hooks
+  - vendor
 
 # Run the ACSF init commands to prepare for Site Factory.
 extra_build_commands:
