@@ -22,6 +22,19 @@
         {
             "type": "git",
             "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "state-of-rhode-island-ecms/ecms_patternlab",
+                "version": "1.0.0",
+                "type": "pattern-lab",
+                "source": {
+                    "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
     "require": {
@@ -59,7 +72,7 @@
         ]
     },
     "extra": {
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": ["bower-asset", "npm-asset", "pattern-lab"],
         "installer-paths": {
             "docroot/core": ["type:drupal-core"],
             "docroot/libraries/{$name}": [
@@ -70,7 +83,8 @@
             "docroot/modules/contrib/{$name}": ["type:drupal-module"],
             "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "drush/contrib/{$name}": ["type:drupal-drush"],
+            "docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": ["state-of-rhode-island-ecms/ecms_patternlab"]
         },
         "patches": {},
         "preserve-paths": [],
