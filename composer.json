@@ -24,17 +24,8 @@
             "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git"
         },
         {
-            "type": "package",
-            "package": {
-                "name": "state-of-rhode-island-ecms/ecms_patternlab",
-                "version": "1.0.0",
-                "type": "pattern-lab",
-                "source": {
-                    "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
+            "type": "git",
+            "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git"
         }
     ],
     "require": {
@@ -49,6 +40,7 @@
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "rhodeislandecms/ecms_profile": "dev-master",
+        "state-of-rhode-island-ecms/ecms_patternlab": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "minimum-stability": "dev",
@@ -84,7 +76,7 @@
             "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"],
-            "docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": ["state-of-rhode-island-ecms/ecms_patternlab"]
+            "docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": ["type:pattern-lab"]
         },
         "patches": {},
         "preserve-paths": [],
