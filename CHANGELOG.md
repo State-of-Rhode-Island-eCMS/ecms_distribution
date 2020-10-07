@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIG-12: Added the secrets.php post settings hook.
 - RIG-28: Added the automated ci/cid workflow to push to Acquia.
 - RIG-37: Added custom package repository for ECMS Pattern Lab integration.
+- RIG-83: Updated the Pattern lab requirement and all dependencies.
 
 ### Changed
 
