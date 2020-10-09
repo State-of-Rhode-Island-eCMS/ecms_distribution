@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIG-83: Updated the Pattern lab requirement and all dependencies.
 
 ### Changed
+- RIG-67: Updated composer lock file to ensure latest dependencies are installed.
 
 ### Deprecated
 
