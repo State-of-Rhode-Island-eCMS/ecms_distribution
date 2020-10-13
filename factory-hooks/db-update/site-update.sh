@@ -31,7 +31,7 @@ docroot="/var/www/html/$site.$env/docroot"
 # 1. Hardcode the drush version.
 # 2. When running drush, provide the application + url, rather than relying
 #    on aliases. This can prevent some hard to trace problems.
-DRUSH_CMD="drush8 --root=$docroot --uri=https://$domain"
+DRUSH_CMD="drush10 --root=$docroot --uri=https://$domain"
 
 # Run `drush updatedb`.
 $DRUSH_CMD updatedb
