@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIG-28: Added the automated ci/cid workflow to push to Acquia.
 - RIG-37: Added custom package repository for ECMS Pattern Lab integration.
 - RIG-83: Updated the Pattern lab requirement and all dependencies.
+- RIG-96: Added db-update cloud hook to revert features.
 
 ### Changed
 - RIG-67: Updated composer lock file to ensure latest dependencies are installed.
