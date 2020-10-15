@@ -10,6 +10,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.2] - 2019-10-15
+### Added
 - RIG-12: Added the secrets.php post settings hook.
 - RIG-28: Added the automated ci/cid workflow to push to Acquia.
 - RIG-37: Added custom package repository for ECMS Pattern Lab integration.
@@ -20,11 +33,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIG-67: Updated composer lock file to ensure latest dependencies are installed.
 - RIG-6: Updated the ecms_profile to the initial 0.1.0 release.
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 - RIG-28: Updated the lock file to include ecms_profile requirements.
 
-### Security
+## [0.1.1] - 2019-10-09
+## [0.1.0] - 2019-10-07
+### Added
+- Initial Release of the site
+
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.2...HEAD
+[0.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.1...0.1.2
+[0.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.0...0.1.1
+[0.1.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/releases/tag/0.1.0
