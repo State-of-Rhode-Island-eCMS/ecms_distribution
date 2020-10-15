@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cab9b2974a7c31c8fc761a8f76a6f25",
+    "content-hash": "31f85cbe207bbc5453778d1299443ccf",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1594,7 +1594,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-2.67",
-                    "datestamp": "1596111564",
+                    "datestamp": "1600955383",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1673,7 +1673,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-2.67",
-                    "datestamp": "1596111564",
+                    "datestamp": "1600955383",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1744,7 +1744,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-2.67",
-                    "datestamp": "1596111564",
+                    "datestamp": "1600955383",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1814,7 +1814,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-2.67",
-                    "datestamp": "1596111564",
+                    "datestamp": "1600955383",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2531,7 +2531,8 @@
                 "patches_applied": {
                     "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
-                    "3106659 - Error: Call to a member function getItemDefinition() on null in media_requirements()": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch"
+                    "3106659 - Error: Call to a member function getItemDefinition() on null in media_requirements()": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch",
+                    "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch"
                 }
             },
             "autoload": {
@@ -3262,6 +3263,50 @@
             "homepage": "https://www.drupal.org/project/jsonapi_extras",
             "support": {
                 "source": "https://git.drupalcode.org/project/jsonapi_extras"
+            }
+        },
+        {
+            "name": "drupal/moderated_content_bulk_publish",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/moderated_content_bulk_publish.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/moderated_content_bulk_publish-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "8ec4287e6eeefc06cbe703b59ff66a10897134f4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1600287553",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "joseph.olstad",
+                    "homepage": "https://www.drupal.org/user/1321830"
+                }
+            ],
+            "description": "Provides general administration features that Drupal 8 core does not provide.",
+            "homepage": "https://www.drupal.org/project/moderated_content_bulk_publish",
+            "support": {
+                "source": "https://git.drupalcode.org/project/moderated_content_bulk_publish"
             }
         },
         {
@@ -4155,7 +4200,7 @@
                 "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -6228,11 +6273,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "65a357c50cb124251333a9e80160d33b5537de55"
+                "reference": "8e6c2f9f6c28e095ab9455020cdbe1f48eb510f0"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -6247,6 +6292,7 @@
                 "drupal/core-recommended": "^9",
                 "drupal/features": "^3.11",
                 "drupal/jsonapi_extras": "^3.16",
+                "drupal/moderated_content_bulk_publish": "^2.0",
                 "drupal/moderation_dashboard": "^1.0",
                 "drupal/office_hours": "^1.3",
                 "drupal/openid_connect": "1.x-dev",
@@ -6277,7 +6323,8 @@
                     "drupal/core": {
                         "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
                         "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
-                        "3106659 - Error: Call to a member function getItemDefinition() on null in media_requirements()": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch"
+                        "3106659 - Error: Call to a member function getItemDefinition() on null in media_requirements()": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch",
+                        "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch"
                     },
                     "drupal/openid_connect_windows_aad": {
                         "3169996 - Incorrect configuration schema file": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-schema-update-3169996-3.patch"
@@ -6317,7 +6364,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-10-09T17:57:47+00:00"
+            "time": "2020-10-15T18:28:36+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -11242,7 +11289,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "rhodeislandecms/ecms_profile": 20,
         "state-of-rhode-island-ecms/ecms_patternlab": 20
     },
     "prefer-stable": true,

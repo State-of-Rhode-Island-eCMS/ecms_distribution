@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIG-67: Updated composer lock file to ensure latest dependencies are installed.
+- RIG-6: Updated the ecms_profile to the initial 0.1.0 release.
 
 ### Deprecated
 
