@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- Added Let's Encrypt support for the first few pre-production domains.
 
 ### Changed
 
