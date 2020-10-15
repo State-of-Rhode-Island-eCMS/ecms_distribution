@@ -6,6 +6,12 @@
 /docroot/themes/contrib
 /docroot/profiles/contrib
 
+# Allow the .htaccess file to be committed.
+!/docroot/.htaccess
+
+# Allow lets encrypt Acme challenges
+!/docroot/.well-known
+
 /docroot/sites/*
 !/docroot/sites/default
 /docroot/sites/default/*
@@ -40,3 +46,4 @@
 
 # PHPStorm
 /.idea
+

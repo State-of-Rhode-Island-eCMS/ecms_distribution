@@ -81,6 +81,9 @@
         "patches": {},
         "preserve-paths": [],
         "drupal-scaffold": {
+            "excludes": [
+                ".htaccess"
+            ],
             "locations": {
                 "web-root": "docroot"
             }
