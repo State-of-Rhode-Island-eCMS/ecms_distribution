@@ -61,6 +61,9 @@
         ],
         "validate:php": [
             "vendor/bin/phpcs"
+        ],
+        "post-drupal-scaffold-cmd": [
+            "cd docroot && patch -p1 < ../patches/htaccess-lets-encrypt.patch"
         ]
     },
     "extra": {
