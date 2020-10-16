@@ -86,12 +86,6 @@ AddEncoding gzip svgz
   # If you do not have mod_rewrite installed, you should remove these
   # directories from your webroot or otherwise protect them from being
   # downloaded.
-
-  # Manually allowing the acme-challenge for pre-production SSL encryption
-  # with Let's Encrypt. @see:
-  # https://support.acquia.com/hc/en-us/articles/360009491013-Using-Let-s-Encrypt-SSL-on-Acquia-Cloud
-  RewriteRule "^.well-known/acme-challenge" - [L]
-
   RewriteRule "/\.|^\.(?!well-known/)" - [F]
 
   # If your site can be accessed both with and without the 'www.' prefix, you
