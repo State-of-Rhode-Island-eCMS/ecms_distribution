@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31f85cbe207bbc5453778d1299443ccf",
+    "content-hash": "7c1675f367b2303acb609aec5a3e5eb2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3266,6 +3266,69 @@
             }
         },
         {
+            "name": "drupal/layout_builder_modal",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_modal.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_modal-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "5063c2d5e33265c92bfeed34df6682d74c973c51"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1588175915",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Svensson",
+                    "homepage": "https://www.drupal.org/u/johndevman",
+                    "email": "john@kodamera.se",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Emil Johnsson",
+                    "homepage": "https://www.drupal.org/u/johnzzon",
+                    "email": "emil@kodamera.se",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Henrik Larsson",
+                    "homepage": "https://www.drupal.org/u/henriklarsson",
+                    "email": "henrik@kodamera.se",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "twfahey",
+                    "homepage": "https://www.drupal.org/user/3403722"
+                }
+            ],
+            "description": "Open blocks in a modal in the Layout Builder UI.",
+            "homepage": "https://www.drupal.org/project/layout_builder_modal",
+            "support": {
+                "source": "http://cgit.drupalcode.org/layout_builder_modal",
+                "issues": "https://www.drupal.org/project/issues/layout_builder_modal"
+            }
+        },
+        {
             "name": "drupal/moderated_content_bulk_publish",
             "version": "2.0.0",
             "source": {
@@ -6273,11 +6336,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "8e6c2f9f6c28e095ab9455020cdbe1f48eb510f0"
+                "reference": "d729108bcd604756a2529bb8909d1fe9ec72c5a9"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -6292,6 +6355,7 @@
                 "drupal/core-recommended": "^9",
                 "drupal/features": "^3.11",
                 "drupal/jsonapi_extras": "^3.16",
+                "drupal/layout_builder_modal": "^1.1",
                 "drupal/moderated_content_bulk_publish": "^2.0",
                 "drupal/moderation_dashboard": "^1.0",
                 "drupal/office_hours": "^1.3",
@@ -6334,6 +6398,10 @@
                     },
                     "drupal/content_moderation_notifications": {
                         "3170503 - Core requirement error during Functional test": "https://www.drupal.org/files/issues/2020-09-11/3170503-2.patch"
+                    },
+                    "drupal/paragraphs": {
+                        "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
+                        "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -6364,7 +6432,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-10-15T18:28:36+00:00"
+            "time": "2020-10-19T15:20:12+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -6472,11 +6540,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "1639f77322b472fa5625fce6c4662de453cd931e"
+                "reference": "31f49fc3a1854d8547b9c1667a75406d5e36676b"
             },
             "type": "pattern-lab",
             "license": [
@@ -6490,7 +6558,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-09-29T19:58:11+00:00"
+            "time": "2020-10-19T15:07:07+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -11288,9 +11356,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "state-of-rhode-island-ecms/ecms_patternlab": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

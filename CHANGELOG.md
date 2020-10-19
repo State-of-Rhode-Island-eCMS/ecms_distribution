@@ -10,8 +10,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- Added verbose logging to the site factory db-update script.
 
 ### Changed
+- Changed the ecms_profile to use 0.1.1.
+- Changed the ecms_patternlab to use 0.1.0.
 
 ### Deprecated
 
