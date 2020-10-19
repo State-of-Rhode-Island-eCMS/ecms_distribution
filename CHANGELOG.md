@@ -10,11 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- Added verbose logging to the site factory db-update script.
 
 ### Changed
-- Changed the ecms_profile to use 0.1.1.
-- Changed the ecms_patternlab to use 0.1.0.
 
 ### Deprecated
 
@@ -24,7 +21,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [0.1.2] - 2019-10-15
+## [0.1.3] - 2020-10-19
+### Added
+- Added verbose logging to the site factory db-update script.
+
+### Changed
+- Changed the ecms_profile to use 0.1.1.
+- Changed the ecms_patternlab to use 0.1.0.
+
+## [0.1.2] - 2020-10-15
 ### Added
 - RIG-12: Added the secrets.php post settings hook.
 - RIG-28: Added the automated ci/cid workflow to push to Acquia.
@@ -39,12 +44,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 - RIG-28: Updated the lock file to include ecms_profile requirements.
 
-## [0.1.1] - 2019-10-09
-## [0.1.0] - 2019-10-07
+## [0.1.1] - 2020-10-09
+## [0.1.0] - 2020-10-07
 ### Added
 - Initial Release of the site
 
 [Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.2...HEAD
+[0.1.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/releases/tag/0.1.0
