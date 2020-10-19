@@ -31,13 +31,13 @@ docroot="/var/www/html/$site.$env/docroot"
 # 1. Hardcode the drush version.
 # 2. When running drush, provide the application + url, rather than relying
 #    on aliases. This can prevent some hard to trace problems.
-DRUSH_CMD="drush10 --root=$docroot --uri=https://$domain"
+DRUSH_CMD="drush10 --verbose --root=$docroot --uri=https://$domain"
 
 # Run `drush updatedb`.
-$DRUSH_CMD updatedb
+$DRUSH_CMD updatedb >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update.log
 
 # Run `drush features:import:all`.
-$DRUSH_CMD drush features:import:all --bundle=ecms --yes
+$DRUSH_CMD drush features:import:all --bundle=ecms --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update.log
 
 # Rebuild caches after features import.
-$DRUSH_CMD cache-rebuild
+$DRUSH_CMD cache-rebuild >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update.log
