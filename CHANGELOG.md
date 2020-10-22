@@ -12,6 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- Changed the ecms_patternlab to use 0.1.1.
+- Changed the ecms_profile to use 0.1.2.
 
 ### Deprecated
 
@@ -49,7 +51,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.3...HEAD
 [0.1.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.0...0.1.1
