@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c1675f367b2303acb609aec5a3e5eb2",
+    "content-hash": "2898d2819e10fc028c511a7e0627e885",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3879,6 +3879,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
+                    "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6540,11 +6544,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "31f49fc3a1854d8547b9c1667a75406d5e36676b"
+                "reference": "42a9936a1b72ea857d9d05c27293f7c997c3ed4a"
             },
             "type": "pattern-lab",
             "license": [
@@ -6558,7 +6562,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-10-19T15:07:07+00:00"
+            "time": "2020-10-22T17:40:26+00:00"
         },
         {
             "name": "symfony-cmf/routing",
