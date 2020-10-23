@@ -37,7 +37,7 @@ DRUSH_CMD="drush10 --verbose --root=$docroot --uri=https://$domain"
 $DRUSH_CMD updatedb >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update.log
 
 # Run `drush features:import:all`.
-$DRUSH_CMD drush features:import:all --bundle=ecms --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features.log
+$DRUSH_CMD features:import:all --bundle=ecms --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features.log
 
 # Rebuild caches after features import.
 $DRUSH_CMD cache-rebuild >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-cache.log
