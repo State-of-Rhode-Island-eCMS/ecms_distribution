@@ -27,6 +27,15 @@ jobs:
           echo "${{ secrets.ECMS_PROFILE_DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
+      - name: Add a lando.local file for environment variables.
+        run: |
+          echo "env_file:
+                  - .env  " >> .lando.local.yml
+
+      - name: Add an ephemeral encryption key to the environment variable.
+        run: |
+          echo -e  "ENCRYPTION_PRIVATE_KEY=$(dd if=/dev/urandom bs=32 count=1 | base64 -i -)" >> .env
+
       - name: Build the Drupal application
         run: ./oomph-infrastructure/oomph-action build-drupal.yml
 
