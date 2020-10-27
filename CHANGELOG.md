@@ -12,17 +12,22 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIG-6: Updated ecms_patternlab to use 0.1.2.
-- RIG-6: Updated ecms_profile to use 0.1.3.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
-- RIG-122: Fixed the features import drush command.
 
 ### Security
+
+## [0.1.5] - 2020-10-27
+### Changed
+- RIG-6: Updated ecms_patternlab to use 0.1.2.
+- RIG-6: Updated ecms_profile to use 0.1.3.
+
+### Fixed
+- RIG-122: Fixed the features import drush command.
 
 ## [0.1.4] - 2020-10-22
 ### Changed
@@ -57,7 +62,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.5...HEAD
+[0.1.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.4...0.1.5
 [0.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.1...0.1.2
