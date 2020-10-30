@@ -39,7 +39,7 @@
         "drupal/mysql56": "^1.0",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^1.1",
-        "rhodeislandecms/ecms_profile": "0.1.5",
+        "rhodeislandecms/ecms_profile": "0.1.6",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.1.5",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
