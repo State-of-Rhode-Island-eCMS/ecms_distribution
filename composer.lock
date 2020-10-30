@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b92b022389ebbc6a8907a6c14d71d5f",
+    "content-hash": "8d3eef89837e9cddfc89ce53eb3512e5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5035,8 +5035,7 @@
                     }
                 },
                 "patches_applied": {
-                    "3142997 - D9 readiness": "https://www.drupal.org/files/issues/2020-06-05/3142997-20.patch",
-                    "2943344 - Add option to encrypt all elements on a webform": "https://www.drupal.org/files/issues/2020-05-19/webform_encrypt-encrypt_all-2943344-9.patch"
+                    "3142997 - D9 readiness": "https://www.drupal.org/files/issues/2020-06-05/3142997-20.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7229,11 +7228,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.1.3",
+            "version": "0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "76278a59288af2367cea561ffd18afae9cad9835"
+                "reference": "5fc96863641ed41d9cdfee5ef156e9d573265bfc"
             },
             "type": "pattern-lab",
             "license": [
@@ -7247,7 +7246,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-10-28T19:22:29+00:00"
+            "time": "2020-10-30T14:35:30+00:00"
         },
         {
             "name": "symfony-cmf/routing",
