@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIG-6 - Updated ecms_patternlab to use 0.1.4.
 - RIG-6 - Updated the ecms_profile to use 0.1.5.
+- RIG-6 - Locked Lando's composer version to 1.10.1.
 
 ### Deprecated
 
