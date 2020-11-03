@@ -13,9 +13,6 @@
 
 /config/**/.htaccess
 
-# Ignore the configuration directory as it is not needed.
-/config
-
 # Drush
 /drush/contrib
 
