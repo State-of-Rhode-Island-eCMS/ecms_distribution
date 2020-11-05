@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIG-6 - Hotfix pattern lab to 0.1.7.
 
 ### Deprecated
 
