@@ -13,6 +13,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIG-6 - Added config.php post settings hook.
 
 ### Changed
+- RIG-6: Updated ecms_patternlab to 0.1.6.
+- RIG-6: Updated ecms_profile to 0.1.7.
 
 ### Deprecated
 

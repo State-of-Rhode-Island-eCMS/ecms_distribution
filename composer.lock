@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c9804e20ce871d4f8e915233b27cae7",
+    "content-hash": "3e07ffa55aa995e7d8b6176ce8b91700",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1506,6 +1506,7 @@
                 "reflection",
                 "static"
             ],
+            "abandoned": "roave/better-reflection",
             "time": "2020-03-27T11:06:43+00:00"
         },
         {
@@ -4887,7 +4888,7 @@
                 "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "drupal-module",
             "extra": {
@@ -4939,6 +4940,59 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/twig_tweak",
+            "version": "2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/twig_tweak.git",
+                "reference": "8.x-2.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.8.zip",
+                "reference": "8.x-2.8",
+                "shasum": "11ae232159fc1139e00980736dff39bf2bfcfa6d"
+            },
+            "require": {
+                "drupal/core": "^8.7 || ^9.0",
+                "twig/twig": "^1.41 || ^2.12"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Better dump() function for debugging Twig variables"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.8",
+                    "datestamp": "1602156806",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Chi",
+                    "homepage": "https://www.drupal.org/user/556138"
+                }
+            ],
+            "description": "A Twig extension with some useful functions and filters for Drupal development.",
+            "homepage": "https://www.drupal.org/project/twig_tweak",
+            "keywords": [
+                "Drupal",
+                "Twig"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/twig_tweak",
+                "issues": "https://www.drupal.org/project/issues/twig_tweak"
             }
         },
         {
@@ -7127,11 +7181,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.1.6",
+            "version": "0.1.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "811f57d5c2c6e5a899e792b1b07ede0bc6a0160f"
+                "reference": "a899def53d88068aaee52ad2e620dc55bbbf2136"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7167,6 +7221,7 @@
                 "drupal/smart_date": "^3.0",
                 "drupal/svg_image": "^1.14",
                 "drupal/token": "^1.7",
+                "drupal/twig_tweak": "^2.8",
                 "drupal/twig_vardumper": "^3.0",
                 "drupal/webform": "^6.0",
                 "drupal/webform_encrypt": "1.x-dev@dev",
@@ -7238,7 +7293,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-10-30T20:27:22+00:00"
+            "time": "2020-11-05T15:41:26+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -7346,11 +7401,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "ef28de53e025db9752544f478640f72c98dae86d"
+                "reference": "d78d1792132a228e8095683fdc638b2a35157a61"
             },
             "type": "pattern-lab",
             "license": [
@@ -7364,7 +7419,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-10-30T16:12:02+00:00"
+            "time": "2020-11-05T15:42:39+00:00"
         },
         {
             "name": "symfony-cmf/routing",
