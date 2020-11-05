@@ -10,11 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-6 - Added config.php post settings hook.
 
 ### Changed
-- RIG-6: Updated ecms_patternlab to 0.1.6.
-- RIG-6: Updated ecms_profile to 0.1.7.
 
 ### Deprecated
 
@@ -23,6 +20,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.10] - 2020-11-05
+### Added
+- RIG-6 - Added config.php post settings hook.
+
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.1.6.
+- RIG-6: Updated ecms_profile to 0.1.7.
 
 ## [0.1.9] - 2020-10-30
 ### Changed
@@ -84,7 +89,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.10...HEAD
+[0.1.10]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.9...0.1.10
 [0.1.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.6...0.1.7
