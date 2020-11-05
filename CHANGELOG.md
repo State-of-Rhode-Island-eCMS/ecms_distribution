@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIG-6 - Hotfix pattern lab to 0.1.7.
 
 ### Deprecated
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.11] - 2020-11-05
+### Changed
+- RIG-6 - Hotfix pattern lab to 0.1.7.
 
 ## [0.1.10] - 2020-11-05
 ### Added
@@ -90,7 +93,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.10...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.11...HEAD
+[0.1.11]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.10...0.1.11
 [0.1.10]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.9...0.1.10
 [0.1.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.7...0.1.8
