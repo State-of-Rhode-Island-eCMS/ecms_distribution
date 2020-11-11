@@ -12,9 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIG-6: Updated ecms_patternlab to 0.1.9.
-- RIG-6: Updated ecms_profile to 0.1.9.
-- Updated oomphinc/composer-installers-extender to ^2.0.
 
 ### Deprecated
 
@@ -23,6 +20,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.13] - 2020-11-11
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.1.9.
+- RIG-6: Updated ecms_profile to 0.1.9.
+- Updated oomphinc/composer-installers-extender to ^2.0.
 
 ## [0.1.12] - 2020-11-06
 ### Changed
@@ -101,7 +104,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.12...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.13...HEAD
+[0.1.13]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.12...0.1.13
 [0.1.12]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.11...0.1.12
 [0.1.11]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.10...0.1.11
 [0.1.10]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.1.9...0.1.10
