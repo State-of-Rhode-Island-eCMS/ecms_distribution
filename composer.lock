@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49c80622312b723fc78bd23e156eb447",
+    "content-hash": "e5a7d489afc990e5e4c5a40f37585fb5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2878,6 +2878,65 @@
             }
         },
         {
+            "name": "drupal/dynamic_entity_reference",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/dynamic_entity_reference.git",
+                "reference": "8.x-1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/dynamic_entity_reference-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "a57bb94071f40b310a53a179ae435b119b05a5ab"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "require-dev": {
+                "drupal/diff": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.11",
+                    "datestamp": "1603517234",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Lee Rowlands",
+                    "homepage": "https://www.drupal.org/u/larowlan",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Jibran Ijaz",
+                    "homepage": "https://www.drupal.org/u/jibran",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Provides a field that allows an entity-reference field to reference more than one entity type.",
+            "homepage": "http://drupal.org/project/dynamic_entity_reference",
+            "support": {
+                "source": "http://cgit.drupalcode.org/dynamic_entity_reference",
+                "issues": "http://drupal.org/project/dynamic_entity_reference",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/encrypt",
             "version": "3.0.0",
             "source": {
@@ -4628,6 +4687,57 @@
             "homepage": "https://www.drupal.org/project/redirect",
             "support": {
                 "source": "https://git.drupalcode.org/project/redirect"
+            }
+        },
+        {
+            "name": "drupal/scheduled_transitions",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/scheduled_transitions.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/scheduled_transitions-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "5cf9ef0a3f82595460fe16c3dbefcac2fc55421d"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9",
+                "drupal/dynamic_entity_reference": "*",
+                "php": "^7.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1597634088",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "dpi",
+                    "homepage": "https://www.drupal.org/user/81431"
+                }
+            ],
+            "description": "Allows users to schedule a revision to change state.",
+            "homepage": "https://www.drupal.org/project/scheduled_transitions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/scheduled_transitions"
             }
         },
         {
@@ -6575,21 +6685,27 @@
         },
         {
             "name": "oomphinc/composer-installers-extender",
-            "version": "v1.1.2",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oomphinc/composer-installers-extender.git",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56"
+                "reference": "8d3fe38a1723e0e91076920c8bb946b1696e28ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
-                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
+                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/8d3fe38a1723e0e91076920c8bb946b1696e28ca",
+                "reference": "8d3fe38a1723e0e91076920c8bb946b1696e28ca",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0",
-                "composer/installers": "^1.0"
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "composer/installers": "^1.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "phpunit/phpunit": "^7.2",
+                "squizlabs/php_codesniffer": "^3.3"
             },
             "type": "composer-plugin",
             "extra": {
@@ -6609,11 +6725,16 @@
                     "name": "Stephen Beemsterboer",
                     "email": "stephen@oomphinc.com",
                     "homepage": "https://github.com/balbuf"
+                },
+                {
+                    "name": "Nathan Dentzau",
+                    "email": "nate@oomphinc.com",
+                    "homepage": "http://oomph.is/ndentzau"
                 }
             ],
             "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
             "homepage": "http://www.oomphinc.com/",
-            "time": "2017-03-31T16:57:39+00:00"
+            "time": "2020-08-11T21:06:11+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7184,11 +7305,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.1.8",
+            "version": "0.1.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "3797e8a262093c7e080b8c2764d584cd468e6c83"
+                "reference": "31076c23f3ea2da4ac02c4c80947f27f0f0a3076"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7219,6 +7340,7 @@
                 "drupal/rabbit_hole": "^1.0",
                 "drupal/real_aes": "^2.3",
                 "drupal/redirect": "^1.6",
+                "drupal/scheduled_transitions": "^2.0",
                 "drupal/scheduler": "^1.3",
                 "drupal/simple_oauth": "^4.5",
                 "drupal/smart_date": "^3.0",
@@ -7229,11 +7351,14 @@
                 "drupal/webform": "^6.0",
                 "drupal/webform_encrypt": "1.x-dev@dev",
                 "drush/drush": "^10.0",
-                "oomphinc/composer-installers-extender": "^1.1",
+                "oomphinc/composer-installers-extender": "^2.0",
                 "zaporylie/composer-drupal-optimizations": "^1.0"
             },
             "require-dev": {
                 "behat/mink-goutte-driver": "^1.2",
+                "drupal/coder": "^8.3",
+                "drush/drush": "^10.0",
+                "liuggio/fastest": "^1.6",
                 "php-mock/php-mock": "^2.2",
                 "php-mock/php-mock-phpunit": "^2.6",
                 "phpunit/phpunit": "^8",
@@ -7296,7 +7421,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-11-06T17:15:39+00:00"
+            "time": "2020-11-11T19:50:33+00:00"
         },
         {
             "name": "simshaun/recurr",
