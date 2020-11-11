@@ -12,6 +12,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIG-6: Updated ecms_patternlab to 0.1.9.
+- RIG-6: Updated ecms_profile to 0.1.9.
+- Updated oomphinc/composer-installers-extender to ^2.0.
 
 ### Deprecated
 
