@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5a7d489afc990e5e4c5a40f37585fb5",
+    "content-hash": "2fd8da39c1507e5c70092310a670f2b1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7529,11 +7529,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.1.9",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "40811ea91a37345fb67484107fabfa1a51be8867"
+                "reference": "9aa2baf5c369dcf5344ee03854ef3aa9c3ec53f1"
             },
             "type": "pattern-lab",
             "license": [
@@ -7547,7 +7547,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-11-11T19:42:21+00:00"
+            "time": "2020-11-12T15:55:28+00:00"
         },
         {
             "name": "symfony-cmf/routing",
