@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2fd8da39c1507e5c70092310a670f2b1",
+    "content-hash": "1b1dc34d6f896f785ae6e0ca81f5f697",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2875,6 +2875,71 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/disable_language",
+            "version": "1.0.0-beta10",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/disable_language.git",
+                "reference": "8.x-1.0-beta10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/disable_language-8.x-1.0-beta10.zip",
+                "reference": "8.x-1.0-beta10",
+                "shasum": "acc28829bfbd6e1329538b420ad0c699ff1a1924"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta10",
+                    "datestamp": "1605177967",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": []
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Grayle",
+                    "homepage": "https://www.drupal.org/user/3145497"
+                },
+                {
+                    "name": "L_VanDamme",
+                    "homepage": "https://www.drupal.org/user/3162503"
+                },
+                {
+                    "name": "Thomas Cys",
+                    "homepage": "https://www.drupal.org/user/2575770"
+                },
+                {
+                    "name": "nielsaers",
+                    "homepage": "https://www.drupal.org/user/752444"
+                },
+                {
+                    "name": "sandboxpl",
+                    "homepage": "https://www.drupal.org/user/2187728"
+                }
+            ],
+            "description": "Disable language lets you disable language",
+            "homepage": "http://drupal.org/project/disable_language",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/disable_language",
+                "issues": "http://drupal.org/project/issues/disable_language"
             }
         },
         {
@@ -7305,11 +7370,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.1.9",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "31076c23f3ea2da4ac02c4c80947f27f0f0a3076"
+                "reference": "51db8592df907c0ac20195009349cf8acabb76e2"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7322,6 +7387,7 @@
                 "drupal/components": "^2.0",
                 "drupal/content_moderation_notifications": "^3.2",
                 "drupal/core-recommended": "^9",
+                "drupal/disable_language": "^1.0@beta",
                 "drupal/extlink": "^1.5",
                 "drupal/features": "^3.11",
                 "drupal/jsonapi_extras": "^3.16",
@@ -7391,6 +7457,9 @@
                     },
                     "drupal/webform_encrypt": {
                         "3142997 - D9 readiness": "https://www.drupal.org/files/issues/2020-06-05/3142997-20.patch"
+                    },
+                    "drupal/disable_language": {
+                        "3181905 - Remove core key": "https://www.drupal.org/files/issues/2020-11-11/disable_language_coreinfo.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -7421,7 +7490,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-11-11T19:50:33+00:00"
+            "time": "2020-11-12T16:42:07+00:00"
         },
         {
             "name": "simshaun/recurr",
