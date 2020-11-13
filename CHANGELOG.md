@@ -12,6 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIG-6: Updated ecms_patternlab to 0.2.2.
+- RIG-6: Updated ecms_profile to 0.2.1.
 
 ### Deprecated
 
