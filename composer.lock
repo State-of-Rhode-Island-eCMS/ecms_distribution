@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f8682698cba8dd9f0e08c456c615853",
+    "content-hash": "4dd090c34f134f4e06a7dc37558f9293",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2903,8 +2903,7 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": []
+                }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
@@ -3588,6 +3587,59 @@
                 "source": "http://cgit.drupalcode.org/key",
                 "issues": "http://drupal.org/project/key"
             }
+        },
+        {
+            "name": "drupal/language_cookie",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/language_cookie.git",
+                "reference": "95e32840f4716d9e5d4e83f5547f903309db8da6"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/language_selection_page": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+3-dev",
+                    "datestamp": "1604303764",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "JeroenT",
+                    "homepage": "https://www.drupal.org/user/2228934"
+                },
+                {
+                    "name": "alexweber",
+                    "homepage": "https://www.drupal.org/user/850856"
+                },
+                {
+                    "name": "stefan.r",
+                    "homepage": "https://www.drupal.org/user/551886"
+                }
+            ],
+            "description": "Allows usage of cookies to remember the user's last language.",
+            "homepage": "https://www.drupal.org/project/language_cookie",
+            "support": {
+                "source": "https://git.drupalcode.org/project/language_cookie"
+            },
+            "time": "2020-11-02T07:55:41+00:00"
         },
         {
             "name": "drupal/layout_builder_modal",
@@ -7370,11 +7422,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "51db8592df907c0ac20195009349cf8acabb76e2"
+                "reference": "16da60cf1e41ecd518488c9561ecda23f3379e98"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7391,6 +7443,7 @@
                 "drupal/extlink": "^1.5",
                 "drupal/features": "^3.11",
                 "drupal/jsonapi_extras": "^3.16",
+                "drupal/language_cookie": "1.x-dev",
                 "drupal/layout_builder_modal": "^1.1",
                 "drupal/layout_builder_restrictions": "^2.7",
                 "drupal/media_library_theme_reset": "^1.0",
@@ -7440,7 +7493,8 @@
                         "3106659 - Error: Call to a member function getItemDefinition() on null in media_requirements()": "https://www.drupal.org/files/issues/2020-04-29/media-install-requirements-3106659.patch",
                         "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch",
                         "3083051 - Remove tabledrag.js replacement when core issues are resolved": "https://www.drupal.org/files/issues/2020-10-02/3083051-21.patch",
-                        "1832818 - Allow a queue item to be postponed": "https://www.drupal.org/files/issues/2020-03-24/1832818.80-requeue.patch"
+                        "1832818 - Allow a queue item to be postponed": "https://www.drupal.org/files/issues/2020-03-24/1832818.80-requeue.patch",
+                        "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2019-06-24/2259567-113_0.patch"
                     },
                     "drupal/openid_connect_windows_aad": {
                         "3169996 - Incorrect configuration schema file": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-schema-update-3169996-3.patch"
@@ -7457,9 +7511,6 @@
                     },
                     "drupal/webform_encrypt": {
                         "3142997 - D9 readiness": "https://www.drupal.org/files/issues/2020-06-05/3142997-20.patch"
-                    },
-                    "drupal/disable_language": {
-                        "3181905 - Remove core key": "https://www.drupal.org/files/issues/2020-11-11/disable_language_coreinfo.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -7490,7 +7541,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-11-12T16:42:07+00:00"
+            "time": "2020-11-13T21:39:48+00:00"
         },
         {
             "name": "simshaun/recurr",
