@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIG-152: SA-CORE-2020-012.
 
 ## [0.2.2] - 2020-11-18
 ### Changed
