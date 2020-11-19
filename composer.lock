@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88d55c508cf2af20ff0ec00a4a8a7359",
+    "content-hash": "9410f893b262edd66c10c97f129944c6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3656,6 +3656,50 @@
                 "source": "https://git.drupalcode.org/project/language_cookie"
             },
             "time": "2020-11-02T07:55:41+00:00"
+        },
+        {
+            "name": "drupal/language_neutral_aliases",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/language_neutral_aliases.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/language_neutral_aliases-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "3770a77b5c5f0d42f9e5753f5395db75ab80423a"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1586155413",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Xen",
+                    "homepage": "https://www.drupal.org/user/91385"
+                }
+            ],
+            "description": "Use the same URL aliases regardless of language.",
+            "homepage": "https://www.drupal.org/project/language_neutral_aliases",
+            "support": {
+                "source": "https://git.drupalcode.org/project/language_neutral_aliases"
+            }
         },
         {
             "name": "drupal/layout_builder_modal",
@@ -7369,11 +7413,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "b5e8fd115b1449a897a49c7c2f575669c302876b"
+                "reference": "15bca6694f2629f003f56c5d68d59e22007435de"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7391,6 +7435,7 @@
                 "drupal/features": "^3.11",
                 "drupal/jsonapi_extras": "^3.16",
                 "drupal/language_cookie": "1.x-dev",
+                "drupal/language_neutral_aliases": "^3.0",
                 "drupal/layout_builder_modal": "^1.1",
                 "drupal/layout_builder_restrictions": "^2.7",
                 "drupal/media_library_theme_reset": "^1.0",
@@ -7487,7 +7532,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-11-18T14:56:00+00:00"
+            "time": "2020-11-19T21:26:22+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -7595,11 +7640,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.2.3",
+            "version": "0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "5d78d043b44e7caba25b3197549330a4ee9ab1c1"
+                "reference": "bc35e26756f97593ea9eb12ec0333c0f077ed1bf"
             },
             "type": "pattern-lab",
             "license": [
@@ -7613,7 +7658,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-11-18T14:54:07+00:00"
+            "time": "2020-11-19T21:05:38+00:00"
         },
         {
             "name": "symfony-cmf/routing",
