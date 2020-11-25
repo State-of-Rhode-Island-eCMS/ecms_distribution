@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1afd9380b6bdcc7bcc86777bdfa0fe82",
+    "content-hash": "21b685842e4677f57a98d8c63086b34f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4968,6 +4968,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "3082364 - Fix the migration of the status_code redirect property: status code of NULL or 0 causes exception": "https://www.drupal.org/files/issues/2020-07-28/redirect-fix_status_code_property_migration-3082364-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7700,11 +7703,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.2.4",
+            "version": "0.2.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ad208b0c0e52f5706b14c771e6de553bf54bc9c4"
+                "reference": "e696790758990b90958630edd5690851bfdb79cb"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7838,7 +7841,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-11-24T23:57:06+00:00"
+            "time": "2020-11-25T18:17:26+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -7946,11 +7949,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.2.6",
+            "version": "0.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "6932684b3066373e30c63b69ad8959913aa6c45d"
+                "reference": "869b4770fb2c5f0eceb5feb6351c91cbbe80c148"
             },
             "type": "pattern-lab",
             "license": [
@@ -7964,7 +7967,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-11-24T23:23:11+00:00"
+            "time": "2020-11-25T18:13:13+00:00"
         },
         {
             "name": "symfony-cmf/routing",
