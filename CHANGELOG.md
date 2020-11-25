@@ -18,9 +18,16 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIG-6 - Fixed settings variable and path for config directories.
 
 ### Security
+
+## [0.2.6] - 2020-11-25
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.2.7.
+- RIG-6: Updated ecms_profile to 0.2.5.
+
+### Fixed
+- RIG-6 - Fixed settings variable and path for config directories.
 
 ## [0.2.5] - 2020-11-24
 ### Changed
