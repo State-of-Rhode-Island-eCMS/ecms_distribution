@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65714f2bfcfc3f8ee6a779d8db3f84dd",
+    "content-hash": "e8016fdb5b865ec385e279a5115019b7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7703,11 +7703,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.2.5",
+            "version": "0.2.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "e696790758990b90958630edd5690851bfdb79cb"
+                "reference": "6a77e9765c2be45fcddb1e4c58abdfbd4192f441"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7804,7 +7804,8 @@
                         "3142997 - D9 readiness": "https://www.drupal.org/files/issues/2020-06-05/3142997-20.patch"
                     },
                     "drupal_git/migration_tools": {
-                        "3148135 - D9 readiness": "https://www.drupal.org/files/issues/2020-11-17/automated-d9-compatibility-fixes-3148135-5.patch"
+                        "3148135 - D9 readiness": "https://www.drupal.org/files/issues/2020-11-17/automated-d9-compatibility-fixes-3148135-5.patch",
+                        "3163830 - Fatal Error: Call to undefined function drush_print()": "https://www.drupal.org/files/issues/2020-08-06/migration_tools-drush-10-compatibility-13778991-3.patch"
                     },
                     "drupal_git/migrate_google_sheets": {
                         "3138999 - D9 readiness": "https://www.drupal.org/files/issues/2020-11-17/Drupal-9-readiness-3138999-6.patch"
@@ -7841,7 +7842,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-11-25T18:17:26+00:00"
+            "time": "2020-12-01T20:14:42+00:00"
         },
         {
             "name": "simshaun/recurr",
