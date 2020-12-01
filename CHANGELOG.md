@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIG-6: Updated ecms_patternlab to 0.2.8.
 
 ### Deprecated
 
@@ -20,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIG-157: Security Update: SA-CORE-2020-013
 
 ## [0.2.6] - 2020-11-25
 ### Changed
