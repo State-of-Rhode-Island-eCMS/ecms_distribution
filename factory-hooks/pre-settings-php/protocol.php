@@ -13,8 +13,10 @@ function isSecure(): bool {
 }
 
 // Redirect to the secure version.
-if (($_ENV['AH_SITE_ENVIRONMENT'] === "prod" || $_ENV['AH_SITE_ENVIRONMENT'] === "dev") && !isSecure()) {
+if (($_ENV['AH_SITE_ENVIRONMENT'] == "prod" || $_ENV['AH_SITE_ENVIRONMENT'] == "dev") && !isSecure()) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: ' . $_SERVER['REQUEST_URI']);
   exit();
 }
+
+print $_ENV['AH_SITE_ENVIRONMENT'];
