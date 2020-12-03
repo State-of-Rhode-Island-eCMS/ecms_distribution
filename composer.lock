@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8016fdb5b865ec385e279a5115019b7",
+    "content-hash": "68f327ace3618263188386bfa829033e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3291,6 +3291,50 @@
             }
         },
         {
+            "name": "drupal/google_tag",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_tag.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_tag-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "1bdc6f93d1c79c27738320597f2185f5de37432f"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1593179846",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "solotandem",
+                    "homepage": "https://www.drupal.org/user/240748"
+                }
+            ],
+            "description": "Allows your website analytics to be managed using Google Tag Manager.",
+            "homepage": "https://www.drupal.org/project/google_tag",
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_tag"
+            }
+        },
+        {
             "name": "drupal/jquery_ui",
             "version": "1.4.0",
             "source": {
@@ -3962,6 +4006,69 @@
                 "source": "https://git.drupalcode.org/project/menu_block"
             },
             "time": "2020-11-18T00:42:05+00:00"
+        },
+        {
+            "name": "drupal/metatag",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/metatag.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "9bf9f1517ad015d0c93ca1460e284c557624aa90"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/token": "^1.0"
+            },
+            "require-dev": {
+                "drupal/metatag_dc": "*",
+                "drupal/metatag_open_graph": "*",
+                "drupal/page_manager": "4.x-dev",
+                "drupal/panelizer": "4.x-dev",
+                "drupal/redirect": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1597183852",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/640498/committers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                }
+            ],
+            "description": "Manage meta tags for all entities.",
+            "homepage": "https://www.drupal.org/project/metatag",
+            "keywords": [
+                "Drupal",
+                "seo"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/metatag",
+                "issues": "https://www.drupal.org/project/issues/metatag",
+                "docs": "https://www.drupal.org/docs/8/modules/metatag"
+            }
         },
         {
             "name": "drupal/migrate_plus",
@@ -5186,6 +5293,64 @@
             }
         },
         {
+            "name": "drupal/simple_sitemap",
+            "version": "3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simple_sitemap.git",
+                "reference": "8.x-3.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-8.x-3.8.zip",
+                "reference": "8.x-3.8",
+                "shasum": "55252af261fbd7b18c230ab429eb7d8b92f4c66a"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "ext-xmlwriter": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.8",
+                    "datestamp": "1605141357",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pawel Ginalski (gbyte.co)",
+                    "homepage": "https://www.drupal.org/u/gbyte.co",
+                    "email": "contact@gbyte.co",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "gbyte",
+                    "homepage": "https://www.drupal.org/user/2381352"
+                }
+            ],
+            "description": "Creates a standard conform hreflang XML sitemap of the site content and provides a framework for developing other sitemap types.",
+            "homepage": "https://drupal.org/project/simple_sitemap",
+            "support": {
+                "source": "https://cgit.drupalcode.org/simple_sitemap",
+                "issues": "https://drupal.org/project/issues/simple_sitemap",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/smart_date",
             "version": "3.1.0",
             "source": {
@@ -5718,7 +5883,8 @@
             "type": "drupal-module",
             "extra": {
                 "patches_applied": {
-                    "3148135 - D9 readiness": "https://www.drupal.org/files/issues/2020-11-17/automated-d9-compatibility-fixes-3148135-5.patch"
+                    "3148135 - D9 readiness": "https://www.drupal.org/files/issues/2020-11-17/automated-d9-compatibility-fixes-3148135-5.patch",
+                    "3163830 - Fatal Error: Call to undefined function drush_print()": "https://www.drupal.org/files/issues/2020-08-06/migration_tools-drush-10-compatibility-13778991-3.patch"
                 }
             }
         },
@@ -7703,11 +7869,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.2.6",
+            "version": "0.2.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "6a77e9765c2be45fcddb1e4c58abdfbd4192f441"
+                "reference": "c12c727b8a92e196b4b679e5c07be1ca8ada26c8"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -7719,10 +7885,11 @@
                 "drupal/auto_entitylabel": "^3.0@beta",
                 "drupal/components": "^2.0",
                 "drupal/content_moderation_notifications": "^3.2",
-                "drupal/core-recommended": "^9",
+                "drupal/core-recommended": "^9.0",
                 "drupal/easy_breadcrumb": "^1.13",
                 "drupal/extlink": "^1.5",
                 "drupal/features": "^3.11",
+                "drupal/google_tag": "^1.4",
                 "drupal/jsonapi_extras": "^3.16",
                 "drupal/language_cookie": "1.x-dev",
                 "drupal/language_neutral_aliases": "^3.0",
@@ -7730,6 +7897,7 @@
                 "drupal/layout_builder_restrictions": "^2.7",
                 "drupal/media_library_theme_reset": "^1.0",
                 "drupal/menu_block": "1.x-dev",
+                "drupal/metatag": "^1.14",
                 "drupal/migrate_plus": "^5.1",
                 "drupal/migrate_tools": "^5.0",
                 "drupal/moderated_content_bulk_publish": "^2.0",
@@ -7746,6 +7914,7 @@
                 "drupal/scheduled_transitions": "^2.0",
                 "drupal/search_api": "^1.18",
                 "drupal/simple_oauth": "^4.5",
+                "drupal/simple_sitemap": "^3.8",
                 "drupal/smart_date": "^3.0",
                 "drupal/svg_image": "^1.14",
                 "drupal/token": "^1.7",
@@ -7842,7 +8011,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-12-01T20:14:42+00:00"
+            "time": "2020-12-03T16:09:34+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -7950,11 +8119,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.2.8",
+            "version": "0.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "0c20c03b8db89b28ac5b826e928279b88a60b53f"
+                "reference": "fe46141149454316b1a0ceee313e3958a21e1138"
             },
             "type": "pattern-lab",
             "license": [
@@ -7968,7 +8137,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-12-01T19:42:12+00:00"
+            "time": "2020-12-03T15:57:14+00:00"
         },
         {
             "name": "symfony-cmf/routing",
