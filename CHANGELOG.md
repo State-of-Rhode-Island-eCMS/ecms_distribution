@@ -18,9 +18,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- Fixed deployment error due to https redirect and CLI conflict.
 
 ### Security
+
+## [0.2.9] - 2020-12-03
+### Fixed
+- Fixed deployment error due to https redirect and CLI conflict.
 
 ## [0.2.8] - 2020-12-03
 ### Added
@@ -158,7 +161,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.9...HEAD
+[0.2.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.8...0.2.9
 [0.2.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.7...0.2.8
 [0.2.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.6...0.2.7
 [0.2.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.5...0.2.6
