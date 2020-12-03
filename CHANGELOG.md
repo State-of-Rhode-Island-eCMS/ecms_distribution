@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- Fixed deployment error due to https redirect and CLI conflict.
 
 ### Security
 
