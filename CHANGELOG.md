@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-158: Force HTTPS on production environment.
 
 ### Changed
 
@@ -21,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.2.8] - 2020-12-03
+### Added
+- RIG-158: Force HTTPS on production environment.
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.2.9.
+- RIG-6: Updated ecms_profile to 0.2.7.
 
 ## [0.2.7] - 2020-12-01
 ### Changed
