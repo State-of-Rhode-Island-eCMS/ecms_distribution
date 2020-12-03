@@ -19,8 +19,10 @@ function isSecure(): bool {
 
 // Redirect to the secure version.
 if (($_ENV['AH_SITE_ENVIRONMENT'] === "01live" || $_ENV['AH_SITE_ENVIRONMENT'] === "01dev") && !isSecure()) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-  exit();
+  if (PHP_SAPI !== 'cli') {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+    exit();
+  }
 }
 
