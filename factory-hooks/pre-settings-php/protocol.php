@@ -8,8 +8,7 @@ declare(strict_types = 1);
  */
 function isSecure(): bool {
   return
-    (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' && $_SERVER['HTTPS'] !== 'OFF')
-    || $_SERVER['SERVER_PORT'] == 443;
+    (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on');
 }
 
 // Redirect to the secure version.
