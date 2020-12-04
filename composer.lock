@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68f327ace3618263188386bfa829033e",
+    "content-hash": "5657710eb26047f196192a8645fb9ee5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7869,11 +7869,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.2.7",
+            "version": "0.2.8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "c12c727b8a92e196b4b679e5c07be1ca8ada26c8"
+                "reference": "d05f88823dbca5401dcf2f48d48c6d9d502b851d"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8011,7 +8011,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-12-03T16:09:34+00:00"
+            "time": "2020-12-04T16:44:28+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -8119,11 +8119,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.2.9",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "fe46141149454316b1a0ceee313e3958a21e1138"
+                "reference": "6d3ed22570c19264b285b547cdd056558547f900"
             },
             "type": "pattern-lab",
             "license": [
@@ -8137,7 +8137,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-12-03T15:57:14+00:00"
+            "time": "2020-12-04T15:34:17+00:00"
         },
         {
             "name": "symfony-cmf/routing",
