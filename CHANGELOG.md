@@ -19,6 +19,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIG-165: Unable to install a new site.
 
 ### Security
 
