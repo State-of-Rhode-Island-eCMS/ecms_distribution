@@ -12,16 +12,23 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIG-6: Added Drupal recommended .htaccess to config/default/ folder.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
-- RIG-165: Unable to install a new site.
 
 ### Security
+
+## [0.3.1] - 2020-12-08
+### Changed
+- RIG-6: Added Drupal recommended .htaccess to config/default/ folder.
+- RIG-6: Updated ecms_patternlab to 0.3.1.
+- RIG-6: Updated ecms_profile to 0.2.9.
+
+### Fixed
+- RIG-165: Unable to install a new site.
 
 ## [0.3.0] - 2020-12-04
 ### Changed
@@ -168,7 +175,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.1...HEAD
+[0.3.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.9...0.3.0
 [0.2.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.8...0.2.9
 [0.2.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.2.7...0.2.8
