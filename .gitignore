@@ -12,6 +12,7 @@
 !/docroot/sites/default/settings.php
 
 /config/**/.htaccess
+!/config/default/.htaccess
 
 # Drush
 /drush/contrib
