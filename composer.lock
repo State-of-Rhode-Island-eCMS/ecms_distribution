@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "926512fb1b154128080af14f79f9b3c9",
+    "content-hash": "1a973a357fa638186ac416965ecfd813",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1565,6 +1565,63 @@
                 "nested package"
             ],
             "time": "2020-11-14T20:28:03+00:00"
+        },
+        {
+            "name": "drupal/acquia_purge",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/acquia_purge.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/acquia_purge-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "6e4b819262f5ed82fa1bfd533cd7a35b70242e9b"
+            },
+            "require": {
+                "drupal/core": "^8.8.6 || ^9",
+                "drupal/purge": "^3.0.0",
+                "php": ">=7.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1590768773",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Acquia",
+                    "homepage": "http://www.acquia.com"
+                },
+                {
+                    "name": "anavarre",
+                    "homepage": "https://www.drupal.org/user/796160"
+                },
+                {
+                    "name": "nielsvm",
+                    "homepage": "https://www.drupal.org/user/163285"
+                }
+            ],
+            "description": "Top-notch cache invalidation on Acquia Cloud!",
+            "homepage": "https://www.drupal.org/project/acquia_purge",
+            "support": {
+                "source": "https://git.drupalcode.org/project/acquia_purge"
+            }
         },
         {
             "name": "drupal/acsf",
@@ -4927,6 +4984,62 @@
             }
         },
         {
+            "name": "drupal/purge",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/purge.git",
+                "reference": "8.x-3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "e7113e9927dbdbbd5c2f4edc2649a14676e14f34"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "php": ">=7.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1590744318",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-3.x": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Niels van Mourik",
+                    "homepage": "http://www.nielsvm.org"
+                },
+                {
+                    "name": "djbobbydrake",
+                    "homepage": "https://www.drupal.org/user/336378"
+                },
+                {
+                    "name": "nielsvm",
+                    "homepage": "https://www.drupal.org/user/163285"
+                }
+            ],
+            "description": "Provides a generic external cache invalidation API and queue service.",
+            "homepage": "https://www.drupal.org/project/purge",
+            "support": {
+                "source": "https://git.drupalcode.org/project/purge"
+            }
+        },
+        {
             "name": "drupal/rabbit_hole",
             "version": "1.0.0-beta7",
             "source": {
@@ -7919,15 +8032,16 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.2.9",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "3371a6f1a28fbd695545ee93be33fc559152f87b"
+                "reference": "4c447130509307c1e8b00228b284240fddca4daa"
             },
             "require": {
                 "composer/installers": "^1.9",
                 "cweagans/composer-patches": "^1.6",
+                "drupal/acquia_purge": "^1.1",
                 "drupal/acsf": "^2.67",
                 "drupal/address": "^1.8",
                 "drupal/admin_toolbar": "^2.3",
@@ -8002,7 +8116,8 @@
                         "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch",
                         "3083051 - Remove tabledrag.js replacement when core issues are resolved": "https://www.drupal.org/files/issues/2020-10-02/3083051-21.patch",
                         "1832818 - Allow a queue item to be postponed": "https://www.drupal.org/files/issues/2020-03-24/1832818.80-requeue.patch",
-                        "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2019-06-24/2259567-113_0.patch"
+                        "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2019-06-24/2259567-113_0.patch",
+                        "3020876 - Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-09-25/contextual_links_with_LB-3020876-38.patch"
                     },
                     "drupal/openid_connect_windows_aad": {
                         "3169996 - Incorrect configuration schema file": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-schema-update-3169996-3.patch"
@@ -8062,7 +8177,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-12-08T19:14:17+00:00"
+            "time": "2020-12-10T20:36:00+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -8170,11 +8285,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "26f7a0d46bbf054f8e81be981fc06cce3d4ba1e4"
+                "reference": "4bcc339861b293a4de42073d7122591896528416"
             },
             "type": "pattern-lab",
             "license": [
@@ -8188,7 +8303,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-12-08T18:42:23+00:00"
+            "time": "2020-12-10T19:28:28+00:00"
         },
         {
             "name": "symfony-cmf/routing",
