@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a973a357fa638186ac416965ecfd813",
+    "content-hash": "c4ff17cee558c3f871c4d9436d27b345",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2596,7 +2596,8 @@
                     "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch",
                     "3083051 - Remove tabledrag.js replacement when core issues are resolved": "https://www.drupal.org/files/issues/2020-10-02/3083051-21.patch",
                     "1832818 - Allow a queue item to be postponed": "https://www.drupal.org/files/issues/2020-03-24/1832818.80-requeue.patch",
-                    "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2019-06-24/2259567-113_0.patch"
+                    "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2019-06-24/2259567-113_0.patch",
+                    "3020876 - Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-09-25/contextual_links_with_LB-3020876-38.patch"
                 }
             },
             "autoload": {
@@ -8032,11 +8033,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "4c447130509307c1e8b00228b284240fddca4daa"
+                "reference": "30cd05175aec5d63d07dcf87ff6682a18aa03468"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8177,7 +8178,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-12-10T20:36:00+00:00"
+            "time": "2020-12-11T16:51:04+00:00"
         },
         {
             "name": "simshaun/recurr",
@@ -8285,11 +8286,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "4bcc339861b293a4de42073d7122591896528416"
+                "reference": "08809701f1d494814f9e76a99ba41a090fc7ec35"
             },
             "type": "pattern-lab",
             "license": [
@@ -8303,7 +8304,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-12-10T19:28:28+00:00"
+            "time": "2020-12-11T16:43:55+00:00"
         },
         {
             "name": "symfony-cmf/routing",
