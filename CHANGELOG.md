@@ -23,7 +23,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [0.3.3] - 2020-12-11
 ### Changed
-- RIG-6: Updated ecms_patternlab to 0.3.3.
+- RIG-6: Updated ecms_patternlab to 0.3.4.
 - RIG-6: Updated ecms_profile to 0.3.1.
 
 ## [0.3.2] - 2020-12-10
