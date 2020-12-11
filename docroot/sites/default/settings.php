@@ -7,6 +7,8 @@ if ($_acsf_infrastructure === 'acsf-infrastructure') {
 }
 // ===== Added by acsf-init, please do not delete. Section end. =====
 
+use Drupal\Core\Installer\InstallerKernel;
+
 /**
  * Load local development override configuration, if available.
  *
@@ -72,9 +74,9 @@ if (getenv('LANDO_INFO')) {
   if ($memcache_module_is_present && ($memcache_exists || $memcached_exists)) {
     $settings['memcache']['servers'] = ['cache:11211' => 'default'];
     $settings['memcache']['bins'] = ['default' => 'default'];
-    $settings['memcache']['key_prefix'] = 'leicageosystems_';
+    $settings['memcache']['key_prefix'] = 'ecms_';
 
-    if (!drupal_installation_attempted()) {
+    if (!InstallerKernel::installationAttempted()) {
       $settings['cache']['default'] = 'cache.backend.memcache';
     }
   }
