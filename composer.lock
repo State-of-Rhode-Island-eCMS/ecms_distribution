@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93907010022b7c5807ab65e54c2c6c0b",
+    "content-hash": "6a31342068361639611d51532b04d629",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8033,11 +8033,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "30cd05175aec5d63d07dcf87ff6682a18aa03468"
+                "reference": "af29ffda015e02203d2fc9f57dd5dc18d2286737"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8178,7 +8178,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-12-11T16:51:04+00:00"
+            "time": "2020-12-12T15:58:34+00:00"
         },
         {
             "name": "simshaun/recurr",
