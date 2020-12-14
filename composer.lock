@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc40968e67226bb8ca7386d6cca79ab7",
+    "content-hash": "a1e08345ba0480db9f3b72d7697cf238",
     "packages": [
         {
             "name": "algolia/places",
@@ -4125,6 +4125,82 @@
             "homepage": "https://www.drupal.org/project/media_library_theme_reset",
             "support": {
                 "source": "https://git.drupalcode.org/project/media_library_theme_reset"
+            }
+        },
+        {
+            "name": "drupal/memcache",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/memcache.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "1d9876763c7ef04a9bba698ddcadbe708037fed2"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1601053267",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-2.x": "2.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabianx",
+                    "homepage": "https://www.drupal.org/user/693738"
+                },
+                {
+                    "name": "Jeremy",
+                    "homepage": "https://www.drupal.org/user/409"
+                },
+                {
+                    "name": "bdragon",
+                    "homepage": "https://www.drupal.org/user/53081"
+                },
+                {
+                    "name": "catch",
+                    "homepage": "https://www.drupal.org/user/35733"
+                },
+                {
+                    "name": "damiankloip",
+                    "homepage": "https://www.drupal.org/user/1037976"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "jvandyk",
+                    "homepage": "https://www.drupal.org/user/2375"
+                },
+                {
+                    "name": "robertDouglass",
+                    "homepage": "https://www.drupal.org/user/5449"
+                }
+            ],
+            "description": "High performance integration with memcache.",
+            "homepage": "http://drupal.org/project/memcache",
+            "support": {
+                "source": "https://git.drupalcode.org/project/memcache",
+                "issues": "https://www.drupal.org/project/issues/memcache"
             }
         },
         {
@@ -8348,11 +8424,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.3.3",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "d843ea9ec1265083b0a24fccccc4835e6dc44414"
+                "reference": "dcd9627bb829eddfe8279547e54b1cfc3930356c"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8376,6 +8452,7 @@
                 "drupal/layout_builder_modal": "^1.1",
                 "drupal/layout_builder_restrictions": "^2.7",
                 "drupal/media_library_theme_reset": "^1.0",
+                "drupal/memcache": "^2.2",
                 "drupal/menu_block": "1.x-dev",
                 "drupal/metatag": "^1.14",
                 "drupal/migrate_plus": "^5.1",
@@ -8493,7 +8570,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2020-12-14T15:53:38+00:00"
+            "time": "2020-12-14T22:21:24+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -8616,11 +8693,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.3.6",
+            "version": "0.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "2de924b55b51a66ed938a012cb93b72803e9c8c4"
+                "reference": "ded4b25a89e9df407d97d5236520737c029ebc11"
             },
             "type": "pattern-lab",
             "license": [
@@ -8634,7 +8711,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2020-12-14T16:38:26+00:00"
+            "time": "2020-12-14T20:33:07+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
