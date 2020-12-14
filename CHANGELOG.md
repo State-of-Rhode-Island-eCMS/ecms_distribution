@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-171: Add Acquia memcache PHP script to post-settings factory hooks.
 
 ### Changed
 
