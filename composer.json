@@ -80,7 +80,8 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "rhodeislandecms/ecms_profile": "0.3.2",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.3.4",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "wikimedia/composer-merge-plugin": "dev-master"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -124,7 +125,19 @@
                 "web-root": "docroot"
             }
         },
-        "enable-patching": "true"
+        "enable-patching": "true",
+        "merge-plugin": {
+            "require": [
+                "docroot/modules/contrib/webform/composer.libraries.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": false
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^8",
