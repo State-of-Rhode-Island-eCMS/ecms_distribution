@@ -18,9 +18,16 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIG-185: Added the webform library dependencies.
 
 ### Security
+
+## [0.3.5] - 2020-12-14
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.3.5.
+- RIG-6: Updated ecms_profile to 0.3.3.
+
+### Fixed
+- RIG-185: Added the webform library dependencies.
 
 ## [0.3.4] - 2020-12-12
 ### Changed
@@ -190,7 +197,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.5...HEAD
+[0.3.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.4...0.3.5
 [0.3.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.3...0.3.4
 [0.3.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.2...0.3.3
 [0.3.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.1...0.3.2
