@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-171: Add Acquia memcache PHP script to post-settings factory hooks.
 
 ### Changed
 
@@ -21,6 +20,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.3.7] - 2020-12-14
+### Added
+- RIG-171: Add Acquia memcache PHP script to post-settings factory hooks.
+
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.3.7.
+- RIG-6: Updated ecms_profile to 0.3.4.
 
 ## [0.3.6] - 2020-12-14
 ### Changed
