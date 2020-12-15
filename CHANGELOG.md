@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.3.8] - 2020-12-15
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.3.8.
+- RIG-6: Updated ecms_profile to 0.3.5.
+
 ## [0.3.7] - 2020-12-14
 ### Added
 - RIG-171: Add Acquia memcache PHP script to post-settings factory hooks.
@@ -209,7 +214,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.8...HEAD
+[0.3.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.7...0.3.8
+[0.3.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.6...0.3.7
 [0.3.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.5...0.3.6
 [0.3.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.4...0.3.5
 [0.3.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/0.3.3...0.3.4
