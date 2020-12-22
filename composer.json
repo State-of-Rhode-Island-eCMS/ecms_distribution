@@ -79,7 +79,7 @@
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "rhodeislandecms/ecms_profile": "0.3.9",
-        "state-of-rhode-island-ecms/ecms_patternlab": "0.3.9",
+        "state-of-rhode-island-ecms/ecms_patternlab": "0.4.0",
         "wikimedia/composer-merge-plugin": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
