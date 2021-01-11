@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da9a410789468470d5216c45990e7730",
+    "content-hash": "7dedc18ace04103f3cbd76067920ab3c",
     "packages": [
         {
             "name": "algolia/places",
@@ -2717,7 +2717,9 @@
                     "3083051 - Remove tabledrag.js replacement when core issues are resolved": "https://www.drupal.org/files/issues/2020-10-02/3083051-21.patch",
                     "1832818 - Allow a queue item to be postponed": "https://www.drupal.org/files/issues/2020-03-24/1832818.80-requeue.patch",
                     "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2019-06-24/2259567-113_0.patch",
-                    "3020876 - Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-09-25/contextual_links_with_LB-3020876-38.patch"
+                    "3020876 - Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-09-25/contextual_links_with_LB-3020876-38.patch",
+                    "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
+                    "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch"
                 }
             },
             "autoload": {
@@ -3510,6 +3512,68 @@
             "homepage": "https://www.drupal.org/project/google_tag",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_tag"
+            }
+        },
+        {
+            "name": "drupal/honeypot",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/honeypot.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/honeypot-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c29d248c0fdcdf733a31b9214355acfa73716632"
+            },
+            "require": {
+                "drupal/core": "^8.0 || ^9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1597855128",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "homepage": "https://www.drupal.org/user/213194",
+                    "email": "geerlingguy@mac.com"
+                },
+                {
+                    "name": "geerlingguy",
+                    "homepage": "https://www.drupal.org/user/389011"
+                },
+                {
+                    "name": "vijaycs85",
+                    "homepage": "https://www.drupal.org/user/93488"
+                }
+            ],
+            "description": "Mitigates spam form submissions using the honeypot method.",
+            "homepage": "https://www.drupal.org/project/honeypot",
+            "keywords": [
+                "deterrent",
+                "form",
+                "honeypot",
+                "honeytrap",
+                "php",
+                "spam"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/honeypot",
+                "issues": "https://www.drupal.org/project/issues/honeypot"
             }
         },
         {
@@ -8424,11 +8488,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "7694f48e0407de8e075e8771d979e92c709c2fc1"
+                "reference": "32b48a1dc7cdfbbd1df4a281a46d78326fb64593"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8446,6 +8510,7 @@
                 "drupal/extlink": "^1.5",
                 "drupal/features": "^3.11",
                 "drupal/google_tag": "^1.4",
+                "drupal/honeypot": "^2.0",
                 "drupal/jsonapi_extras": "^3.16",
                 "drupal/language_cookie": "1.x-dev",
                 "drupal/language_neutral_aliases": "^3.0",
@@ -8572,7 +8637,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-01-06T16:18:13+00:00"
+            "time": "2021-01-11T20:21:54+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -8695,11 +8760,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "40a58d755fff21c1694e62c9ca389f27ea461725"
+                "reference": "724a397d98ed8a36fae74292cf8150c22e98f054"
             },
             "type": "pattern-lab",
             "license": [
@@ -8713,7 +8778,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-01-05T20:30:17+00:00"
+            "time": "2021-01-11T19:35:39+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
