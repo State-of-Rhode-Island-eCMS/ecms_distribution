@@ -78,8 +78,8 @@
         "drupal/mysql56": "^1.0",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.4.3",
-        "state-of-rhode-island-ecms/ecms_patternlab": "0.4.3",
+        "rhodeislandecms/ecms_profile": "0.4.4",
+        "state-of-rhode-island-ecms/ecms_patternlab": "0.4.4",
         "wikimedia/composer-merge-plugin": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
