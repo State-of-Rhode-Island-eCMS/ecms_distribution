@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49dd6c09f46a85ae38e3bb751e6b6072",
+    "content-hash": "862d898a0f230a554f174396fd4934f4",
     "packages": [
         {
             "name": "algolia/places",
@@ -2719,7 +2719,8 @@
                     "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2019-06-24/2259567-113_0.patch",
                     "3020876 - Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-09-25/contextual_links_with_LB-3020876-38.patch",
                     "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
-                    "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch"
+                    "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
+                    "2958588 - Off-canvas style resets are overriding styles (especially SVGs) in Safari and Firefox resulting in display issues": "https://www.drupal.org/files/issues/2021-01-06/off-canvas-style-resets-2958588-13.patch"
                 }
             },
             "autoload": {
@@ -8488,11 +8489,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.4.3",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "a2b8f5c97ead0f079f6b0c6e45ba45f71c4da719"
+                "reference": "201a1ae5a73ed190d4a45a4ff6871c0ba5f3acf8"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8638,7 +8639,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-01-15T21:23:31+00:00"
+            "time": "2021-01-19T17:49:19+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -8761,11 +8762,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.4.3",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "f0002d68f7bd69d10105a647702a0fb8d62c91ba"
+                "reference": "77e64c4f5d98fc257346d7e596da1334895359f9"
             },
             "type": "pattern-lab",
             "license": [
@@ -8779,7 +8780,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-01-15T20:58:28+00:00"
+            "time": "2021-01-19T17:44:57+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
