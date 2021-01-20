@@ -18,7 +18,7 @@ For non-admin users, you must contact the RI DOIT to establish the new
 Active Directory groups and domains, as outlined in the distribution
 documentation.
 
-## SSL Setup
+## Let's Encrypt - Temporary SSL Setup
 Create a temporary certificate for the new production domain using
 Let's Encrypt. The [Acquia Let's Encrypt] documentation outlines
 this process, but here are specific steps to take that avoid the
@@ -46,11 +46,10 @@ Congratulations! Your certificate and chain have been saved at:
    sudo vi /etc/letsencrypt/live/{DOMAIN}/privkey.pem
    ```
 
- 6. Install the new certificate using the [Acquia Cloud UI SSL Interface]
+ 6. Install the new certificate using the Acquia Cloud Dashboard SSL Interface
  7. Follow Acquia's documentation to [activate the new certificate]
  8. Delete the media item and redirect from Drupal
 
 [Acquia Let's Encrypt]: https://support.acquia.com/hc/en-us/articles/360009491013-Using-Let-s-Encrypt-SSL-on-Acquia-Cloud
 [Install certbot]: https://certbot.eff.org/lets-encrypt/osx-other
-[Acquia Cloud UI SSL Interface]: https://cloud.acquia.com/a/environments/5235-0e6d7fd2-1e89-435f-ab6a-f6dd183a7c7b/domain-management/ssl
 [activate the new certificate]: https://docs.acquia.com/cloud-platform/manage/ssl/cert/#installing-an-ssl-certificate-not-based-on-an-acquia-generated-csr
