@@ -40,12 +40,13 @@ IMPORTANT NOTES:
 Congratulations! Your certificate and chain have been saved at:
    /etc/letsencrypt/live/governor.riecms.acsitefactory.com/fullchain.pem
 ```
- 5. To access the certificate on your local machine, run the command (with {DOMAIN} replaced):
+ 5. To access the certificate on your local machine, run the commands (with {DOMAIN} replaced):
    ```shell
    sudo vi /etc/letsencrypt/live/{DOMAIN}/fullchain.pem
    sudo vi /etc/letsencrypt/live/{DOMAIN}/privkey.pem
    ```
-
+ *Note that the "fullchain.pem" will include 2 certificates, the primary
+and the intermediate (in that order).
  6. Install the new certificate using the Acquia Cloud Dashboard SSL Interface
  7. Follow Acquia's documentation to [activate the new certificate]
  8. Delete the media item and redirect from Drupal
