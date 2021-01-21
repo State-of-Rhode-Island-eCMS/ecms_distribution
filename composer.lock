@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "862d898a0f230a554f174396fd4934f4",
+    "content-hash": "6f798ac2007a5599c386c8487a52dd66",
     "packages": [
         {
             "name": "algolia/places",
@@ -8489,11 +8489,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.4.4",
+            "version": "0.4.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "201a1ae5a73ed190d4a45a4ff6871c0ba5f3acf8"
+                "reference": "89aebf5bdab0e45d23abb0b03d691a6b8301b737"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8639,7 +8639,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-01-19T17:49:19+00:00"
+            "time": "2021-01-21T17:58:47+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -8762,11 +8762,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.4.4",
+            "version": "0.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "77e64c4f5d98fc257346d7e596da1334895359f9"
+                "reference": "c3262dcf7f936d4566cf0d16c5760dcef6f99a5d"
             },
             "type": "pattern-lab",
             "license": [
@@ -8780,7 +8780,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-01-19T17:44:57+00:00"
+            "time": "2021-01-21T17:46:18+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
@@ -11218,12 +11218,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
