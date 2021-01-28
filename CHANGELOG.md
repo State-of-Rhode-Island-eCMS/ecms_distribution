@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIG-243: Updated core to 9.0.11 (SA-CORE-2021-001).
 
 ## [1.0.9] - 2021-01-19
 ### Changed
