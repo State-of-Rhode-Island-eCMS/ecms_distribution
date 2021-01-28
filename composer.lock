@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18b4f0750eb0b58fcec5ab0be5597ac7",
+    "content-hash": "4e1dddcd8501fd730580834ac6dd7321",
     "packages": [
         {
             "name": "algolia/places",
@@ -8499,11 +8499,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.4.5",
+            "version": "0.4.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "89aebf5bdab0e45d23abb0b03d691a6b8301b737"
+                "reference": "562beb1299103065f2ab2c3ead430a1bdc81e031"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -8649,7 +8649,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-01-21T17:58:47+00:00"
+            "time": "2021-01-28T21:44:53+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -8772,11 +8772,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.4.5",
+            "version": "0.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "c3262dcf7f936d4566cf0d16c5760dcef6f99a5d"
+                "reference": "a090e6719f3963301692a6ee040a3f35a350ce18"
             },
             "type": "pattern-lab",
             "license": [
@@ -8790,7 +8790,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-01-21T17:46:18+00:00"
+            "time": "2021-01-28T21:36:21+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
