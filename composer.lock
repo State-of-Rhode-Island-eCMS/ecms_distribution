@@ -9379,7 +9379,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "1aa59aeefc66c2c9ad5717b5d9252862f3b81845"
+                "reference": "7d443fad5b5a463ba98ff7308a26cc4b675d46bb"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -9428,7 +9428,7 @@
                 "drupal/search_api": "^1.18",
                 "drupal/simple_oauth": "^4.5",
                 "drupal/simple_sitemap": "^3.8",
-                "drupal/smart_date": "^3.0",
+                "drupal/smart_date": "^3.1",
                 "drupal/svg_image": "^1.14",
                 "drupal/token": "^1.7",
                 "drupal/twig_tweak": "^2.8",
@@ -9528,7 +9528,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-02-09T21:01:24+00:00"
+            "time": "2021-02-10T00:20:38+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
