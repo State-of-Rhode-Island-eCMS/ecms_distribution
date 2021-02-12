@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-222: Adds Acquia Solr Search settings.
 
 ### Changed
 
@@ -21,6 +20,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.1.1] - 2021-02-12
+### Added
+- RIG-222: Adds Acquia Solr Search settings.
+
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.4.7.
+- RIG-6: Updated ecms_profile to 0.4.7.
 
 ## [1.1.0] - 2021-01-28
 ### Changed
@@ -273,7 +280,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.1...HEAD
+[1.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.0.9...1.1.0
 [1.0.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.0.8...1.0.9
 [1.0.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.0.7...1.0.8
