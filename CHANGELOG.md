@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.1.3] - 2021-02-17
+### Changed
+- RIG-6: Updated ecms_patternlab to 0.4.9.
+- RIG-6: Updated ecms_profile to 0.4.9.
+
 ## [1.1.2] - 2021-02-17
 ### Changed
 - RIG-6: Updated ecms_patternlab to 0.4.8.

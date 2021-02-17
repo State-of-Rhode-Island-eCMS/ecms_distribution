@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38d0e4e4c7cab2f64b43c4c0123eee25",
+    "content-hash": "bec29de50b8d9c1cb8c6f6ad37dbc7a4",
     "packages": [
         {
             "name": "algolia/places",
@@ -4460,6 +4460,73 @@
             "homepage": "https://www.drupal.org/project/layout_builder_restrictions",
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
+            }
+        },
+        {
+            "name": "drupal/media_library_form_element",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_library_form_element.git",
+                "reference": "2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_library_form_element-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "9d7782136526752cbddd2ecc98fcf1024da75e00"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.3",
+                    "datestamp": "1608021997",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kim Kennof",
+                    "homepage": "https://www.drupal.org/u/nightlife2008",
+                    "email": "kim.kennof@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "AUSY, a randstad company",
+                    "homepage": "https://www.ausy.be",
+                    "email": "info@ausy.be",
+                    "role": "Sponsor"
+                },
+                {
+                    "name": "nightlife2008",
+                    "homepage": "https://www.drupal.org/user/333515"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                }
+            ],
+            "description": "This module provides a Media Library Form API element to be used in all sorts of forms.",
+            "homepage": "https://www.drupal.org/project/media_library_form_element",
+            "keywords": [
+                "Drupal",
+                "Form API",
+                "Media",
+                "Media Library"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_library_form_element",
+                "issues": "https://www.drupal.org/project/issues/media_library_form_element"
             }
         },
         {
@@ -9375,11 +9442,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.4.8",
+            "version": "0.4.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "b5e38ec52763c209470a7ebde7d7a07bccd190a5"
+                "reference": "7a21dbe722c0eaa2b81e2daf5aeda2d00eae217f"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -9406,6 +9473,7 @@
                 "drupal/language_neutral_aliases": "^3.0",
                 "drupal/layout_builder_modal": "^1.1",
                 "drupal/layout_builder_restrictions": "^2.7",
+                "drupal/media_library_form_element": "^2.0",
                 "drupal/media_library_theme_reset": "^1.0",
                 "drupal/memcache": "^2.2",
                 "drupal/menu_block": "1.x-dev",
@@ -9528,7 +9596,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-02-17T17:26:10+00:00"
+            "time": "2021-02-17T18:54:18+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -9710,11 +9778,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.4.8",
+            "version": "0.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "582032ea0c931d200008a13966320ce37b767051"
+                "reference": "582a9446fed43b146a2e69fb4627af61d3750bfa"
             },
             "type": "pattern-lab",
             "license": [
@@ -9728,7 +9796,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-02-17T17:26:31+00:00"
+            "time": "2021-02-17T18:54:04+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
