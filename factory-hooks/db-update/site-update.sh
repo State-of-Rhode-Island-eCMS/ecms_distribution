@@ -34,7 +34,7 @@ docroot="/var/www/html/$site.$env/docroot"
 DRUSH_CMD="drush10 --verbose --root=$docroot --uri=https://$domain"
 
 # Run `drush updatedb`.
-$DRUSH_CMD updatedb >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update.log
+$DRUSH_CMD updatedb --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update.log
 
 # Run `drush features:import:all`.
 $DRUSH_CMD features:import:all --bundle=ecms --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features.log
