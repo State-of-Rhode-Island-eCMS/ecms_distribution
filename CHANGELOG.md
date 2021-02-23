@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-6: Added mysql56-driver post-settings factory hook.
 
 ### Changed
 - RIG-6: Added `--yes` flag to updatedb command.
