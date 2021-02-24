@@ -17,6 +17,10 @@ use Composer\Autoload\ClassLoader;
  * default backend when installing Drupal.
  *
  * @see https://www.drupal.org/node/2766509
+ *
+ * To avoid ACSF site install issues, added PHP_SAPI and site-install check.
+ *
+ * @see https://support.acquia.com/hc/en-us/articles/360047676154-Site-Factory-installations-fail-when-memcache-is-included
  */
 
 if (getenv('AH_SITE_ENVIRONMENT') &&
@@ -24,7 +28,7 @@ if (getenv('AH_SITE_ENVIRONMENT') &&
   array_key_exists('servers', $settings['memcache']) &&
   !empty($settings['memcache']['servers']) &&
   !(PHP_SAPI === 'cli' && isset($_SERVER['argv']) &&
-  in_array('site-install',$_SERVER['argv']))
+  in_array('site-install', $_SERVER['argv']))
 ) {
 
   // Check for PHP Memcached libraries.
