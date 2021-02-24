@@ -22,7 +22,9 @@ use Composer\Autoload\ClassLoader;
 if (getenv('AH_SITE_ENVIRONMENT') &&
   array_key_exists('memcache', $settings) &&
   array_key_exists('servers', $settings['memcache']) &&
-  !empty($settings['memcache']['servers'])
+  !empty($settings['memcache']['servers']) &&
+  !(PHP_SAPI === 'cli' && isset($_SERVER['argv']) &&
+  in_array('site-install',$_SERVER['argv']))
 ) {
 
   // Check for PHP Memcached libraries.

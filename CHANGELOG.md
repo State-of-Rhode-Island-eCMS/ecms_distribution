@@ -12,7 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIG-6: Added `--yes` flag to updatedb command.
+- RIG-6: Added --yes flag to updatedb command.
+- RIG-6: Added conditions to disable memcache during site installs.
 
 ### Deprecated
 
