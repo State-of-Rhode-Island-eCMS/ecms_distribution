@@ -78,7 +78,7 @@
         "drupal/mysql56": "^1.0",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.5.0",
+        "rhodeislandecms/ecms_profile": "dev-RIG-271/update-solr-search-module",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.4.9",
         "wikimedia/composer-merge-plugin": "dev-master",
         "zaporylie/composer-drupal-optimizations": "^1.0"
