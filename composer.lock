@@ -9478,7 +9478,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "686e4a8a9b339112607ff24eff43b1c99e7156fb"
+                "reference": "9ffd6be3177a0de51b938fa2adef0c40a9c9e87a"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -9577,9 +9577,6 @@
                     "drupal/publishcontent": {
                         "3170248 - Configuration Schema Errors": "https://www.drupal.org/files/issues/2020-09-10/publishcontent-schema-3170248-2.patch"
                     },
-                    "drupal/content_moderation_notifications": {
-                        "3170503 - Core requirement error during Functional test": "https://www.drupal.org/files/issues/2020-09-11/3170503-2.patch"
-                    },
                     "drupal/redirect": {
                         "3082364 - Fix the migration of the status_code redirect property: status code of NULL or 0 causes exception": "https://www.drupal.org/files/issues/2020-07-28/redirect-fix_status_code_property_migration-3082364-13.patch"
                     },
@@ -9629,7 +9626,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-02-27T22:18:26+00:00"
+            "time": "2021-02-28T15:54:34+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
