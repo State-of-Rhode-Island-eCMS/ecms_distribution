@@ -12,8 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIG-6: Added --yes flag to updatedb command.
-- RIG-6: Added conditions to disable memcache during site installs.
 
 ### Deprecated
 
@@ -22,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.1.5] - 2021-03-04
+### Changed
+- RIG-6: Added --yes flag to updatedb command.
+- RIG-6: Added conditions to disable memcache during site installs.
+- RIG-6: Updated ecms_patternlab to 0.5.0.
+- RIG-6: Updated ecms_profile to 0.5.1.
 
 ## [1.1.4] - 2021-02-18
 ### Changed
@@ -296,7 +301,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.5...HEAD
+[1.1.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.3...1.1.4
 [1.1.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.2...1.1.3
 [1.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.1...1.1.2
