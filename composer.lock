@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "662d1e8abfc968db802af25f5572162f",
+    "content-hash": "266d65b1adab1f16efcbd039489b817e",
     "packages": [
         {
             "name": "algolia/places",
@@ -2624,10 +2624,6 @@
                 {
                     "name": "RenatoG",
                     "homepage": "https://www.drupal.org/user/3326031"
-                },
-                {
-                    "name": "VladimirAus",
-                    "homepage": "https://www.drupal.org/user/673120"
                 },
                 {
                     "name": "bforchhammer",
@@ -6445,7 +6441,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.18",
-                    "datestamp": "1605204423",
+                    "datestamp": "1603359374",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7054,7 +7050,7 @@
             "extra": {
                 "drupal": {
                     "version": "6.0.0-alpha21",
-                    "datestamp": "1614791851",
+                    "datestamp": "1604531929",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -10371,11 +10367,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.5.1",
+            "version": "0.5.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "1409b7f4775cf32513644495bbcd60b1d69a03dc"
+                "reference": "b601b5f5df39a0ffc2fc54dfbed5ecc82b7e9552"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10529,7 +10525,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-03-03T22:15:18+00:00"
+            "time": "2021-03-04T16:32:22+00:00"
         },
         {
             "name": "sibyx/phpgpx",
