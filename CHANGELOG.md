@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- SA-CONTRIB-2021-004: Webform - Moderately critical - Access bypass.
 
 ## [1.1.6] - 2021-03-04
 - RIG-6: Updated ecms_profile to 0.5.2.
