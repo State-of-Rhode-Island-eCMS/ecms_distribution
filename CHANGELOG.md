@@ -12,13 +12,20 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-6: Added unique log filenames for drush-update and drush-features.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.1.7] - 2021-03-10
+### Changed
+- RIGA-6: Added unique log filenames for drush-update and drush-features.
+- RIG-6: Updated ecms_patternlab to 0.5.1.
+- RIG-6: Updated ecms_profile to 0.5.3.
 
 ### Security
 - SA-CONTRIB-2021-004: Webform - Moderately critical - Access bypass.
@@ -306,7 +313,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.7...HEAD
+[1.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.6...1.1.7
 [1.1.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.3...1.1.4

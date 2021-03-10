@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "266d65b1adab1f16efcbd039489b817e",
+    "content-hash": "42cae46572b6b3c6a04fc1db9cddd9ef",
     "packages": [
         {
             "name": "algolia/places",
@@ -6994,6 +6994,50 @@
             }
         },
         {
+            "name": "drupal/views_ajax_get",
+            "version": "1.0.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_ajax_get.git",
+                "reference": "8.x-1.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_ajax_get-8.x-1.0-rc2.zip",
+                "reference": "8.x-1.0-rc2",
+                "shasum": "b3d890959cf1c39eededd8d2ac84b4600514a368"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-rc2",
+                    "datestamp": "1587732741",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Leon Kessler",
+                    "homepage": "https://www.drupal.org/user/595374"
+                }
+            ],
+            "description": "Overrides Views Ajax to work with GET instead of POST",
+            "homepage": "https://www.drupal.org/project/views_ajax_get",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_ajax_get"
+            }
+        },
+        {
             "name": "drupal/webform",
             "version": "6.0.2",
             "source": {
@@ -10371,11 +10415,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.5.2",
+            "version": "0.5.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "b601b5f5df39a0ffc2fc54dfbed5ecc82b7e9552"
+                "reference": "8f397a1160ef121a2c931cd162cda474dade144b"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10434,6 +10478,7 @@
                 "drupal/token": "^1.7",
                 "drupal/twig_tweak": "^2.8",
                 "drupal/twig_vardumper": "^3.0",
+                "drupal/views_ajax_get": "^1.0@RC",
                 "drupal/webform": "^6.0",
                 "drupal/webform_encrypt": "1.x-dev@dev",
                 "drupal_git/migrate_google_sheets": "1.0.0",
@@ -10529,7 +10574,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-03-04T16:32:22+00:00"
+            "time": "2021-03-10T18:44:11+00:00"
         },
         {
             "name": "sibyx/phpgpx",
@@ -10756,11 +10801,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "2178057e45685e571c16ee5ac4c034ffd0924fe7"
+                "reference": "c775e56ff5e5172534ebf92578a369110b750be4"
             },
             "type": "pattern-lab",
             "license": [
@@ -10774,7 +10819,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-03-03T22:03:57+00:00"
+            "time": "2021-03-10T18:54:50+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
