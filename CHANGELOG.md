@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-6: Added unique log filenames for drush-update and drush-features.
 
 ### Deprecated
 
