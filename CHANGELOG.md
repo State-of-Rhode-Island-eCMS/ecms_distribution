@@ -24,8 +24,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [1.1.7] - 2021-03-10
 ### Changed
 - RIGA-6: Added unique log filenames for drush-update and drush-features.
-- RIG-6: Updated ecms_patternlab to 0.5.1.
-- RIG-6: Updated ecms_profile to 0.5.3.
+- RIGA-6: Updated ecms_patternlab to 0.5.1.
+- RIGA-6: Updated ecms_profile to 0.5.3.
 
 ### Security
 - SA-CONTRIB-2021-004: Webform - Moderately critical - Access bypass.
