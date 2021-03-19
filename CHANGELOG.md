@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.1.8] - 2021-03-19
+### Changed
+- RIGA-6: Updated ecms_patternlab to 0.5.2.
+- RIGA-6: Updated ecms_profile to 0.5.4.
+
 ## [1.1.7] - 2021-03-10
 ### Changed
 - RIGA-6: Added unique log filenames for drush-update and drush-features.
@@ -313,7 +318,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.8...HEAD
+[1.1.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.7...1.1.8
 [1.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.6...1.1.7
 [1.1.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.4...1.1.5
