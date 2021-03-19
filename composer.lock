@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42cae46572b6b3c6a04fc1db9cddd9ef",
+    "content-hash": "9a12d99ac5701e20b606873d9ade562f",
     "packages": [
         {
             "name": "algolia/places",
@@ -5221,6 +5221,67 @@
             }
         },
         {
+            "name": "drupal/migrate_devel",
+            "version": "2.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_devel.git",
+                "reference": "8.x-2.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_devel-8.x-2.0-alpha2.zip",
+                "reference": "8.x-2.0-alpha2",
+                "shasum": "8ea8a10d8238c0a52abc7b12d688414e024999c8"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "conflict": {
+                "drush/drush": "<9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-alpha2",
+                    "datestamp": "1593367363",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Derimagia",
+                    "homepage": "https://www.drupal.org/user/819640"
+                },
+                {
+                    "name": "aczietlow",
+                    "homepage": "https://www.drupal.org/user/1616656"
+                },
+                {
+                    "name": "andrewmacpherson",
+                    "homepage": "https://www.drupal.org/user/265648"
+                }
+            ],
+            "description": "Migrate Development Tools",
+            "homepage": "https://www.drupal.org/project/migrate_devel",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_devel",
+                "issues": "https://www.drupal.org/project/issues/migrate_devel"
+            }
+        },
+        {
             "name": "drupal/migrate_plus",
             "version": "5.1.0",
             "source": {
@@ -10415,11 +10476,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.5.3",
+            "version": "0.5.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "8f397a1160ef121a2c931cd162cda474dade144b"
+                "reference": "c204e7c44adee947d3bb70011b1f719d7c145278"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10455,6 +10516,7 @@
                 "drupal/memcache": "^2.2",
                 "drupal/menu_block": "1.x-dev",
                 "drupal/metatag": "^1.14",
+                "drupal/migrate_devel": "^2.0",
                 "drupal/migrate_plus": "^5.1",
                 "drupal/migrate_tools": "^5.0",
                 "drupal/moderated_content_bulk_publish": "^2.0",
@@ -10574,7 +10636,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-03-10T18:44:11+00:00"
+            "time": "2021-03-19T14:47:14+00:00"
         },
         {
             "name": "sibyx/phpgpx",
@@ -10801,11 +10863,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.5.1",
+            "version": "0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "c775e56ff5e5172534ebf92578a369110b750be4"
+                "reference": "0327700109a2d132ce258fff25f5292f814d0649"
             },
             "type": "pattern-lab",
             "license": [
@@ -10819,7 +10881,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-03-10T18:54:50+00:00"
+            "time": "2021-03-19T14:55:13+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
