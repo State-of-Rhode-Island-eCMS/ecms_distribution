@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-50: Added .htaccess patch to redirect all www. requests.
 
 ### Changed
 
