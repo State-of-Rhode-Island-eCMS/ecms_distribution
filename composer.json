@@ -91,10 +91,12 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "patch -d docroot <patches/htaccess.patch"
         ],
         "post-update-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "patch -d docroot <patches/htaccess.patch"
         ],
         "test:php": [
             "vendor/bin/phpunit"
