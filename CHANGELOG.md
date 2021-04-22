@@ -20,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.2.2] - 2021-04-22
+### Changed
+- RIGA-6: Updated ecms_patternlab to 0.5.4.
+- RIGA-6: Updated ecms_profile to 0.5.7.
+
+### Security
 - RIGA-59: Update core: SA-CORE-2021-002.
 
 ## [1.2.1] - 2021-04-09
@@ -332,7 +339,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.2...HEAD
+[1.2.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.9...1.2.0
 [1.1.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.8...1.1.9
