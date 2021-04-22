@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-59: Update core: SA-CORE-2021-002.
 
 ## [1.2.1] - 2021-04-09
 ### Changed
