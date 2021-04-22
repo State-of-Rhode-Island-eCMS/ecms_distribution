@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-35: Update solr override settings.
 
 ### Deprecated
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.2.3] - 2021-04-22
+### Changed
+- RIGA-35: Update solr override settings.
 
 ## [1.2.2] - 2021-04-22
 ### Changed
@@ -340,7 +343,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.3...HEAD
+[1.2.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.1.9...1.2.0
