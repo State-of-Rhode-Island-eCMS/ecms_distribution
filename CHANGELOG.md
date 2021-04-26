@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.2.4] - 2021-04-26
+### Changed
+- RIGA-6: Updated ecms_patternlab to 0.5.5.
+
 ## [1.2.3] - 2021-04-22
 ### Changed
 - RIGA-35: Update solr override settings.
@@ -343,7 +347,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.4...HEAD
+[1.2.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.3...1.2.4
 [1.2.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.0...1.2.1
