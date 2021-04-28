@@ -1,6 +1,4 @@
-
-title: Site Search
-# Site Search
+## Site Search
 
 Site search is available in two optional methods, database site search
 and Solr search, driven by Acquia Search, using Solr 7. Each option
