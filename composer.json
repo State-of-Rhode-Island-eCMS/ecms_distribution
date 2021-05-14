@@ -96,8 +96,7 @@
         ],
         "post-update-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-            "patch -d docroot < patches/htaccess.patch",
-            "patch -p1 < patches/drupal-core-2259567-allow-svg.patch"
+            "patch -d docroot < patches/htaccess.patch"
         ],
         "test:php": [
             "vendor/bin/phpunit"
