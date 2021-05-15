@@ -1,7 +1,7 @@
-diff --git a/docroot/core/modules/system/src/Form/ThemeSettingsForm.php b/docroot/core/modules/system/src/Form/ThemeSettingsForm.php
+diff --git a/core/modules/system/src/Form/ThemeSettingsForm.php b/core/modules/system/src/Form/ThemeSettingsForm.php
 index e863c0f805..ab8c84dcf8 100644
---- a/docroot/core/modules/system/src/Form/ThemeSettingsForm.php
-+++ b/docroot/core/modules/system/src/Form/ThemeSettingsForm.php
+--- a/core/modules/system/src/Form/ThemeSettingsForm.php
++++ b/core/modules/system/src/Form/ThemeSettingsForm.php
 @@ -232,7 +232,9 @@ public function buildForm(array $form, FormStateInterface $form_state, $theme =
          '#maxlength' => 40,
          '#description' => t("If you don't have direct file access to the server, use this field to upload your logo."),
