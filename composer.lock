@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a958a6ff12bc714e8b7fe794e15f1b8a",
+    "content-hash": "a0651ce553df3433e200771d0da3a636",
     "packages": [
         {
             "name": "algolia/places",
@@ -6960,21 +6960,21 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "3.1.0",
+            "version": "3.3.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "3.1.0"
+                "reference": "3.3.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-3.1.0.zip",
-                "reference": "3.1.0",
-                "shasum": "1174954dbac358628e697a6d1eb531e1e7c5835b"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-3.3.0-rc1.zip",
+                "reference": "3.3.0-rc1",
+                "shasum": "6e6dd334c3f4299a90670c4d5d3dd12de4ec628d"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
-                "php": "^7.1",
+                "php": ">=7.1",
                 "simshaun/recurr": "^4"
             },
             "suggest": {
@@ -6983,11 +6983,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.0",
-                    "datestamp": "1605540528",
+                    "version": "3.3.0-rc1",
+                    "datestamp": "1620484276",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
                     }
                 }
             },
@@ -10852,11 +10857,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.5.8",
+            "version": "0.5.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "66ceeef0e0aa1785d88f0f68a99b74ac2e5de546"
+                "reference": "fed1fb4a769c358e07571b1522ec7ecd65167d85"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10911,7 +10916,7 @@
                 "drupal/search_api": "^1.18",
                 "drupal/simple_oauth": "^4.5",
                 "drupal/simple_sitemap": "^3.8",
-                "drupal/smart_date": "^3.1",
+                "drupal/smart_date": "^3.3",
                 "drupal/svg_image": "^1.14",
                 "drupal/token": "^1.7",
                 "drupal/twig_tweak": "^2.8",
@@ -10963,9 +10968,6 @@
                     "drupal/redirect": {
                         "3082364 - Fix the migration of the status_code redirect property: status code of NULL or 0 causes exception": "https://www.drupal.org/files/issues/2020-07-28/redirect-fix_status_code_property_migration-3082364-13.patch"
                     },
-                    "drupal/smart_date": {
-                        "3212990 - Hide the end date unless different hides the end date on all day": "https://www.drupal.org/files/issues/2021-05-08/smart_date-dont_hide_all_day_end-3212990-2.patch"
-                    },
                     "drupal/paragraphs": {
                         "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
                         "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch",
@@ -11013,7 +11015,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-05-20T16:02:51+00:00"
+            "time": "2021-05-20T17:00:22+00:00"
         },
         {
             "name": "sibyx/phpgpx",
@@ -11256,11 +11258,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.5.5",
+            "version": "0.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "795ab2a96f02897a424924214c3e0eccc306b3d1"
+                "reference": "40a5d707a0d0dbab28427fe00f33b1e776721bf4"
             },
             "type": "pattern-lab",
             "license": [
@@ -11274,7 +11276,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-04-26T16:34:19+00:00"
+            "time": "2021-05-20T15:58:56+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
