@@ -20,6 +20,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-80: Updated Chaos Tool Suite to 3.6 (SA-CONTRIB-2021-009).
+- RIGA-87: Updated core to 9.1.9 (SA-CORE-2021-003).
 
 ## [1.3.1] - 2021-05-21
 ### Changed
