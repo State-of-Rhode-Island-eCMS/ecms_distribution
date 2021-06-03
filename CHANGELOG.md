@@ -20,6 +20,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.3.2] - 2021-06-03
+### Changed
+- RIGA-6: Updated ecms_profile to 0.6.1.
+
+### Security
 - RIGA-80: Updated Chaos Tool Suite to 3.6 (SA-CONTRIB-2021-009).
 - RIGA-87: Updated core to 9.1.9 (SA-CORE-2021-003).
 
@@ -359,7 +365,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.2...HEAD
+[1.3.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.0...1.3.2
 [1.3.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.4...1.3.0
 [1.2.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.2.3...1.2.4
