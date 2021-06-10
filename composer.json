@@ -78,7 +78,7 @@
         "drupal/mysql56": "^1.0",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.6.1",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-90/update-acsf",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.5.6",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
