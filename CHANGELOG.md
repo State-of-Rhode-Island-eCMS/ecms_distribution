@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-92: Update ACSF module including automatic updates to site factory hooks.
 
 ### Deprecated
 
