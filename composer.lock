@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "def5ee85f4ec2394678431eec639b44f",
+    "content-hash": "82b6102ff7bc42d830b26e6cd5fd2f16",
     "packages": [
         {
             "name": "algolia/places",
@@ -2278,17 +2278,17 @@
         },
         {
             "name": "drupal/acsf",
-            "version": "2.68.0",
+            "version": "2.69.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acsf.git",
-                "reference": "8.x-2.68"
+                "reference": "8.x-2.69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.68.zip",
-                "reference": "8.x-2.68",
-                "shasum": "6b8afd8b2bc72e85c7c01be6f0187992ee4e91d8"
+                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.69.zip",
+                "reference": "8.x-2.69",
+                "shasum": "649186e899e719f8886ab385706bf56e6afe1183"
             },
             "require": {
                 "drupal/acsf_duplication": "*",
@@ -2307,8 +2307,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.68",
-                    "datestamp": "1603275065",
+                    "version": "8.x-2.69",
+                    "datestamp": "1612957028",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10860,11 +10860,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.6.1",
+            "version": "dev-RIGA-90/update-acsf",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "6306e559f2469c7e533fd1a0935212fac7f1df32"
+                "reference": "ba534cf99c1a7abd43c867f59ef786900773dbfc"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10872,7 +10872,7 @@
                 "drupal/acquia_connector": "^3.0",
                 "drupal/acquia_purge": "^1.1",
                 "drupal/acquia_search_solr": "^3.0",
-                "drupal/acsf": "^2.67",
+                "drupal/acsf": "2.69",
                 "drupal/address": "^1.8",
                 "drupal/admin_toolbar": "^2.3",
                 "drupal/allowed_formats": "^1.3",
@@ -11018,7 +11018,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-06-03T12:47:13+00:00"
+            "time": "2021-06-10T13:00:00+00:00"
         },
         {
             "name": "sibyx/phpgpx",
@@ -16667,7 +16667,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
