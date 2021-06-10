@@ -10,7 +10,6 @@
 !/docroot/sites/default
 /docroot/sites/default/*
 !/docroot/sites/default/settings.php
-!/docroot/sites/g
 
 /config/**/.htaccess
 !/config/default/.htaccess
