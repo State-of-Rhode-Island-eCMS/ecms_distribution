@@ -10,12 +10,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-18: Added patch to webform encrypt to support global encryption for a given form.
 
 ### Changed
 - RIGA-92: Update ACSF module including automatic updates to site factory hooks.
 - RIGA-90: Updated auto_entitylabel, components, dynamic_entity_reference, easy_breadcrumb.
 - RIGA-90: Updated entity_reference_revisions, extlink, features, layout_builder_restrictions.
 - RIGA-90: Updated simple_sitemap, twig_tweak.
+- RIGA-92: Update webform module to 6.0.3.
+
 
 ### Deprecated
 
