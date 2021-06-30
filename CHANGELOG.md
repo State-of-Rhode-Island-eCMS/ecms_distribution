@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.3.4] - 2021-06-30
+### Changed
+- RIGA-6: Updated ecms_patternlab to 0.5.8.
+- RIGA-6: Updated ecms_profile to 0.6.3.
+
 ## [1.3.3] - 2021-06-23
 ### Added
 - RIGA-18: Added patch to webform encrypt to support global encryption for a given form.
