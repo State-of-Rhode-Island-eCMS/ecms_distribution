@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41078f7e4a2ca83503cae0efdb3366ae",
+    "content-hash": "0a47ffb52a640c6d14d067dbafdee945",
     "packages": [
         {
             "name": "algolia/places",
@@ -5095,6 +5095,62 @@
             "homepage": "https://www.drupal.org/project/layout_builder_restrictions",
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
+            }
+        },
+        {
+            "name": "drupal/media_entity_download",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_entity_download.git",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_entity_download-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "31d7baae5d6e60cf729dab19e2dc748c9d12e2a3"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1586899177",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "kevinquillen",
+                    "homepage": "https://www.drupal.org/user/317279"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "This module provides a route for linking to media assets by URI for users to download without worrying about the actual file path.",
+            "homepage": "https://www.drupal.org/project/media_entity_download",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/media_entity_download",
+                "issues": "https://www.drupal.org/project/issues/media_entity_download"
             }
         },
         {
@@ -10860,11 +10916,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.6.3",
+            "version": "0.6.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "294cfba1c549d45d82cad8295a8b74acd66b3ee6"
+                "reference": "a774dcc9a4786101034cbbfa88681c0592ad46c2"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10895,6 +10951,7 @@
                 "drupal/language_neutral_aliases": "^3.0",
                 "drupal/layout_builder_modal": "^1.1",
                 "drupal/layout_builder_restrictions": "^2.7",
+                "drupal/media_entity_download": "^2.0",
                 "drupal/media_library_form_element": "^2.0",
                 "drupal/media_library_theme_reset": "^1.0",
                 "drupal/memcache": "^2.2",
@@ -11016,7 +11073,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-06-30T19:18:22+00:00"
+            "time": "2021-07-01T14:59:37+00:00"
         },
         {
             "name": "sibyx/phpgpx",
@@ -16670,5 +16727,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
