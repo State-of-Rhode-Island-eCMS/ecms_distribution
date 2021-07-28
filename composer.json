@@ -75,7 +75,6 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9.1.8",
         "drupal/core-vendor-hardening": "^9",
-        "drupal/mysql56": "^1.0",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "rhodeislandecms/ecms_profile": "0.6.5",
