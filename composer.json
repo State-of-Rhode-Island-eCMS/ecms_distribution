@@ -68,6 +68,7 @@
         }
     ],
     "require": {
+        "behat/mink": "^1.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/preserve-paths": "^0.1.4",
