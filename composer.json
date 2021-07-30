@@ -78,7 +78,7 @@
         "drupal/core-vendor-hardening": "^9",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "dev-RIGA-96/core-update-nine-two",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-98/search-modules-update",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.5.9",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
