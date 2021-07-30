@@ -39,8 +39,9 @@ $DRUSH_CMD updatedb --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/
 # Run features import. Run on individual features so we can identify issues easily.
 # $DRUSH_CMD features:import:all --bundle=ecms --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_basic_page --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_basic_page-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_landing_page --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_landing_page-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_event --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_event-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_hotel --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_hotel-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_landing_page --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_landing_page-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_location --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_location-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_notification --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_notification-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_paragraphs --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_paragraphs-${domain}-$(date +"%Y-%m-%d").log
