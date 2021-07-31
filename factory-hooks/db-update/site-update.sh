@@ -51,5 +51,8 @@ $DRUSH_CMD features:import ecms_promotions --yes >> /var/log/sites/${AH_SITE_NAM
 $DRUSH_CMD features:import ecms_publications --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_publications-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_solr_search --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_solr_search-${domain}-$(date +"%Y-%m-%d").log
 
+# Send email about features status.
+$DRUSH_CMD drush features-list --bundle=ecms | mail -s "Features deploy status for ${domain}" bhamelin@oomphinc.com
+
 # Rebuild caches after features import.
 $DRUSH_CMD cache-rebuild >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-cache.log
