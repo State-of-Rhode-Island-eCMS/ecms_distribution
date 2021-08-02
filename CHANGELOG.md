@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-96: Updated Drupal core to 9.2.2.
 - RIGA-98: Updated search module dependencies.
+- RIGA-101: Updated scheduled_transitions module to 2.1.
 
 ### Deprecated
 
