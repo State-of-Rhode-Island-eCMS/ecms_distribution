@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9df1b61d8167ad63558a987c7b143528",
+    "content-hash": "419c942f02c348db7d8dfb232b41ed80",
     "packages": [
         {
             "name": "algolia/places",
@@ -2217,125 +2217,6 @@
             "homepage": "https://www.drupal.org/project/acquia_search",
             "support": {
                 "source": "https://git.drupalcode.org/project/acquia_search"
-            }
-        },
-        {
-            "name": "drupal/acquia_search_solr",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/acquia_search_solr.git",
-                "reference": "3.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_search_solr-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "7607e2d292b00a3cf3d34b155e3e0ce00ae97ce4"
-            },
-            "require": {
-                "drupal/acquia_search": "^3",
-                "drupal/core": "^8.9 || ^9",
-                "drupal/search_api_solr": "^4.1.10",
-                "http-interop/http-factory-guzzle": "^1.0",
-                "php-http/guzzle6-adapter": "^2.0"
-            },
-            "conflict": {
-                "drupal/acquia_connector": "^1",
-                "drupal/search_api_solr_multilingual": "<3"
-            },
-            "require-dev": {
-                "drush/drush": "^10.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1614299468",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Dane Powell",
-                    "homepage": "https://www.drupal.org/user/339326"
-                },
-                {
-                    "name": "Gary.Wu",
-                    "homepage": "https://www.drupal.org/user/1469028"
-                },
-                {
-                    "name": "Jabb",
-                    "homepage": "https://www.drupal.org/user/584658"
-                },
-                {
-                    "name": "Mark Trapp",
-                    "homepage": "https://www.drupal.org/user/212019"
-                },
-                {
-                    "name": "acquia",
-                    "homepage": "https://www.drupal.org/user/1231722"
-                },
-                {
-                    "name": "ayang",
-                    "homepage": "https://www.drupal.org/user/1777884"
-                },
-                {
-                    "name": "dmitrii",
-                    "homepage": "https://www.drupal.org/user/411965"
-                },
-                {
-                    "name": "gcassie",
-                    "homepage": "https://www.drupal.org/user/80260"
-                },
-                {
-                    "name": "janusman",
-                    "homepage": "https://www.drupal.org/user/153120"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "jmoreira",
-                    "homepage": "https://www.drupal.org/user/2374486"
-                },
-                {
-                    "name": "kolafson",
-                    "homepage": "https://www.drupal.org/user/822402"
-                },
-                {
-                    "name": "m.yudin",
-                    "homepage": "https://www.drupal.org/user/2358036"
-                },
-                {
-                    "name": "mundanity",
-                    "homepage": "https://www.drupal.org/user/373605"
-                },
-                {
-                    "name": "vlad.pavlovic",
-                    "homepage": "https://www.drupal.org/user/92673"
-                }
-            ],
-            "description": "Provides integration between your Drupal site and Acquia's hosted search service.",
-            "homepage": "https://www.drupal.org/project/acquia_search_solr",
-            "support": {
-                "source": "https://git.drupalcode.org/project/acquia_search_solr"
             }
         },
         {
@@ -10977,11 +10858,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.6.7",
+            "version": "0.6.8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "7f7aa55c21a332951157b3ec8a8169c9c353878f"
+                "reference": "b350f37bb44393130cc60366025cecf68e43810b"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10989,7 +10870,6 @@
                 "drupal/acquia_connector": "^3.0",
                 "drupal/acquia_purge": "^1.1",
                 "drupal/acquia_search": "^3.0",
-                "drupal/acquia_search_solr": "^3.0",
                 "drupal/acsf": "2.69",
                 "drupal/address": "^1.8",
                 "drupal/admin_toolbar": "^2.3",
@@ -11134,7 +11014,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-08-05T13:28:54+00:00"
+            "time": "2021-08-12T17:44:39+00:00"
         },
         {
             "name": "sibyx/phpgpx",
@@ -11377,11 +11257,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.5.9",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "309d7378f8501251cc74f554bf0ca8539eb4b8db"
+                "reference": "dd9ed19f3dfb7c7a0b57d60d09d6ac87ddc89168"
             },
             "type": "pattern-lab",
             "license": [
@@ -11395,7 +11275,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-07-15T13:47:02+00:00"
+            "time": "2021-08-12T18:25:41+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
