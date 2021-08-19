@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-99: Add features email report to site update script.
 
 ### Changed
 
@@ -19,6 +18,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.4.2] - 2021-08-19
+### Added
+- RIGA-99: Add features email report to site update script.
+
+### Changed
+- RIGA-6: Updated ecms_profile to 0.6.9.
 
 ### Security
 - RIGA-110: Updated Drupal core to 9.2.4 (SA-CORE-005).
