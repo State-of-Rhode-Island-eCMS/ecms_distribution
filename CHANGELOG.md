@@ -416,7 +416,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.2...HEAD
+[1.4.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.1...1.4.2
 [1.4.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.7...1.4.0
 [1.3.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.6...1.3.7
