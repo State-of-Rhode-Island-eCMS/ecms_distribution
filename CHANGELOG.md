@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-99: Add features email report to site update script.
 
 ### Changed
 
@@ -19,6 +18,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.4.2] - 2021-08-19
+### Added
+- RIGA-99: Add features email report to site update script.
+
+### Changed
+- RIGA-6: Updated ecms_profile to 0.6.9.
 
 ### Security
 - RIGA-110: Updated Drupal core to 9.2.4 (SA-CORE-005).
@@ -408,7 +416,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.2...HEAD
+[1.4.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.1...1.4.2
 [1.4.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.7...1.4.0
 [1.3.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.6...1.3.7
