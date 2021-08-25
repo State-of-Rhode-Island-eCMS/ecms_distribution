@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-106: Updated jsonapi_extras to 3.19.
 
 ### Deprecated
 
