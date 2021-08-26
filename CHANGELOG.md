@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-106: Updated jsonapi_extras to 3.19.
 
 ### Deprecated
 
@@ -21,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+
+## [1.4.3] - 2021-08-26
+### Changed
+- RIGA-106: Updated jsonapi_extras to 3.19.
+- RIGA-6: Updated ecms_profile to 0.7.0.
+- RIGA-6: Updated ecms_patternlab to 0.6.1.
 
 ## [1.4.2] - 2021-08-19
 ### Added
@@ -417,7 +423,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.3...HEAD
+[1.4.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.2...1.4.3
 [1.4.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.1...1.4.2
 [1.4.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.3.7...1.4.0
