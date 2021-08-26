@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42f8c1a5884089a81b950f9226aa7a66",
+    "content-hash": "459877c5f687350c15af67ba1f54041f",
     "packages": [
         {
             "name": "algolia/places",
@@ -2600,26 +2600,29 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "2.4.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "8.x-2.4"
+                "reference": "3.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "6240047b8d91ac78f98d861ba8282af971fa0b38"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "a3b7a8030695d0c1d49ec57786321e2dd142184a"
             },
             "require": {
                 "drupal/core": "^8.8.0 || ^9.0"
             },
+            "require-dev": {
+                "drupal/admin_toolbar_tools": "*"
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1601999178",
+                    "version": "3.0.2",
+                    "datestamp": "1629907124",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4492,6 +4495,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/honeypot",
                 "issues": "https://www.drupal.org/project/issues/honeypot"
+            }
+        },
+        {
+            "name": "drupal/http_cache_control",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/http_cache_control.git",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/http_cache_control-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "7c528eedf27be54943c84e61474b3d6ff855a767"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1591254259",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Waihi",
+                    "homepage": "https://www.drupal.org/user/188162"
+                }
+            ],
+            "description": "Module for controlling HTTP Cache Control response headers.",
+            "homepage": "https://www.drupal.org/project/http_cache_control",
+            "support": {
+                "source": "https://git.drupalcode.org/project/http_cache_control"
             }
         },
         {
@@ -10858,11 +10905,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.6.9",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "91e529505cc3e29d820b6a50a5d225db6da52303"
+                "reference": "8e8a157dfd79a632a305a591dd5503f46248e30f"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10872,7 +10919,7 @@
                 "drupal/acquia_search": "^3.0",
                 "drupal/acsf": "2.69",
                 "drupal/address": "^1.8",
-                "drupal/admin_toolbar": "^2.3",
+                "drupal/admin_toolbar": "^3.0",
                 "drupal/allowed_formats": "^1.3",
                 "drupal/auto_entitylabel": "^3.0@beta",
                 "drupal/components": "^2.0",
@@ -10888,6 +10935,7 @@
                 "drupal/google_tag": "^1.4",
                 "drupal/google_translator": "^1.0@RC",
                 "drupal/honeypot": "^2.0",
+                "drupal/http_cache_control": "^2.0",
                 "drupal/jsonapi_extras": "^3.16",
                 "drupal/language_cookie": "1.x-dev",
                 "drupal/language_neutral_aliases": "^3.0",
@@ -10925,7 +10973,7 @@
                 "drupal/twig_tweak": "^2.8",
                 "drupal/twig_vardumper": "^3.0",
                 "drupal/views_ajax_get": "1.x-dev@dev",
-                "drupal/webform": "~6.0.3",
+                "drupal/webform": "~6.0.5",
                 "drupal/webform_encrypt": "1.x-dev@dev",
                 "drupal_git/migrate_google_sheets": "1.0.0",
                 "drupal_git/migrate_process_trim": "1.0.0",
@@ -10958,7 +11006,8 @@
                         "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                         "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
                         "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
-                        "3186034 - Prevent language fallback to happen when a translation is unpublished": "https://www.drupal.org/files/issues/2020-12-02/3186034_2_respect_empty_translation_candidates.patch"
+                        "3186034 - Prevent language fallback to happen when a translation is unpublished": "https://www.drupal.org/files/issues/2020-12-02/3186034_2_respect_empty_translation_candidates.patch",
+                        "2492171 - Provide options to sanitize filenames": "https://www.drupal.org/files/issues/2021-07-22/2492171-295_0.patch"
                     },
                     "drupal/openid_connect_windows_aad": {
                         "3169996 - Incorrect configuration schema file": "https://www.drupal.org/files/issues/2020-09-09/openid_connect_windows_aad-schema-update-3169996-3.patch"
@@ -11014,7 +11063,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-08-19T12:54:42+00:00"
+            "time": "2021-08-26T13:26:43+00:00"
         },
         {
             "name": "sibyx/phpgpx",
@@ -11257,11 +11306,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "dd9ed19f3dfb7c7a0b57d60d09d6ac87ddc89168"
+                "reference": "e06bf88399626973eec6481a031884b3c7d3dc3b"
             },
             "type": "pattern-lab",
             "license": [
@@ -11275,7 +11324,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-08-12T18:25:41+00:00"
+            "time": "2021-08-26T13:24:49+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
