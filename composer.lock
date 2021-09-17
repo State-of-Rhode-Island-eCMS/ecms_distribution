@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf388c40dc37c7623937dc2ef6f7920b",
+    "content-hash": "54624211f177b1cb041ba01ca095500f",
     "packages": [
         {
             "name": "algolia/places",
@@ -11306,11 +11306,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.6.3",
+            "version": "0.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "d3ac7c54457071da5455ffe6e697d70cc5695fdf"
+                "reference": "90071d17f79c82450efa3750263749b29d68c107"
             },
             "type": "pattern-lab",
             "license": [
@@ -11324,7 +11324,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-09-16T17:26:32+00:00"
+            "time": "2021-09-17T16:18:43+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
