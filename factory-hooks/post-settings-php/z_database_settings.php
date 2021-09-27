@@ -13,7 +13,7 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === '01d
     'username' => 'MnrWrAD3LTXCde6U',
     'password' => getenv("DATABASE_POC_PASSWORD"),
     'prefix' => '',
-    'host' => 'riecms01dev.ssh.enterprise-g1.acquia-sites.com',
+    'host' => 'localhost',
     'port' => '3306',
     'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
     'driver' => 'mysql',
