@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6ffa7601fad8d8d4072b5d3a9d66cf3",
+    "content-hash": "a36eb7751e5668095351f5a23aa06338",
     "packages": [
         {
             "name": "algolia/places",
@@ -2846,6 +2846,78 @@
             }
         },
         {
+            "name": "drupal/captcha",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/captcha.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "e35a2ce42b652f833d140f7571d1eef0e06b0edc"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1619673374",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "elachlan",
+                    "homepage": "https://www.drupal.org/user/1021502"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "soxofaan",
+                    "homepage": "https://www.drupal.org/user/41478"
+                },
+                {
+                    "name": "wundo",
+                    "homepage": "https://www.drupal.org/user/25523"
+                }
+            ],
+            "description": "The CAPTCHA module provides this feature to virtually any user facing web form on a Drupal site.",
+            "homepage": "https://www.drupal.org/project/captcha",
+            "support": {
+                "source": "https://git.drupalcode.org/project/captcha",
+                "issues": "https://www.drupal.org/project/issues/captcha"
+            }
+        },
+        {
             "name": "drupal/components",
             "version": "2.4.0",
             "source": {
@@ -5325,6 +5397,54 @@
             "homepage": "https://www.drupal.org/project/media_library_theme_reset",
             "support": {
                 "source": "https://git.drupalcode.org/project/media_library_theme_reset"
+            }
+        },
+        {
+            "name": "drupal/media_revisions_ui",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_revisions_ui.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_revisions_ui-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "3705d7291486ada1c8384c2eefa2219c7d2fdc49"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1594109933",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "benjamincizej",
+                    "homepage": "https://www.drupal.org/user/3612191"
+                }
+            ],
+            "description": "Adds admin interface to handle media revisions.",
+            "homepage": "https://www.drupal.org/project/media_revisions_ui",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_revisions_ui",
+                "issues": "https://www.drupal.org/project/issues/media_revisions_ui"
             }
         },
         {
@@ -10954,11 +11074,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.7.5",
+            "version": "0.7.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "69c38377d093b3dea11026957d2f3015c54453bf"
+                "reference": "d46c55ee667cd22c48670279ab586ddb568bfabb"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -10972,6 +11092,7 @@
                 "drupal/allowed_formats": "^1.3",
                 "drupal/asset_injector": "^2.7",
                 "drupal/auto_entitylabel": "^3.0@beta",
+                "drupal/captcha": "^1.2",
                 "drupal/components": "^2.0",
                 "drupal/content_moderation_notifications": "^3.2",
                 "drupal/core-recommended": "^9.2",
@@ -10994,6 +11115,7 @@
                 "drupal/media_entity_download": "^2.0",
                 "drupal/media_library_form_element": "^2.0",
                 "drupal/media_library_theme_reset": "^1.0",
+                "drupal/media_revisions_ui": "^2.0",
                 "drupal/memcache": "^2.2",
                 "drupal/menu_block": "1.x-dev",
                 "drupal/metatag": "^1.14",
@@ -11110,7 +11232,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-10-14T17:30:18+00:00"
+            "time": "2021-10-21T19:00:51+00:00"
         },
         {
             "name": "sibyx/phpgpx",
