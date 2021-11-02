@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-160: Add external database connection settings to new factory hook.
 
 ### Deprecated
 
