@@ -37,7 +37,3 @@ to create a new Drupal view using one of the database tables you created above.
 4. Keep in mind that if you add a new table, the module will need to be reinstalled in order to see the new data
 5. Adding or deleting rows to an existing table will be reflected in existing views
    1. This is important for any longer term/production level solution
-
-
-
-
