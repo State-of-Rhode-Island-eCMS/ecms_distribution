@@ -2,13 +2,14 @@ diff --git a/.htaccess b/.htaccess
 index 6f9123d..84ec3c6 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -102,8 +102,8 @@ AddEncoding gzip svgz
+@@ -102,8 +102,9 @@ AddEncoding gzip svgz
    # To redirect all users to access the site WITHOUT the 'www.' prefix,
    # (http://www.example.com/foo will be redirected to http://example.com/foo)
    # uncomment the following:
 -  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 -  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 +  RewriteCond %{HTTP_HOST} ^www\.(.+)\.ri\.gov$ [NC]
++  RewriteCond %{HTTP_HOST} !^www\.riag\.ri\.gov$ [NC]
 +  RewriteRule ^ http%{ENV:protossl}://%1.ri.gov%{REQUEST_URI} [L,R=301]
 
    # Modify the RewriteBase if you are using Drupal in a subdirectory or in a

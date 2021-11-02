@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-160: Add external database connection settings to new factory hook.
+- RIGA-159: Updated main rewrite rule to exclude the RIAG website.
 
 ### Deprecated
 
