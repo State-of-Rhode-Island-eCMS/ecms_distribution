@@ -3,15 +3,16 @@
 declare(strict_types = 1);
 
 /**
-* Enable development services for DEV environment.
+* Enable external database connection for a given Acquia environment.
+ * The 3 environment variables must be defined via putenv() calls
+ * in the secrets.settings.php file for each environment.
 */
 
-if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === '01dev') {
-
+if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
   $databases['external']['default'] = array(
-    'database' => 'riecms01ddb1046451',
-    'username' => 'MnrWrAD3LTXCde6U',
-    'password' => getenv("DATABASE_POC_PASSWORD"),
+    'database' => getenv("EXTERNAL_DATABASE_NAME"),
+    'username' => getenv("EXTERNAL_DATABASE_USER"),
+    'password' => getenv("EXTERNAL_DATABASE_PASSWORD"),
     'prefix' => '',
     'host' => 'localhost',
     'port' => '3306',
