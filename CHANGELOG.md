@@ -10,11 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-158: Add patch for media revision ui module issue 3247661.
 
 ### Changed
-- RIGA-160: Add external database connection settings to new factory hook.
-- RIGA-159: Updated main rewrite rule to exclude the RIAG website.
 
 ### Deprecated
 
@@ -23,6 +20,16 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.5.2] - 2021-11-04
+### Added
+- RIGA-158: Add patch for media revision ui module issue 3247661.
+
+### Changed
+- RIGA-160: Add external database connection settings to new factory hook.
+- RIGA-159: Updated main rewrite rule to exclude the RIAG website.
+- RIGA-6: Updated ecms_profile to 0.7.7.
+- RIGA-6: Updated ecms_patternlab to 0.6.5.
 
 ## [1.5.1] - 2021-10-21
 ### Changed
@@ -461,7 +468,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.2...HEAD
+[1.5.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.1...1.5.2
 [1.5.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.0...1.5.1
 [1.5.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.9...1.5.0
 [1.4.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.4.8...1.4.9
