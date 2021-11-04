@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-158: Add patch for media revision ui module issue 3247661.
 
 ### Changed
 - RIGA-160: Add external database connection settings to new factory hook.
