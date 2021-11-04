@@ -124,7 +124,7 @@
                 "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "patches/drupal-core-2259567-allow-svg.patch"
             },
             "drupal/media_revisions_ui": {
-                "3247661 - Add fielname": "patches/3247661-media-revisions-filename.patch"
+                "3247661 - Add filename to output": "patches/3247661-media-revisions-filename.patch"
             }
         },
         "preserve-paths": [],
