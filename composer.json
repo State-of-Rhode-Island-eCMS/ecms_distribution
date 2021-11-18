@@ -30,19 +30,6 @@
         {
             "type": "package",
             "package": {
-                "name": "drupal_git/migrate_google_sheets",
-                "type": "drupal-module",
-                "version": "1.0.0",
-                "source": {
-                    "type": "git",
-                    "url": "https://git.drupalcode.org/project/migrate_google_sheets.git",
-                    "reference": "22944d55be891cfe48d6a6d7c222ff9e89f67b8d"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "drupal_git/migration_tools",
                 "type": "drupal-module",
                 "version": "1.0.0",
@@ -78,8 +65,8 @@
         "drupal/core-vendor-hardening": "^9",
         "drush/drush": "^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.7.7",
-        "state-of-rhode-island-ecms/ecms_patternlab": "0.6.5",
+        "rhodeislandecms/ecms_profile": "0.7.8",
+        "state-of-rhode-island-ecms/ecms_patternlab": "0.6.6",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
