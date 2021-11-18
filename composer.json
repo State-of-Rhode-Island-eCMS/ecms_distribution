@@ -30,19 +30,6 @@
         {
             "type": "package",
             "package": {
-                "name": "drupal_git/migrate_google_sheets",
-                "type": "drupal-module",
-                "version": "1.0.0",
-                "source": {
-                    "type": "git",
-                    "url": "https://git.drupalcode.org/project/migrate_google_sheets.git",
-                    "reference": "22944d55be891cfe48d6a6d7c222ff9e89f67b8d"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "drupal_git/migration_tools",
                 "type": "drupal-module",
                 "version": "1.0.0",
