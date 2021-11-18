@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4300924d87875f567ac065a40bd79ea",
+    "content-hash": "d3fd1d66f1e4eba379fada7a88e3e1eb",
     "packages": [
         {
             "name": "algolia/places",
@@ -7268,17 +7268,17 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "3.3.0-rc1",
+            "version": "3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "3.3.0-rc1"
+                "reference": "3.4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-3.3.0-rc1.zip",
-                "reference": "3.3.0-rc1",
-                "shasum": "6e6dd334c3f4299a90670c4d5d3dd12de4ec628d"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-3.4.3.zip",
+                "reference": "3.4.3",
+                "shasum": "802f21abc5c1848b04b88169cd63e0980ed5ec85"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -7291,11 +7291,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0-rc1",
-                    "datestamp": "1620484276",
+                    "version": "3.4.3",
+                    "datestamp": "1634467244",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -7328,7 +7328,7 @@
                 "Drupal"
             ],
             "support": {
-                "source": "http://cgit.drupalcode.org/smart_date",
+                "source": "https://git.drupalcode.org/project/smart_date",
                 "issues": "https://www.drupal.org/project/issues/smart_date",
                 "documentation": "https://www.drupal.org/docs/contributed-modules/smart-date"
             }
@@ -7827,16 +7827,6 @@
                 "source": "http://cgit.drupalcode.org/webform_encrypt",
                 "issues": "https://drupal.org/project/issues/webform_encrypt"
             }
-        },
-        {
-            "name": "drupal_git/migrate_google_sheets",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/migrate_google_sheets.git",
-                "reference": "22944d55be891cfe48d6a6d7c222ff9e89f67b8d"
-            },
-            "type": "drupal-module"
         },
         {
             "name": "drupal_git/migrate_process_trim",
@@ -11415,11 +11405,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.7.7",
+            "version": "0.7.8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "e8e24376f022f1b823771dd972bae4fd9868b18d"
+                "reference": "dcc603a342262d37de05f1df9358c94ced524a7c"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -11481,7 +11471,7 @@
                 "drupal/search_api_solr": "^4.2",
                 "drupal/simple_oauth": "^4.5",
                 "drupal/simple_sitemap": "^3.8",
-                "drupal/smart_date": "^3.3",
+                "drupal/smart_date": "^3.4",
                 "drupal/svg_image": "^1.14",
                 "drupal/token": "^1.7",
                 "drupal/twig_tweak": "^2.8",
@@ -11490,7 +11480,6 @@
                 "drupal/views_database_connector": "^1.4",
                 "drupal/webform": "~6.0.5",
                 "drupal/webform_encrypt": "1.x-dev@dev",
-                "drupal_git/migrate_google_sheets": "1.0.0",
                 "drupal_git/migrate_process_trim": "1.0.0",
                 "drupal_git/migration_tools": "1.0.0",
                 "drush/drush": "^10.0",
@@ -11576,7 +11565,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2021-11-04T14:17:45+00:00"
+            "time": "2021-11-18T16:08:31+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -11868,11 +11857,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.6.5",
+            "version": "0.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "ddee078a51a98c9bae998c8770d51f5c2e3b17ad"
+                "reference": "fd4add9ce7ec263b5581c4f9a868ddc475d2e89e"
             },
             "type": "pattern-lab",
             "license": [
@@ -11886,7 +11875,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2021-11-04T14:16:39+00:00"
+            "time": "2021-11-18T14:49:40+00:00"
         },
         {
             "name": "svg-pan-zoom/svg-pan-zoom",
