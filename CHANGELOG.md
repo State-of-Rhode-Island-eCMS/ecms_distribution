@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-168: Upgrading openid_connect_windows_aad 1.3.0 => 1.4.0 (SA-CONTRIB-2021-044).
 
 ## [1.5.4] - 2021-12-02
 ### Changed
