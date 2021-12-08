@@ -20,6 +20,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.5.5] - 2021-12-09
+### Changed
+- RIGA-6: Updated ecms_profile to 0.8.0.
+
+### Security
 - RIGA-168: Upgrading openid_connect_windows_aad 1.3.0 => 1.4.0 (SA-CONTRIB-2021-044).
 
 ## [1.5.4] - 2021-12-02
@@ -478,7 +484,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.5...HEAD
+[1.5.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.4...1.5.5
 [1.5.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.3...1.5.4
 [1.5.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.2...1.5.3
 [1.5.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.1...1.5.2
