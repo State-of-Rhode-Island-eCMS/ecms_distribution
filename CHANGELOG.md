@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-189: Updated Simple OAuth to 8.x-4.6 (SA-CONTRIB-2022-002).
 
 ## [1.5.5] - 2021-12-09
 ### Changed
