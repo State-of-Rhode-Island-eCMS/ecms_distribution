@@ -7149,17 +7149,17 @@
         },
         {
             "name": "drupal/simple_oauth",
-            "version": "4.5.0",
+            "version": "4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_oauth.git",
-                "reference": "8.x-4.5"
+                "reference": "8.x-4.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_oauth-8.x-4.5.zip",
-                "reference": "8.x-4.5",
-                "shasum": "e453816aeb9e7c3a2d83dcb3eff855f27b365546"
+                "url": "https://ftp.drupal.org/files/projects/simple_oauth-8.x-4.6.zip",
+                "reference": "8.x-4.6",
+                "shasum": "5687946a8966a6950ccc07fbdfdacc86e37e7eba"
             },
             "require": {
                 "drupal/consumers": "^1.2",
@@ -7170,8 +7170,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.5",
-                    "datestamp": "1588250233",
+                    "version": "8.x-4.6",
+                    "datestamp": "1641409812",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7196,10 +7196,6 @@
                 {
                     "name": "e0ipso",
                     "homepage": "https://www.drupal.org/user/550110"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
                 },
                 {
                     "name": "pcambra",
