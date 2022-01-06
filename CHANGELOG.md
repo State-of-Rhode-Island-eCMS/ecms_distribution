@@ -20,6 +20,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.5.6] - 2022-01-06
+### Changed
+- RIGA-6: Updated ecms_profile to 0.8.1.
+
+### Security
 - RIGA-189: Updated Simple OAuth to 8.x-4.6 (SA-CONTRIB-2022-002).
 
 ## [1.5.5] - 2021-12-09
