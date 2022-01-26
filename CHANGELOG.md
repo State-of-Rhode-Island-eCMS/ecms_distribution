@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-6: Updated local development documentation.
 
 ### Deprecated
 
@@ -20,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-202: Update core to 9.2.11.
 
 ## [1.5.7] - 2022-01-13
 ### Changed

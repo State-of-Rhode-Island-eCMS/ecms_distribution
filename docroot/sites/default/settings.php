@@ -31,11 +31,8 @@ if (getenv('LANDO_INFO')) {
   $settings['file_public_path'] = 'sites/default/files';
   $settings['file_private_path'] = 'sites/default/files/private';
 
-  // This setting is specific to Lando.
-  $config_directories[CONFIG_SYNC_DIRECTORY] = '/app/config/common';
-
   $settings['config_sync_directory'] = '/app/config/common';
-  $settings['file_temp_path'] = $_ENV['TEMP'];
+  $settings['file_temp_path'] = '/tmp';
 
   // Generic hash salt for all local environments.
   $settings['hash_salt'] = 'BfHE?EG)vJPa3uikBCZWW#ATbDLijMFRZgfkyayYcZYoy>eC7QhdG7qaB4hcm4x$';

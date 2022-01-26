@@ -31,10 +31,11 @@
 /tests/**/results
 .phpunit.result.cache
 
-# Lando
+# Lando / Local dev
 /*.gz
 /.lando.local.yml
 /.gitattributes
+/.env
 
 # PHPStorm
 /.idea
