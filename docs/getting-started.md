@@ -22,6 +22,28 @@ tools to get started with a new project:
 
 ## Local development
 
+Testing the eCMS Distribution profile locally should typically be done
+using the `develop-ecms-profile` environment provided by the ecms_profile
+repository. However, if you need to test something in this repo, you can.
+
+### .lando.local.yml
+
+Add the local lando config file `.lando.local.yml` with the following contents:
+```yml
+name: ecms-distribution
+recipe: drupal9
+
+env_file:
+  - .env
+```
+Next, execute the following command to generate a private key stored
+as an environment variable, which is required by this profile.
+```shell
+echo -e  "ENCRYPTION_PRIVATE_KEY=$(dd if=/dev/urandom bs=32 count=1 | base64 -i -)" >> .env
+```
+
+### Start Lando
+
 Getting started with local development is easy. You will have to start [Lando][]
 from the project root. [Lando][] will create the required [Docker][] containers
 to run the application, install project dependencies and then build the frontend
@@ -60,6 +82,14 @@ URLs provided by [Lando][] and follow the installations steps of [Drupal][]
 through the web browser, or you can install [Drupal][] using
 `lando drush site-install`. Check out the [Drush][] documentation for further
 information.
+
+## Testing the install profile
+
+Use the following drush site install command to test a fresh install of the
+eCMS profile:
+```bash
+lando drush site-install ecms_base --verbose --yes --site-name="State of Rhode Island Distribution" --account-name=admin --account-pass=admin;
+```
 
 ### Importing a database
 
