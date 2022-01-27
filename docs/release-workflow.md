@@ -167,8 +167,8 @@ require 'vendor/autoload.php';
 $config = [
   // URL of a subsection inside the SF REST API; must end with sites/.
   'url' => 'https://www.riecms.acsitefactory.com/api/v1/sites/',
-  'api_user' => 'YOUR_ACQUIA_ACCOUNT_EMAIL',
-  'api_key' => 'YOUR_ACQUIA_API_KEY',
+  'api_user' => 'YOUR_ACQUIA_USER_ACCOUNT_NAME',
+  'api_key' => 'YOUR_ACQUIA_CLOUD_API_KEY',
 
   // Site IDs of the sites to process; can also be provided as CLI argument.
   'sites' => ['all'],
