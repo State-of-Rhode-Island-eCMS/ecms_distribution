@@ -64,6 +64,7 @@
         "drupal/core-recommended": "^9.1.8",
         "drupal/core-vendor-hardening": "^9",
         "drush/drush": "^10.0",
+        "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
         "rhodeislandecms/ecms_profile": "0.8.3",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.6.7",
