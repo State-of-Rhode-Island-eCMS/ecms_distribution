@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-199: Added jQuery UI Touch Punch to libraries.
 
 ### Changed
 
@@ -21,6 +20,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.5.9] - 2022-02-10
+### Added
+- RIGA-199: Added jQuery UI Touch Punch to libraries.
+
+### Changed
+- RIGA-6: Updated ecms_profile to 0.8.4.
+- RIGA-6: Updated ecms_patternlab to 0.6.8.
 
 ## [1.5.8] - 2022-01-26
 ### Changed
@@ -505,7 +512,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.9...HEAD
+[1.5.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.8...1.5.9
 [1.5.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.7...1.5.8
 [1.5.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.6...1.5.7
 [1.5.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.5...1.5.6

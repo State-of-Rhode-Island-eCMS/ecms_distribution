@@ -66,8 +66,8 @@
         "drush/drush": "^10.0",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.8.3",
-        "state-of-rhode-island-ecms/ecms_patternlab": "0.6.7",
+        "rhodeislandecms/ecms_profile": "0.8.4",
+        "state-of-rhode-island-ecms/ecms_patternlab": "0.6.8",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
