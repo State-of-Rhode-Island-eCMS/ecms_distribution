@@ -9158,10 +9158,7 @@
             "version": "1.0.2 ",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fronteed/icheck/archive/1.0.2.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://github.com/dargullin/icheck/archive/refs/tags/1.0.2.zip"
             },
             "type": "drupal-library",
             "extra": {
