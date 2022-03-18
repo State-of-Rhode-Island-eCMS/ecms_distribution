@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.6.2] - 2022-03-18
+### Changed
+- RIGA-6: Updated ecms_profile to 0.8.8.
+
 ## [1.6.1] - 2022-03-17
 ### Changed
 - RIGA-6: Updated ecms_profile to 0.8.7 (0.8.6 needed a hotfix for easy breadcrumb config).
@@ -527,7 +531,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.2...HEAD
+[1.6.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.1...1.6.2
 [1.6.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.0...1.6.1
 [1.6.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.9...1.6.0
 [1.5.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.5.8...1.5.9
