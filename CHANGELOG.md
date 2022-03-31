@@ -24,6 +24,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [1.6.3] - 2022-03-31
 ### Changed
 - RIGA-6: Updated ecms_profile to 0.8.9.
+
 ### Security
 - RIGA-233: Updated Drupal core to 9.3.9 (SA-CORE-2022-006).
 
