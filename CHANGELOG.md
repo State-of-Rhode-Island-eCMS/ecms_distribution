@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- RIGA-244: Removed core robots.txt from the scaffold process.
 
 ### Fixed
 
