@@ -67,7 +67,7 @@
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
         "php": ">=7.4",
-        "rhodeislandecms/ecms_profile": "0.8.9",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-244/robotstxt-module",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.6.8",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
@@ -120,6 +120,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "docroot"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
             }
         },
         "enable-patching": "true",
