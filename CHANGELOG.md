@@ -16,11 +16,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
-- RIGA-244: Removed core robots.txt from the scaffold process.
 
 ### Fixed
 
 ### Security
+
+## [1.6.4] - 2022-04-07
+### Changed
+- RIGA-6: Updated ecms_profile to 0.9.0.
+
+### Removed
+- RIGA-244: Removed core robots.txt from the scaffold process.
 
 ## [1.6.3] - 2022-03-31
 ### Changed
@@ -537,9 +543,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [0.1.1] - 2020-10-09
 ## [0.1.0] - 2020-10-07
 ### Added
-- Initial Release of the site
+- Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.4...HEAD
+[1.6.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.3...1.6.4
 [1.6.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.2...1.6.3
 [1.6.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.1...1.6.2
 [1.6.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.0...1.6.1
