@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad97886d9777f96028ca9b3639b14fcf",
+    "content-hash": "480bc6b54c8d34085a38ebba5b5f0a8e",
     "packages": [
         {
             "name": "algolia/places",
@@ -12,9 +12,6 @@
             "dist": {
                 "type": "tar",
                 "url": "https://registry.npmjs.org/places.js/-/places.js-1.19.0.tgz"
-            },
-            "require": {
-                "composer/installers": "~1.0"
             },
             "type": "drupal-library",
             "extra": {
@@ -201,9 +198,6 @@
                 "type": "zip",
                 "url": "https://github.com/jshjohnson/Choices/archive/v9.0.1.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "choices"
@@ -211,13 +205,10 @@
         },
         {
             "name": "ckeditor/autogrow",
-            "version": "4.14.1",
+            "version": "4.17.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.14.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.17.1.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -231,9 +222,6 @@
                 "type": "zip",
                 "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/releases/download/v1.17.12/CKEditor-CodeMirror-Plugin.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "ckeditor.codemirror"
@@ -241,13 +229,10 @@
         },
         {
             "name": "ckeditor/fakeobjects",
-            "version": "4.14.1",
+            "version": "4.17.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.17.1.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -256,13 +241,10 @@
         },
         {
             "name": "ckeditor/image",
-            "version": "4.14.1",
+            "version": "4.17.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/image/releases/image_4.14.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://download.ckeditor.com/image/releases/image_4.17.1.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -271,13 +253,10 @@
         },
         {
             "name": "ckeditor/link",
-            "version": "4.14.1",
+            "version": "4.17.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/link/releases/link_4.14.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://download.ckeditor.com/link/releases/link_4.17.1.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -352,13 +331,10 @@
         },
         {
             "name": "codemirror/codemirror",
-            "version": "5.53.2",
+            "version": "5.61.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/components/codemirror/archive/5.53.2.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://github.com/components/codemirror/archive/5.61.1.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -430,16 +406,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.9.0",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca"
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
-                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d20a64ed3c94748397ff5973488761b22f6d3f19",
+                "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19",
                 "shasum": ""
             },
             "require": {
@@ -450,17 +426,18 @@
                 "shama/baton": "*"
             },
             "require-dev": {
-                "composer/composer": "1.6.* || 2.0.*@dev",
-                "composer/semver": "1.0.* || 2.0.*@dev",
-                "phpunit/phpunit": "^4.8.36",
-                "sebastian/comparator": "^1.2.4",
+                "composer/composer": "1.6.* || ^2.0",
+                "composer/semver": "^1 || ^3",
+                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
                 "symfony/process": "^2.3"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-main": "1.x-dev"
                 }
             },
             "autoload": {
@@ -498,6 +475,7 @@
                 "Porto",
                 "RadPHP",
                 "SMF",
+                "Starbug",
                 "Thelia",
                 "Whmcs",
                 "WolfCMS",
@@ -531,13 +509,16 @@
                 "majima",
                 "mako",
                 "mediawiki",
+                "miaoxing",
                 "modulework",
                 "modx",
                 "moodle",
                 "osclass",
+                "pantheon",
                 "phpbb",
                 "piwik",
                 "ppi",
+                "processwire",
                 "puppet",
                 "pxcms",
                 "reindex",
@@ -547,6 +528,7 @@
                 "sydes",
                 "sylius",
                 "symfony",
+                "tastyigniter",
                 "typo3",
                 "wordpress",
                 "yawik",
@@ -555,7 +537,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v1.9.0"
+                "source": "https://github.com/composer/installers/tree/v1.12.0"
             },
             "funding": [
                 {
@@ -563,11 +545,15 @@
                     "type": "custom"
                 },
                 {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/composer/composer",
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-04-07T06:57:05+00:00"
+            "time": "2021-09-13T08:19:44+00:00"
         },
         {
             "name": "composer/semver",
@@ -9391,9 +9377,6 @@
                 "type": "zip",
                 "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.chosen"
@@ -9406,9 +9389,6 @@
                 "type": "zip",
                 "url": "https://github.com/ubilabs/geocomplete/archive/1.7.0.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.geocomplete"
@@ -9420,9 +9400,6 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/jeresig/jquery.hotkeys/archive/0.2.0.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
             },
             "type": "drupal-library",
             "extra": {
@@ -9448,9 +9425,6 @@
                 "type": "zip",
                 "url": "https://github.com/rvera/image-picker/archive/0.3.1.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.image-picker"
@@ -9458,13 +9432,10 @@
         },
         {
             "name": "jquery/inputmask",
-            "version": "5.0.5",
+            "version": "5.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.5.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/5.0.6.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -9478,9 +9449,6 @@
                 "type": "zip",
                 "url": "https://github.com/jackocnr/intl-tel-input/archive/v16.1.0.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.intl-tel-input"
@@ -9492,9 +9460,6 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/gjunge/rateit.js/archive/1.1.3.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
             },
             "type": "drupal-library",
             "extra": {
@@ -9508,9 +9473,6 @@
                 "type": "zip",
                 "url": "https://github.com/select2/select2/archive/4.0.13.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.select2"
@@ -9523,9 +9485,6 @@
                 "type": "zip",
                 "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/0.9.0.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "jquery.textcounter"
@@ -9533,13 +9492,10 @@
         },
         {
             "name": "jquery/timepicker",
-            "version": "1.13.14",
+            "version": "1.13.18",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.14.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://github.com/jonthornton/jquery-timepicker/archive/1.13.18.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -9552,9 +9508,6 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/simontabor/jquery-toggles/archive/v4.0.0.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
             },
             "type": "drupal-library",
             "extra": {
@@ -11404,13 +11357,10 @@
         },
         {
             "name": "progress-tracker/progress-tracker",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/NigelOToole/progress-tracker/archive/2.0.6.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://github.com/NigelOToole/progress-tracker/archive/2.0.7.zip"
             },
             "type": "drupal-library",
             "extra": {
@@ -11942,11 +11892,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.0",
+            "version": "0.9.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "c009e1776c72ffad4e7a229b312ecf2911a3ba1b"
+                "reference": "7328ed59c6530c37f064a6de0237ddc850764775"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12106,7 +12056,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-04-06T12:43:14+00:00"
+            "time": "2022-04-19T14:39:29+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -12212,9 +12162,6 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
             },
             "type": "drupal-library",
             "extra": {
@@ -12398,11 +12345,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.6.8",
+            "version": "0.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "6f384052890c0c05bb7fe2fa16540a23ad9fbcfc"
+                "reference": "d745f4284e31c3129b54c37b94b761565b615a30"
             },
             "type": "pattern-lab",
             "license": [
@@ -12416,7 +12363,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2022-02-10T14:28:27+00:00"
+            "time": "2022-04-19T14:30:23+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
@@ -12469,9 +12416,6 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/ariutta/svg-pan-zoom/archive/3.6.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
             },
             "type": "drupal-library",
             "extra": {
@@ -15112,9 +15056,6 @@
                 "type": "zip",
                 "url": "https://github.com/cferdinandi/tabby/archive/v12.0.3.zip"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "tabby"
@@ -15127,9 +15068,6 @@
                 "type": "file",
                 "url": "https://unpkg.com/tippy.js@5.2.1/dist/tippy-bundle.iife.min.js"
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
             "type": "drupal-library",
             "extra": {
                 "installer-name": "tippyjs/5.x"
@@ -15141,9 +15079,6 @@
             "dist": {
                 "type": "file",
                 "url": "https://unpkg.com/tippy.js@6.2.6/dist/tippy-bundle.umd.min.js"
-            },
-            "require": {
-                "composer/installers": "~1.0"
             },
             "type": "drupal-library",
             "extra": {
