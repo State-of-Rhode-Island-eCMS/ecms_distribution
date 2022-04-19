@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.6.5] - 2022-04-19
+### Changed
+- RIGA-6: Updated ecms_profile to 0.9.1.
+- RIGA-6: Updated ecms_patternlab to 0.6.9.
+
 ## [1.6.4] - 2022-04-07
 ### Changed
 - RIGA-6: Updated ecms_profile to 0.9.0.

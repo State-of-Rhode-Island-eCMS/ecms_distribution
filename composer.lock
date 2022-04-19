@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "955d3613613959263bdac569ebba72f9",
+    "content-hash": "480bc6b54c8d34085a38ebba5b5f0a8e",
     "packages": [
         {
             "name": "algolia/places",
@@ -11892,11 +11892,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-235/create-modal",
+            "version": "0.9.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "5c34b9904b595fbdfef62964701cffbe77d4640d"
+                "reference": "7328ed59c6530c37f064a6de0237ddc850764775"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12056,7 +12056,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-04-18T21:35:52+00:00"
+            "time": "2022-04-19T14:39:29+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -12345,11 +12345,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "dev-RIGA-235b/create-modal",
+            "version": "0.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "a072c53ab145593e29f690d1c633705e07053dc8"
+                "reference": "d745f4284e31c3129b54c37b94b761565b615a30"
             },
             "type": "pattern-lab",
             "license": [
@@ -12363,7 +12363,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2022-04-18T21:34:09+00:00"
+            "time": "2022-04-19T14:30:23+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
@@ -17902,10 +17902,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "rhodeislandecms/ecms_profile": 20,
-        "state-of-rhode-island-ecms/ecms_patternlab": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
