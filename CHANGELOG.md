@@ -10,12 +10,16 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-262: Post site install site factory hook to set site email.
+- RIGA-264: Post site duplication site factory hook to update Solr config.
 
 ### Changed
+- RIGA-260: Add rewrite rule and start tracking .htaccess.
 
 ### Deprecated
 
 ### Removed
+- RIGA-260: Remove htaccess patch.
 
 ### Fixed
 
