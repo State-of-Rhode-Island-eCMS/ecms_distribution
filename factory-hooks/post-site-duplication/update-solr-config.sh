@@ -33,5 +33,5 @@ DRUSH_CMD="drush10 --verbose --root=$docroot --uri=https://$domain"
 # Run `drush updatedb`.
 $DRUSH_CMD sdel search_api_solr.site_hash --yes  >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-duplication-solr-config${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD sapi-i acquia_search_index --yes   >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-duplication-solr-config${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD cr --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-duplication-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD cr --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-duplication-solr-config${domain}-$(date +"%Y-%m-%d").log
 
