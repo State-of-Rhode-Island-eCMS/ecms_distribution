@@ -79,12 +79,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-            "patch -d docroot < patches/htaccess.patch"
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
         ],
         "post-update-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-            "patch -d docroot < patches/htaccess.patch"
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
         ],
         "test:php": [
             "vendor/bin/phpunit"
@@ -122,7 +120,9 @@
                 "web-root": "docroot"
             },
             "file-mapping": {
-                "[web-root]/robots.txt": false
+                "[web-root]/robots.txt": false,
+                "[web-root]/.htaccess": false
+
             }
         },
         "enable-patching": "true",
