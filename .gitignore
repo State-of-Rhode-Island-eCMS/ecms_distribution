@@ -1,6 +1,7 @@
 # Drupal
 /docroot/*.*
 !/docroot/.htaccess
+!/docroot/no_robots.txt
 /docroot/core
 /docroot/libraries
 /docroot/modules/contrib

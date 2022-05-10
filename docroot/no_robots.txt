@@ -1,0 +1,6 @@
+#
+# no_robots.txt
+#
+#
+User-agent: *
+Disallow: /
