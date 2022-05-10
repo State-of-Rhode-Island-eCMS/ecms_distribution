@@ -106,6 +106,12 @@ AddEncoding gzip svgz
   RewriteCond %{HTTP_HOST} !^www\.riag\.ri\.gov$ [NC]
   RewriteRule ^ http%{ENV:protossl}://%1.ri.gov%{REQUEST_URI} [L,R=301]
 
+  # Serve a robots disallow file for any internal domains.
+  RewriteCond %{HTTP_HOST} \.acsitefactory\.com$ [NC,OR]
+  RewriteCond %{HTTP_HOST} \.ecms\.ri\.gov$ [NC]
+  RewriteCond %{REQUEST_URI} /robots.txt [NC]
+  RewriteRule ^ no_robots.txt [L]
+
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
   # VirtualDocumentRoot and the rewrite rules are not working properly.
   # For example if your site is at http://example.com/drupal uncomment and
