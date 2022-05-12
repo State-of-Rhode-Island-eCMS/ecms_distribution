@@ -75,7 +75,17 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
-        "discard-changes": true
+        "discard-changes": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "oomphinc/composer-installers-extender": true,
+            "drupal-composer/preserve-paths": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true,
+            "wikimedia/composer-merge-plugin": true
+        }
     },
     "scripts": {
         "post-install-cmd": [
