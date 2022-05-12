@@ -132,9 +132,7 @@
                 "web-root": "docroot"
             },
             "file-mapping": {
-                "[web-root]/robots.txt": false,
-                "[web-root]/.htaccess": false
-
+                "[web-root]/robots.txt": false
             }
         },
         "enable-patching": "true",
