@@ -1,0 +1,22 @@
+diff --git a/.htaccess b/.htaccess
+index 6f9123d..84ec3c6 100644
+--- a/.htaccess
++++ b/.htaccess
+@@ -102,8 +102,15 @@ AddEncoding gzip svgz
+   # To redirect all users to access the site WITHOUT the 'www.' prefix,
+   # (http://www.example.com/foo will be redirected to http://example.com/foo)
+   # uncomment the following:
+-  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+-  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
++  RewriteCond %{HTTP_HOST} ^www\.(.+)\.ri\.gov$ [NC]
++  RewriteCond %{HTTP_HOST} !^www\.riag\.ri\.gov$ [NC]
++  RewriteRule ^ http%{ENV:protossl}://%1.ri.gov%{REQUEST_URI} [L,R=301]
++
++  # Serve a robots disallow file for any internal domains.
++  RewriteCond %{HTTP_HOST} \.acsitefactory\.com$ [NC,OR]
++  RewriteCond %{HTTP_HOST} \.ecms\.ri\.gov$ [NC]
++  RewriteCond %{REQUEST_URI} /robots.txt [NC]
++  RewriteRule ^ no_robots.txt [L]
+
+   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+   # VirtualDocumentRoot and the rewrite rules are not working properly.
