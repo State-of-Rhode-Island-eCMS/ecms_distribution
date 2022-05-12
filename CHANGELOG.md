@@ -14,12 +14,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-264: Post site duplication site factory hook to update Solr config.
 
 ### Changed
-- RIGA-260: Add rewrite rule and start tracking .htaccess.
+- RIGA-260: Add rewrite rule for no_robots.txt.
 
 ### Deprecated
 
 ### Removed
-- RIGA-260: Remove htaccess patch.
 
 ### Fixed
 
