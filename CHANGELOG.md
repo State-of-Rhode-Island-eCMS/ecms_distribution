@@ -10,11 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-262: Post site install site factory hook to set site email.
-- RIGA-264: Post site duplication site factory hook to update Solr config.
 
 ### Changed
-- RIGA-260: Add rewrite rule for no_robots.txt.
 
 ### Deprecated
 
@@ -23,6 +20,16 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.6.7] - 2022-05-12
+### Added
+- RIGA-262: Post site install site factory hook to set site email.
+- RIGA-264: Post site duplication site factory hook to update Solr config.
+
+### Changed
+- RIGA-260: Add rewrite rule for no_robots.txt.
+- RIGA-6: Updated ecms_profile to 0.9.4.
+- RIGA-6: Updated ecms_patternlab to 0.7.0.
 
 ## [1.6.6] - 2022-04-28
 ### Changed
@@ -560,7 +567,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.7...HEAD
+[1.6.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.6...1.6.7
 [1.6.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.5...1.6.6
 [1.6.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.4...1.6.5
 [1.6.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.3...1.6.4
