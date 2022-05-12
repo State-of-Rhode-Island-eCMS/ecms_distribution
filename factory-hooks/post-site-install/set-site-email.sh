@@ -30,6 +30,6 @@ docroot="/var/www/html/$site.$env/docroot"
 #    on aliases. This can prevent some hard to trace problems.
 DRUSH_CMD="drush10 --verbose --root=$docroot --uri=https://$domain"
 
-# Run `drush updatedb`.
+# Ensures the default email address is ecms@notification.ri.gov.
 $DRUSH_CMD cset system.site mail "ecms@notification.ri.gov" --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-install-${domain}-$(date +"%Y-%m-%d").log
 
