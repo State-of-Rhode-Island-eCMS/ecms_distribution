@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-233: Updated Drupal core to 9.3.13.
 
 ### Deprecated
 
