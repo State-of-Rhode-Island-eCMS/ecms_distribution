@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-233: Updated Drupal core to 9.3.13.
 
 ### Deprecated
 
@@ -21,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.6.8] - 2022-05-19
+### Changed
+- RIGA-233: Updated Drupal core to 9.3.13.
+- RIGA-6: Updated ecms_profile to 0.9.5.
 
 ## [1.6.7] - 2022-05-12
 ### Added
@@ -568,7 +572,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.8...HEAD
+[1.6.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.7...1.6.8
 [1.6.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.6...1.6.7
 [1.6.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.5...1.6.6
 [1.6.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.4...1.6.5
