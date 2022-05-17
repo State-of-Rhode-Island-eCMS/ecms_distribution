@@ -85,7 +85,8 @@
             "drupal/core-project-message": true,
             "drupal/core-vendor-hardening": true,
             "wikimedia/composer-merge-plugin": true
-        }
+        },
+        "process-timeout": 0
     },
     "scripts": {
         "post-install-cmd": [
