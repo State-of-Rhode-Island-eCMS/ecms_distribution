@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ea0b8ff17388b76f27d0fe8139d5fe3",
+    "content-hash": "035ab3d4c398708474fcbad1b6c6fc79",
     "packages": [
         {
             "name": "algolia/places",
@@ -2787,26 +2787,26 @@
         },
         {
             "name": "drupal/asset_injector",
-            "version": "2.7.0",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/asset_injector.git",
-                "reference": "8.x-2.7"
+                "reference": "8.x-2.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.7.zip",
-                "reference": "8.x-2.7",
-                "shasum": "95287280fc513b4d32f6fc81feac9ada0a6f7948"
+                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.10.zip",
+                "reference": "8.x-2.10",
+                "shasum": "c7912ce49cdfbb517bfecc6301d417f0c9ab9833"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.8 || ^9.0 || ^10.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.7",
-                    "datestamp": "1591636386",
+                    "version": "8.x-2.10",
+                    "datestamp": "1647880963",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2815,7 +2815,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -5964,26 +5964,26 @@
         },
         {
             "name": "drupal/memcache",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/memcache.git",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "1d9876763c7ef04a9bba698ddcadbe708037fed2"
+                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "b2f9715612be74f9ce55daaf838f6f17a9eb2f5a"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.9 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1601053267",
+                    "version": "8.x-2.3",
+                    "datestamp": "1614802365",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7300,26 +7300,26 @@
         },
         {
             "name": "drupal/role_delegation",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/role_delegation.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/role_delegation-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "a63b548056cc729beacfd385625fafb983e0f73e"
+                "url": "https://ftp.drupal.org/files/projects/role_delegation-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "08095bada0f492e70d32fcf357a8c01825ca81fc"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.2 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1580498751",
+                    "version": "8.x-1.2",
+                    "datestamp": "1644487627",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7472,6 +7472,56 @@
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/search_api_exclude",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api_exclude.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api_exclude-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "b5a6803c03b995f4a4ddf7346fa9af9d0c3006e4"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1628003031",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "MiSc",
+                    "homepage": "https://www.drupal.org/user/382892"
+                },
+                {
+                    "name": "StijnStroobants",
+                    "homepage": "https://www.drupal.org/user/1787140"
+                }
+            ],
+            "description": "The Search API Exclude module allows users to prevent certain nodes from being indexed.",
+            "homepage": "https://www.drupal.org/project/search_api_exclude",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api_exclude",
+                "issues": "https://www.drupal.org/project/issues/search_api_exclude"
             }
         },
         {
@@ -7773,27 +7823,27 @@
         },
         {
             "name": "drupal/svg_image",
-            "version": "1.14.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/svg_image.git",
-                "reference": "8.x-1.14"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/svg_image-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "0a6ca8104995a8cf4a1fff3e9e04e1fecf734b11"
+                "url": "https://ftp.drupal.org/files/projects/svg_image-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "e29b6fff49aacfaf81e58059b09551b45325f633"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
-                "enshrined/svg-sanitize": ">=0.9 <1.0"
+                "enshrined/svg-sanitize": ">=0.15 <1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1591251834",
+                    "version": "8.x-1.16",
+                    "datestamp": "1647314248",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7824,26 +7874,26 @@
         },
         {
             "name": "drupal/token",
-            "version": "1.7.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/token.git",
-                "reference": "8.x-1.7"
+                "reference": "8.x-1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "c7e3a3757282e4c94e3c1fff08d01e22155cb853"
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "8b81224ab0420221b292e8d3b66d0da726317400"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1589314266",
+                    "version": "8.x-1.10",
+                    "datestamp": "1638619775",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7857,7 +7907,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -8542,25 +8592,25 @@
         },
         {
             "name": "enshrined/svg-sanitize",
-            "version": "0.13.3",
+            "version": "0.15.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darylldoyle/svg-sanitizer.git",
-                "reference": "bc66593f255b7d2613d8f22041180036979b6403"
+                "reference": "e50b83a2f1f296ca61394fe88fbfe3e896a84cf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/bc66593f255b7d2613d8f22041180036979b6403",
-                "reference": "bc66593f255b7d2613d8f22041180036979b6403",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/e50b83a2f1f296ca61394fe88fbfe3e896a84cf4",
+                "reference": "e50b83a2f1f296ca61394fe88fbfe3e896a84cf4",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
-                "ext-libxml": "*"
+                "ext-libxml": "*",
+                "php": "^7.0 || ^8.0"
             },
             "require-dev": {
-                "codeclimate/php-test-reporter": "^0.1.2",
-                "phpunit/phpunit": "^6"
+                "phpunit/phpunit": "^6.5 || ^8.5"
             },
             "type": "library",
             "autoload": {
@@ -8581,9 +8631,9 @@
             "description": "An SVG sanitizer for PHP",
             "support": {
                 "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
-                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/develop"
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.15.4"
             },
-            "time": "2020-01-20T01:34:17+00:00"
+            "time": "2022-02-21T09:13:59+00:00"
         },
         {
             "name": "gasparesganga/php-shapefile",
@@ -11936,11 +11986,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-271/core-9.3.14",
+            "version": "0.9.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "cf6a2860e1b764dfd2e4aa3cf23471fc7f51a40d"
+                "reference": "7e7531fb05944b04111b592e8fcbb12fae5fa978"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12004,6 +12054,7 @@
                 "drupal/role_delegation": "^1.1",
                 "drupal/scheduled_transitions": "^2.2",
                 "drupal/search_api": "^1.18",
+                "drupal/search_api_exclude": "^2.0",
                 "drupal/search_api_solr": "^4.2",
                 "drupal/simple_oauth": "^5.2",
                 "drupal/simple_sitemap": "^3.8",
@@ -12100,7 +12151,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-05-31T10:27:58+00:00"
+            "time": "2022-05-31T18:48:50+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -17946,9 +17997,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "rhodeislandecms/ecms_profile": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
