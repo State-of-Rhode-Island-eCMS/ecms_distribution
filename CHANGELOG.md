@@ -12,6 +12,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-268: Updated Token to 1.10.
+- RIGA-268: Updated SVG Image to 1.16.
+- RIGA-268: Updated Asset Injector to 1.10.
+- RIGA-268: Updated Memcache to 2.3.
+- RIGA-6: Updated ecms_profile to 0.9.6.
 
 ### Deprecated
 
