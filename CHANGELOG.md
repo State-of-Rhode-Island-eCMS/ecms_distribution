@@ -12,17 +12,22 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-268: Updated Token to 1.10.
-- RIGA-268: Updated SVG Image to 1.16.
-- RIGA-268: Updated Asset Injector to 1.10.
-- RIGA-268: Updated Memcache to 2.3.
-- RIGA-6: Updated ecms_profile to 0.9.6.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.6.9] - 2022-06-02
+### Changed
+- RIGA-268: Updated Token to 1.10.
+- RIGA-268: Updated SVG Image to 1.16.
+- RIGA-268: Updated Asset Injector to 1.10.
+- RIGA-268: Updated Memcache to 2.3.
+- RIGA-6: Updated ecms_profile to 0.9.6.
 
 ### Security
 - RIGA-271: Updated Drupal core to 9.3.14 (SA-CORE-2022-010).
@@ -578,7 +583,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.9...HEAD
+[1.6.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.8...1.6.9
 [1.6.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.7...1.6.8
 [1.6.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.6...1.6.7
 [1.6.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.5...1.6.6
