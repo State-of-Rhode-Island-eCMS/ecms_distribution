@@ -14,12 +14,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-268: Updated Acquia Connector to 3.0.4.
 - RIGA-268: Updated Acquia Purge to 1.2.
-- RIGA-268: Updated Acquia Search 3.0.5.
-- RIGA-268: Updated Allowed Formats 1.5.
-- RIGA-268: Updated Purge 3.2.
-- RIGA-268: Updated Search API 1.23.
-- RIGA-268: Updated Search API Solr
+- RIGA-268: Updated Acquia Search to 3.0.5.
+- RIGA-268: Updated Allowed Formats to 1.5.
+- RIGA-268: Updated Purge to 3.2.
+- RIGA-268: Updated Search API to 1.23.
+- RIGA-268: Updated Search API Solr to 4.2.7.
 - RIGA-268: Updated Simple XML Sitemap to 3.11.
+- RIGA-268: Updated Drupal core to 9.3.15.
 
 ### Deprecated
 
