@@ -12,6 +12,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.7.0] - 2022-06-09
+### Changed
 - RIGA-268: Updated Acquia Connector to 3.0.4.
 - RIGA-268: Updated Acquia Purge to 1.2.
 - RIGA-268: Updated Acquia Search to 3.0.5.
@@ -21,14 +32,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-268: Updated Search API Solr to 4.2.7.
 - RIGA-268: Updated Simple XML Sitemap to 3.11.
 - RIGA-268: Updated Drupal core to 9.3.15.
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
+- RIGA-6: Updated ecms_profile to 0.9.7.
+- RIGA-6: Updated ecms_patternlab to 0.7.1.
 
 ## [1.6.9] - 2022-06-02
 ### Changed
@@ -592,7 +597,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.0...HEAD
+[1.7.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.9...1.7.0
 [1.6.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.8...1.6.9
 [1.6.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.7...1.6.8
 [1.6.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.6...1.6.7
