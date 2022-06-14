@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-268: Updated Address to 1.10.
 
 ### Deprecated
 
@@ -20,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-278: Updated Drupal core to 9.3.16 (SA-CORE-2022-011).
 
 ## [1.7.0] - 2022-06-09
 ### Changed

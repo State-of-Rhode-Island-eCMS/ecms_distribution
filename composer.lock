@@ -343,27 +343,28 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v1.0.9",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "7f6b8780ae20862529a0ceaaf102a3f7ff740b91"
+                "reference": "566febd56ca71e31dd383b014c4e1bec680507bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/7f6b8780ae20862529a0ceaaf102a3f7ff740b91",
-                "reference": "7f6b8780ae20862529a0ceaaf102a3f7ff740b91",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/566febd56ca71e31dd383b014c4e1bec680507bf",
+                "reference": "566febd56ca71e31dd383b014c4e1bec680507bf",
                 "shasum": ""
             },
             "require": {
                 "doctrine/collections": "~1.0",
-                "php": ">=7.0.8"
+                "php": ">=7.3"
             },
             "require-dev": {
+                "ext-json": "*",
                 "mikey179/vfsstream": "1.*",
-                "phpunit/phpunit": "^6.0",
-                "squizlabs/php_codesniffer": "2.*",
-                "symfony/validator": "^3.4"
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "3.*",
+                "symfony/validator": "^4.4 || ^5.4"
             },
             "suggest": {
                 "symfony/validator": "to validate addresses"
@@ -400,9 +401,9 @@
             ],
             "support": {
                 "issues": "https://github.com/commerceguys/addressing/issues",
-                "source": "https://github.com/commerceguys/addressing/tree/v1.0.9"
+                "source": "https://github.com/commerceguys/addressing/tree/v1.3.0"
             },
-            "time": "2020-09-12T12:15:49+00:00"
+            "time": "2022-04-08T13:06:51+00:00"
         },
         {
             "name": "composer/installers",
@@ -2542,21 +2543,22 @@
         },
         {
             "name": "drupal/address",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/address.git",
-                "reference": "8.x-1.9"
+                "reference": "8.x-1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/address-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "c7e6406d88c6d6be9e8fe0091040d67012bdbf05"
+                "url": "https://ftp.drupal.org/files/projects/address-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "bbe61eb51da9d9b2a7ab247f90426836eb9b6f25"
             },
             "require": {
-                "commerceguys/addressing": "^1.0.7",
-                "drupal/core": "^8.8 || ^9"
+                "commerceguys/addressing": "^1.2.0",
+                "drupal/core": "^9.2 || ^10",
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
                 "drupal/token": "^1.0"
@@ -2564,8 +2566,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1604422821",
+                    "version": "8.x-1.10",
+                    "datestamp": "1643715226",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2577,6 +2579,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
                 {
                     "name": "bojanz",
                     "homepage": "https://www.drupal.org/user/86106"
