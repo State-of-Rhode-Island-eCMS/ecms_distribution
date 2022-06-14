@@ -6390,17 +6390,17 @@
         },
         {
             "name": "drupal/moderated_content_bulk_publish",
-            "version": "2.0.1",
+            "version": "2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/moderated_content_bulk_publish.git",
-                "reference": "2.0.1"
+                "reference": "2.0.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/moderated_content_bulk_publish-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "928a977cd872682454d5050c7240b8beeed2693c"
+                "url": "https://ftp.drupal.org/files/projects/moderated_content_bulk_publish-2.0.11.zip",
+                "reference": "2.0.11",
+                "shasum": "6aef06c1c22095ecc683d5ccfbfba6fba8eccb8f"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6408,8 +6408,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1603853542",
+                    "version": "2.0.11",
+                    "datestamp": "1649772907",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6480,17 +6480,17 @@
         },
         {
             "name": "drupal/office_hours",
-            "version": "1.3.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/office_hours.git",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "92f3501b72de9bfce282981d8f1b2eec18822c29"
+                "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "97f46cdc0673d3354496888b71aaf330715d94d0"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6498,8 +6498,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1592488115",
+                    "version": "8.x-1.6",
+                    "datestamp": "1648134032",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

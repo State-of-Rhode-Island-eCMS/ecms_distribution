@@ -18,6 +18,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-268: Updated Honeypot to 2.1.1.
 - RIGA-268: Updated Layout Builder Restrictions to 2.13.
 - RIGA-268: Updated Media Library Theme Reset to 1.1.0.
+- RIGA-268: Updated moderated_content_bulk_publish to 2.0.11.
+- RIGA-268: Updated Office Hours to 1.6.0.
 
 ### Deprecated
 
