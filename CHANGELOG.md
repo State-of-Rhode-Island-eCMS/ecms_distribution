@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-268: Updated Dynamic Entity Reference to 1.16.
 - RIGA-268: Updated Easy Breadcrumb to 2.0.3.
 - RIGA-268: Updated Honeypot to 2.1.1.
+- RIGA-268: Updated Layout Builder Restrictions to 2.13.
 
 ### Deprecated
 

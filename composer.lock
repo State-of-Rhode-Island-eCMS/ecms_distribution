@@ -5591,31 +5591,31 @@
         },
         {
             "name": "drupal/layout_builder_restrictions",
-            "version": "2.8.0",
+            "version": "2.13.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/layout_builder_restrictions.git",
-                "reference": "8.x-2.8"
+                "reference": "8.x-2.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.8.zip",
-                "reference": "8.x-2.8",
-                "shasum": "89e1efccd83ac0796cdd6bd33a82186f1539f8f5"
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.13.zip",
+                "reference": "8.x-2.13",
+                "shasum": "2ff1a74d533cd785d3f3e8dae5ebc9d499771090"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.8.0 || ^9.0"
             },
             "require-dev": {
-                "drupal/dashboards": "*",
-                "drupal/layout_library": "*",
-                "drupal/mini_layouts": "*"
+                "drupal/dashboards": "^2",
+                "drupal/layout_library": "^1",
+                "drupal/mini_layouts": "^1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.8",
-                    "datestamp": "1606569511",
+                    "version": "8.x-2.13",
+                    "datestamp": "1649945847",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5628,12 +5628,14 @@
             ],
             "authors": [
                 {
-                    "name": "Jeff Cardwell",
-                    "homepage": "https://www.drupal.org/user/2913129"
+                    "name": "The University of Texas at Austin",
+                    "homepage": "https://www.drupal.org/university-of-texas-at-austin",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "eiriksm",
-                    "homepage": "https://www.drupal.org/user/1014468"
+                    "name": "Eirik Morland (eiriksm)",
+                    "homepage": "https://www.drupal.org/u/eiriksm",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "gravelpot",
@@ -5662,8 +5664,13 @@
             ],
             "description": "Manage which fields & layouts are available in Layout Builder",
             "homepage": "https://www.drupal.org/project/layout_builder_restrictions",
+            "keywords": [
+                "Drupal",
+                "Layout Builder Restrictions"
+            ],
             "support": {
-                "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
+                "source": "https://git.drupalcode.org/project/layout_builder_restrictions",
+                "issues": "https://www.drupal.org/project/issues/layout_builder_restrictions"
             }
         },
         {
