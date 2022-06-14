@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-268: Updated Address to 1.10.
 - RIGA-268: Updated Dynamic Entity Reference to 1.16.
+- RIGA-268: Updated Easy Breadcrumb to 2.0.3.
 
 ### Deprecated
 
