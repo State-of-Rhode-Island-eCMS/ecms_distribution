@@ -12,6 +12,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.7.1] - 2022-06-16
+### Changed
 - RIGA-268: Updated Address to 1.10.
 - RIGA-268: Updated Dynamic Entity Reference to 1.16.
 - RIGA-268: Updated Easy Breadcrumb to 2.0.3.
@@ -20,12 +31,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-268: Updated Media Library Theme Reset to 1.1.0.
 - RIGA-268: Updated moderated_content_bulk_publish to 2.0.11.
 - RIGA-268: Updated Office Hours to 1.6.0.
-
-### Deprecated
-
-### Removed
-
-### Fixed
+- RIGA-6: Updated ecms_profile to 0.9.8.
 
 ### Security
 - RIGA-278: Updated Drupal core to 9.3.16 (SA-CORE-2022-011).
@@ -606,7 +612,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.1...HEAD
+[1.7.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.0...1.7.1
 [1.7.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.9...1.7.0
 [1.6.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.8...1.6.9
 [1.6.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.7...1.6.8
