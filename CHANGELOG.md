@@ -19,6 +19,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-268: Updated Media Entity Download to 2.1.
 - RIGA-268: Updated Media File Delete to 1.1.1.
 - RIGA-268: Updated Metatag to 1.19.
+- RIGA-268: Updated Pathauto to 1.10.
 
 ### Deprecated
 
