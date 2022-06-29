@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-268: Updated Entity Print to 2.5.
 - RIGA-268: Updated Feeds to 3.0.0-beta1.
 - RIGA-268: Updated JSON:API Extras to 3.20.
+- RIGA-268: Updated Media Entity Download to 2.1.
 
 ### Deprecated
 
