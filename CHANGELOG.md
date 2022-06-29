@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-268: Updated Consumers to 1.12.
 - RIGA-268: Updated Entity Print to 2.5.
+- RIGA-268: Updated Feeds to 3.0.0-beta1.
 
 ### Deprecated
 
