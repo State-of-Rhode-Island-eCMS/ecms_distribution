@@ -12,6 +12,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-268: Updated Consumers to 1.12.
+- RIGA-268: Updated Entity Print to 2.5.
+- RIGA-268: Updated Feeds to 3.0.0-beta1.
+- RIGA-268: Updated JSON:API Extras to 3.20.
+- RIGA-268: Updated Media Entity Download to 2.1.
+- RIGA-268: Updated Media File Delete to 1.1.1.
+- RIGA-268: Updated Metatag to 1.19.
+- RIGA-268: Updated Pathauto to 1.10.
 
 ### Deprecated
 
