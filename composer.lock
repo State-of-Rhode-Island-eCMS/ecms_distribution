@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "376be1f8bb107eaf0459ffebc7c7366c",
+    "content-hash": "e1ba58179b394bec3aa62361851c1ac8",
     "packages": [
         {
             "name": "algolia/places",
@@ -12075,11 +12075,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-268/june-modules-part-tre",
+            "version": "0.9.9",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "76c0d1c311bcd2d150698214d1dcb5e4b5bd7615"
+                "reference": "dd9f6c83e1e3acac7b6fe5a946e832224f9cfe92"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12241,7 +12241,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-06-29T12:28:07+00:00"
+            "time": "2022-06-30T12:57:40+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -18109,9 +18109,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "rhodeislandecms/ecms_profile": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
