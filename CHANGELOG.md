@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-285: Updated Key to 1.15.
 - RIGA-285: Updated Migrate Plus to 5.3.
+- RIGA-285: Updated Migrate Tools to 5.1.
 
 ### Deprecated
 
