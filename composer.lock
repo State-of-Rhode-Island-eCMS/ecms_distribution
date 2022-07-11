@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1ba58179b394bec3aa62361851c1ac8",
+    "content-hash": "8b21792fac2676b54a752704b5c88199",
     "packages": [
         {
             "name": "algolia/places",
@@ -8415,6 +8415,75 @@
             }
         },
         {
+            "name": "drupal/webform_views",
+            "version": "5.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform_views.git",
+                "reference": "8.x-5.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform_views-8.x-5.0-beta1.zip",
+                "reference": "8.x-5.0-beta1",
+                "shasum": "9d73a091bea676c4b69ca5d2e404cade37b00b21"
+            },
+            "require": {
+                "drupal/core": "^9",
+                "drupal/webform": "^6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-5.0-beta1",
+                    "datestamp": "1649076086",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
+                },
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "bucefal91",
+                    "homepage": "https://www.drupal.org/user/504128"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                },
+                {
+                    "name": "matio89",
+                    "homepage": "https://www.drupal.org/user/2320090"
+                },
+                {
+                    "name": "ws.agency",
+                    "homepage": "https://www.drupal.org/user/2851415"
+                }
+            ],
+            "description": "Webform integration with views.",
+            "homepage": "https://www.drupal.org/project/webform_views",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform_views"
+            }
+        },
+        {
             "name": "drupal_git/migrate_process_trim",
             "version": "1.0.0",
             "source": {
@@ -12089,11 +12158,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.9",
+            "version": "dev-RIGA-280/add-webform-views",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "dd9f6c83e1e3acac7b6fe5a946e832224f9cfe92"
+                "reference": "ea0b80d9395e7a133fc5ceabeb2710745001376f"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12171,6 +12240,7 @@
                 "drupal/views_database_connector": "^1.4",
                 "drupal/webform": "^6.0",
                 "drupal/webform_encrypt": "1.x-dev@dev",
+                "drupal/webform_views": "^5.0@beta",
                 "drupal_git/migrate_process_trim": "1.0.0",
                 "drupal_git/migration_tools": "1.0.0",
                 "drush/drush": "^10.0",
@@ -12255,7 +12325,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-06-30T12:57:40+00:00"
+            "time": "2022-07-11T16:21:05+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -18123,7 +18193,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
