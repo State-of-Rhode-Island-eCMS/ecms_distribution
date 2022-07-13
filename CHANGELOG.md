@@ -12,6 +12,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-285: Updated CTools to 3.8.
+- RIGA-285: Updated Key to 1.15.
+- RIGA-285: Updated Migrate Plus to 5.3.
+- RIGA-285: Updated Migrate Tools to 5.1.
+- RIGA-285: Updated Moderation Dashboard to 1.0.0-beta3.
+- RIGA-285: Updated Publish Content to 1.5.
+- RIGA-285: Updated Rabbit Hole to 1.0.0-beta10.
+- RIGA-285: Updated Real AES to 2.4.
 
 ### Deprecated
 
