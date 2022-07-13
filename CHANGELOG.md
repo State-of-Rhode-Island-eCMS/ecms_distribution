@@ -12,14 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-285: Updated CTools to 3.8.
-- RIGA-285: Updated Key to 1.15.
-- RIGA-285: Updated Migrate Plus to 5.3.
-- RIGA-285: Updated Migrate Tools to 5.1.
-- RIGA-285: Updated Moderation Dashboard to 1.0.0-beta3.
-- RIGA-285: Updated Publish Content to 1.5.
-- RIGA-285: Updated Rabbit Hole to 1.0.0-beta10.
-- RIGA-285: Updated Real AES to 2.4.
 
 ### Deprecated
 
@@ -28,6 +20,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.7.3] - 2022-07-14
+### Changed
+- RIGA-285: Updated CTools to 3.8.
+- RIGA-285: Updated Key to 1.15.
+- RIGA-285: Updated Migrate Plus to 5.3.
+- RIGA-285: Updated Migrate Tools to 5.1.
+- RIGA-285: Updated Moderation Dashboard to 1.0.0-beta3.
+- RIGA-285: Updated Publish Content to 1.5.
+- RIGA-285: Updated Rabbit Hole to 1.0.0-beta10.
+- RIGA-285: Updated Real AES to 2.4.
+- RIGA-6: Updated ecms_profile to 0.9.10.
 
 ## [1.7.2] - 2022-06-30
 ### Changed
@@ -632,7 +636,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.3...HEAD
+[1.7.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.2...1.7.3
 [1.7.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.1...1.7.2
 [1.7.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.0...1.7.1
 [1.7.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.6.9...1.7.0
