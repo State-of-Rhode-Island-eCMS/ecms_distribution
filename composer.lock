@@ -4035,20 +4035,20 @@
         },
         {
             "name": "drupal/entity_print",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_print.git",
-                "reference": "8.x-2.5"
+                "reference": "8.x-2.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_print-8.x-2.5.zip",
-                "reference": "8.x-2.5",
-                "shasum": "4fa16c4025ad1f82dfab1d305ab07d224e61bea3"
+                "url": "https://ftp.drupal.org/files/projects/entity_print-8.x-2.6.zip",
+                "reference": "8.x-2.6",
+                "shasum": "d11303c4f38b97e262d561df80bba79e50922487"
             },
             "require": {
-                "dompdf/dompdf": "^1.2.1",
+                "dompdf/dompdf": "^1.2.1 || ^2.0.0",
                 "drupal/core": "^8 || ^9",
                 "php": "^7.1 || ^8.0"
             },
@@ -4058,8 +4058,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.5",
-                    "datestamp": "1649710508",
+                    "version": "8.x-2.6",
+                    "datestamp": "1657729488",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4076,20 +4076,20 @@
                     "homepage": "https://www.drupal.org/u/benjy"
                 },
                 {
-                    "name": "VladimirAus",
-                    "homepage": "https://www.drupal.org/user/673120"
-                },
-                {
-                    "name": "benjy",
-                    "homepage": "https://www.drupal.org/user/1852732"
-                },
-                {
                     "name": "larowlan",
                     "homepage": "https://www.drupal.org/user/395439"
                 },
                 {
                     "name": "pameeela",
                     "homepage": "https://www.drupal.org/user/1431110"
+                },
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                },
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
                 }
             ],
             "description": "PDF print solution for any Drupal entity.",
