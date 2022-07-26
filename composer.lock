@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "275863872b7c58bbfd1c3f8c9c8612f0",
+    "content-hash": "892f6a9634ef5b16d12ae1c9fbac0dfa",
     "packages": [
         {
             "name": "algolia/places",
@@ -12158,11 +12158,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-293/core-security-update",
+            "version": "dev-RIGA-285/contrib-update-fixes-misc-7-25",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "cfd60bef25b2ac36e4548fdc08d1a314cc326e12"
+                "reference": "3daa95ef4cd357f2412fc1ca902a97019acaf129"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12279,8 +12279,7 @@
                     },
                     "drupal/paragraphs": {
                         "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
-                        "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch",
-                        "2887353 - Paragraph Translation Sync": "https://www.drupal.org/files/issues/2020-08-05/translation-sync-submodule-2887353-44.patch"
+                        "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
                     },
                     "drupal/webform_encrypt": {
                         "3142997 - D9 readiness": "https://www.drupal.org/files/issues/2020-06-05/3142997-20.patch",
@@ -12325,7 +12324,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-07-25T16:05:14+00:00"
+            "time": "2022-07-26T14:06:51+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
