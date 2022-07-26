@@ -1,0 +1,350 @@
+diff --git a/modules/paragraphs_translation_sync/paragraphs_translation_sync.info.yml b/modules/paragraphs_translation_sync/paragraphs_translation_sync.info.yml
+new file mode 100644
+index 0000000..3016945
+--- /dev/null
++++ b/modules/paragraphs_translation_sync/paragraphs_translation_sync.info.yml
+@@ -0,0 +1,9 @@
++name: Paragraphs translation sync
++type: module
++description: 'Enables to synchronise translations of paragraphs.'
++core_version_requirement: ^8.7.7 || ^9
++version: '8.x-1.14'
++package: Paragraphs
++project: 'paragraphs'
++dependencies:
++  - paragraphs:paragraphs
+diff --git a/modules/paragraphs_translation_sync/paragraphs_translation_sync.module b/modules/paragraphs_translation_sync/paragraphs_translation_sync.module
+new file mode 100644
+index 0000000..822edd3
+--- /dev/null
++++ b/modules/paragraphs_translation_sync/paragraphs_translation_sync.module
+@@ -0,0 +1,67 @@
++<?php
++
++declare(strict_types=1);
++
++/**
++ * @file
++ * Contains paragraphs_translation_sync.module.
++ */
++
++use Drupal\paragraphs\ParagraphInterface;
++use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Entity\EntityFormInterface;
++
++/**
++ * Implements hook_ENTITY_TYPE_create().
++ */
++function paragraphs_translation_sync_paragraph_insert(ParagraphInterface $paragraph) {
++  /** @var \Drupal\paragraphs_translation_sync\Services\SyncService $sync_service */
++  $sync_service = Drupal::service('paragraphs_translation_sync.sync');
++  $sync_service->deferSync($paragraph);
++}
++
++/**
++ * Implements hook_form_FORM_ID_alter().
++ */
++function paragraphs_translation_sync_form_paragraphs_type_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
++  $form_object = $form_state->getFormObject();
++  if ($form_object instanceof EntityFormInterface) {
++    $paragraphs_type = $form_object->getEntity();
++    $config = Drupal::config('paragraphs_translation_sync.' . $paragraphs_type->id());
++
++    $form['translation_sync_settings'] = [
++      '#type' => 'fieldset',
++      '#title' => t('Translation sync settings'),
++    ];
++
++    $form['translation_sync_settings']['translation_sync'] = [
++      '#type' => 'checkbox',
++      '#title' => t('Translation sync'),
++      '#default_value' => $config->get('enabled'),
++      '#description' => t('Enable translation sync functionality.'),
++    ];
++    $form['translation_sync_settings']['translation_sync_default_publish_state'] = [
++      '#type' => 'checkbox',
++      '#title' => t('Publish by default'),
++      '#default_value' => $config->get('default_publish_state'),
++      '#description' => t('Publish automatically created translations by default.'),
++    ];
++    $form['actions']['submit']['#submit'][] = 'paragraphs_translation_sync_form_paragraphs_type_edit_form_submit';
++  }
++}
++
++/**
++ * Submit handler for paragraphs_type_edit_form form.
++ */
++function paragraphs_translation_sync_form_paragraphs_type_edit_form_submit(&$form, FormStateInterface $form_state) {
++  $form_object = $form_state->getFormObject();
++  if ($form_object instanceof EntityFormInterface) {
++    $paragraphs_type = $form_object->getEntity();
++    /** @var \Drupal\Core\Config\Config $config */
++    $config = Drupal::service('config.factory')->getEditable('paragraphs_translation_sync.' . $paragraphs_type->id());
++
++    $config->set('enabled', $form_state->getValue(['translation_sync']));
++    $config->set('default_publish_state', $form_state->getValue(['translation_sync_default_publish_state']));
++    $config->save();
++  }
++}
+diff --git a/modules/paragraphs_translation_sync/paragraphs_translation_sync.services.yml b/modules/paragraphs_translation_sync/paragraphs_translation_sync.services.yml
+new file mode 100644
+index 0000000..779cef5
+--- /dev/null
++++ b/modules/paragraphs_translation_sync/paragraphs_translation_sync.services.yml
+@@ -0,0 +1,13 @@
++services:
++  paragraphs_translation_sync.sync:
++    class: Drupal\paragraphs_translation_sync\Services\SyncService
++    arguments: ['@config.factory', '@entity_type.manager', '@logger.factory']
++    tags:
++      - { name: event_subscriber }
++
++  # Event subscribers.
++  paragraphs_translation_sync.config_subscriber:
++    class: Drupal\paragraphs_translation_sync\EventSubscriber\ParagraphsTranslationSyncConfigSubscriber
++    arguments: ['@entity_display.repository']
++    tags:
++      - { name: event_subscriber }
+diff --git a/modules/paragraphs_translation_sync/src/EventSubscriber/ParagraphsTranslationSyncConfigSubscriber.php b/modules/paragraphs_translation_sync/src/EventSubscriber/ParagraphsTranslationSyncConfigSubscriber.php
+new file mode 100644
+index 0000000..481e77b
+--- /dev/null
++++ b/modules/paragraphs_translation_sync/src/EventSubscriber/ParagraphsTranslationSyncConfigSubscriber.php
+@@ -0,0 +1,71 @@
++<?php
++
++declare(strict_types=1);
++
++namespace Drupal\paragraphs_translation_sync\EventSubscriber;
++
++use Drupal\Core\Config\ConfigCrudEvent;
++use Drupal\Core\Config\ConfigEvents;
++use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
++use Symfony\Component\EventDispatcher\EventSubscriberInterface;
++
++/**
++ * A subscriber triggering a config when certain configuration changes.
++ */
++class ParagraphsTranslationSyncConfigSubscriber implements EventSubscriberInterface {
++
++  /**
++   * The entity display repository.
++   *
++   * @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface
++   */
++  private $entityDisplayRepository;
++
++  /**
++   * ParagraphsTranslationSyncConfigSubscriber constructor.
++   *
++   * @param \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entityDisplayRepository
++   *   The entity display repository.
++   */
++  public function __construct(EntityDisplayRepositoryInterface $entityDisplayRepository) {
++    $this->entityDisplayRepository = $entityDisplayRepository;
++  }
++
++  /**
++   * Change form display for paragraph.
++   *
++   * @param \Drupal\Core\Config\ConfigCrudEvent $event
++   *   The Event to process.
++   *
++   * @throws \Drupal\Core\Entity\EntityStorageException
++   *   If form display saving fails.
++   */
++  public function onSave(ConfigCrudEvent $event) {
++    $savedConfig = $event->getConfig();
++    $wasRelevantConfigChanged = $event->isChanged('enabled') || $event->isChanged('default_publish_state');
++    if (strpos($savedConfig->getName(), 'paragraphs_translation_sync.') !== FALSE && $wasRelevantConfigChanged) {
++      $bundle = substr($savedConfig->getName(), strlen('paragraphs_translation_sync.'));
++
++      /* Add a publish state checkbox if syncing is enabled for paragraph type
++      and the programmatically created translations are not published by default. */
++      if ($savedConfig->get('enabled') && !$savedConfig->get('default_publish_state')) {
++        $this->entityDisplayRepository->getFormDisplay('paragraph', $bundle, 'default')
++          ->setComponent('status', [])->save();
++      }
++      else {
++        $this->entityDisplayRepository->getFormDisplay('paragraph', $bundle, 'default')
++          ->removeComponent('status')->save();
++      }
++    }
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getSubscribedEvents() {
++    $events[ConfigEvents::SAVE][] = ['onSave'];
++
++    return $events;
++  }
++
++}
+diff --git a/modules/paragraphs_translation_sync/src/Services/SyncService.php b/modules/paragraphs_translation_sync/src/Services/SyncService.php
+new file mode 100644
+index 0000000..6521437
+--- /dev/null
++++ b/modules/paragraphs_translation_sync/src/Services/SyncService.php
+@@ -0,0 +1,160 @@
++<?php
++
++declare(strict_types=1);
++
++namespace Drupal\paragraphs_translation_sync\Services;
++
++use Drupal\Core\Config\ConfigFactoryInterface;
++use Drupal\Core\Config\ImmutableConfig;
++use Drupal\Core\Entity\ContentEntityInterface;
++use Drupal\Core\Entity\EntityTypeManagerInterface;
++use Drupal\Core\Logger\LoggerChannelFactoryInterface;
++use Drupal\field\FieldConfigInterface;
++use Drupal\paragraphs\ParagraphInterface;
++use Symfony\Component\EventDispatcher\EventSubscriberInterface;
++use Symfony\Component\HttpKernel\Event\TerminateEvent;
++use Symfony\Component\HttpKernel\KernelEvents;
++
++/**
++ * Responsible for creating translations for newly added paragraphs.
++ *
++ * @package Drupal\paragraphs_translation_sync\Services
++ */
++class SyncService implements EventSubscriberInterface {
++
++  /**
++   * The config factory.
++   *
++   * @var \Drupal\Core\Config\ConfigFactoryInterface
++   */
++  protected $configFactory;
++
++  /**
++   * The entity type manager.
++   *
++   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
++   */
++  protected $entityTypeManager;
++
++  /**
++   * Stores all paragraphs currently scheduled for translation sync.
++   *
++   * @var int[]
++   */
++  protected $scheduledParagraphs = [];
++
++  /**
++   * The logger.
++   *
++   * @var \Drupal\Core\Logger\LoggerChannelInterface
++   */
++  protected $logger;
++
++  /**
++   * SyncService constructor.
++   *
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
++   *   The config factory.
++   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
++   *   The entity type manager.
++   * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $loggerChannelFactory
++   *   The logger channel factory.
++   */
++  public function __construct(ConfigFactoryInterface $configFactory, EntityTypeManagerInterface $entityTypeManager, LoggerChannelFactoryInterface $loggerChannelFactory) {
++    $this->configFactory = $configFactory;
++    $this->entityTypeManager = $entityTypeManager;
++    $this->logger = $loggerChannelFactory->get('paragraphs_translation_sync');
++  }
++
++  /**
++   * Adds a paragraph to the list of paragraphs ready to be synced.
++   *
++   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
++   *   The paragraph to be synced.
++   */
++  public function deferSync(ParagraphInterface $paragraph): void {
++    // Check, if translation sync is enabled for the given paragraph's type.
++    $syncEnabled = $this->getConfig($paragraph)->get('enabled');
++    if ($syncEnabled) {
++      $this->scheduledParagraphs[] = (int) $paragraph->id();
++    }
++  }
++
++  /**
++   * Syncs all paragraphs scheduled for sync.
++   *
++   * Creates translations for the paragraph for all languages,
++   * the parent entity is currently translated to.
++   *
++   * @throws \Drupal\Core\Entity\EntityStorageException
++   *   If paragraph saving fails.
++   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
++   *   Thrown if the paragraph entity type doesn't exist.
++   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
++   *   Thrown if the paragraph storage handler couldn't be loaded.
++   */
++  public function sync(TerminateEvent $event): void {
++    foreach ($this->scheduledParagraphs as $id) {
++      $paragraphStorage = $this->entityTypeManager->getStorage('paragraph');
++      $paragraph = $paragraphStorage->load($id);
++      if (!$paragraph instanceof ParagraphInterface) {
++        $this->logger->error('Could not sync translations for paragraph with id "%id" because it could not be loaded', ['%id' => $id]);
++        continue;
++      }
++
++      $parent = $paragraph->getParentEntity();
++      if ($parent instanceof ContentEntityInterface && $paragraph->isTranslatable()) {
++        /* We only want to create translations
++        for languages that the parent entity is has translations for. */
++        $languages = $parent->getTranslationLanguages();
++
++        foreach ($languages as $language) {
++          $langcode = $language->getId();
++
++          // Entity doesn't have a translation for this language yet.
++          if (!$paragraph->hasTranslation($langcode)) {
++            // Create a paragraph translation.
++            $values = [];
++            foreach ($paragraph->getTranslatableFields() as $translatableField) {
++              /* Only set custom fields on the new translation,
++              ignore fields like langcode, status, etc. */
++              if ($translatableField->getFieldDefinition() instanceof FieldConfigInterface) {
++                $values[$translatableField->getName()] = $translatableField->getValue();
++              }
++            }
++            /* Set the newly created translation to unpublished by default.
++            The editor has to manually set it to published for it to be displayed. */
++            $values['status'] = (bool) $this->getConfig($paragraph)->get('default_publish_state');
++
++            $paragraph->addTranslation($langcode, $values);
++          }
++        }
++
++        $paragraph->save();
++      }
++    }
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function getSubscribedEvents() {
++    $events[KernelEvents::TERMINATE][] = ['sync'];
++
++    return $events;
++  }
++
++  /**
++   * Gets the config that applies to given paragraph.
++   *
++   * @param \Drupal\paragraphs\ParagraphInterface $paragraph
++   *   The paragraph for whose type to get the config for.
++   *
++   * @return \Drupal\Core\Config\ImmutableConfig
++   *   The config.
++   */
++  protected function getConfig(ParagraphInterface $paragraph): ImmutableConfig {
++    return $this->configFactory->get('paragraphs_translation_sync.' . $paragraph->getType());
++  }
++
++}

@@ -125,6 +125,9 @@
             },
             "drupal/media_revisions_ui": {
                 "3247661 - Add filename to output": "patches/3247661-media-revisions-filename.patch"
+            },
+            "drupal/paragraphs": {
+                "2887353 - Paragraph Translation Sync": "patches/2887353-paragraphs-translation-sync.patch"
             }
         },
         "preserve-paths": [],

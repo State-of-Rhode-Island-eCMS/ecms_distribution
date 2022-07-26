@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-285: Update Paragraphs to 1.14.
+- RIGA-285: Moved Paragraphs Translation Sync patch (issue #2887353) to local patches directory.
 
 ### Deprecated
 
