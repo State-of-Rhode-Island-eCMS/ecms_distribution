@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "892f6a9634ef5b16d12ae1c9fbac0dfa",
+    "content-hash": "61fd50594c2421faece157fc95ab788d",
     "packages": [
         {
             "name": "algolia/places",
@@ -12162,7 +12162,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "3daa95ef4cd357f2412fc1ca902a97019acaf129"
+                "reference": "afd234b6a48898d33a891f04d724b41161da84a7"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12279,7 +12279,8 @@
                     },
                     "drupal/paragraphs": {
                         "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
-                        "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
+                        "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch",
+                        "2887353 - Paragraph Translation Sync": "https://www.drupal.org/files/issues/2022-07-26/paragraphs-translation-sync-2887353-54.patch"
                     },
                     "drupal/webform_encrypt": {
                         "3142997 - D9 readiness": "https://www.drupal.org/files/issues/2020-06-05/3142997-20.patch",
@@ -12324,7 +12325,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-07-26T14:06:51+00:00"
+            "time": "2022-07-26T14:49:05+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
