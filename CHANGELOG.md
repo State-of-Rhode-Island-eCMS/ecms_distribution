@@ -19,6 +19,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-297: Upgrade drupal/search_api 1.23.0 => 1.25.0.
 - RIGA-297: Upgrade drupal/search_api_solr 4.2.7 => 4.2.8.
 - RIGA-297: Upgrade drupal/token 1.10.0 => 1.11.0.
+- RIGA-297: Upgrade drupal/jsonapi_extras 3.20.0 => 3.21.0.
+- RIGA-297: Update line numbers of htaccess patch.
 
 ### Deprecated
 
