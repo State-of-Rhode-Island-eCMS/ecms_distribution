@@ -12,15 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-297: Upgrade drupal/acsf_duplication 2.68.0 => 2.72.0.
-- RIGA-297: Upgrade drupal/acsf_theme 2.68.0 => 2.72.0.
-- RIGA-297: Upgrade drupal/acsf_variables 2.68.0 => 2.72.0.
-- RIGA-297: Upgrade drupal/memcache 2.3.0 => 2.4.0.
-- RIGA-297: Upgrade drupal/search_api 1.23.0 => 1.25.0.
-- RIGA-297: Upgrade drupal/search_api_solr 4.2.7 => 4.2.8.
-- RIGA-297: Upgrade drupal/token 1.10.0 => 1.11.0.
-- RIGA-297: Upgrade drupal/jsonapi_extras 3.20.0 => 3.21.0.
-- RIGA-297: Update line numbers of htaccess patch.
 
 ### Deprecated
 
@@ -29,6 +20,20 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.7.5] - 2022-08-11
+### Changed
+- RIGA-282: Update drupal/core 9.3.19 => 9.4.5.
+- RIGA-282: Update core patch for issue 1356276.
+- RIGA-282: Update line numbers of htaccess patch.
+- RIGA-297: Upgrade drupal/acsf_duplication 2.68.0 => 2.72.0.
+- RIGA-297: Upgrade drupal/acsf_theme 2.68.0 => 2.72.0.
+- RIGA-297: Upgrade drupal/acsf_variables 2.68.0 => 2.72.0.
+- RIGA-297: Upgrade drupal/memcache 2.3.0 => 2.4.0.
+- RIGA-297: Upgrade drupal/search_api 1.23.0 => 1.25.0.
+- RIGA-297: Upgrade drupal/search_api_solr 4.2.7 => 4.2.8.
+- RIGA-297: Upgrade drupal/token 1.10.0 => 1.11.0.
+- RIGA-297: Upgrade drupal/jsonapi_extras 3.20.0 => 3.21.0.
 
 ## [1.7.4] - 2022-07-28
 ### Changed
@@ -658,7 +663,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.5...HEAD
+[1.7.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.4...1.7.5
 [1.7.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.3...1.7.4
 [1.7.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.2...1.7.3
 [1.7.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.1...1.7.2
