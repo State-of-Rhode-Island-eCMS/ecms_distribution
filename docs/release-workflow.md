@@ -140,8 +140,9 @@ git push --follow-tags
 
 Add the following PHP script named backup.php to the develop-ecms-profile directory
 to initiate backups of all production databases.
-This requires an Acquia Cloud API key, which you can find in the Acquia dashboard
-under Account > Credentials.
+This requires an Acquia Cloud API key, which you can find in the Acquia Site Factory
+dashboard under Account Settings > API Key.
+E.g. https://www.riecms.acsitefactory.com/user/{uid}/api-key
 
 ```phpregexp
 #!/usr/bin/env php
