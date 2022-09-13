@@ -12,6 +12,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-308: Upgrade drupal/acquia_connector 3.0.4 => 3.0.5.
+- RIGA-308: Upgrade drupal/acsf 2.72 => 2.73.
+- RIGA-308: Upgrade drupal/memcache 2.4.0 => 2.5.0.
+- RIGA-308: Upgrade drupal/metatag 1.19.0 => 1.21.0.
+- RIGA-308: Upgrade drupal/pathauto 1.10.0 => 1.11.0.
+- RIGA-308: Upgrade drupal/purge 3.2.0 => 3.3.0.
+- RIGA-308: Upgrade drupal/redirect 1.7.0 => 1.8.0.
 
 ### Deprecated
 
