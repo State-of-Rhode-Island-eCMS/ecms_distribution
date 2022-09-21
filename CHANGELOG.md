@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.7.7] - 2022-09-22
+### Changed
+- RIGA-286: Updates to support PHP 8.0.
+- RIGA-6: Updated ecms_profile to 0.9.14.
+
 ## [1.7.6] - 2022-09-15
 ### Changed
 - RIGA-308: Upgrade drupal/acquia_connector 3.0.4 => 3.0.5.
@@ -675,7 +680,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.7...HEAD
+[1.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.6...1.7.7
 [1.7.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.5...1.7.6
 [1.7.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.4...1.7.5
 [1.7.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.3...1.7.4
