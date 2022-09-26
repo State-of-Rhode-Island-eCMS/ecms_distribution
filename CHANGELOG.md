@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-311: Upgrade drupal/admin_toolbar 3.1.0 => 3.1.1.
 - RIGA-311: Upgrade drupal/consumers 1.12.0 => 1.13.0.
 - RIGA-311: Upgrade drupal/feeds 3.0.0-beta1 => 3.0.0-beta2.
+- RIGA-311: Upgrade drupal/moderated_content_bulk_publish 2.0.11 => 2.0.19.
 - RIGA-311: Upgrade drupal/purge 3.3.0 => 3.4.0.
 
 ### Deprecated
