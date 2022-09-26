@@ -12,6 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-311: Upgrade drupal/acquia_purge 1.2.0 => 1.3.0.
+- RIGA-311: Upgrade drupal/purge 3.3.0 => 3.4.0.
 
 ### Deprecated
 
