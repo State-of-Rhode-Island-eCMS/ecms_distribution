@@ -20,6 +20,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-313: Upgrade drupal/core 9.4.5 => 9.4.7 (with all dependencies).
+- RIGA-313: Drupal core - Critical - Multiple vulnerabilities - SA-CORE-2022-016.
 
 ## [1.7.7] - 2022-09-22
 ### Changed
