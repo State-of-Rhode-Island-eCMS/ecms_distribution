@@ -20,6 +20,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.7.8] - 2022-09-22
+### Security
 - RIGA-313: Upgrade drupal/core 9.4.5 => 9.4.7 (with all dependencies).
 - RIGA-313: Drupal core - Critical - Multiple vulnerabilities - SA-CORE-2022-016.
 
@@ -682,7 +685,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.8...HEAD
+[1.7.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.7...1.7.8
 [1.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.6...1.7.7
 [1.7.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.5...1.7.6
 [1.7.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.4...1.7.5
