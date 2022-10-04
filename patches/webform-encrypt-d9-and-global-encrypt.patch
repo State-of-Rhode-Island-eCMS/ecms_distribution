@@ -1,0 +1,694 @@
+diff --git a/composer.json b/composer.json
+index c8f20d6..bbc0ea7 100644
+--- a/composer.json
++++ b/composer.json
+@@ -42,7 +42,7 @@
+         "source": "http://cgit.drupalcode.org/webform_encrypt"
+     },
+     "require": {
+-        "drupal/webform": ">=5.0.0-rc22",
++        "drupal/webform": "^5.0.0-rc22 || ^6.0.0-alpha4",
+         "drupal/encrypt": "3.*"
+     }
+ }
+diff --git a/src/WebformEncryptSubmissionStorage.php b/src/WebformEncryptSubmissionStorage.php
+index 6e5622b..aa9066c 100644
+--- a/src/WebformEncryptSubmissionStorage.php
++++ b/src/WebformEncryptSubmissionStorage.php
+@@ -2,20 +2,14 @@
+ 
+ namespace Drupal\webform_encrypt;
+ 
+-use Drupal\Core\Cache\CacheBackendInterface;
+-use Drupal\Core\Database\Connection;
+ use Drupal\Core\Entity\EntityInterface;
+-use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Entity\EntityTypeInterface;
+-use Drupal\Core\Language\LanguageManagerInterface;
+-use Drupal\Core\Session\AccountProxyInterface;
+ use Drupal\encrypt\EncryptionProfileInterface;
+ use Drupal\encrypt\EncryptServiceInterface;
+-use Drupal\webform\WebformAccessRulesManagerInterface;
++use Drupal\encrypt\Entity\EncryptionProfile;
+ use Drupal\webform\WebformInterface;
+ use Drupal\webform\WebformSubmissionInterface;
+ use Drupal\webform\WebformSubmissionStorage;
+-use Drupal\encrypt\Entity\EncryptionProfile;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+ /**
+@@ -31,45 +25,22 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
+   protected $encryptionService;
+ 
+   /**
+-   * WebformEncryptSubmissionStorage constructor.
+-   *
+-   * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
+-   *   The entity type definition.
+-   * @param \Drupal\Core\Database\Connection $database
+-   *   The database connection to be used.
+-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+-   *   The entity type manager.
+-   * @param \Drupal\Core\Cache\CacheBackendInterface $cache
+-   *   The cache backend to be used.
+-   * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
+-   *   The language manager.
+-   * @param \Drupal\Core\Session\AccountProxyInterface $current_user
+-   *   Proxied implementation of AccountInterface, to access current user data.
+-   * @param \Drupal\webform\WebformAccessRulesManagerInterface $access_rules_manager
+-   *   The webform access rules manager.
+-   * @param \Drupal\encrypt\EncryptServiceInterface $encryptService
+-   *   The encryption Service.
++   * {@inheritdoc}
+    */
+-  public function __construct(EntityTypeInterface $entity_type, Connection $database, EntityTypeManagerInterface $entity_type_manager, CacheBackendInterface $cache, LanguageManagerInterface $language_manager, AccountProxyInterface $current_user, WebformAccessRulesManagerInterface $access_rules_manager, EncryptServiceInterface $encryptService) {
+-    parent::__construct($entity_type, $database, $entity_type_manager, $cache, $language_manager, $current_user, $access_rules_manager);
+-
+-    $this->encryptionService = $encryptService;
++  public static function createInstance(ContainerInterface $container, EntityTypeInterface $entity_type) {
++    $instance = parent::createInstance($container, $entity_type);
++    $instance->setEncryptionService($container->get('encryption'));
++    return $instance;
+   }
+ 
+   /**
+-   * {@inheritdoc}
++   * Set the encryption service.
++   *
++   * @param \Drupal\encrypt\EncryptServiceInterface $encryptionService
++   *   The encryption service.
+    */
+-  public static function createInstance(ContainerInterface $container, EntityTypeInterface $entity_type) {
+-    return new static(
+-      $entity_type,
+-      $container->get('database'),
+-      $container->get('entity.manager'),
+-      $container->get('cache.entity'),
+-      $container->get('language_manager'),
+-      $container->get('current_user'),
+-      $container->get('webform.access_rules_manager'),
+-      $container->get('encryption')
+-    );
++  public function setEncryptionService(EncryptServiceInterface $encryptionService) {
++    $this->encryptionService = $encryptionService;
+   }
+ 
+   /**
+@@ -87,11 +58,9 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
+    * @throws \Drupal\encrypt\Exception\EncryptException
+    */
+   public function encryptElements(array $data, WebformInterface $webform) {
+-    // Load the configuration.
+-    $config = $webform->getThirdPartySetting('webform_encrypt', 'element');
+ 
+     foreach ($data as $element_name => $value) {
+-      $encryption_profile = isset($config[$element_name]) ? EncryptionProfile::load($config[$element_name]['encrypt_profile']) : FALSE;
++      $encryption_profile = $this->getElementProfile($webform, $element_name);
+       // If the value is an array and we have a encryption profile.
+       if ($encryption_profile) {
+         if (is_array($value)) {
+@@ -169,7 +138,7 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
+     if ($check_permissions && !$this->currentUser->hasPermission('view encrypted values')) {
+       return '[Value Encrypted]';
+     }
+-    $unserialized = unserialize($data);
++    $unserialized = @unserialize($data);
+     if (isset($unserialized['data']) && isset($unserialized['encrypt_profile'])) {
+       $encryption_profile = EncryptionProfile::load($unserialized['encrypt_profile']);
+       return $this->encryptionService->decrypt($unserialized['data'], $encryption_profile);
+@@ -193,27 +162,58 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
+    * @throws \Drupal\encrypt\Exception\EncryptException
+    */
+   public function decryptElements(WebformSubmissionInterface $webform_submission, $check_permissions = TRUE) {
+-    // Load webform.
+-    $webform = $webform_submission->getWebform();
+     // Load submission data.
+     $data = $webform_submission->getData();
+-    // Load the configuration.
+-    $config = $webform->getThirdPartySetting('webform_encrypt', 'element');
++    $webform = $webform_submission->getWebform();
+     foreach ($data as $element_name => $value) {
+-      if (isset($config[$element_name]) && $config[$element_name]['encrypt']) {
+-        if (is_array($value)) {
+-          $this->decryptChildren($data[$element_name], $check_permissions);
+-        }
+-        else {
+-          $decrypted_value = $this->decrypt($value, $check_permissions);
+-          // Save the decrypted data value.
+-          $data[$element_name] = $decrypted_value;
++      $encryption_profile = $this->getElementProfile($webform, $element_name);
++      // If the value is an array, and we have an encryption profile.
++      if ($encryption_profile) {
++        if (isset($config[$element_name]) && $config[$element_name]['encrypt']) {
++          if (is_array($value)) {
++            $this->decryptChildren($data[$element_name], $check_permissions);
++          }
++          else {
++            $decrypted_value = $this->decrypt($value, $check_permissions);
++            // Save the decrypted data value.
++            $data[$element_name] = $decrypted_value;
++          }
+         }
+       }
+     }
+     return $data;
+   }
+ 
++  /**
++   * Get the encryption profile for a webform element if available.
++   *
++   * @param \Drupal\webform\WebformInterface $webform
++   *   The webform.
++   * @param string $element_name
++   *   The element name.
++   *
++   * @return \Drupal\encrypt\EncryptionProfileInterface|false
++   *   The loaded profile entity, or FALSE if the element isn't configured to
++   *   have one.
++   */
++  protected function getElementProfile($webform, $element_name) {
++    // Load the configuration.
++    $encrypt_all_settings = $webform->getThirdPartySetting('webform_encrypt', 'encrypt_all');
++    $encrypt_all = !empty($encrypt_all_settings['encrypt']);
++    $elements = $webform->getThirdPartySetting('webform_encrypt', 'element');
++
++    if ($encrypt_all) {
++      $encryption_profile = EncryptionProfile::load($encrypt_all_settings['encrypt_profile']);
++    }
++    elseif (isset($elements[$element_name])) {
++      $encryption_profile = EncryptionProfile::load($elements[$element_name]['encrypt_profile']);
++    }
++    else {
++      $encryption_profile = FALSE;
++    }
++    return $encryption_profile;
++  }
++
+   /**
+    * Helper function to recursively decrypt children of fields.
+    *
+diff --git a/tests/modules/webform_encrypt_test/config/install/webform.webform.test_encryption.yml b/tests/modules/webform_encrypt_test/config/install/webform.webform.test_encryption.yml
+index 65cdc34..1b0676c 100644
+--- a/tests/modules/webform_encrypt_test/config/install/webform.webform.test_encryption.yml
++++ b/tests/modules/webform_encrypt_test/config/install/webform.webform.test_encryption.yml
+@@ -127,8 +127,9 @@ access:
+     permissions: {  }
+ handlers:
+   test_handler:
+-    id: text_webform_handler
++    id: test_webform_handler
+     label: 'Test Handler'
++    notes: ''
+     handler_id: test_handler
+     status: true
+     conditions: {  }
+diff --git a/tests/modules/webform_encrypt_test/config/schema/webform_encrypt_test.schema.yml b/tests/modules/webform_encrypt_test/config/schema/webform_encrypt_test.schema.yml
+new file mode 100644
+index 0000000..13f542b
+--- /dev/null
++++ b/tests/modules/webform_encrypt_test/config/schema/webform_encrypt_test.schema.yml
+@@ -0,0 +1,4 @@
++webform.handler.test_webform_handler:
++  type: mapping
++  label: Test handler
++  mapping: {  }
+diff --git a/tests/modules/webform_encrypt_test/src/Plugin/WebformHandler/TestWebformHandler.php b/tests/modules/webform_encrypt_test/src/Plugin/WebformHandler/TestWebformHandler.php
+index 8b7e66f..15f2378 100644
+--- a/tests/modules/webform_encrypt_test/src/Plugin/WebformHandler/TestWebformHandler.php
++++ b/tests/modules/webform_encrypt_test/src/Plugin/WebformHandler/TestWebformHandler.php
+@@ -2,12 +2,7 @@
+ 
+ namespace Drupal\webform_encrypt_test\Plugin\WebformHandler;
+ 
+-use Drupal\Core\Config\ConfigFactoryInterface;
+-use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+-use Drupal\Core\Entity\EntityTypeManagerInterface;
+-use Drupal\Core\State\StateInterface;
+ use Drupal\webform\Plugin\WebformHandlerBase;
+-use Drupal\webform\WebformSubmissionConditionsValidatorInterface;
+ use Drupal\webform\WebformSubmissionInterface;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+@@ -15,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
+  * Webform submission action handler.
+  *
+  * @WebformHandler(
+- *   id = "text_webform_handler",
++ *   id = "test_webform_handler",
+  *   label = @Translation("Test Handler"),
+  *   category = @Translation("Test"),
+  *   description = @Translation("A Test webform handler."),
+@@ -35,28 +30,13 @@ class TestWebformHandler extends WebformHandlerBase {
+    */
+   protected $state;
+ 
+-  /**
+-   * {@inheritdoc}
+-   */
+-  public function __construct(array $configuration, $plugin_id, $plugin_definition, LoggerChannelFactoryInterface $logger_factory, ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager, WebformSubmissionConditionsValidatorInterface $conditions_validator, StateInterface $state) {
+-    parent::__construct($configuration, $plugin_id, $plugin_definition, $logger_factory, $config_factory, $entity_type_manager, $conditions_validator);
+-    $this->state = $state;
+-  }
+-
+   /**
+    * {@inheritdoc}
+    */
+   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+-    return new static(
+-      $configuration,
+-      $plugin_id,
+-      $plugin_definition,
+-      $container->get('logger.factory'),
+-      $container->get('config.factory'),
+-      $container->get('entity_type.manager'),
+-      $container->get('webform_submission.conditions_validator'),
+-      $container->get('state')
+-    );
++    $instance = parent::create($container, $configuration, $plugin_id, $plugin_definition);
++    $instance->state = $container->get('state');
++    return $instance;
+   }
+ 
+   /**
+diff --git a/tests/modules/webform_encrypt_test/webform_encrypt_test.info.yml b/tests/modules/webform_encrypt_test/webform_encrypt_test.info.yml
+index 96505b8..78bb82d 100644
+--- a/tests/modules/webform_encrypt_test/webform_encrypt_test.info.yml
++++ b/tests/modules/webform_encrypt_test/webform_encrypt_test.info.yml
+@@ -1,8 +1,7 @@
+ name: 'Webform Encrypt Test'
+ type: module
+ description: 'Provides test config for webform_encrypt module tests.'
+-package: 'Webform'
+-core: 8.x
++package: 'Testing'
+ dependencies:
+   - webform_encrypt:webform_encrypt
+   - encrypt:encrypt_test
+diff --git a/tests/src/Functional/WebformEncryptEditSumissionsTest.php b/tests/src/Functional/WebformEncryptEditSumissionsTest.php
+index 78c13c4..23dfbfb 100644
+--- a/tests/src/Functional/WebformEncryptEditSumissionsTest.php
++++ b/tests/src/Functional/WebformEncryptEditSumissionsTest.php
+@@ -25,6 +25,11 @@ class WebformEncryptEditSumissionsTest extends BrowserTestBase {
+    */
+   protected $viewEncryptedUser;
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected $defaultTheme = 'stark';
++
+   /**
+    * {@inheritdoc}
+    */
+diff --git a/tests/src/Functional/WebformEncryptFunctionalTest.php b/tests/src/Functional/WebformEncryptFunctionalTest.php
+index 30ef4e0..4f396ce 100644
+--- a/tests/src/Functional/WebformEncryptFunctionalTest.php
++++ b/tests/src/Functional/WebformEncryptFunctionalTest.php
+@@ -19,6 +19,11 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
+    */
+   protected $adminUser;
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected $defaultTheme = 'stark';
++
+   /**
+    * {@inheritdoc}
+    */
+@@ -40,6 +45,13 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
+     'edit any webform',
+   ];
+ 
++  /**
++   * The value displayed to users without permission to view encrypted fields.
++   *
++   * @var string
++   */
++  protected $encryptedValue = '[Value Encrypted]';
++
+   /**
+    * Sets the test up.
+    */
+@@ -57,7 +69,6 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
+     $assert_session = $this->assertSession();
+     $page = $this->getSession()->getPage();
+     $this->drupalLogin($this->adminUser);
+-    $encrypted_value = '[Value Encrypted]';
+ 
+     // Test admin functionality.
+     $this->drupalGet('admin/structure/webform/manage/test_encryption');
+@@ -138,14 +149,14 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
+     $multiple_address_field_address_selector = '.form-item-test-multiple-address-field';
+     $date_selector = '.form-item-test-date';
+ 
+-    $assert_session->elementTextContains('css', $text_selector, $encrypted_value);
++    $assert_session->elementTextContains('css', $text_selector, $this->encryptedValue);
+     $assert_session->elementTextNotContains('css', $text_selector, $edit['test_text_field']);
+-    $assert_session->elementTextContains('css', $text_multiple_selector, $encrypted_value);
++    $assert_session->elementTextContains('css', $text_multiple_selector, $this->encryptedValue);
+     $assert_session->elementTextNotContains('css', $text_multiple_selector, $edit['test_multiple_text_field[items][0][_item_]']);
+-    $assert_session->elementTextContains('css', $area_selector, $encrypted_value);
++    $assert_session->elementTextContains('css', $area_selector, $this->encryptedValue);
+     $assert_session->elementTextNotContains('css', $area_selector, $edit['test_text_area']);
+     $assert_session->elementTextContains('css', $not_encrypted_selector, $edit['test_not_encrypted']);
+-    $assert_session->elementTextNotContains('css', $not_encrypted_selector, $encrypted_value);
++    $assert_session->elementTextNotContains('css', $not_encrypted_selector, $this->encryptedValue);
+ 
+     $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[address]']);
+     $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[address_2]']);
+@@ -166,7 +177,7 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
+     // Grant user access to view encrypted values and check again.
+     $this->grantPermissions(Role::load($this->adminUser->getRoles()[0]), ['view encrypted values']);
+     $this->drupalGet($submission_path);
+-    $assert_session->responseNotContains($encrypted_value);
++    $assert_session->responseNotContains($this->encryptedValue);
+     $assert_session->responseContains($edit['test_text_field']);
+     $assert_session->responseContains($edit['test_multiple_text_field[items][0][_item_]']);
+     $assert_session->responseContains($edit['test_text_area']);
+@@ -176,4 +187,135 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
+     $assert_session->responseContains($edit['test_date']);
+   }
+ 
++  /**
++   * Test webform-level encryption.
++   */
++  public function testWebformEncryption() {
++    $assert_session = $this->assertSession();
++    $page = $this->getSession()->getPage();
++    $this->drupalLogin($this->adminUser);
++
++    // Test admin functionality.
++    $this->drupalGet('admin/structure/webform/manage/test_encrypt_all/settings');
++    $encrypt_name = 'third_party_settings[webform_encrypt][encrypt_all][encrypt]';
++    $encrypt_profile_name = 'third_party_settings[webform_encrypt][encrypt_all][encrypt_profile]';
++    $edit = [
++      $encrypt_name => TRUE,
++      $encrypt_profile_name => 'test_encryption_profile',
++    ];
++    $this->submitForm($edit, 'Save');
++
++    // Verify settings are saved and displayed in the settings form.
++    $assert_session->checkboxChecked($encrypt_name);
++    $assert_session->fieldValueEquals($encrypt_profile_name, 'test_encryption_profile');
++
++    // Add a new element.
++    $this->drupalGet('admin/structure/webform/manage/test_encrypt_all');
++    $page->clickLink('Add element');
++    $page->clickLink('Date');
++
++    // Check that you can't set field-level encryption.
++    $assert_session->responseContains("The webform's configured to encrypt all fields");
++    $assert_session->fieldNotExists('encrypt');
++    $assert_session->fieldNotExists('encrypt_profile');
++
++    $edit = [
++      'key' => 'test_date',
++      'title' => 'Test date',
++    ];
++    $this->submitForm($edit, 'Save');
++    $assert_session->responseContains('<em class="placeholder">Test date</em> has been created');
++
++    // Make a submission.
++    $edit = [
++      'test_text_field' => 'Test text field value',
++      'test_multiple_text_field[items][0][_item_]' => 'Test multiple text field value 1',
++      'test_text_area' => 'Test text area value',
++
++      'test_address_field[address]' => 'Test multiple address field address',
++      'test_address_field[address_2]' => 'Test multiple address field address 2',
++      'test_address_field[city]' => 'Test multiple address field city',
++      'test_address_field[state_province]' => 'California',
++      'test_address_field[postal_code]' => 'AA11AA',
++      'test_address_field[country]' => 'United Kingdom',
++
++      'test_multiple_address_field[items][0][_item_][address]' => 'Test multiple address field address',
++      'test_multiple_address_field[items][0][_item_][address_2]' => 'Test multiple address field address 2',
++      'test_multiple_address_field[items][0][_item_][city]' => 'Test multiple address field city',
++      'test_multiple_address_field[items][0][_item_][state_province]' => 'California',
++      'test_multiple_address_field[items][0][_item_][postal_code]' => 'AA11AA',
++      'test_multiple_address_field[items][0][_item_][country]' => 'United Kingdom',
++
++      'test_date' => '2019-09-15',
++    ];
++    $this->drupalPostForm('/webform/test_encrypt_all', $edit, 'Submit');
++    $assert_session->responseContains('New submission added');
++
++    // Ensure encrypted fields do not show values.
++    $this->drupalGet('admin/structure/webform/manage/test_encrypt_all/results/submissions');
++    $assert_session->responseNotContains($edit['test_text_field']);
++    $assert_session->responseNotContains($edit['test_multiple_text_field[items][0][_item_]']);
++    $assert_session->responseNotContains($edit['test_text_area']);
++    $assert_session->responseNotContains($edit['test_address_field[address]']);
++    $assert_session->responseNotContains($edit['test_address_field[address_2]']);
++    $assert_session->responseNotContains($edit['test_address_field[city]']);
++    $assert_session->responseNotContains($edit['test_address_field[state_province]']);
++    $assert_session->responseNotContains($edit['test_address_field[postal_code]']);
++    $assert_session->responseNotContains($edit['test_address_field[country]']);
++
++    $assert_session->responseNotContains($edit['test_multiple_address_field[items][0][_item_][address]']);
++    $assert_session->responseNotContains($edit['test_multiple_address_field[items][0][_item_][address_2]']);
++    $assert_session->responseNotContains($edit['test_multiple_address_field[items][0][_item_][city]']);
++    $assert_session->responseNotContains($edit['test_multiple_address_field[items][0][_item_][state_province]']);
++    $assert_session->responseNotContains($edit['test_multiple_address_field[items][0][_item_][postal_code]']);
++    $assert_session->responseNotContains($edit['test_multiple_address_field[items][0][_item_][country]']);
++
++    $assert_session->responseNotContains($edit['test_date']);
++
++    $submission_path = 'admin/structure/webform/manage/test_encrypt_all/submission/1';
++    $this->drupalGet($submission_path);
++
++    $text_selector = '.form-item-test-text-field';
++    $text_multiple_selector = '.form-item-test-multiple-text-field';
++    $area_selector = '.form-item-test-text-area';
++    $address_field_address_selector = '.form-item-test-address-field';
++    $multiple_address_field_address_selector = '.form-item-test-multiple-address-field';
++    $date_selector = '.form-item-test-date';
++
++    $assert_session->elementTextContains('css', $text_selector, $this->encryptedValue);
++    $assert_session->elementTextNotContains('css', $text_selector, $edit['test_text_field']);
++    $assert_session->elementTextContains('css', $text_multiple_selector, $this->encryptedValue);
++    $assert_session->elementTextNotContains('css', $text_multiple_selector, $edit['test_multiple_text_field[items][0][_item_]']);
++    $assert_session->elementTextContains('css', $area_selector, $this->encryptedValue);
++    $assert_session->elementTextNotContains('css', $area_selector, $edit['test_text_area']);
++
++    $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[address]']);
++    $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[address_2]']);
++    $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[city]']);
++    $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[state_province]']);
++    $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[postal_code]']);
++    $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[country]']);
++
++    $assert_session->elementTextNotContains('css', $multiple_address_field_address_selector, $edit['test_multiple_address_field[items][0][_item_][address]']);
++    $assert_session->elementTextNotContains('css', $multiple_address_field_address_selector, $edit['test_multiple_address_field[items][0][_item_][address_2]']);
++    $assert_session->elementTextNotContains('css', $multiple_address_field_address_selector, $edit['test_multiple_address_field[items][0][_item_][city]']);
++    $assert_session->elementTextNotContains('css', $multiple_address_field_address_selector, $edit['test_multiple_address_field[items][0][_item_][state_province]']);
++    $assert_session->elementTextNotContains('css', $multiple_address_field_address_selector, $edit['test_multiple_address_field[items][0][_item_][postal_code]']);
++    $assert_session->elementTextNotContains('css', $multiple_address_field_address_selector, $edit['test_multiple_address_field[items][0][_item_][country]']);
++
++    $assert_session->elementTextNotContains('css', $date_selector, $edit['test_date']);
++
++    // Grant user access to view encrypted values and check again.
++    $this->grantPermissions(Role::load($this->adminUser->getRoles()[0]), ['view encrypted values']);
++    $this->drupalGet($submission_path);
++    $assert_session->responseNotContains($this->encryptedValue);
++    $assert_session->responseContains($edit['test_text_field']);
++    $assert_session->responseContains($edit['test_multiple_text_field[items][0][_item_]']);
++    $assert_session->responseContains($edit['test_text_area']);
++    $assert_session->responseContains($edit['test_address_field[address]']);
++    $assert_session->responseContains($edit['test_multiple_address_field[items][0][_item_][address]']);
++    $assert_session->responseContains($edit['test_date']);
++  }
++
++
+ }
+diff --git a/tests/src/Functional/WebformEncryptUninstallTest.php b/tests/src/Functional/WebformEncryptUninstallTest.php
+index adb1677..50365fc 100644
+--- a/tests/src/Functional/WebformEncryptUninstallTest.php
++++ b/tests/src/Functional/WebformEncryptUninstallTest.php
+@@ -24,6 +24,11 @@ class WebformEncryptUninstallTest extends BrowserTestBase {
+    */
+   protected $profile = 'standard';
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected $defaultTheme = 'stark';
++
+   /**
+    * Test webform encrypt uninstall hook.
+    */
+diff --git a/tests/src/Functional/WebformEncryptWizardTest.php b/tests/src/Functional/WebformEncryptWizardTest.php
+index 9b98334..b59bbed 100644
+--- a/tests/src/Functional/WebformEncryptWizardTest.php
++++ b/tests/src/Functional/WebformEncryptWizardTest.php
+@@ -18,6 +18,11 @@ class WebformEncryptWizardTest extends BrowserTestBase {
+    */
+   protected $adminUser;
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected $defaultTheme = 'stark';
++
+   /**
+    * {@inheritdoc}
+    */
+@@ -53,19 +58,19 @@ class WebformEncryptWizardTest extends BrowserTestBase {
+     $edit = [
+       'test_first_name_field' => 'FirstNameTest',
+       'test_last_name_field' => 'LastNameTest',
+-      'test_gender_field' => 'Male',
++      'test_gender_field' => 'Man',
+ 
+     ];
+ 
+     // Move to next page.
+-    $this->drupalPostForm(NULL, $edit, 'Next Page >');
++    $this->submitForm($edit, 'Next >');
+ 
+     // Return to the first page and check the plain text value is still there.
+-    $this->drupalPostForm(NULL, NULL, '< Previous Page');
++    $this->submitForm([], '< Previous');
+     $assert_session->fieldValueEquals('test_last_name_field', $edit['test_last_name_field']);
+ 
+     // Providing the above assertion is correct move back to the second page.
+-    $this->drupalPostForm(NULL, NULL, 'Next Page >');
++    $this->submitForm([], 'Next >');
+ 
+     // Enter a value on the second page.
+     $edit = [
+@@ -89,10 +94,10 @@ class WebformEncryptWizardTest extends BrowserTestBase {
+     ];
+ 
+     // Post and move to third page.
+-    $this->drupalPostForm(NULL, $edit, 'Next Page >');
++    $this->submitForm($edit, 'Next >');
+ 
+     // Return to the second page and check previously entered values.
+-    $this->drupalPostForm(NULL, NULL, '< Previous Page');
++    $this->submitForm([], '< Previous');
+     $assert_session->fieldValueEquals('test_email_field', $edit['test_email_field']);
+     $assert_session->fieldValueEquals('test_phone_field', $edit['test_phone_field']);
+     $assert_session->fieldValueEquals('test_contact_via_phone_field', $edit['test_contact_via_phone_field']);
+diff --git a/webform_encrypt.module b/webform_encrypt.module
+index d768e43..f3a9b6b 100644
+--- a/webform_encrypt.module
++++ b/webform_encrypt.module
+@@ -6,6 +6,7 @@
+  */
+ 
+ use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Url;
+ 
+ /**
+  * Implements hook_form_FORM_ID_alter().
+@@ -21,6 +22,11 @@ function webform_encrypt_form_webform_ui_element_form_alter(&$form, FormStateInt
+   // Only input elements are allowed to be encrypted.
+   $is_input_element = $element_handler->isInput($element);
+   if ($is_input_element) {
++    $build_info = $form_state->getBuildInfo();
++    /** @var \Drupal\webform\WebformInterface $webform */
++    $webform = $build_info['args'][0];
++    $encrypt_all = $webform->getThirdPartySetting('webform_encrypt', 'encrypt_all');
++
+     // To provide the fieldset for encryption fields on element config form.
+     $form['element_encrypt'] = [
+       '#type' => 'details',
+@@ -28,12 +34,19 @@ function webform_encrypt_form_webform_ui_element_form_alter(&$form, FormStateInt
+       '#group' => 'tab_advanced',
+     ];
+ 
+-    // To provide the encryption fields for webform elements.
+-    $form['element_encrypt']['encrypt'] = [
+-      '#type' => 'webform_element_encrypt',
+-      '#title' => t('Encryption'),
+-      '#title_display' => 'hidden',
+-    ];
++    if (!empty($encrypt_all['encrypt'])) {
++      $form['element_encrypt']['message'] = [
++        '#markup' => t("The webform's configured to encrypt all fields - it's not possible to selectively encrypt individual fields."),
++      ];
++    }
++    else {
++      // To provide the encryption fields for webform elements.
++      $form['element_encrypt']['encrypt'] = [
++        '#type' => 'webform_element_encrypt',
++        '#title' => t('Encryption'),
++        '#title_display' => 'hidden',
++      ];
++    }
+   }
+ }
+ 
+@@ -47,3 +60,70 @@ function webform_encrypt_entity_type_alter(array &$entity_types) {
+     $entity_types['webform_submission']->setAccessClass('Drupal\webform_encrypt\WebformEncryptSubmissionAccessControlHandler');
+   }
+ }
++
++
++/**
++ * Implements hook_webform_third_party_settings_form_alter().
++ *
++ * Adds a setting for encrypting all fields.
++ */
++function webform_encrypt_webform_third_party_settings_form_alter(array &$form, FormStateInterface $form_state) {
++  /** @var \Drupal\webform\WebformInterface $webform */
++  $webform = $form_state->getFormObject()->getEntity();
++  $config = $webform->getThirdPartySetting('webform_encrypt', 'encrypt_all');
++  $encryption_options = \Drupal::service('encrypt.encryption_profile.manager')
++    ->getEncryptionProfileNamesAsOptions();
++  if (count($encryption_options) > 0) {
++    $encrypt_all['encrypt'] = [
++      '#type' => 'checkbox',
++      '#title' => t('Encrypt all the field values'),
++      '#description' => t('<a href=":link">Click here</a> to edit encryption settings.', array(
++        ':link' => Url::fromRoute('entity.encryption_profile.collection')
++          ->toString(),
++      )),
++      '#default_value' => $config['encrypt'],
++    ];
++
++    $encrypt_all['encrypt_profile'] = [
++      '#type' => 'select',
++      '#title' => t('Select Encryption Profile'),
++      '#options' => $encryption_options,
++      '#default_value' => isset($config['encrypt_profile']) ? $config['encrypt_profile'] : NULL,
++      '#states' => [
++        'visible' => [
++          [':input[name="third_party_settings[webform_encrypt][encrypt_all][encrypt]"]' => ['checked' => TRUE]],
++        ],
++      ],
++    ];
++
++    $form['#validate'][] = '_webform_encrypt_webform_third_party_settings_form_validate';
++  }
++  else {
++    $encrypt_all['message'] = array(
++      '#markup' => t('Please configure the encryption profile to enable encryption for the element.'),
++    );
++  }
++  $form['third_party_settings']['webform_encrypt']['encrypt_all'] = $encrypt_all;
++}
++
++/**
++ * Form validation handler for the webform_encrypt third party settings form.
++ *
++ * It ensures configuration isn't saved unless it's enabled, preventing
++ * unnecessary dependencies.
++ */
++function _webform_encrypt_webform_third_party_settings_form_validate(&$form, FormStateInterface $form_state) {
++  $keys = ['third_party_settings', 'webform_encrypt', 'encrypt_all', 'encrypt'];
++  if (!$form_state->getValue($keys)) {
++    // Encrypt was not checked so unset 'encrypt_all'
++    array_pop($keys);
++    $form_state->unsetValue($keys);
++    // Unset 'webform_encrypt' if it's empty to avoid an unnecessary config
++    // dependency.
++    array_pop($keys);
++    if (!$form_state->getValue($keys)) {
++      $form_state->unsetValue($keys);
++    }
++  }
++}
++

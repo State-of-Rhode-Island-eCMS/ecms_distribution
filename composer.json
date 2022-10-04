@@ -125,6 +125,9 @@
             },
             "drupal/media_revisions_ui": {
                 "3247661 - Add filename to output": "patches/3247661-media-revisions-filename.patch"
+            },
+            "drupal/webform_encrypt": {
+                "Combined patches for issues 3292305, 2943344, 3142997": "patches/webform-encrypt-d9-and-global-encrypt.patch"
             }
         },
         "preserve-paths": [],
