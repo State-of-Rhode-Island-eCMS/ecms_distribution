@@ -12,13 +12,13 @@ index c8f20d6..bbc0ea7 100644
      }
  }
 diff --git a/src/WebformEncryptSubmissionStorage.php b/src/WebformEncryptSubmissionStorage.php
-index 6e5622b..aa9066c 100644
+index 6e5622b..dbf5342 100644
 --- a/src/WebformEncryptSubmissionStorage.php
 +++ b/src/WebformEncryptSubmissionStorage.php
 @@ -2,20 +2,14 @@
- 
+
  namespace Drupal\webform_encrypt;
- 
+
 -use Drupal\Core\Cache\CacheBackendInterface;
 -use Drupal\Core\Database\Connection;
  use Drupal\Core\Entity\EntityInterface;
@@ -35,11 +35,11 @@ index 6e5622b..aa9066c 100644
  use Drupal\webform\WebformSubmissionStorage;
 -use Drupal\encrypt\Entity\EncryptionProfile;
  use Symfony\Component\DependencyInjection\ContainerInterface;
- 
+
  /**
 @@ -31,45 +25,22 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
    protected $encryptionService;
- 
+
    /**
 -   * WebformEncryptSubmissionStorage constructor.
 -   *
@@ -70,7 +70,7 @@ index 6e5622b..aa9066c 100644
 +    $instance->setEncryptionService($container->get('encryption'));
 +    return $instance;
    }
- 
+
    /**
 -   * {@inheritdoc}
 +   * Set the encryption service.
@@ -92,21 +92,23 @@ index 6e5622b..aa9066c 100644
 +  public function setEncryptionService(EncryptServiceInterface $encryptionService) {
 +    $this->encryptionService = $encryptionService;
    }
- 
+
    /**
-@@ -87,11 +58,9 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
+@@ -87,12 +58,10 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
     * @throws \Drupal\encrypt\Exception\EncryptException
     */
    public function encryptElements(array $data, WebformInterface $webform) {
 -    // Load the configuration.
 -    $config = $webform->getThirdPartySetting('webform_encrypt', 'element');
- 
+
      foreach ($data as $element_name => $value) {
 -      $encryption_profile = isset($config[$element_name]) ? EncryptionProfile::load($config[$element_name]['encrypt_profile']) : FALSE;
+-      // If the value is an array and we have a encryption profile.
 +      $encryption_profile = $this->getElementProfile($webform, $element_name);
-       // If the value is an array and we have a encryption profile.
++      // If have an encryption profile.
        if ($encryption_profile) {
          if (is_array($value)) {
+           $this->encryptChildren($data[$element_name], $encryption_profile);
 @@ -169,7 +138,7 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
      if ($check_permissions && !$this->currentUser->hasPermission('view encrypted values')) {
        return '[Value Encrypted]';
@@ -116,7 +118,7 @@ index 6e5622b..aa9066c 100644
      if (isset($unserialized['data']) && isset($unserialized['encrypt_profile'])) {
        $encryption_profile = EncryptionProfile::load($unserialized['encrypt_profile']);
        return $this->encryptionService->decrypt($unserialized['data'], $encryption_profile);
-@@ -193,27 +162,58 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
+@@ -193,14 +162,15 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
     * @throws \Drupal\encrypt\Exception\EncryptException
     */
    public function decryptElements(WebformSubmissionInterface $webform_submission, $check_permissions = TRUE) {
@@ -124,36 +126,21 @@ index 6e5622b..aa9066c 100644
 -    $webform = $webform_submission->getWebform();
      // Load submission data.
      $data = $webform_submission->getData();
--    // Load the configuration.
--    $config = $webform->getThirdPartySetting('webform_encrypt', 'element');
 +    $webform = $webform_submission->getWebform();
+     // Load the configuration.
+     $config = $webform->getThirdPartySetting('webform_encrypt', 'element');
++
      foreach ($data as $element_name => $value) {
 -      if (isset($config[$element_name]) && $config[$element_name]['encrypt']) {
--        if (is_array($value)) {
--          $this->decryptChildren($data[$element_name], $check_permissions);
--        }
--        else {
--          $decrypted_value = $this->decrypt($value, $check_permissions);
--          // Save the decrypted data value.
--          $data[$element_name] = $decrypted_value;
 +      $encryption_profile = $this->getElementProfile($webform, $element_name);
-+      // If the value is an array, and we have an encryption profile.
 +      if ($encryption_profile) {
-+        if (isset($config[$element_name]) && $config[$element_name]['encrypt']) {
-+          if (is_array($value)) {
-+            $this->decryptChildren($data[$element_name], $check_permissions);
-+          }
-+          else {
-+            $decrypted_value = $this->decrypt($value, $check_permissions);
-+            // Save the decrypted data value.
-+            $data[$element_name] = $decrypted_value;
-+          }
+         if (is_array($value)) {
+           $this->decryptChildren($data[$element_name], $check_permissions);
          }
-       }
-     }
+@@ -214,6 +184,36 @@ class WebformEncryptSubmissionStorage extends WebformSubmissionStorage {
      return $data;
    }
- 
+
 +  /**
 +   * Get the encryption profile for a webform element if available.
 +   *
@@ -217,9 +204,9 @@ index 8b7e66f..15f2378 100644
 --- a/tests/modules/webform_encrypt_test/src/Plugin/WebformHandler/TestWebformHandler.php
 +++ b/tests/modules/webform_encrypt_test/src/Plugin/WebformHandler/TestWebformHandler.php
 @@ -2,12 +2,7 @@
- 
+
  namespace Drupal\webform_encrypt_test\Plugin\WebformHandler;
- 
+
 -use Drupal\Core\Config\ConfigFactoryInterface;
 -use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 -use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -228,7 +215,7 @@ index 8b7e66f..15f2378 100644
 -use Drupal\webform\WebformSubmissionConditionsValidatorInterface;
  use Drupal\webform\WebformSubmissionInterface;
  use Symfony\Component\DependencyInjection\ContainerInterface;
- 
+
 @@ -15,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   * Webform submission action handler.
   *
@@ -241,7 +228,7 @@ index 8b7e66f..15f2378 100644
 @@ -35,28 +30,13 @@ class TestWebformHandler extends WebformHandlerBase {
     */
    protected $state;
- 
+
 -  /**
 -   * {@inheritdoc}
 -   */
@@ -268,7 +255,7 @@ index 8b7e66f..15f2378 100644
 +    $instance->state = $container->get('state');
 +    return $instance;
    }
- 
+
    /**
 diff --git a/tests/modules/webform_encrypt_test/webform_encrypt_test.info.yml b/tests/modules/webform_encrypt_test/webform_encrypt_test.info.yml
 index 96505b8..78bb82d 100644
@@ -291,7 +278,7 @@ index 78c13c4..23dfbfb 100644
 @@ -25,6 +25,11 @@ class WebformEncryptEditSumissionsTest extends BrowserTestBase {
     */
    protected $viewEncryptedUser;
- 
+
 +  /**
 +   * {@inheritdoc}
 +   */
@@ -307,7 +294,7 @@ index 30ef4e0..4f396ce 100644
 @@ -19,6 +19,11 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
     */
    protected $adminUser;
- 
+
 +  /**
 +   * {@inheritdoc}
 +   */
@@ -319,7 +306,7 @@ index 30ef4e0..4f396ce 100644
 @@ -40,6 +45,13 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
      'edit any webform',
    ];
- 
+
 +  /**
 +   * The value displayed to users without permission to view encrypted fields.
 +   *
@@ -335,13 +322,13 @@ index 30ef4e0..4f396ce 100644
      $page = $this->getSession()->getPage();
      $this->drupalLogin($this->adminUser);
 -    $encrypted_value = '[Value Encrypted]';
- 
+
      // Test admin functionality.
      $this->drupalGet('admin/structure/webform/manage/test_encryption');
 @@ -138,14 +149,14 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
      $multiple_address_field_address_selector = '.form-item-test-multiple-address-field';
      $date_selector = '.form-item-test-date';
- 
+
 -    $assert_session->elementTextContains('css', $text_selector, $encrypted_value);
 +    $assert_session->elementTextContains('css', $text_selector, $this->encryptedValue);
      $assert_session->elementTextNotContains('css', $text_selector, $edit['test_text_field']);
@@ -354,7 +341,7 @@ index 30ef4e0..4f396ce 100644
      $assert_session->elementTextContains('css', $not_encrypted_selector, $edit['test_not_encrypted']);
 -    $assert_session->elementTextNotContains('css', $not_encrypted_selector, $encrypted_value);
 +    $assert_session->elementTextNotContains('css', $not_encrypted_selector, $this->encryptedValue);
- 
+
      $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[address]']);
      $assert_session->elementTextNotContains('css', $address_field_address_selector, $edit['test_address_field[address_2]']);
 @@ -166,7 +177,7 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
@@ -369,7 +356,7 @@ index 30ef4e0..4f396ce 100644
 @@ -176,4 +187,135 @@ class WebformEncryptFunctionalTest extends BrowserTestBase {
      $assert_session->responseContains($edit['test_date']);
    }
- 
+
 +  /**
 +   * Test webform-level encryption.
 +   */
@@ -509,7 +496,7 @@ index adb1677..50365fc 100644
 @@ -24,6 +24,11 @@ class WebformEncryptUninstallTest extends BrowserTestBase {
     */
    protected $profile = 'standard';
- 
+
 +  /**
 +   * {@inheritdoc}
 +   */
@@ -525,7 +512,7 @@ index 9b98334..b59bbed 100644
 @@ -18,6 +18,11 @@ class WebformEncryptWizardTest extends BrowserTestBase {
     */
    protected $adminUser;
- 
+
 +  /**
 +   * {@inheritdoc}
 +   */
@@ -540,31 +527,31 @@ index 9b98334..b59bbed 100644
        'test_last_name_field' => 'LastNameTest',
 -      'test_gender_field' => 'Male',
 +      'test_gender_field' => 'Man',
- 
+
      ];
- 
+
      // Move to next page.
 -    $this->drupalPostForm(NULL, $edit, 'Next Page >');
 +    $this->submitForm($edit, 'Next >');
- 
+
      // Return to the first page and check the plain text value is still there.
 -    $this->drupalPostForm(NULL, NULL, '< Previous Page');
 +    $this->submitForm([], '< Previous');
      $assert_session->fieldValueEquals('test_last_name_field', $edit['test_last_name_field']);
- 
+
      // Providing the above assertion is correct move back to the second page.
 -    $this->drupalPostForm(NULL, NULL, 'Next Page >');
 +    $this->submitForm([], 'Next >');
- 
+
      // Enter a value on the second page.
      $edit = [
 @@ -89,10 +94,10 @@ class WebformEncryptWizardTest extends BrowserTestBase {
      ];
- 
+
      // Post and move to third page.
 -    $this->drupalPostForm(NULL, $edit, 'Next Page >');
 +    $this->submitForm($edit, 'Next >');
- 
+
      // Return to the second page and check previously entered values.
 -    $this->drupalPostForm(NULL, NULL, '< Previous Page');
 +    $this->submitForm([], '< Previous');
@@ -577,10 +564,10 @@ index d768e43..f3a9b6b 100644
 +++ b/webform_encrypt.module
 @@ -6,6 +6,7 @@
   */
- 
+
  use Drupal\Core\Form\FormStateInterface;
 +use Drupal\Core\Url;
- 
+
  /**
   * Implements hook_form_FORM_ID_alter().
 @@ -21,6 +22,11 @@ function webform_encrypt_form_webform_ui_element_form_alter(&$form, FormStateInt
@@ -598,7 +585,7 @@ index d768e43..f3a9b6b 100644
 @@ -28,12 +34,19 @@ function webform_encrypt_form_webform_ui_element_form_alter(&$form, FormStateInt
        '#group' => 'tab_advanced',
      ];
- 
+
 -    // To provide the encryption fields for webform elements.
 -    $form['element_encrypt']['encrypt'] = [
 -      '#type' => 'webform_element_encrypt',
@@ -620,7 +607,7 @@ index d768e43..f3a9b6b 100644
 +    }
    }
  }
- 
+
 @@ -47,3 +60,70 @@ function webform_encrypt_entity_type_alter(array &$entity_types) {
      $entity_types['webform_submission']->setAccessClass('Drupal\webform_encrypt\WebformEncryptSubmissionAccessControlHandler');
    }
