@@ -12,14 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-311: Upgrade drupal/acquia_purge 1.2.0 => 1.3.0.
-- RIGA-311: Upgrade drupal/admin_toolbar 3.1.0 => 3.1.1.
-- RIGA-311: Upgrade drupal/consumers 1.12.0 => 1.13.0.
-- RIGA-311: Upgrade drupal/feeds 3.0.0-beta1 => 3.0.0-beta2.
-- RIGA-311: Upgrade drupal/moderated_content_bulk_publish 2.0.11 => 2.0.19.
-- RIGA-311: Upgrade drupal/office_hours 1.6.0 => 1.7.0.
-- RIGA-311: Upgrade drupal/purge 3.3.0 => 3.4.0.
-- RIGA-298: Added local patch for 3 outstanding webform_encrypt issues.
 
 ### Deprecated
 
@@ -29,7 +21,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [1.7.8] - 2022-09-22
+## [1.7.9] - 2022-10-06
+### Changed
+- RIGA-311: Upgrade drupal/acquia_purge 1.2.0 => 1.3.0.
+- RIGA-311: Upgrade drupal/admin_toolbar 3.1.0 => 3.1.1.
+- RIGA-311: Upgrade drupal/consumers 1.12.0 => 1.13.0.
+- RIGA-311: Upgrade drupal/feeds 3.0.0-beta1 => 3.0.0-beta2.
+- RIGA-311: Upgrade drupal/moderated_content_bulk_publish 2.0.11 => 2.0.19.
+- RIGA-311: Upgrade drupal/office_hours 1.6.0 => 1.7.0.
+- RIGA-311: Upgrade drupal/purge 3.3.0 => 3.4.0.
+- RIGA-298: Added local patch for 3 outstanding webform_encrypt issues.
+- RIGA-6: Updated ecms_profile to 0.9.15.
+
+## [1.7.8] - 2022-09-29
 ### Security
 - RIGA-313: Upgrade drupal/core 9.4.5 => 9.4.7 (with all dependencies).
 - RIGA-313: Drupal core - Critical - Multiple vulnerabilities - SA-CORE-2022-016.
@@ -693,7 +697,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.9...HEAD
+[1.7.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.8...1.7.9
 [1.7.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.7...1.7.8
 [1.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.6...1.7.7
 [1.7.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.5...1.7.6
