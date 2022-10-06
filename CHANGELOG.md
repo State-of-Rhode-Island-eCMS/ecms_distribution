@@ -31,6 +31,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-311: Upgrade drupal/office_hours 1.6.0 => 1.7.0.
 - RIGA-311: Upgrade drupal/purge 3.3.0 => 3.4.0.
 - RIGA-298: Added local patch for 3 outstanding webform_encrypt issues.
+- RIGA-6: Updated ecms_profile to 0.9.15.
 
 ## [1.7.8] - 2022-09-29
 ### Security
