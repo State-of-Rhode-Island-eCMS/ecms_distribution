@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA:312: Upgrading drupal/admin_toolbar (3.1.1 => 3.2.1).
 
 ### Deprecated
 
