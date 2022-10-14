@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f0c3d3b7536dd502ad541906223fa8f",
+    "content-hash": "80fa7697efb77ce4014c7afcdc3e0cba",
     "packages": [
         {
             "name": "algolia/places",
@@ -2657,20 +2657,20 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.1.1",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.1.1"
+                "reference": "3.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.1.1.zip",
-                "reference": "3.1.1",
-                "shasum": "a66ce69cd7e56f1cc43797dc2a58d6eab367d353"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.2.1.zip",
+                "reference": "3.2.1",
+                "shasum": "7a4bfb716e269be4ca03b7f04e29e4439ec6cf93"
             },
             "require": {
-                "drupal/core": "^8.8.0 || ^9.0 || ^10.0"
+                "drupal/core": "^8.8.0 || ^9.0"
             },
             "require-dev": {
                 "drupal/admin_toolbar_tools": "*"
@@ -2678,8 +2678,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.1",
-                    "datestamp": "1658802262",
+                    "version": "3.2.1",
+                    "datestamp": "1665044276",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4378,20 +4378,20 @@
         },
         {
             "name": "drupal/file_delete",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/file_delete.git",
-                "reference": "8.x-1.0"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/file_delete-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "d62822374b8866a92719a3bc854562d0b1ad38dc"
+                "url": "https://ftp.drupal.org/files/projects/file_delete-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "39933b698ed2f6500f1d94a681172b2c4cc94feb"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "require-dev": {
                 "drupal/coder": "^8.3"
@@ -4399,8 +4399,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1582059332",
+                    "version": "2.0.0",
+                    "datestamp": "1664902819",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12198,11 +12198,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.15",
+            "version": "dev-RIGA-312/update-unsupported-moules",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "5cc47a49237c97d0fa12c2c41eaf0f77a162226e"
+                "reference": "22f2116d911146529b766392b2c3b730bf8bde4d"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12227,7 +12227,7 @@
                 "drupal/extlink": "^1.5",
                 "drupal/features": "^3.11",
                 "drupal/feeds": "^3.0@alpha",
-                "drupal/file_delete": "^1.0",
+                "drupal/file_delete": "^2.0",
                 "drupal/geocoder": "^3.15",
                 "drupal/geofield": "^1.20",
                 "drupal/geolocation": "^3.2",
@@ -12361,7 +12361,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-10-06T16:10:03+00:00"
+            "time": "2022-10-13T13:17:38+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -18343,7 +18343,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
