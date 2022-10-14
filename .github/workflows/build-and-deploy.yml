@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Build Drupal
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -49,7 +49,7 @@ jobs:
   branch_deploy:
     name: Deploy environment branches
     needs: build
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: startsWith(github.ref, 'refs/heads/')
     steps:
       - name: Checkout
@@ -78,7 +78,7 @@ jobs:
   tag_deploy:
     name: Deploy tags
     needs: build
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: startsWith(github.ref, 'refs/tags/')
     steps:
       - name: Checkout
