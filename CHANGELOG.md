@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-312: Upgrading drupal/admin_toolbar (3.1.1 => 3.2.1).
 - RIGA-312: Upgrading drupal/file_delete (1.0.0 => 2.0.0).
+- RIGA-315: Update drupal/core 9.4.7 => 9.4.8.
 
 ### Deprecated
 

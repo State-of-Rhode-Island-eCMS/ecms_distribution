@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80fa7697efb77ce4014c7afcdc3e0cba",
+    "content-hash": "2f2aa70344ea5fbda0ef207329fde77e",
     "packages": [
         {
             "name": "algolia/places",
@@ -3300,16 +3300,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.4.7",
+            "version": "9.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "247431af7e33a8cf7c46677a79336103c6e83db1"
+                "reference": "a627d1b2a00f2cef0572e37b94dea298800541f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/247431af7e33a8cf7c46677a79336103c6e83db1",
-                "reference": "247431af7e33a8cf7c46677a79336103c6e83db1",
+                "url": "https://api.github.com/repos/drupal/core/zipball/a627d1b2a00f2cef0572e37b94dea298800541f4",
+                "reference": "a627d1b2a00f2cef0572e37b94dea298800541f4",
                 "shasum": ""
             },
             "require": {
@@ -3461,13 +3461,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.4.7"
+                "source": "https://github.com/drupal/core/tree/9.4.8"
             },
-            "time": "2022-09-28T16:19:47+00:00"
+            "time": "2022-10-06T15:57:08+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.4.7",
+            "version": "9.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -3511,13 +3511,13 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.4.7"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/9.4.8"
             },
             "time": "2022-06-19T16:14:23+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.4.7",
+            "version": "9.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -3552,22 +3552,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.5.0-beta1"
+                "source": "https://github.com/drupal/core-project-message/tree/9.5.0-beta2"
             },
             "time": "2022-02-24T17:40:53+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.4.7",
+            "version": "9.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "287868a598996f1eb04ea57dbefb741d3784db23"
+                "reference": "684cc844f7b729286f5d62f1ee4b20ab12586502"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/287868a598996f1eb04ea57dbefb741d3784db23",
-                "reference": "287868a598996f1eb04ea57dbefb741d3784db23",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/684cc844f7b729286f5d62f1ee4b20ab12586502",
+                "reference": "684cc844f7b729286f5d62f1ee4b20ab12586502",
                 "shasum": ""
             },
             "require": {
@@ -3576,7 +3576,7 @@
                 "doctrine/annotations": "~1.13.2",
                 "doctrine/lexer": "~1.2.3",
                 "doctrine/reflection": "~1.2.3",
-                "drupal/core": "9.4.7",
+                "drupal/core": "9.4.8",
                 "egulias/email-validator": "~3.2",
                 "guzzlehttp/guzzle": "~6.5.8",
                 "guzzlehttp/promises": "~1.5.1",
@@ -3638,13 +3638,13 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.4.7"
+                "source": "https://github.com/drupal/core-recommended/tree/9.4.8"
             },
-            "time": "2022-09-28T16:19:47+00:00"
+            "time": "2022-10-06T15:57:08+00:00"
         },
         {
             "name": "drupal/core-vendor-hardening",
-            "version": "9.4.7",
+            "version": "9.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-vendor-hardening.git",
@@ -3679,7 +3679,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-vendor-hardening/tree/9.5.0-beta1"
+                "source": "https://github.com/drupal/core-vendor-hardening/tree/9.5.0-beta2"
             },
             "time": "2022-02-24T17:40:53+00:00"
         },
@@ -12198,11 +12198,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-312/update-unsupported-moules",
+            "version": "dev-RIGA-315/core-update-9-4-8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "22f2116d911146529b766392b2c3b730bf8bde4d"
+                "reference": "7ac5657b1302c507179798fb3e1fce07921e8e0a"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12221,7 +12221,7 @@
                 "drupal/captcha": "^1.2",
                 "drupal/components": "^2.0",
                 "drupal/content_moderation_notifications": "^3.2",
-                "drupal/core-recommended": "~9.4.5",
+                "drupal/core-recommended": "~9.4.8",
                 "drupal/easy_breadcrumb": "^2.0",
                 "drupal/entity_print": "^2.5",
                 "drupal/extlink": "^1.5",
@@ -12361,7 +12361,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-10-13T13:17:38+00:00"
+            "time": "2022-10-14T15:15:16+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
