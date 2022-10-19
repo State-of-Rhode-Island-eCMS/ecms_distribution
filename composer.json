@@ -67,7 +67,7 @@
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
         "php": ">=8.0",
-        "rhodeislandecms/ecms_profile": "dev-RIGA-315/core-update-9-4-8",
+        "rhodeislandecms/ecms_profile": "0.9.16",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.1",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
