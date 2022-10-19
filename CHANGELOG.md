@@ -12,13 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-312: Upgrading drupal/admin_toolbar (3.1.1 => 3.2.1).
-- RIGA-312: Upgrading drupal/file_delete (1.0.0 => 2.0.0).
-- RIGA-315: Update drupal/core 9.4.7 => 9.4.8.
-- RIGA-312: Upgrading drupal/acquia_connector (3.0.5 => 3.0.6).
-- RIGA-312: Upgrading drupal/acquia_search (3.0.5 => 3.0.7).
-- RIGA-312: Upgrading drupal/search_api (1.25.0 => 1.26.0).
-- RIGA-307: Upgrading drupal/google_translate (1.0.0-rc1 => 1.0.0).
 
 ### Deprecated
 
@@ -27,6 +20,16 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.0] - 2022-10-20
+### Changed
+- RIGA-312: Upgrading drupal/admin_toolbar (3.1.1 => 3.2.1).
+- RIGA-312: Upgrading drupal/file_delete (1.0.0 => 2.0.0).
+- RIGA-315: Update drupal/core 9.4.7 => 9.4.8.
+- RIGA-312: Upgrading drupal/acquia_connector (3.0.5 => 3.0.6).
+- RIGA-312: Upgrading drupal/acquia_search (3.0.5 => 3.0.7).
+- RIGA-312: Upgrading drupal/search_api (1.25.0 => 1.26.0).
+- RIGA-307: Upgrading drupal/google_translate (1.0.0-rc1 => 1.0.0).
 
 ## [1.7.9] - 2022-10-06
 ### Changed
@@ -704,7 +707,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.0...HEAD
+[1.8.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.9...1.8.0
 [1.7.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.8...1.7.9
 [1.7.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.7...1.7.8
 [1.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.6...1.7.7
