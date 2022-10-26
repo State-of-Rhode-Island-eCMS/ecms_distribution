@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-325: Search API (1.26.0 => 1.27.0) - Moderately critical - Information Disclosure - SA-CONTRIB-2022-059.
 
 ## [1.8.1] - 2022-10-20
 ### Changed
