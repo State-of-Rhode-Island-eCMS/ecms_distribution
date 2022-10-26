@@ -20,6 +20,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.2] - 2022-10-27
+### Security
 - RIGA-325: Search API (1.26.0 => 1.27.0) - Moderately critical - Information Disclosure - SA-CONTRIB-2022-059.
 
 ## [1.8.1] - 2022-10-20
@@ -713,7 +716,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.2...HEAD
+[1.8.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.1...1.8.2
 [1.8.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.0...1.8.1
 [1.8.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.9...1.8.0
 [1.7.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.8...1.7.9
