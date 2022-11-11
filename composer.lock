@@ -6392,31 +6392,29 @@
         },
         {
             "name": "drupal/moderation_dashboard",
-            "version": "1.0.0-beta3",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/moderation_dashboard.git",
-                "reference": "8.x-1.0-beta3"
+                "reference": "2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/moderation_dashboard-8.x-1.0-beta3.zip",
-                "reference": "8.x-1.0-beta3",
-                "shasum": "fb7779ec55654d7b645d29a98cadd59ef8dfda24"
+                "url": "https://ftp.drupal.org/files/projects/moderation_dashboard-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "e90125b214ee3c56bc434aa6c4fa10611b701cf4"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9",
-                "drupal/page_manager": "*",
-                "drupal/panels": "*"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta3",
-                    "datestamp": "1627851954",
+                    "version": "2.1.1",
+                    "datestamp": "1661553556",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -6685,8 +6683,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "dsnopek",
-                    "homepage": "https://www.drupal.org/user/266527"
+                    "name": "EclipseGc",
+                    "homepage": "https://www.drupal.org/user/61203"
                 },
                 {
                     "name": "japerry",
@@ -12193,7 +12191,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "cdfa4190b0a92a530516b4145e1a7ac0b43ae77f"
+                "reference": "08abc262d8171f441e0063691a2ed423a13d01cb"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12244,10 +12242,12 @@
                 "drupal/migrate_plus": "^5.1",
                 "drupal/migrate_tools": "^5.0",
                 "drupal/moderated_content_bulk_publish": "^2.0",
-                "drupal/moderation_dashboard": "^1.0",
+                "drupal/moderation_dashboard": "^2.0",
                 "drupal/office_hours": "^1.3",
                 "drupal/openid_connect": "1.x-dev",
                 "drupal/openid_connect_windows_aad": "^1.3",
+                "drupal/page_manager": "^4.0@beta",
+                "drupal/panels": "^4.6.0",
                 "drupal/paragraphs": "^1.12",
                 "drupal/pathauto": "^1.8",
                 "drupal/publishcontent": "^1.3",
@@ -12356,7 +12356,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-11-11T13:38:50+00:00"
+            "time": "2022-11-11T17:14:01+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
