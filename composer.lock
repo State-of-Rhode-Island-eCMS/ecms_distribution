@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41ede8a099381782547077286b374436",
+    "content-hash": "e4faa3c84b5a7673500e3c6b90df23b9",
     "packages": [
         {
             "name": "algolia/places",
@@ -6210,67 +6210,6 @@
             }
         },
         {
-            "name": "drupal/migrate_devel",
-            "version": "2.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/migrate_devel.git",
-                "reference": "8.x-2.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/migrate_devel-8.x-2.0-alpha2.zip",
-                "reference": "8.x-2.0-alpha2",
-                "shasum": "8ea8a10d8238c0a52abc7b12d688414e024999c8"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "conflict": {
-                "drush/drush": "<9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.0-alpha2",
-                    "datestamp": "1593367363",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Derimagia",
-                    "homepage": "https://www.drupal.org/user/819640"
-                },
-                {
-                    "name": "aczietlow",
-                    "homepage": "https://www.drupal.org/user/1616656"
-                },
-                {
-                    "name": "andrewmacpherson",
-                    "homepage": "https://www.drupal.org/user/265648"
-                }
-            ],
-            "description": "Migrate Development Tools",
-            "homepage": "https://www.drupal.org/project/migrate_devel",
-            "support": {
-                "source": "https://git.drupalcode.org/project/migrate_devel",
-                "issues": "https://www.drupal.org/project/issues/migrate_devel"
-            }
-        },
-        {
             "name": "drupal/migrate_plus",
             "version": "5.3.0",
             "source": {
@@ -12250,11 +12189,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.16",
+            "version": "dev-RIGA-290/publication-migration-investigation",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "049772328e49a89c46d6bfbb85caa8e29c0df9bb"
+                "reference": "cdfa4190b0a92a530516b4145e1a7ac0b43ae77f"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12302,7 +12241,6 @@
                 "drupal/memcache": "^2.2",
                 "drupal/menu_block": "1.x-dev",
                 "drupal/metatag": "^1.14",
-                "drupal/migrate_devel": "^2.0",
                 "drupal/migrate_plus": "^5.1",
                 "drupal/migrate_tools": "^5.0",
                 "drupal/moderated_content_bulk_publish": "^2.0",
@@ -12347,6 +12285,7 @@
             "require-dev": {
                 "behat/mink-goutte-driver": "^1.2",
                 "drupal/coder": "^8.3",
+                "drupal/migrate_devel": "^2.0@alpha",
                 "drush/drush": "^10.0",
                 "liuggio/fastest": "^1.6",
                 "php-mock/php-mock": "^2.2",
@@ -12417,7 +12356,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-10-19T14:44:14+00:00"
+            "time": "2022-11-11T13:38:50+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -18399,7 +18338,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
