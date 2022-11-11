@@ -3,7 +3,7 @@
 Use feature branches for each issue that you work on. When you are ready
 to test your changes on the site factory environment, merge your feature
 branch to the `staging` branch of this repository. The staging branch
-should be reset to the main `branch` ideally after each sprint.
+should be reset to the main branch ideally after each sprint.
 
 ## Testing ecms_profile and ecms_pattern_lab changes
 
