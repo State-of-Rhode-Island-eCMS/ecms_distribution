@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "83f554b9b60c0ee692861f5b71b1eecc",
+    "content-hash": "3247ceab4bb1c10471701040e9333759",
     "packages": [
         {
             "name": "algolia/places",
@@ -2052,17 +2052,17 @@
         },
         {
             "name": "drupal/acquia_connector",
-            "version": "3.0.6",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_connector.git",
-                "reference": "3.0.6"
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_connector-3.0.6.zip",
-                "reference": "3.0.6",
-                "shasum": "8c37604b7bcc7c43e12ef9c2f1d1d65af3a75c4b"
+                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "84263c7288c72f501f3f29d96754b8f3a0952e5e"
             },
             "require": {
                 "drupal/core": ">=8.9 <11.0.0-stable",
@@ -2071,19 +2071,19 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.6",
-                    "datestamp": "1665784287",
+                    "version": "4.0.0",
+                    "datestamp": "1666214489",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-3.x": "3.x-dev"
+                    "dev-4.x": "4.x-dev"
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": ">=9"
                     }
                 }
             },
@@ -12187,16 +12187,24 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
+<<<<<<< HEAD
             "version": "dev-staging",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
                 "reference": "c034549a06cee685846532240734cc594de5d829"
+=======
+            "version": "dev-RIGA-329/update-acquia-connector-module",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
+                "reference": "002b2af282c478e749ddb4b06decd6d5406dba9c"
+>>>>>>> 12fe364 (update acquia connector 4.0)
             },
             "require": {
                 "composer/installers": "^1.9",
                 "cweagans/composer-patches": "^1.6",
-                "drupal/acquia_connector": "^3.0",
+                "drupal/acquia_connector": "^4.0",
                 "drupal/acquia_purge": "^1.1",
                 "drupal/acquia_search": "^3.0",
                 "drupal/acsf": "2.73",
@@ -12356,7 +12364,11 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
+<<<<<<< HEAD
             "time": "2022-11-11T19:18:30+00:00"
+=======
+            "time": "2022-11-11T20:58:39+00:00"
+>>>>>>> 12fe364 (update acquia connector 4.0)
         },
         {
             "name": "sabberworm/php-css-parser",
