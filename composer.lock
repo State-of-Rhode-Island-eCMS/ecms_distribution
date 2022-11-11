@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4faa3c84b5a7673500e3c6b90df23b9",
+    "content-hash": "83f554b9b60c0ee692861f5b71b1eecc",
     "packages": [
         {
             "name": "algolia/places",
@@ -12187,7 +12187,7 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-290/publication-migration-investigation",
+            "version": "dev-staging",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
