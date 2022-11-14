@@ -12183,11 +12183,19 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
+<<<<<<< HEAD
             "version": "dev-staging",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
+                "reference": "c034549a06cee685846532240734cc594de5d829"
+=======
+            "version": "dev-RIGA-329/update-acquia-connector-module",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
                 "reference": "002b2af282c478e749ddb4b06decd6d5406dba9c"
+>>>>>>> 12fe364 (update acquia connector 4.0)
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12352,7 +12360,11 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
+<<<<<<< HEAD
+            "time": "2022-11-11T19:18:30+00:00"
+=======
             "time": "2022-11-11T20:58:39+00:00"
+>>>>>>> 12fe364 (update acquia connector 4.0)
         },
         {
             "name": "sabberworm/php-css-parser",
