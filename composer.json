@@ -67,7 +67,7 @@
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
         "php": ">=8.0",
-        "rhodeislandecms/ecms_profile": "dev-RIGA-328/nov-contrib-mods-1",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-329/update-acquia-connector-module",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.2",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
@@ -105,19 +105,35 @@
         ]
     },
     "extra": {
-        "installer-types": ["bower-asset", "npm-asset", "pattern-lab"],
+        "installer-types": [
+            "bower-asset",
+            "npm-asset",
+            "pattern-lab"
+        ],
         "installer-paths": {
-            "docroot/core": ["type:drupal-core"],
+            "docroot/core": [
+                "type:drupal-core"
+            ],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
                 "type:npm-asset"
             ],
-            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"],
-            "docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": ["type:pattern-lab"]
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": [
+                "type:pattern-lab"
+            ]
         },
         "patches": {
             "drupal/core": {

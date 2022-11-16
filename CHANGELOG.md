@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-358: Upgrading drupal/asset_injector (2.10.0 => 2.12.0).
 - RIGA-358: Upgrading drupal/twig_tweak (2.9.0 => 2.10.0).
 - RIGA-358: Upgrading drupal/webform_views (5.0-beta1 => 5.0.0).
+- RIGA-329: Upgrading drupal/acquia_connector (3.0.0 => 4.0.0).
 
 ### Deprecated
 
