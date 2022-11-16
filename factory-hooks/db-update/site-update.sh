@@ -12,6 +12,13 @@
 # Map the script inputs to convenient names.
 # Acquia hosting site / environment names
 site="$1"
+
+# For sites without Drupal installed we can skip.
+if [[ "$site" == "external.test-riecms.acsitefactory.com" ]]
+then
+  exit
+fi
+
 env="$2"
 
 # database role. (Not expected to be needed in most hook scripts.)
