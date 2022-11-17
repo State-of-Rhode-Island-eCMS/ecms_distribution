@@ -12,13 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-358: Upgrading drupal/search_api (1.27.0 => 1.28.0).
-- RIGA-358: Upgrading drupal/search_api_solr (4.2.8 => 4.2.9).
-- RIGA-358: Upgrading drupal/acquia_search (3.0.7 => 3.0.9).
-- RIGA-358: Upgrading drupal/asset_injector (2.10.0 => 2.12.0).
-- RIGA-358: Upgrading drupal/twig_tweak (2.9.0 => 2.10.0).
-- RIGA-358: Upgrading drupal/webform_views (5.0-beta1 => 5.0.0).
-- RIGA-329: Upgrading drupal/acquia_connector (3.0.0 => 4.0.0).
 
 ### Deprecated
 
@@ -27,6 +20,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.3] - 2022-11-17
+### Changed
+- RIGA-6: Updated ecms_profile to 0.9.18.
+- RIGA-358: Upgrading drupal/search_api (1.27.0 => 1.28.0).
+- RIGA-358: Upgrading drupal/search_api_solr (4.2.8 => 4.2.9).
+- RIGA-358: Upgrading drupal/acquia_search (3.0.7 => 3.0.9).
+- RIGA-358: Upgrading drupal/asset_injector (2.10.0 => 2.12.0).
+- RIGA-358: Upgrading drupal/twig_tweak (2.9.0 => 2.10.0).
+- RIGA-358: Upgrading drupal/webform_views (5.0-beta1 => 5.0.0).
+- RIGA-329: Upgrading drupal/acquia_connector (3.0.0 => 4.0.0).
 
 ## [1.8.2] - 2022-10-27
 ### Security
@@ -723,7 +727,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.3...HEAD
+[1.8.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.2...1.8.3
 [1.8.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.1...1.8.2
 [1.8.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.0...1.8.1
 [1.8.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.7.9...1.8.0
