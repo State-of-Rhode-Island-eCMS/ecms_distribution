@@ -12214,7 +12214,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "c1bb1b32cd8c0a22780f2b5e5a1271a0d8a18d3a"
+                "reference": "f603d1ba70568a68156cacf3250b64f6cd6d24a1"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12346,9 +12346,6 @@
                     },
                     "drupal_git/migrate_process_trim": {
                         "3141131 - D9 Readiness": "https://www.drupal.org/files/issues/2020-05-23/migrate_process_trim.1.x-dev.rector.patch"
-                    },
-                    "drupal/media_revisions_ui": {
-                        "3257781 - Error: Call to undefined method MediaRevisionAccessCheck": "https://www.drupal.org/files/issues/2022-01-20/3257781-restore-method-5.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -12379,7 +12376,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-12-05T07:27:24+00:00"
+            "time": "2022-12-06T20:29:09+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
