@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb22e02d7d8e41ee7942d07a6b12263d",
+    "content-hash": "201bbe71d226d32fa5a1a118860f0ced",
     "packages": [
         {
             "name": "algolia/places",
@@ -2052,17 +2052,17 @@
         },
         {
             "name": "drupal/acquia_connector",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_connector.git",
-                "reference": "4.0.0"
+                "reference": "4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.0.zip",
-                "reference": "4.0.0",
-                "shasum": "84263c7288c72f501f3f29d96754b8f3a0952e5e"
+                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "69851795d3b6f868c0645837669da83f53d35029"
             },
             "require": {
                 "drupal/core": ">=8.9 <11.0.0-stable",
@@ -2071,8 +2071,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0",
-                    "datestamp": "1666214489",
+                    "version": "4.0.1",
+                    "datestamp": "1670270139",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4068,20 +4068,20 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
-                "reference": "8.x-1.9"
+                "reference": "8.x-1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "e1c51bdea495eb3b458130d6f0a00c347f5637df"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "edd23b91c4a34db65ea22c4db54b7458edc7513b"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "require-dev": {
                 "drupal/diff": "1.x-dev"
@@ -4089,11 +4089,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1614805871",
+                    "version": "8.x-1.10",
+                    "datestamp": "1660664712",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10 || ^11"
                     }
                 }
             },
@@ -5554,31 +5559,31 @@
         },
         {
             "name": "drupal/layout_builder_restrictions",
-            "version": "2.13.0",
+            "version": "2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/layout_builder_restrictions.git",
-                "reference": "8.x-2.13"
+                "reference": "8.x-2.17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.13.zip",
-                "reference": "8.x-2.13",
-                "shasum": "2ff1a74d533cd785d3f3e8dae5ebc9d499771090"
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.17.zip",
+                "reference": "8.x-2.17",
+                "shasum": "6916564f2fd96c3d8e5fc66179bb2d26c4569b00"
             },
             "require": {
-                "drupal/core": "^8.8.0 || ^9.0"
+                "drupal/core": "^9.3 || ^10"
             },
             "require-dev": {
                 "drupal/dashboards": "^2",
-                "drupal/layout_library": "^1",
-                "drupal/mini_layouts": "^1"
+                "drupal/layout_library": "dev-1.x",
+                "drupal/mini_layouts": "dev-2.0.x"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.13",
-                    "datestamp": "1649945847",
+                    "version": "8.x-2.17",
+                    "datestamp": "1668183343",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5601,8 +5606,8 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "gravelpot",
-                    "homepage": "https://www.drupal.org/user/748208"
+                    "name": "Jeff Cardwell",
+                    "homepage": "https://www.drupal.org/user/2913129"
                 },
                 {
                     "name": "lreynaga",
@@ -5611,6 +5616,10 @@
                 {
                     "name": "mark_fullmer",
                     "homepage": "https://www.drupal.org/user/2612816"
+                },
+                {
+                    "name": "mmarler",
+                    "homepage": "https://www.drupal.org/user/500192"
                 },
                 {
                     "name": "ricksta",
@@ -5623,6 +5632,10 @@
                 {
                     "name": "twfahey",
                     "homepage": "https://www.drupal.org/user/3403722"
+                },
+                {
+                    "name": "utexas",
+                    "homepage": "https://www.drupal.org/user/3716409"
                 }
             ],
             "description": "Manage which fields & layouts are available in Layout Builder",
@@ -5738,26 +5751,26 @@
         },
         {
             "name": "drupal/media_entity_file_replace",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_entity_file_replace.git",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_entity_file_replace-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "a22fb6b946dade434301b85c249d8621d0fc6654"
+                "url": "https://ftp.drupal.org/files/projects/media_entity_file_replace-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "4462d41e80de7880e556eb677cd1831a44470dac"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1618180544",
+                    "version": "8.x-1.1",
+                    "datestamp": "1665518899",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5782,20 +5795,20 @@
         },
         {
             "name": "drupal/media_file_delete",
-            "version": "1.1.1",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_file_delete.git",
-                "reference": "1.1.1"
+                "reference": "1.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_file_delete-1.1.1.zip",
-                "reference": "1.1.1",
-                "shasum": "015eaea59e4a876dd9c36b69553335932dde9b9d"
+                "url": "https://ftp.drupal.org/files/projects/media_file_delete-1.3.0.zip",
+                "reference": "1.3.0",
+                "shasum": "a3772a9c4b96d9f0c93eb3ebcac2f4041db93f1d"
             },
             "require": {
-                "drupal/core": "^8.8 || ~9.0"
+                "drupal/core": "^8.8 || ~9.0 || ~10.0"
             },
             "require-dev": {
                 "drupal/entity_usage": "*"
@@ -5803,8 +5816,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.1",
-                    "datestamp": "1651977836",
+                    "version": "1.3.0",
+                    "datestamp": "1669241949",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5829,29 +5842,32 @@
         },
         {
             "name": "drupal/media_library_form_element",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_library_form_element.git",
-                "reference": "2.0.3"
+                "reference": "2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_library_form_element-2.0.3.zip",
-                "reference": "2.0.3",
-                "shasum": "9d7782136526752cbddd2ecc98fcf1024da75e00"
+                "url": "https://ftp.drupal.org/files/projects/media_library_form_element-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "c345d1c047762c342b9ed73e8f1fb796c8644945"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
+            "require-dev": {
+                "drupal/webform": "^6.0"
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.3",
-                    "datestamp": "1608021997",
+                    "version": "2.0.4",
+                    "datestamp": "1659257104",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -5871,6 +5887,10 @@
                     "homepage": "https://www.ausy.be",
                     "email": "info@ausy.be",
                     "role": "Sponsor"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
                 },
                 {
                     "name": "nightlife2008",
@@ -5960,26 +5980,26 @@
         },
         {
             "name": "drupal/media_revisions_ui",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_revisions_ui.git",
-                "reference": "2.0.0"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_revisions_ui-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "3705d7291486ada1c8384c2eefa2219c7d2fdc49"
+                "url": "https://ftp.drupal.org/files/projects/media_revisions_ui-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "fab967dbaebc96350d2334d8ff09e257f943b4e0"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1594109933",
+                    "version": "2.1.0",
+                    "datestamp": "1663070347",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5992,8 +6012,16 @@
             ],
             "authors": [
                 {
-                    "name": "benjamincizej",
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "bcizej",
                     "homepage": "https://www.drupal.org/user/3612191"
+                },
+                {
+                    "name": "mstrelan",
+                    "homepage": "https://www.drupal.org/user/314289"
                 }
             ],
             "description": "Adds admin interface to handle media revisions.",
@@ -6800,32 +6828,31 @@
         },
         {
             "name": "drupal/paragraphs",
-            "version": "1.14.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8.x-1.14"
+                "reference": "8.x-1.15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "caa1a945dcfd058c4937c4907743eed970ce14cc"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.15.zip",
+                "reference": "8.x-1.15",
+                "shasum": "2ed2d3199553010fa1c500181bbebe676e9e60c1"
             },
             "require": {
-                "drupal/core": "^9.2",
+                "drupal/core": "^9.3 || ^10",
                 "drupal/entity_reference_revisions": "~1.3"
             },
             "require-dev": {
-                "drupal/block_field": "~1.0",
-                "drupal/ctools": "3.x-dev",
-                "drupal/diff": "~1.0",
+                "drupal/block_field": "1.x-dev",
+                "drupal/diff": "1.x-dev",
                 "drupal/entity_browser": "2.x-dev",
                 "drupal/entity_usage": "2.x-dev",
                 "drupal/field_group": "3.x-dev",
-                "drupal/inline_entity_form": "~1.0",
+                "drupal/inline_entity_form": "1.x-dev",
                 "drupal/paragraphs-paragraphs_library": "*",
-                "drupal/replicate": "~1.0",
+                "drupal/replicate": "1.x-dev",
                 "drupal/search_api": "1.x-dev",
                 "drupal/search_api_db": "*"
             },
@@ -6835,8 +6862,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1650520869",
+                    "version": "8.x-1.15",
+                    "datestamp": "1661440897",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6857,10 +6884,6 @@
                     "homepage": "https://www.drupal.org/user/514222"
                 },
                 {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
                     "name": "jeroen.b",
                     "homepage": "https://www.drupal.org/user/1853532"
                 },
@@ -6871,6 +6894,10 @@
                 {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
                 }
             ],
             "description": "Enables the creation of Paragraphs entities.",
@@ -12183,16 +12210,16 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.18",
+            "version": "dev-RIGA-333/december-contrib-module-updates",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "3ec55aaf87242c8a49558a33f1b048e29d214284"
+                "reference": "42a2987f68490575a6746390cefee29a7f16124b"
             },
             "require": {
                 "composer/installers": "^1.9",
                 "cweagans/composer-patches": "^1.6",
-                "drupal/acquia_connector": "^4.0",
+                "drupal/acquia_connector": "^4.0.1",
                 "drupal/acquia_purge": "^1.1",
                 "drupal/acquia_search": "^3.0",
                 "drupal/acsf": "2.73",
@@ -12224,14 +12251,14 @@
                 "drupal/language_cookie": "1.x-dev",
                 "drupal/language_neutral_aliases": "^3.0",
                 "drupal/layout_builder_modal": "^1.1",
-                "drupal/layout_builder_restrictions": "^2.7",
+                "drupal/layout_builder_restrictions": "^2.17",
                 "drupal/layout_builder_tabs": "^1.0",
                 "drupal/media_entity_download": "^2.0",
-                "drupal/media_entity_file_replace": "^1.0",
-                "drupal/media_file_delete": "^1.1",
-                "drupal/media_library_form_element": "^2.0",
+                "drupal/media_entity_file_replace": "^1.1",
+                "drupal/media_file_delete": "^1.3",
+                "drupal/media_library_form_element": "^2.0.4",
                 "drupal/media_library_theme_reset": "^1.0",
-                "drupal/media_revisions_ui": "^2.0",
+                "drupal/media_revisions_ui": "^2.1",
                 "drupal/memcache": "^2.2",
                 "drupal/menu_block": "1.x-dev",
                 "drupal/metatag": "^1.14",
@@ -12244,7 +12271,7 @@
                 "drupal/openid_connect_windows_aad": "^1.3",
                 "drupal/page_manager": "^4.0@beta",
                 "drupal/panels": "^4.6.0",
-                "drupal/paragraphs": "^1.12",
+                "drupal/paragraphs": "^1.15",
                 "drupal/pathauto": "^1.8",
                 "drupal/publishcontent": "^1.3",
                 "drupal/rabbit_hole": "^1.0",
@@ -12319,9 +12346,6 @@
                     },
                     "drupal_git/migrate_process_trim": {
                         "3141131 - D9 Readiness": "https://www.drupal.org/files/issues/2020-05-23/migrate_process_trim.1.x-dev.rector.patch"
-                    },
-                    "drupal/media_revisions_ui": {
-                        "3257781 - Error: Call to undefined method MediaRevisionAccessCheck": "https://www.drupal.org/files/issues/2022-01-20/3257781-restore-method-5.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -12352,7 +12376,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-11-17T17:12:59+00:00"
+            "time": "2022-12-07T16:33:38+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -18334,7 +18358,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
