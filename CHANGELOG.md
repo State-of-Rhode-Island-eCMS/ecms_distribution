@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-333: Upgrading drupal/entity_reference_revisions 1.9.0 => 1.10.0.
 
 ### Deprecated
 
@@ -21,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.4] - 2022-12-08
+### Changed
+- RIGA-333: Upgrading drupal/entity_reference_revisions 1.9.0 => 1.10.0.
+- RIGA-6: Updated ecms_profile to 0.9.19.
 
 ## [1.8.3] - 2022-11-17
 ### Changed
@@ -728,7 +732,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.4...HEAD
+[1.8.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.3...1.8.4
 [1.8.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.2...1.8.3
 [1.8.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.1...1.8.2
 [1.8.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.0...1.8.1
