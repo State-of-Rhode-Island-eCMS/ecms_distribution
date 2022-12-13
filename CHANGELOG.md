@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-323: Replace `file_get_contents` with CURL-based alternative.
 
 ### Deprecated
 
