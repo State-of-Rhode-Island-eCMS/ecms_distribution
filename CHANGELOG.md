@@ -12,9 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-345: Upgrade drupal/admin_toolbar 3.2.1 => 3.3.0.
-- RIGA-345: Upgrade drupal/simple_oauth 5.2.0 => 5.2.3.
-- RIGA-345: Upgrade drupal/smart_date 3.5.1 => 3.6.1.
 
 ### Deprecated
 
@@ -23,6 +20,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.5] - 2022-12-15
+### Changed
+- RIGA-345: Upgrade drupal/admin_toolbar 3.2.1 => 3.3.0.
+- RIGA-345: Upgrade drupal/simple_oauth 5.2.0 => 5.2.3.
+- RIGA-345: Upgrade drupal/smart_date 3.5.1 => 3.6.1.
 
 ## [1.8.4] - 2022-12-08
 ### Changed
@@ -735,7 +738,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.5...HEAD
+[1.8.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.4...1.8.5
 [1.8.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.3...1.8.4
 [1.8.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.2...1.8.3
 [1.8.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.1...1.8.2
