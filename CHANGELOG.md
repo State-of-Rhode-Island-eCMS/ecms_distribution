@@ -12,6 +12,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-345: Upgrade drupal/admin_toolbar 3.2.1 => 3.3.0.
+- RIGA-345: Upgrade drupal/simple_oauth 5.2.0 => 5.2.3.
+- RIGA-345: Upgrade drupal/smart_date 3.5.1 => 3.6.1.
 
 ### Deprecated
 
