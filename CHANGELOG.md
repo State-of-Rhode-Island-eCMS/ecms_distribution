@@ -12,7 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-349: Upgrade drupal/acquia_search 3.0.9 => 3.1.1.
+- RIGA-349: Upgrade drupal/acquia_search 3.0.9 => 3.1.2.
 - RIGA-355: Upgrade drupal/media_library_form_element 2.0.4 => 2.0.6.
 
 ### Deprecated
