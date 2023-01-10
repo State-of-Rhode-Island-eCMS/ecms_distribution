@@ -12,6 +12,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-349: Upgrade drupal/asset_injector 2.12.0 => 2.16.0.
+- RIGA-349: Upgrade drupal/auto_entitylabel 3.0.0-beta4 => 3.0.0.
+- RIGA-349: Upgrade drupal/entity_print 2.6.0 => 2.9.0.
+- RIGA-349: Upgrade drupal/scheduled_transitions 2.2.1 => 2.3.0.
 
 ### Deprecated
 
