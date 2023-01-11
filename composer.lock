@@ -6113,6 +6113,62 @@
             }
         },
         {
+            "name": "drupal/menu_admin_per_menu",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_admin_per_menu.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_admin_per_menu-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "ec8c7a4a064aa285dfb722dad264da9936fc81b6"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1660918821",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anrikun",
+                    "homepage": "https://www.drupal.org/user/410199"
+                },
+                {
+                    "name": "JeroenT",
+                    "homepage": "https://www.drupal.org/user/2228934"
+                },
+                {
+                    "name": "jonas139",
+                    "homepage": "https://www.drupal.org/user/2873401"
+                },
+                {
+                    "name": "mkdok",
+                    "homepage": "https://www.drupal.org/user/3308753"
+                }
+            ],
+            "description": "Allows to give roles per menu admin permissions without giving them full administer menu permission.",
+            "homepage": "https://www.drupal.org/project/menu_admin_per_menu",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_admin_per_menu"
+            }
+        },
+        {
             "name": "drupal/menu_block",
             "version": "dev-1.x",
             "source": {
@@ -12535,7 +12591,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "b8acd5e09c1944288bc55214dde3c0a132e92590"
+                "reference": "40fbd904f2441354960e23bd22565880012a5a1c"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12581,6 +12637,7 @@
                 "drupal/media_library_theme_reset": "^1.0",
                 "drupal/media_revisions_ui": "^2.1",
                 "drupal/memcache": "^2.2",
+                "drupal/menu_admin_per_menu": "^1.5",
                 "drupal/menu_block": "1.x-dev",
                 "drupal/metatag": "^1.14",
                 "drupal/migrate_plus": "^5.1",
@@ -12701,7 +12758,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-01-11T23:15:48+00:00"
+            "time": "2023-01-11T23:32:40+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
