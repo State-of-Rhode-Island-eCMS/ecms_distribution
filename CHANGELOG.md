@@ -12,10 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-349: Upgrade drupal/asset_injector 2.12.0 => 2.16.0.
-- RIGA-349: Upgrade drupal/auto_entitylabel 3.0.0-beta4 => 3.0.0.
-- RIGA-349: Upgrade drupal/entity_print 2.6.0 => 2.9.0.
-- RIGA-349: Upgrade drupal/scheduled_transitions 2.2.1 => 2.3.0.
 
 ### Deprecated
 
@@ -24,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.6] - 2022-01-12
+### Changed
+- RIGA-349: Upgrade drupal/asset_injector 2.12.0 => 2.16.0.
+- RIGA-349: Upgrade drupal/auto_entitylabel 3.0.0-beta4 => 3.0.0.
+- RIGA-349: Upgrade drupal/entity_print 2.6.0 => 2.9.0.
+- RIGA-349: Upgrade drupal/scheduled_transitions 2.2.1 => 2.3.0.
 
 ## [1.8.5] - 2022-12-15
 ### Changed
@@ -742,7 +745,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.6...HEAD
+[1.8.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.5...1.8.6
 [1.8.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.4...1.8.5
 [1.8.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.3...1.8.4
 [1.8.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.2...1.8.3
