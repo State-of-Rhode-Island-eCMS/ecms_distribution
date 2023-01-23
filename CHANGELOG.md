@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-354: Install drupal/menu_force 1.2.0.
 
 ### Changed
 
