@@ -16,4 +16,7 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
       $settings['acquia_search']['override_search_core'] = "AMTW-199087.01dev.riecms";
       break;
   }
+
+  // Disable read_only until Acquia Search module bug is fixed.
+  $settings['acquia_search']['read_only'] = FALSE;
 }
