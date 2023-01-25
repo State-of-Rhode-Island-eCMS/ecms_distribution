@@ -10,12 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-354: Install drupal/menu_force 1.2.0.
-- RIGA-354: Add drupal/menu_admin_per_menu 1.5.0 to composer.lock.
-- RIGA-354: Add drupal/simple_menu_permissions 1.4.0 to composer.lock.
 
 ### Changed
-- RIGA-346: Update ecms_profile to 0.9.22.
 
 ### Deprecated
 
@@ -24,9 +20,20 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.7] - 2023-01-25
+### Added
+- RIGA-354: Install drupal/menu_force 1.2.0.
+- RIGA-346: Add drupal/menu_admin_per_menu 1.5.0 to composer.lock.
+- RIGA-346: Add drupal/simple_menu_permissions 1.4.0 to composer.lock.
+
+### Changed
+- RIGA-346: Update ecms_profile to 0.9.22.
+
+### Security
 - RIGA-355: Upgrade drupal/core 9.4.8 => 9.4.10 (SA-CORE-2023-001).
 
-## [1.8.6] - 2022-01-12
+## [1.8.6] - 2023-01-12
 ### Changed
 - RIGA-349: Upgrade drupal/asset_injector 2.12.0 => 2.16.0.
 - RIGA-349: Upgrade drupal/auto_entitylabel 3.0.0-beta4 => 3.0.0.
@@ -750,7 +757,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.7...HEAD
+[1.8.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.6...1.8.7
 [1.8.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.5...1.8.6
 [1.8.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.4...1.8.5
 [1.8.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.3...1.8.4
