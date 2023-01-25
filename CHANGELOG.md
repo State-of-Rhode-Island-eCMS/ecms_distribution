@@ -21,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-355: Upgrade drupal/core 9.4.8 => 9.4.10 (SA-CORE-2023-001).
 
 ## [1.8.6] - 2022-01-12
 ### Changed
