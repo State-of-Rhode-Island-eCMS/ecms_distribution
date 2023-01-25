@@ -11,8 +11,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-354: Install drupal/menu_force 1.2.0.
+- RIGA-354: Add drupal/menu_admin_per_menu 1.5.0 to composer.lock.
+- RIGA-354: Add drupal/simple_menu_permissions 1.4.0 to composer.lock.
 
 ### Changed
+- RIGA-346: Update ecms_profile to 0.9.22.
 
 ### Deprecated
 

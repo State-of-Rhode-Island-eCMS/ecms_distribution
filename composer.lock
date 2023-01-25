@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "821ca978934eda3e442064aac9e1745c",
+    "content-hash": "948fba0101a438d3fd88d82a19679f75",
     "packages": [
         {
             "name": "algolia/places",
@@ -6113,6 +6113,62 @@
             }
         },
         {
+            "name": "drupal/menu_admin_per_menu",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_admin_per_menu.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_admin_per_menu-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "ec8c7a4a064aa285dfb722dad264da9936fc81b6"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1660918821",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anrikun",
+                    "homepage": "https://www.drupal.org/user/410199"
+                },
+                {
+                    "name": "JeroenT",
+                    "homepage": "https://www.drupal.org/user/2228934"
+                },
+                {
+                    "name": "jonas139",
+                    "homepage": "https://www.drupal.org/user/2873401"
+                },
+                {
+                    "name": "mkdok",
+                    "homepage": "https://www.drupal.org/user/3308753"
+                }
+            ],
+            "description": "Allows to give roles per menu admin permissions without giving them full administer menu permission.",
+            "homepage": "https://www.drupal.org/project/menu_admin_per_menu",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_admin_per_menu"
+            }
+        },
+        {
             "name": "drupal/menu_block",
             "version": "dev-1.x",
             "source": {
@@ -7764,6 +7820,50 @@
                 "source": "http://git.drupal.org/project/search_api_solr.git",
                 "issues": "https://www.drupal.org/project/issues/search_api_solr",
                 "chat": "https://drupalchat.me/channel/search"
+            }
+        },
+        {
+            "name": "drupal/simple_menu_permissions",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simple_menu_permissions.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simple_menu_permissions-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "5ba3d6aa4c9a62f03fb0ce05504abaa8f94fc287"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1627889656",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Ewout Goosmann",
+                    "homepage": "https://www.drupal.org/user/3138239"
+                }
+            ],
+            "description": "Defines permissions for each menu. Such as the edit and delete permission. Also defines a permission to create new menus.",
+            "homepage": "https://www.drupal.org/project/simple_menu_permissions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/simple_menu_permissions"
             }
         },
         {
@@ -12487,11 +12587,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.21",
+            "version": "0.9.22",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "28b36ee093832c26ef2d9f85794218262f136592"
+                "reference": "29999de00e2abfa71b1d03a7b8c427f47416926e"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12537,6 +12637,7 @@
                 "drupal/media_library_theme_reset": "^1.0",
                 "drupal/media_revisions_ui": "^2.1",
                 "drupal/memcache": "^2.2",
+                "drupal/menu_admin_per_menu": "^1.5",
                 "drupal/menu_block": "1.x-dev",
                 "drupal/metatag": "^1.14",
                 "drupal/migrate_plus": "^5.1",
@@ -12560,6 +12661,7 @@
                 "drupal/search_api": "^1.18",
                 "drupal/search_api_exclude": "^2.0",
                 "drupal/search_api_solr": "^4.2",
+                "drupal/simple_menu_permissions": "^1.4",
                 "drupal/simple_oauth": "^5.2",
                 "drupal/simple_sitemap": "^3.8",
                 "drupal/smart_date": "^3.5",
@@ -12656,7 +12758,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2022-12-15T16:42:06+00:00"
+            "time": "2023-01-25T23:10:37+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
