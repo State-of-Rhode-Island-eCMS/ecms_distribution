@@ -55,6 +55,7 @@
         }
     ],
     "require": {
+        "php": ">=8.0",
         "behat/mink": "^1.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
@@ -63,10 +64,10 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9.1.8",
         "drupal/core-vendor-hardening": "^9",
+        "drupal/menu_force": "^1.2",
         "drush/drush": "^10.0",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "php": ">=8.0",
         "rhodeislandecms/ecms_profile": "0.9.21",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.2",
         "wikimedia/composer-merge-plugin": "^2.0.1"
