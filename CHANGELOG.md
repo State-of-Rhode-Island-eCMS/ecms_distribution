@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-355: Upgrade drupal/media_library_form_element 2.0.4 => 2.0.6.
 
 ### Deprecated
 
@@ -20,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-355: Media Library Form API Element => 2.0.6 (SA-CONTRIB-2023-004).
 
 ## [1.8.7] - 2023-01-25
 ### Added
