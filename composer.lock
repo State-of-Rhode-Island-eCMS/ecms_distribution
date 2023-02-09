@@ -325,16 +325,16 @@
         },
         {
             "name": "clue/stream-filter",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/clue/stream-filter.git",
-                "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320"
+                "reference": "d6169430c7731d8509da7aecd0af756a5747b78e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clue/stream-filter/zipball/aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
-                "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
+                "url": "https://api.github.com/repos/clue/stream-filter/zipball/d6169430c7731d8509da7aecd0af756a5747b78e",
+                "reference": "d6169430c7731d8509da7aecd0af756a5747b78e",
                 "shasum": ""
             },
             "require": {
@@ -345,12 +345,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Clue\\StreamFilter\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "Clue\\StreamFilter\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -375,7 +375,7 @@
             ],
             "support": {
                 "issues": "https://github.com/clue/stream-filter/issues",
-                "source": "https://github.com/clue/stream-filter/tree/v1.5.0"
+                "source": "https://github.com/clue/stream-filter/tree/v1.6.0"
             },
             "funding": [
                 {
@@ -387,7 +387,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-02T12:38:20+00:00"
+            "time": "2022-02-21T13:15:14+00:00"
         },
         {
             "name": "codemirror/codemirror",
@@ -1423,28 +1423,31 @@
         },
         {
             "name": "davedevelopment/stiphle",
-            "version": "0.9.2",
+            "version": "0.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/davedevelopment/stiphle.git",
-                "reference": "76151e6474741adee258c1a4860a0460e319563b"
+                "reference": "5d1c244f0525d265e231a65db538b74eb5483768"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davedevelopment/stiphle/zipball/76151e6474741adee258c1a4860a0460e319563b",
-                "reference": "76151e6474741adee258c1a4860a0460e319563b",
+                "url": "https://api.github.com/repos/davedevelopment/stiphle/zipball/5d1c244f0525d265e231a65db538b74eb5483768",
+                "reference": "5d1c244f0525d265e231a65db538b74eb5483768",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.1"
+                "php": "^5.6.0|^7.0|^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.5",
-                "predis/predis": "^1.1"
+                "doctrine/cache": "^1.0",
+                "phpunit/phpunit": "^6.5|^7.5|^8.4",
+                "predis/predis": "^1.1",
+                "zendframework/zend-cache": "^2.8"
             },
             "suggest": {
                 "doctrine/cache": "~1.0",
-                "predis/predis": "~1.1"
+                "predis/predis": "~1.1",
+                "zendframework/zend-cache": "^2.8"
             },
             "type": "library",
             "autoload": {
@@ -1473,9 +1476,9 @@
             ],
             "support": {
                 "issues": "https://github.com/davedevelopment/stiphle/issues",
-                "source": "https://github.com/davedevelopment/stiphle/tree/0.9.2"
+                "source": "https://github.com/davedevelopment/stiphle/tree/0.9.4"
             },
-            "time": "2017-08-16T07:58:18+00:00"
+            "time": "2022-11-25T16:30:20+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -3103,26 +3106,26 @@
         },
         {
             "name": "drupal/captcha",
-            "version": "1.2.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/captcha.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "e35a2ce42b652f833d140f7571d1eef0e06b0edc"
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.9.zip",
+                "reference": "8.x-1.9",
+                "shasum": "aefe4d37341f8f00f469ac5c1d5f577cbd9f9a0b"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.9 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1619673374",
+                    "version": "8.x-1.9",
+                    "datestamp": "1672484865",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3138,12 +3141,16 @@
             ],
             "authors": [
                 {
-                    "name": "RobLoach",
-                    "homepage": "https://www.drupal.org/user/61114"
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
                 },
                 {
                     "name": "elachlan",
                     "homepage": "https://www.drupal.org/user/1021502"
+                },
+                {
+                    "name": "Grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
                 },
                 {
                     "name": "japerry",
@@ -3158,8 +3165,16 @@
                     "homepage": "https://www.drupal.org/user/116002"
                 },
                 {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
                     "name": "soxofaan",
                     "homepage": "https://www.drupal.org/user/41478"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
                 },
                 {
                     "name": "wundo",
@@ -4508,22 +4523,22 @@
         },
         {
             "name": "drupal/geocoder",
-            "version": "3.29.0",
+            "version": "3.31.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geocoder.git",
-                "reference": "8.x-3.29"
+                "reference": "8.x-3.31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.29.zip",
-                "reference": "8.x-3.29",
-                "shasum": "472fdc6259c3c3c90b0e84f7c5301103fdba919f"
+                "url": "https://ftp.drupal.org/files/projects/geocoder-8.x-3.31.zip",
+                "reference": "8.x-3.31",
+                "shasum": "f6a24695f1fefa1c52a6119dd02c329410d22ce6"
             },
             "require": {
                 "davedevelopment/stiphle": "^0.9.2",
                 "drupal/core": "^8.8 || ^9",
-                "php": ">=7.1.0",
+                "php": ">=7.3.0",
                 "php-http/guzzle6-adapter": "^1.1 || ^2.0",
                 "php-http/message": "^1.6",
                 "willdurand/geocoder": "^4.0"
@@ -4561,8 +4576,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.29",
-                    "datestamp": "1655853021",
+                    "version": "8.x-3.31",
+                    "datestamp": "1663974561",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4631,27 +4646,27 @@
         },
         {
             "name": "drupal/geofield",
-            "version": "1.20.0",
+            "version": "1.52.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield.git",
-                "reference": "8.x-1.20"
+                "reference": "8.x-1.52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.20.zip",
-                "reference": "8.x-1.20",
-                "shasum": "cff7baf2e5e98325c7fbbe1be170538a76dfacc9"
+                "url": "https://ftp.drupal.org/files/projects/geofield-8.x-1.52.zip",
+                "reference": "8.x-1.52",
+                "shasum": "e53392cc8f5eecc32ee7bf1215225a7aeba0f0a6"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
-                "phayes/geophp": "^1.2"
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "itamair/geophp": "^1.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.20",
-                    "datestamp": "1613156933",
+                    "version": "8.x-1.52",
+                    "datestamp": "1674235694",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4660,31 +4675,23 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
+                    "name": "Italo Mairo",
+                    "homepage": "https://www.drupal.org/u/itamair",
+                    "role": "Drupal 8+ Maintainer"
+                },
+                {
                     "name": "Brandon Morrison",
                     "homepage": "https://www.drupal.org/u/brandonian",
-                    "role": "Maintainer"
+                    "role": "Drupal 7 Maintainer"
                 },
                 {
                     "name": "Pablo López",
                     "homepage": "https://www.drupal.org/u/plopesc",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Italo Mairo",
-                    "homepage": "https://www.drupal.org/u/itamair",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "davidseth",
-                    "homepage": "https://www.drupal.org/user/254857"
-                },
-                {
-                    "name": "itamair",
-                    "homepage": "https://www.drupal.org/user/1179076"
+                    "role": "Drupal 7 Maintainer"
                 },
                 {
                     "name": "phayes",
@@ -4693,10 +4700,6 @@
                 {
                     "name": "plopesc",
                     "homepage": "https://www.drupal.org/user/282415"
-                },
-                {
-                    "name": "zzolo",
-                    "homepage": "https://www.drupal.org/user/147331"
                 }
             ],
             "description": "Stores geographic and location data (points, lines, and polygons).",
@@ -4709,22 +4712,23 @@
         },
         {
             "name": "drupal/geolocation",
-            "version": "3.2.0",
+            "version": "3.12.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geolocation.git",
-                "reference": "8.x-3.2"
+                "reference": "8.x-3.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-3.2.zip",
-                "reference": "8.x-3.2",
-                "shasum": "ed6b1e594dd0ad95e52681130a8bcae85d68c305"
+                "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-3.12.zip",
+                "reference": "8.x-3.12",
+                "shasum": "eb31fe9080e2e0dcf442fc9b0a859f326219db5a"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9",
-                "gasparesganga/php-shapefile": ">=3.2",
-                "sibyx/phpgpx": "^1.0"
+                "drupal/core": "^9.3 || ^10",
+                "drupal/jquery_ui": "*",
+                "drupal/jquery_ui_autocomplete": "^2.0",
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
                 "drupal/address": "*",
@@ -4732,11 +4736,11 @@
                 "drupal/geolocation_demo": "*",
                 "drupal/geolocation_geometry": "*",
                 "drupal/geolocation_geometry_data": "*",
-                "drupal/geolocation_geometry_natural_earth_countries": "*",
                 "drupal/geolocation_google_maps": "*",
                 "drupal/geolocation_google_maps_demo": "*",
                 "drupal/geolocation_google_static_maps": "*",
                 "drupal/geolocation_leaflet": "*",
+                "drupal/geolocation_leaflet_demo": "*",
                 "drupal/search_api": "*",
                 "drupal/search_api_location": "*",
                 "drupal/search_api_location_views": "*"
@@ -4744,8 +4748,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.2",
-                    "datestamp": "1590319155",
+                    "version": "8.x-3.12",
+                    "datestamp": "1673282362",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4769,7 +4773,7 @@
             "description": "Provides a simple geolocation Drupal field type to store and display location data (lat, lng).",
             "homepage": "https://www.drupal.org/project/geolocation",
             "support": {
-                "source": "http://git.drupal.org/project/geolocation.git",
+                "source": "https://git.drupal.org/project/geolocation.git",
                 "issues": "https://www.drupal.org/project/issues/geolocation"
             }
         },
@@ -4980,26 +4984,26 @@
         },
         {
             "name": "drupal/jquery_ui",
-            "version": "1.4.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jquery_ui.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jquery_ui-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "64c19ecc8902e2b4b1ab0cc5f5fe28dbc83bfebe"
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "0ddccdcf35a066de1843e1d9670677ee1a2faac0"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9.2 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1582149957",
+                    "version": "8.x-1.6",
+                    "datestamp": "1668521197",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5012,8 +5016,8 @@
             ],
             "authors": [
                 {
-                    "name": "RobLoach",
-                    "homepage": "https://www.drupal.org/user/61114"
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
                 },
                 {
                     "name": "jjeff",
@@ -5040,12 +5044,28 @@
                     "homepage": "https://www.drupal.org/user/2972409"
                 },
                 {
+                    "name": "nod_",
+                    "homepage": "https://www.drupal.org/user/598310"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
                     "name": "sun",
                     "homepage": "https://www.drupal.org/user/54136"
                 },
                 {
                     "name": "webchick",
                     "homepage": "https://www.drupal.org/user/24967"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
                 },
                 {
                     "name": "zrpnr",
@@ -5056,6 +5076,72 @@
             "homepage": "https://www.drupal.org/project/jquery_ui",
             "support": {
                 "source": "https://git.drupalcode.org/project/jquery_ui"
+            }
+        },
+        {
+            "name": "drupal/jquery_ui_autocomplete",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui_autocomplete.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_autocomplete-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "927d312a74002f99e1c971d3d268be1b0a532fc7"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10",
+                "drupal/jquery_ui": "^1.6",
+                "drupal/jquery_ui_menu": "^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1670871461",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "nod_",
+                    "homepage": "https://www.drupal.org/user/598310"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Provides jQuery UI Autocomplete library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui_autocomplete",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jquery_ui_autocomplete"
             }
         },
         {
@@ -5226,6 +5312,71 @@
             "homepage": "https://www.drupal.org/project/jquery_ui_droppable",
             "support": {
                 "source": "https://git.drupalcode.org/project/jquery_ui_droppable"
+            }
+        },
+        {
+            "name": "drupal/jquery_ui_menu",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jquery_ui_menu.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_ui_menu-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "5e1b56bf457669c7779a81784f49da63e3956854"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10",
+                "drupal/jquery_ui": "^1.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1670871546",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "nod_",
+                    "homepage": "https://www.drupal.org/user/598310"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Provides jQuery UI Menu library.",
+            "homepage": "https://www.drupal.org/project/jquery_ui_menu",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jquery_ui_menu"
             }
         },
         {
@@ -9070,58 +9221,6 @@
             "time": "2022-02-21T09:13:59+00:00"
         },
         {
-            "name": "gasparesganga/php-shapefile",
-            "version": "v3.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gasparesganga/php-shapefile.git",
-                "reference": "3c7e4cb80edb40ff184e3971458577a04845f8da"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gasparesganga/php-shapefile/zipball/3c7e4cb80edb40ff184e3971458577a04845f8da",
-                "reference": "3c7e4cb80edb40ff184e3971458577a04845f8da",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Shapefile\\": "src/Shapefile/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gaspare Sganga",
-                    "email": "contact@gasparesganga.com",
-                    "homepage": "https://gasparesganga.com/labs/php-shapefile/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP library to read and write ESRI Shapefiles, compatible with WKT and GeoJSON",
-            "homepage": "https://gasparesganga.com/labs/php-shapefile/",
-            "keywords": [
-                "ESRI",
-                "Shapefile",
-                "dbf",
-                "geojson",
-                "shape",
-                "shp",
-                "wkt"
-            ],
-            "support": {
-                "issues": "https://github.com/gasparesganga/php-shapefile/issues",
-                "source": "https://github.com/gasparesganga/php-shapefile/tree/v3.4.0"
-            },
-            "time": "2021-01-23T08:10:45+00:00"
-        },
-        {
             "name": "geocoder-php/arcgis-online-provider",
             "version": "4.3.0",
             "source": {
@@ -9832,6 +9931,52 @@
                 "source": "https://github.com/http-interop/http-factory-guzzle/tree/1.2.0"
             },
             "time": "2021-07-21T13:50:14+00:00"
+        },
+        {
+            "name": "itamair/geophp",
+            "version": "1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itamair/geoPHP.git",
+                "reference": "ced300d09ddda1b7212ebe1a9a53aa065e5f9585"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itamair/geoPHP/zipball/ced300d09ddda1b7212ebe1a9a53aa065e5f9585",
+                "reference": "ced300d09ddda1b7212ebe1a9a53aa065e5f9585",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.* || 9.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "geoPHP.inc"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Italo Mairo",
+                    "homepage": "https://www.linkedin.com/in/italomairo/",
+                    "role": "Maintanier of this Library Repo"
+                },
+                {
+                    "name": "Patrick Hayes",
+                    "homepage": "https://www.linkedin.com/in/patrickdhayes/",
+                    "role": "Maintanier of original Repositary/Library (https://github.com/phayes/geoPHP)"
+                }
+            ],
+            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
+            "homepage": "https://github.com/itamair/geoPHP",
+            "support": {
+                "source": "https://github.com/itamair/geoPHP/tree/1.4"
+            },
+            "time": "2023-02-05T00:00:51+00:00"
         },
         {
             "name": "johngrogg/ics-parser",
@@ -11552,46 +11697,6 @@
             "time": "2021-03-21T15:43:46+00:00"
         },
         {
-            "name": "phayes/geophp",
-            "version": "1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phayes/geoPHP.git",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "geoPHP.inc"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2 or New-BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Patrick Hayes"
-                }
-            ],
-            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
-            "homepage": "https://github.com/phayes/geoPHP",
-            "support": {
-                "issues": "https://github.com/phayes/geoPHP/issues",
-                "source": "https://github.com/phayes/geoPHP/tree/master"
-            },
-            "time": "2014-12-02T06:11:22+00:00"
-        },
-        {
             "name": "phenx/php-font-lib",
             "version": "0.5.4",
             "source": {
@@ -11819,16 +11924,16 @@
         },
         {
             "name": "php-http/httplug",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/httplug.git",
-                "reference": "191a0a1b41ed026b717421931f8d3bd2514ffbf9"
+                "reference": "f640739f80dfa1152533976e3c112477f69274eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/httplug/zipball/191a0a1b41ed026b717421931f8d3bd2514ffbf9",
-                "reference": "191a0a1b41ed026b717421931f8d3bd2514ffbf9",
+                "url": "https://api.github.com/repos/php-http/httplug/zipball/f640739f80dfa1152533976e3c112477f69274eb",
+                "reference": "f640739f80dfa1152533976e3c112477f69274eb",
                 "shasum": ""
             },
             "require": {
@@ -11875,22 +11980,22 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/httplug/issues",
-                "source": "https://github.com/php-http/httplug/tree/master"
+                "source": "https://github.com/php-http/httplug/tree/2.3.0"
             },
-            "time": "2020-07-13T15:43:23+00:00"
+            "time": "2022-02-21T09:52:22+00:00"
         },
         {
             "name": "php-http/message",
-            "version": "1.11.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29"
+                "reference": "7886e647a30a966a1a8d1dad1845b71ca8678361"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/fb0dbce7355cad4f4f6a225f537c34d013571f29",
-                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29",
+                "url": "https://api.github.com/repos/php-http/message/zipball/7886e647a30a966a1a8d1dad1845b71ca8678361",
+                "reference": "7886e647a30a966a1a8d1dad1845b71ca8678361",
                 "shasum": ""
             },
             "require": {
@@ -11907,7 +12012,7 @@
                 "ext-zlib": "*",
                 "guzzlehttp/psr7": "^1.0",
                 "laminas/laminas-diactoros": "^2.0",
-                "phpspec/phpspec": "^5.1 || ^6.3",
+                "phpspec/phpspec": "^5.1 || ^6.3 || ^7.1",
                 "slim/slim": "^3.0"
             },
             "suggest": {
@@ -11923,12 +12028,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Http\\Message\\": "src/"
-                },
                 "files": [
                     "src/filters.php"
-                ]
+                ],
+                "psr-4": {
+                    "Http\\Message\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -11949,9 +12054,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.11.0"
+                "source": "https://github.com/php-http/message/tree/1.13.0"
             },
-            "time": "2021-02-01T08:54:58+00:00"
+            "time": "2022-02-11T13:41:14+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -12874,55 +12979,6 @@
                 "source": "https://github.com/sabberworm/PHP-CSS-Parser/tree/8.4.0"
             },
             "time": "2021-12-11T13:40:54+00:00"
-        },
-        {
-            "name": "sibyx/phpgpx",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Sibyx/phpGPX.git",
-                "reference": "e8841db16e751a8968a8c0cdc48100cd74407c3d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Sibyx/phpGPX/zipball/e8841db16e751a8968a8c0cdc48100cd74407c3d",
-                "reference": "e8841db16e751a8968a8c0cdc48100cd74407c3d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "ext-simplexml": "*",
-                "lib-libxml": "*",
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "evert/phpdoc-md": "~0.2.0",
-                "friendsofphp/php-cs-fixer": "^2.18",
-                "phpunit/phpunit": "^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "phpGPX\\": "src/phpGPX/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Dubec",
-                    "email": "jakub.dubec@gmail.com",
-                    "homepage": "https://jakubdubec.me"
-                }
-            ],
-            "description": "A simple PHP library for GPX import/export",
-            "support": {
-                "issues": "https://github.com/Sibyx/phpGPX/issues",
-                "source": "https://github.com/Sibyx/phpGPX/tree/1.1.2"
-            },
-            "time": "2021-02-28T19:29:40+00:00"
         },
         {
             "name": "signature_pad/signature_pad",
@@ -16253,20 +16309,20 @@
         },
         {
             "name": "willdurand/geocoder",
-            "version": "4.4.0",
+            "version": "4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geocoder-php/php-common.git",
-                "reference": "3e86f5b10ab0cef1cf03f979fe8e34b6476daff0"
+                "reference": "be3d9ed0fddf8c698ee079d8a07ae9520b4a49a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/3e86f5b10ab0cef1cf03f979fe8e34b6476daff0",
-                "reference": "3e86f5b10ab0cef1cf03f979fe8e34b6476daff0",
+                "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/be3d9ed0fddf8c698ee079d8a07ae9520b4a49a1",
+                "reference": "be3d9ed0fddf8c698ee079d8a07ae9520b4a49a1",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "require-dev": {
                 "nyholm/nsa": "^1.1",
@@ -16309,9 +16365,9 @@
                 "geoip"
             ],
             "support": {
-                "source": "https://github.com/geocoder-php/php-common/tree/4.4.0"
+                "source": "https://github.com/geocoder-php/php-common/tree/4.6.0"
             },
-            "time": "2020-12-21T09:30:01+00:00"
+            "time": "2022-07-30T11:09:43+00:00"
         }
     ],
     "packages-dev": [
