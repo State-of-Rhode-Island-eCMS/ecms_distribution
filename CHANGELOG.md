@@ -12,18 +12,23 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-349: Upgrade drupal/acquia_search 3.0.9 => 3.1.4.
-- RIGA-355: Upgrade drupal/media_library_form_element 2.0.4 => 2.0.6.
-- RIGA-357: Upgrade drupal/captcha 1.2.0 => 1.9.0.
-- RIGA-357: Upgrade drupal/geocoder 3.29.0 => 3.31.0.
-- RIGA-357: Upgrade drupal/geofield 1.20.0 => 1.52.0.
-- RIGA-357: Upgrade drupal/geolocation 3.2.0 => 3.12.0.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.8.8] - 2023-02-09
+### Changed
+- RIGA-349: Upgrade drupal/acquia_search 3.0.9 => 3.1.4.
+- RIGA-355: Upgrade drupal/media_library_form_element 2.0.4 => 2.0.6.
+- RIGA-357: Upgrade drupal/captcha 1.2.0 => 1.9.0.
+- RIGA-357: Upgrade drupal/geocoder 3.29.0 => 3.31.0.
+- RIGA-357: Upgrade drupal/geofield 1.20.0 => 1.52.0.
+- RIGA-357: Upgrade drupal/geolocation 3.2.0 => 3.12.0.
 
 ### Security
 - RIGA-355: Media Library Form API Element => 2.0.6 (SA-CONTRIB-2023-004).
@@ -764,7 +769,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.8...HEAD
+[1.8.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.7...1.8.8
 [1.8.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.6...1.8.7
 [1.8.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.5...1.8.6
 [1.8.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.4...1.8.5
