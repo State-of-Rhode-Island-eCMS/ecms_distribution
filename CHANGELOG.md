@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-364: Upgrade drupal/jquery_ui_datepicker 1.2.0 => 1.4.0.
 - RIGA-364: Upgrade drupal/jquery_ui_touch_punch 1.0.0 => 1.1.0.
 - RIGA-364: Upgrade drupal/jsonapi_extras 3.21.0 => 3.23.0.
+- RIGA-364: Upgrade drupal/address 1.10.0 => 1.11.0.
 
 ### Deprecated
 
