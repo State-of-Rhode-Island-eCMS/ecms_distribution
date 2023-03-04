@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-364: Upgrade drupal/smart_date 3.6.1 => 4.0.0-alpha3.
+- RIGA-364: Upgrade drupal/jquery_ui_datepicker 1.2.0 => 1.4.0.
 
 ### Deprecated
 
