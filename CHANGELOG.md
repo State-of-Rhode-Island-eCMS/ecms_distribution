@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-364: Upgrade drupal/smart_date 3.6.1 => 4.0.0-alpha3.
 
 ### Deprecated
 

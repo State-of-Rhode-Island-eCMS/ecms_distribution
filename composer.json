@@ -68,7 +68,7 @@
         "drush/drush": "^10.0",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.9.22",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-364/march-contrib-updates",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.2",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
@@ -85,7 +85,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "drupal/core-vendor-hardening": true,
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "php-http/discovery": true
         },
         "process-timeout": 0
     },

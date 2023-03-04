@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "948fba0101a438d3fd88d82a19679f75",
+    "content-hash": "3f0010c1f9efa4596130f59e59dbc0cb",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -8208,22 +8208,22 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "3.6.1",
+            "version": "4.0.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "3.6.1"
+                "reference": "4.0.0-alpha3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-3.6.1.zip",
-                "reference": "3.6.1",
-                "shasum": "a2ce55f5e38d046143881839f5ba0e6dcb49e823"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-4.0.0-alpha3.zip",
+                "reference": "4.0.0-alpha3",
+                "shasum": "75c897a2eb06ee0d11fbb535dc0e8b68e29fa3bc"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
-                "php": ">=7.1",
-                "simshaun/recurr": "^4"
+                "php": ">=8.0",
+                "simshaun/recurr": "^5"
             },
             "suggest": {
                 "drupal/multiple_fields_remove_button": "Provides a button for editors to remove unwanted rows."
@@ -8231,11 +8231,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.6.1",
-                    "datestamp": "1661631736",
+                    "version": "4.0.0-alpha3",
+                    "datestamp": "1677784970",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -12754,11 +12754,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.22",
+            "version": "dev-RIGA-364/march-contrib-updates",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "29999de00e2abfa71b1d03a7b8c427f47416926e"
+                "reference": "2ca1744751af66f99f6bef2799c1349ea14244c1"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12831,7 +12831,7 @@
                 "drupal/simple_menu_permissions": "^1.4",
                 "drupal/simple_oauth": "^5.2",
                 "drupal/simple_sitemap": "^3.8",
-                "drupal/smart_date": "^3.5",
+                "drupal/smart_date": "^4.0@alpha",
                 "drupal/svg_image": "^1.14",
                 "drupal/token": "^1.7",
                 "drupal/twig_tweak": "^2.8",
@@ -12925,7 +12925,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-01-25T23:10:37+00:00"
+            "time": "2023-03-04T04:20:37+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -12994,24 +12994,25 @@
         },
         {
             "name": "simshaun/recurr",
-            "version": "v4.0.5",
+            "version": "v5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simshaun/recurr.git",
-                "reference": "08b0b46879f598cd11dd42b4c1a9c221a0562749"
+                "reference": "6887b7bd7075de97c8c69835e0939ff68d23c47e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simshaun/recurr/zipball/08b0b46879f598cd11dd42b4c1a9c221a0562749",
-                "reference": "08b0b46879f598cd11dd42b4c1a9c221a0562749",
+                "url": "https://api.github.com/repos/simshaun/recurr/zipball/6887b7bd7075de97c8c69835e0939ff68d23c47e",
+                "reference": "6887b7bd7075de97c8c69835e0939ff68d23c47e",
                 "shasum": ""
             },
             "require": {
-                "doctrine/collections": "~1.3",
-                "php": ">=5.5.0"
+                "doctrine/collections": "~1.6",
+                "php": "^7.2||^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~5.7"
+                "phpunit/phpunit": "^8.5.16",
+                "symfony/yaml": "^5.3"
             },
             "type": "library",
             "extra": {
@@ -13046,9 +13047,9 @@
             ],
             "support": {
                 "issues": "https://github.com/simshaun/recurr/issues",
-                "source": "https://github.com/simshaun/recurr/tree/v4.0.5"
+                "source": "https://github.com/simshaun/recurr/tree/v5.0.1"
             },
-            "time": "2021-03-25T23:00:49+00:00"
+            "time": "2022-09-09T05:37:22+00:00"
         },
         {
             "name": "solarium/solarium",
@@ -18910,7 +18911,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
