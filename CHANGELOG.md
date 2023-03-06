@@ -10,6 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-363: Install drupal/ckeditor 1.0.1.
+- RIGA-363: Install drupal/ckeditor_entity_link 1.3.0.
 
 ### Changed
 - RIGA-364: Upgrade drupal/smart_date 3.6.1 => 4.0.0-alpha3.
