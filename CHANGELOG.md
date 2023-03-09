@@ -10,15 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-363: Install drupal/ckeditor 1.0.1.
-- RIGA-363: Install drupal/ckeditor_entity_link 1.3.0.
 
 ### Changed
-- RIGA-364: Upgrade drupal/smart_date 3.6.1 => 4.0.0-alpha3.
-- RIGA-364: Upgrade drupal/jquery_ui_datepicker 1.2.0 => 1.4.0.
-- RIGA-364: Upgrade drupal/jquery_ui_touch_punch 1.0.0 => 1.1.0.
-- RIGA-364: Upgrade drupal/jsonapi_extras 3.21.0 => 3.23.0.
-- RIGA-364: Upgrade drupal/address 1.10.0 => 1.11.0.
 
 ### Deprecated
 
@@ -27,6 +20,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.8.9] - 2023-03-09
+### Added
+- RIGA-363: Install drupal/ckeditor 1.0.1.
+- RIGA-363: Install drupal/ckeditor_entity_link 1.3.0.
+
+### Changed
+- RIGA-6: Update ecms_profile => 0.9.23.
+- RIGA-364: Upgrade drupal/smart_date 3.6.1 => 4.0.0-alpha3.
+- RIGA-364: Upgrade drupal/jquery_ui_datepicker 1.2.0 => 1.4.0.
+- RIGA-364: Upgrade drupal/jquery_ui_touch_punch 1.0.0 => 1.1.0.
+- RIGA-364: Upgrade drupal/jsonapi_extras 3.21.0 => 3.23.0.
+- RIGA-364: Upgrade drupal/address 1.10.0 => 1.11.0.
 
 ## [1.8.8] - 2023-02-09
 ### Changed
@@ -776,7 +782,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.9...HEAD
+[1.8.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.8...1.8.9
 [1.8.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.7...1.8.8
 [1.8.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.6...1.8.7
 [1.8.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.5...1.8.6
