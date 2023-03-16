@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-369: Upgrade drupal/core 9.4.10 => 9.4.12.
 
 ### Deprecated
 
@@ -20,6 +21,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-369: Drupal core - Moderately critical - Information Disclosure - SA-CORE-2023-002.
+- RIGA-369: Drupal core - Moderately critical - Information Disclosure - SA-CORE-2023-003.
+- RIGA-369: Drupal core - Moderately critical - Access bypass - SA-CORE-2023-004.
 
 ## [1.8.9] - 2023-03-09
 ### Added
