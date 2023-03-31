@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee08c1bb26fe9f6eacc25cb6726ebbe0",
+    "content-hash": "7a3db375e52812ab9b06028bcfa696b1",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -12946,7 +12946,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ce2b55e3e6b7d971e48ccf2af4546334c082821e"
+                "reference": "9db3bcd9b0c52ff949ca62454f21cec844c85bb9"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13113,7 +13113,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-03-29T09:42:04+00:00"
+            "time": "2023-03-31T08:29:44+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -13359,11 +13359,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.7.2",
+            "version": "dev-RIGA-365/add-search-settings-module",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "9b3ea31c2db15dc7582f8f04a339feb76959540f"
+                "reference": "a10e34a26f622d1dd6202a9d4451a12f77b2dcf5"
             },
             "type": "pattern-lab",
             "license": [
@@ -13377,7 +13377,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2022-10-19T16:59:14+00:00"
+            "time": "2023-03-31T08:25:39+00:00"
         },
         {
             "name": "stella-maris/clock",
@@ -19100,7 +19100,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "rhodeislandecms/ecms_profile": 20
+        "rhodeislandecms/ecms_profile": 20,
+        "state-of-rhode-island-ecms/ecms_patternlab": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
