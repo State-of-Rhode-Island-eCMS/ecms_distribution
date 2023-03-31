@@ -12946,7 +12946,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "9db3bcd9b0c52ff949ca62454f21cec844c85bb9"
+                "reference": "14450c40986892aa4215b2a1812758712c617a5a"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13113,7 +13113,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-03-31T08:29:44+00:00"
+            "time": "2023-03-31T09:16:05+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -13363,7 +13363,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "a10e34a26f622d1dd6202a9d4451a12f77b2dcf5"
+                "reference": "b92b39fb9ea8eba34857072d15bda0440e9a8adf"
             },
             "type": "pattern-lab",
             "license": [
@@ -13377,7 +13377,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2023-03-31T08:25:39+00:00"
+            "time": "2023-03-31T08:59:37+00:00"
         },
         {
             "name": "stella-maris/clock",
