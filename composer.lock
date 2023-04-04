@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e81e52f919c7ca0b02b73c7709daa121",
+    "content-hash": "12f7133a4276ee3154f3743f53e4a6e3",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -4660,6 +4660,58 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/file_delete",
                 "issues": "https://www.drupal.org/project/issues/file_delete"
+            }
+        },
+        {
+            "name": "drupal/force_users_logout",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/force_users_logout.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/force_users_logout-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "09b7b1974d2015756a2e633bbaed83f881540c36"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1659439954",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "kreynen",
+                    "homepage": "https://www.drupal.org/user/48877"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "Vamshi Mulle",
+                    "homepage": "https://www.drupal.org/user/3604678"
+                }
+            ],
+            "description": "Allows admin to force logout of other users",
+            "homepage": "https://www.drupal.org/project/force_users_logout",
+            "support": {
+                "source": "https://git.drupalcode.org/project/force_users_logout"
             }
         },
         {
@@ -12942,11 +12994,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.23",
+            "version": "dev-RIGA-372/install-force-users-logout-module",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "28e2ea883284a4b6a1fb2153874f07c59532efd1"
+                "reference": "838aea826ee617edc2f47c1806bd3d9ada60e54b"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12972,6 +13024,7 @@
                 "drupal/features": "^3.11",
                 "drupal/feeds": "^3.0@alpha",
                 "drupal/file_delete": "^2.0",
+                "drupal/force_users_logout": "^2.0",
                 "drupal/geocoder": "^3.15",
                 "drupal/geofield": "^1.20",
                 "drupal/geolocation": "^3.2",
@@ -13113,7 +13166,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-03-09T10:12:38+00:00"
+            "time": "2023-04-04T08:33:58+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -19099,7 +19152,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
