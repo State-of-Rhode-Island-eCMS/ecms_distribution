@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-365: Upgrade drupal/search_api 1.28.0 => 1.29.0.
 
 ### Deprecated
 
