@@ -7962,17 +7962,17 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.28.0",
+            "version": "1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.28"
+                "reference": "8.x-1.29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.28.zip",
-                "reference": "8.x-1.28",
-                "shasum": "d3ae0bb3cf17c986d5e0c6edb87aee6580b6fc1e"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.29.zip",
+                "reference": "8.x-1.29",
+                "shasum": "4663abbcfe5dfc159ee0886fc6c437e998fc0653"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10.0"
@@ -7993,8 +7993,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.28",
-                    "datestamp": "1667814116",
+                    "version": "8.x-1.29",
+                    "datestamp": "1679910252",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12946,7 +12946,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "14450c40986892aa4215b2a1812758712c617a5a"
+                "reference": "878223354ba34b5f91d4d4a7dc2357ad7969000e"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13083,6 +13083,9 @@
                     },
                     "drupal/allowed_formats": {
                         "2950548 - Default value for format dropdown missing": "https://www.drupal.org/files/issues/2022-02-02/2950548-allowed_formats-missing_default_value.patch"
+                    },
+                    "drupal/search_api": {
+                        "3321499 - Call to a member function preExecute() on null in SearchApiTimeCache::generateResultsKey()": "https://www.drupal.org/files/issues/2023-03-24/Call_on_Null-3321499-7.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -13113,7 +13116,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-03-31T09:16:05+00:00"
+            "time": "2023-04-05T07:00:28+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
