@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e81e52f919c7ca0b02b73c7709daa121",
+    "content-hash": "af869f84804672fb5ab974deb616f24b",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -12942,11 +12942,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.23",
+            "version": "0.9.24",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "28e2ea883284a4b6a1fb2153874f07c59532efd1"
+                "reference": "d01853a310eeab173bedaf1558a43e9f17e4087f"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13083,6 +13083,9 @@
                     },
                     "drupal/allowed_formats": {
                         "2950548 - Default value for format dropdown missing": "https://www.drupal.org/files/issues/2022-02-02/2950548-allowed_formats-missing_default_value.patch"
+                    },
+                    "drupal/search_api": {
+                        "3321499 - Call to a member function preExecute() on null in SearchApiTimeCache::generateResultsKey()": "https://www.drupal.org/files/issues/2023-03-24/Call_on_Null-3321499-7.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -13113,7 +13116,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-03-09T10:12:38+00:00"
+            "time": "2023-04-05T20:17:11+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -13359,11 +13362,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.7.2",
+            "version": "0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "9b3ea31c2db15dc7582f8f04a339feb76959540f"
+                "reference": "163f15f33729c2ce770dc1fb62aa8e4ebc4f2750"
             },
             "type": "pattern-lab",
             "license": [
@@ -13377,7 +13380,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2022-10-19T16:59:14+00:00"
+            "time": "2023-04-05T20:19:12+00:00"
         },
         {
             "name": "stella-maris/clock",
