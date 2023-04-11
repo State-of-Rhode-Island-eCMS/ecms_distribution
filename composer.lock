@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af869f84804672fb5ab974deb616f24b",
+    "content-hash": "a0c4c9ac60a32addc7150e4fec444b2d",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -2985,6 +2985,94 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/auto_entitylabel",
                 "issues": "https://www.drupal.org/project/issues/auto_entitylabel"
+            }
+        },
+        {
+            "name": "drupal/autologout",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/autologout.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/autologout-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "f751062f463d0b52df81764f67cee3a0be97825e"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1658168199",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AjitS",
+                    "homepage": "https://www.drupal.org/user/981944"
+                },
+                {
+                    "name": "AjK",
+                    "homepage": "https://www.drupal.org/user/39030"
+                },
+                {
+                    "name": "boshtian",
+                    "homepage": "https://www.drupal.org/user/1773456"
+                },
+                {
+                    "name": "dandrews",
+                    "homepage": "https://www.drupal.org/user/2014490"
+                },
+                {
+                    "name": "darksnow",
+                    "homepage": "https://www.drupal.org/user/391915"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "johnennew",
+                    "homepage": "https://www.drupal.org/user/1150042"
+                },
+                {
+                    "name": "jrglasgow",
+                    "homepage": "https://www.drupal.org/user/36590"
+                },
+                {
+                    "name": "kmasood",
+                    "homepage": "https://www.drupal.org/user/1262860"
+                },
+                {
+                    "name": "levelos",
+                    "homepage": "https://www.drupal.org/user/54135"
+                },
+                {
+                    "name": "prabeen.giri",
+                    "homepage": "https://www.drupal.org/user/913078"
+                },
+                {
+                    "name": "str8",
+                    "homepage": "https://www.drupal.org/user/2865063"
+                }
+            ],
+            "description": "Adds automated timed logout.",
+            "homepage": "http://drupal.org/project/autologout",
+            "support": {
+                "source": "https://git.drupalcode.org/project/autologout"
             }
         },
         {
@@ -12942,11 +13030,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.24",
+            "version": "dev-RIGA-372/install-and-configure-automated-logout",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "d01853a310eeab173bedaf1558a43e9f17e4087f"
+                "reference": "2726d92dd1b4fdda5b89d5cc3c49b1277a2ab888"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -12960,6 +13048,7 @@
                 "drupal/allowed_formats": "^2.0.0",
                 "drupal/asset_injector": "^2.7",
                 "drupal/auto_entitylabel": "^3.0@beta",
+                "drupal/autologout": "^1.4",
                 "drupal/better_exposed_filters": "^5.0",
                 "drupal/bigmenu": "^2.0@RC",
                 "drupal/captcha": "^1.2",
@@ -13116,7 +13205,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-04-05T20:17:11+00:00"
+            "time": "2023-04-11T09:29:02+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -19102,7 +19191,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
