@@ -10,11 +10,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-372: Install drupal/autologout 1.4.0.
+- RIGA-372: Add drupal/core patch, issue 3301239, comment 7.
 
 ### Changed
 - RIGA-371: Update user role permissions.
-- RIGA-372: Install drupal/autologout 1.4.0.
-- RIGA-372: Add drupal/core patch, issue 3301239, comment 7.
+- RIGA-373: Upgrade drupal/acquia_connector 4.0.1 => 4.0.4.
+- RIGA-373: Upgrade drupal/acquia_search 3.1.4 => 3.1.7.
+- RIGA-373: Upgrade drupal/search_api 1.28.0 => 1.29.0.
+- RIGA-373: Upgrade drupal/search_api_solr 4.2.9 => 4.2.10.
 
 ### Deprecated
 
