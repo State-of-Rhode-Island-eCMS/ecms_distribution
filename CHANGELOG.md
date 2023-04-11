@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-372: Install drupal/autologout 1.4.0.
+- RIGA-372: Add drupal/core patch, issue 3301239, comment 7.
 
 ### Deprecated
 
