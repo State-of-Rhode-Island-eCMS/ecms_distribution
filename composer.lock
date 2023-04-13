@@ -13034,7 +13034,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "2726d92dd1b4fdda5b89d5cc3c49b1277a2ab888"
+                "reference": "5998e82e110297b7c967ebfb6076421458a87332"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13205,7 +13205,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-04-11T09:29:02+00:00"
+            "time": "2023-04-13T08:47:21+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
