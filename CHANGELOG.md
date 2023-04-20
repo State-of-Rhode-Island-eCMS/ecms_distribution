@@ -10,15 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-372: Install drupal/autologout 1.4.0.
-- RIGA-372: Add drupal/core patch, issue 3301239, comment 7.
 
 ### Changed
-- RIGA-371: Update user role permissions.
-- RIGA-373: Upgrade drupal/acquia_connector 4.0.1 => 4.0.4.
-- RIGA-373: Upgrade drupal/acquia_search 3.1.4 => 3.1.7.
-- RIGA-373: Upgrade drupal/search_api 1.28.0 => 1.29.0.
-- RIGA-373: Upgrade drupal/search_api_solr 4.2.9 => 4.2.10.
 
 ### Deprecated
 
@@ -27,6 +20,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.9.2] - 2023-04-20
+### Added
+- RIGA-372: Install drupal/autologout 1.4.0.
+- RIGA-372: Add drupal/core patch, issue 3301239, comment 7.
+
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.9.25.
+- RIGA-371: Update user role permissions.
+- RIGA-373: Upgrade drupal/acquia_connector 4.0.1 => 4.0.4.
+- RIGA-373: Upgrade drupal/acquia_search 3.1.4 => 3.1.7.
+- RIGA-373: Upgrade drupal/search_api 1.28.0 => 1.29.0.
+- RIGA-373: Upgrade drupal/search_api_solr 4.2.9 => 4.2.10.
 
 ## [1.9.1] - 2023-04-06
 ### Changed
@@ -803,7 +809,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.2...HEAD
+[1.9.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.1...1.9.2
 [1.9.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.0...1.9.1
 [1.9.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.9...1.9.0
 [1.8.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.8...1.8.9
