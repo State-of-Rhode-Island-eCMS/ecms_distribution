@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-379: Upgrade drupal/core 9.4.12 => 9.4.14.
 
 ### Deprecated
 
@@ -20,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-379: Drupal core - Moderately critical - Access bypass - SA-CORE-2023-005.
 
 ## [1.9.2] - 2023-04-20
 ### Added
