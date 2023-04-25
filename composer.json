@@ -162,6 +162,9 @@
             },
             "drupal/webform_encrypt": {
                 "Combined patches for issues 3292305, 2943344, 3142997": "patches/webform-encrypt-d9-and-global-encrypt.patch"
+            },
+            "drupal/easy_breadcrumb": {
+                "Re-save string config values as arrays": "patches/easy_breadcrumb-install.patch"
             }
         },
         "preserve-paths": [],
