@@ -77,6 +77,7 @@
         "drupal/core-project-message": "^9.4.10",
         "drupal/core-recommended": "^9.4.10",
         "drupal/core-vendor-hardening": "^9",
+        "drupal/feeds_ex": "^1.0@beta",
         "drupal/menu_force": "^1.2",
         "drush/drush": "^10.0",
         "nnnick/chartjs": "^3.9",
