@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-379: Install nnnick/chartjs v3.9.1 locally to avoid CDN warning.
 
 ### Changed
 - RIGA-379: Upgrade drupal/core 9.4.12 => 9.4.14.
