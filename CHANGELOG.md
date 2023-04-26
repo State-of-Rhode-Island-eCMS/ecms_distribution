@@ -10,17 +10,24 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-379: Install nnnick/chartjs v3.9.1 locally to avoid CDN warning.
-- RIGA-380: Install drupal/feeds_ex 1.0.0-beta3.
 
 ### Changed
-- RIGA-379: Upgrade drupal/core 9.4.12 => 9.4.14.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.9.3] - 2023-04-27
+### Added
+- RIGA-379: Install nnnick/chartjs v3.9.1 locally to avoid CDN warning.
+- RIGA-380: Install drupal/feeds_ex 1.0.0-beta3.
+
+### Changed
+- RIGA-379: Upgrade drupal/core 9.4.12 => 9.4.14.
 
 ### Security
 - RIGA-379: Drupal core - Moderately critical - Access bypass - SA-CORE-2023-005.
@@ -813,7 +820,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.3...HEAD
+[1.9.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.2...1.9.3
 [1.9.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.1...1.9.2
 [1.9.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.0...1.9.1
 [1.9.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.8.9...1.9.0
