@@ -82,7 +82,7 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.9.25",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-380/install-feeds_ex-module",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.3",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
@@ -161,6 +161,9 @@
             },
             "drupal/webform_encrypt": {
                 "Combined patches for issues 3292305, 2943344, 3142997": "patches/webform-encrypt-d9-and-global-encrypt.patch"
+            },
+            "drupal/easy_breadcrumb": {
+                "Re-save string config values as arrays": "patches/easy_breadcrumb-install.patch"
             }
         },
         "preserve-paths": [],
