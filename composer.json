@@ -82,7 +82,7 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "dev-RIGA-380/install-feeds_ex-module",
+        "rhodeislandecms/ecms_profile": "0.9.26",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.3",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
