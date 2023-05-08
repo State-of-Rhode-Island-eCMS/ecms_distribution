@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-382: Upgrade drupal/captcha 1.9.0 => 1.10.0.
 
 ### Deprecated
 
