@@ -13,6 +13,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-382: Upgrade drupal/captcha 1.9.0 => 1.10.0.
+- RIGA-382: Upgrade drupal/webform 6.1.3 => 6.1.4.
+- RIGA-382: Upgrade drupal/webform_views 5.0.0 => 5.1.0.
 
 ### Deprecated
 
