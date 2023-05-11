@@ -12,9 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-382: Upgrade drupal/captcha 1.9.0 => 1.10.0.
-- RIGA-382: Upgrade drupal/webform 6.1.3 => 6.1.4.
-- RIGA-382: Upgrade drupal/webform_views 5.0.0 => 5.1.0.
 
 ### Deprecated
 
@@ -23,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.9.4] - 2023-05-11
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.9.27.
+- RIGA-382: Upgrade drupal/captcha 1.9.0 => 1.10.0.
+- RIGA-382: Upgrade drupal/webform 6.1.3 => 6.1.4.
+- RIGA-382: Upgrade drupal/webform_views 5.0.0 => 5.1.0.
 
 ## [1.9.3] - 2023-04-27
 ### Added
@@ -823,7 +827,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.4...HEAD
+[1.9.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.3...1.9.4
 [1.9.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.2...1.9.3
 [1.9.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.1...1.9.2
 [1.9.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.0...1.9.1
