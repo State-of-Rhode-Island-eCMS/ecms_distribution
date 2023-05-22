@@ -3150,26 +3150,26 @@
         },
         {
             "name": "drupal/bigmenu",
-            "version": "2.0.0-rc2",
+            "version": "2.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bigmenu.git",
-                "reference": "2.0.0-rc2"
+                "reference": "2.0.0-rc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bigmenu-2.0.0-rc2.zip",
-                "reference": "2.0.0-rc2",
-                "shasum": "180b0292e5f0e8eedf0367aa110d1c536b07b935"
+                "url": "https://ftp.drupal.org/files/projects/bigmenu-2.0.0-rc3.zip",
+                "reference": "2.0.0-rc3",
+                "shasum": "98e0d17c00a3bad7198f8e24d69d4f97e56ad447"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-rc2",
-                    "datestamp": "1617224807",
+                    "version": "2.0.0-rc3",
+                    "datestamp": "1680568094",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
