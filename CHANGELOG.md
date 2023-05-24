@@ -12,6 +12,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-387: Upgrade drupal/admin_toolbar 3.3.0 => 3.4.0.
+- RIGA-387: Upgrade drupal/bigmenu 2.0.0-rc2 => 2.0.0-rc3.
+- RIGA-387: Upgrade drupal/extlink 1.6.0 => 1.7.0.
 
 ### Deprecated
 
