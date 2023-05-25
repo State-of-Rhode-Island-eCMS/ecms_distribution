@@ -12,9 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-387: Upgrade drupal/admin_toolbar 3.3.0 => 3.4.0.
-- RIGA-387: Upgrade drupal/bigmenu 2.0.0-rc2 => 2.0.0-rc3.
-- RIGA-387: Upgrade drupal/extlink 1.6.0 => 1.7.0.
 
 ### Deprecated
 
@@ -23,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.9.5] - 2023-05-25
+### Changed
+- RIGA-387: Upgrade drupal/admin_toolbar 3.3.0 => 3.4.0.
+- RIGA-387: Upgrade drupal/bigmenu 2.0.0-rc2 => 2.0.0-rc3.
+- RIGA-387: Upgrade drupal/extlink 1.6.0 => 1.7.0.
+- RIGA-387: Update rhodeislandecms/ecms_profile => 0.9.28.
 
 ## [1.9.4] - 2023-05-11
 ### Changed
@@ -830,7 +834,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.5...HEAD
+[1.9.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.4...1.9.5
 [1.9.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.3...1.9.4
 [1.9.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.2...1.9.3
 [1.9.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.1...1.9.2
