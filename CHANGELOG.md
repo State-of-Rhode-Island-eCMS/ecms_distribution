@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-390: Upgrade drupal/metatag 1.21.0 => 1.25.0.
 - RIGA-390: Upgrade drupal/real_aes 2.4.0 => 2.5.0.
 - RIGA-390: Upgrade drupal/robotstxt 1.4.0 => 1.5.0.
+- RIGA-390: Upgrade drupal/simple_sitemap 3.11.0 => 4.1.6.
 
 ### Deprecated
 

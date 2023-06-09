@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99cd255f8e2dfa986418b152b1f9a59b",
+    "content-hash": "7ef1b9a416a6afa28661b23d1ee5ad3c",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -8465,27 +8465,27 @@
         },
         {
             "name": "drupal/simple_sitemap",
-            "version": "3.11.0",
+            "version": "4.1.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/simple_sitemap.git",
-                "reference": "8.x-3.11"
+                "reference": "4.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-8.x-3.11.zip",
-                "reference": "8.x-3.11",
-                "shasum": "5fdd4ed5af5e37e3c707e401d094a179f52e7711"
+                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-4.1.6.zip",
+                "reference": "4.1.6",
+                "shasum": "5ea5ee97ab4d59b43db86dd6279c3ac5ecbe69b9"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^9.3 || ^10",
                 "ext-xmlwriter": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.11",
-                    "datestamp": "1634344305",
+                    "version": "4.1.6",
+                    "datestamp": "1686288643",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8493,7 +8493,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": ">=9"
                     }
                 }
             },
@@ -8509,16 +8509,15 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "gbyte",
-                    "homepage": "https://www.drupal.org/user/2381352"
+                    "name": "WalkingDexter",
+                    "homepage": "https://www.drupal.org/user/3251330"
                 }
             ],
             "description": "Creates a standard conform hreflang XML sitemap of the site content and provides a framework for developing other sitemap types.",
             "homepage": "https://drupal.org/project/simple_sitemap",
             "support": {
                 "source": "https://cgit.drupalcode.org/simple_sitemap",
-                "issues": "https://drupal.org/project/issues/simple_sitemap",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
+                "issues": "https://drupal.org/project/issues/simple_sitemap"
             }
         },
         {
@@ -13193,11 +13192,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.28",
+            "version": "dev-RIGA-390/june-contrib-updates-part-1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "5812f1fe1ebeb3b9e8ba36b565138438c0869de1"
+                "reference": "ab18e29049986450862372fe3f9dbf2250105087"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13271,7 +13270,7 @@
                 "drupal/search_api_solr": "^4.2",
                 "drupal/simple_menu_permissions": "^1.4",
                 "drupal/simple_oauth": "^5.2",
-                "drupal/simple_sitemap": "^3.8",
+                "drupal/simple_sitemap": "^4.1",
                 "drupal/smart_date": "^4.0@alpha",
                 "drupal/svg_image": "^1.14",
                 "drupal/token": "^1.7",
@@ -13370,7 +13369,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-05-25T07:33:10+00:00"
+            "time": "2023-06-09T06:17:57+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -19426,7 +19425,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
