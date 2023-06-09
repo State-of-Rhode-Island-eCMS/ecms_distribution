@@ -15,6 +15,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-390: Upgrade drupal/asset_injector 2.16.0 => 2.17.0.
+- RIGA-390: Upgrade drupal/encrypt 3.0.0 => 3.1.0.
+- RIGA-390: Upgrade drupal/key 1.15.0 => 1.17.0.
+- RIGA-390: Upgrade drupal/real_aes 2.4.0 => 2.5.0.
 
 ### Deprecated
 
