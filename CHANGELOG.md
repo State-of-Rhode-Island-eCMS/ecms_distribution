@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-388: Add factory hook to set temp file paths depending on environment.
 
 ### Changed
+- RIGA-390: Upgrade drupal/asset_injector 2.16.0 => 2.17.0.
 
 ### Deprecated
 
