@@ -10,6 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-388: Add patch for drupal/feeds issue 3158678 for uncaught exceptions.
+- RIGA-388: Add factory hook to set temp file paths depending on environment.
 
 ### Changed
 
