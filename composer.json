@@ -164,6 +164,9 @@
             },
             "drupal/easy_breadcrumb": {
                 "Re-save string config values as arrays": "patches/easy_breadcrumb-install.patch"
+            },
+            "drupal/feeds": {
+                "3158678 - FetcherResult::checkFile() throws \\RuntimeException, which is never caught": "https://www.drupal.org/files/issues/2022-09-27/feeds-3158678-9-catch-runtime-errors.patch"
             }
         },
         "preserve-paths": [],
