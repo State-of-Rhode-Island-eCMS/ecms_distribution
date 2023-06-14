@@ -10,6 +10,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.9.6] - 2023-06-15
+### Added
 - RIGA-388: Add patch for drupal/feeds issue 3158678 for uncaught exceptions.
 - RIGA-388: Add factory hook to set temp file paths depending on environment.
 
@@ -22,14 +35,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-390: Upgrade drupal/real_aes 2.4.0 => 2.5.0.
 - RIGA-390: Upgrade drupal/robotstxt 1.4.0 => 1.5.0.
 - RIGA-390: Upgrade drupal/simple_sitemap 3.11.0 => 4.1.6.
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [1.9.5] - 2023-05-25
 ### Changed
@@ -844,7 +849,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.6...HEAD
+[1.9.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.5...1.9.6
 [1.9.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.4...1.9.5
 [1.9.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.3...1.9.4
 [1.9.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.2...1.9.3
