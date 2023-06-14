@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-388: Add factory hook to set temp file paths depending on environment.
 
 ### Changed
+- RIGA-390: Update rhodeislandecms/ecms_profile => 0.9.29.
 - RIGA-390: Upgrade drupal/asset_injector 2.16.0 => 2.17.0.
 - RIGA-390: Upgrade drupal/encrypt 3.0.0 => 3.1.0.
 - RIGA-390: Upgrade drupal/key 1.15.0 => 1.17.0.
