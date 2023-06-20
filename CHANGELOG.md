@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-397: Upgrade drupal/office_hours 1.7.0 => 1.11.0.
 
 ### Deprecated
 

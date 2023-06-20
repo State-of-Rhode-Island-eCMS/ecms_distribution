@@ -78,6 +78,7 @@
         "drupal/core-recommended": "^9.4.10",
         "drupal/core-vendor-hardening": "^9",
         "drupal/menu_force": "^1.2",
+        "drupal/office_hours": "^1.11",
         "drush/drush": "^10.0",
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
