@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-397: Upgrade drupal/office_hours 1.7.0 => 1.11.0.
 
 ### Deprecated
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.9.7] - 2023-06-22
+### Changed
+- RIGA-397: Upgrade drupal/office_hours 1.7.0 => 1.11.0.
 
 ## [1.9.6] - 2023-06-15
 ### Added
@@ -850,7 +853,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.7...HEAD
+[1.9.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.6...1.9.7
 [1.9.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.5...1.9.6
 [1.9.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.4...1.9.5
 [1.9.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.3...1.9.4
