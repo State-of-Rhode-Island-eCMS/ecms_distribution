@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-399: Upgrade drupal/core (and dependencies) 9.4.14 => 9.5.9.
 
 ### Deprecated
 
