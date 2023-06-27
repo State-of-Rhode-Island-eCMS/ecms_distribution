@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adccbd285dcf320c4940ed5ad0bde1f5",
+    "content-hash": "5747137a54ab08a700063db632302ea4",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -13192,11 +13192,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.9.29",
+            "version": "dev-RIGA-395/fix-missing-moderation-workgflow",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "f21f3153802a6b42282acd48ab1f6f07de67cdcf"
+                "reference": "2fda2509d2e630f1e1d6e1e29153a372fa480eec"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13369,7 +13369,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-06-14T16:57:27+00:00"
+            "time": "2023-06-27T07:48:14+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -19425,7 +19425,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
