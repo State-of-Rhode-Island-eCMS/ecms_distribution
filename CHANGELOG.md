@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [1.9.8] - 2023-06-29
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.9.30.
+
 ## [1.9.7] - 2023-06-22
 ### Changed
 - RIGA-397: Upgrade drupal/office_hours 1.7.0 => 1.11.0.
