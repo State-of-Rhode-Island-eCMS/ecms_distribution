@@ -15,6 +15,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-399: Upgrade drupal/core (and dependencies) 9.4.14 => 9.5.9.
 - RIGA-403: Upgrade drupal/address 1.11.0 => 1.12.0.
 - RIGA-403: Upgrade drupal/entity_print 2.9.0 => 2.13.0.
+- RIGA-403: Upgrade drupal/geocoder 3.31.0 => 3.34.0.
+- RIGA-403: Upgrade drupal/geofield 1.52.0 => 1.53.0.
 
 ### Deprecated
 
