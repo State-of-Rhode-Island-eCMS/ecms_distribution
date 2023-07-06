@@ -17,6 +17,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-403: Upgrade drupal/entity_print 2.9.0 => 2.13.0.
 - RIGA-403: Upgrade drupal/geocoder 3.31.0 => 3.34.0.
 - RIGA-403: Upgrade drupal/geofield 1.52.0 => 1.53.0.
+- RIGA-403: Upgrade drupal/media_entity_download 2.1.0 => 2.2.0.
 
 ### Deprecated
 
