@@ -12,13 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-399: Upgrade drupal/core (and dependencies) 9.4.14 => 9.5.9.
-- RIGA-403: Upgrade drupal/address 1.11.0 => 1.12.0.
-- RIGA-403: Upgrade drupal/entity_print 2.9.0 => 2.13.0.
-- RIGA-403: Upgrade drupal/geocoder 3.31.0 => 3.34.0.
-- RIGA-403: Upgrade drupal/geofield 1.52.0 => 1.53.0.
-- RIGA-403: Upgrade drupal/media_entity_download 2.1.0 => 2.2.0.
-- RIGA-403: Upgrade drupal/smart_date 4.0.0-alpha3 => 4.0.2.
 
 ### Deprecated
 
@@ -27,6 +20,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.9.9] - 2023-07-13
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.9.31.
+- RIGA-399: Upgrade drupal/core (and dependencies) 9.4.14 => 9.5.9.
+- RIGA-403: Upgrade drupal/address 1.11.0 => 1.12.0.
+- RIGA-403: Upgrade drupal/entity_print 2.9.0 => 2.13.0.
+- RIGA-403: Upgrade drupal/geocoder 3.31.0 => 3.34.0.
+- RIGA-403: Upgrade drupal/geofield 1.52.0 => 1.53.0.
+- RIGA-403: Upgrade drupal/media_entity_download 2.1.0 => 2.2.0.
+- RIGA-403: Upgrade drupal/smart_date 4.0.0-alpha3 => 4.0.2.
 
 ## [1.9.8] - 2023-06-29
 ### Changed
@@ -864,7 +868,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.9...HEAD
+[1.9.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.8...1.9.9
+[1.9.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.7...1.9.8
 [1.9.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.6...1.9.7
 [1.9.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.5...1.9.6
 [1.9.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.4...1.9.5
