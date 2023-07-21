@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-377: Add drupal/paragraphs patch issue 3095959 comment 5.
 
 ### Changed
 
@@ -18,6 +19,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-377: Fix permissions to view unpublished paragraphs (see patch).
 
 ### Security
 
