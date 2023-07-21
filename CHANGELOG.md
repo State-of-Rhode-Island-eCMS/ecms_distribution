@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-377: Add drupal/paragraphs patch issue 3095959 comment 5.
+- RIGA-405: Add drupal/core patch issue 3277784 comment 2.
 
 ### Changed
 
@@ -20,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Fixed
 - RIGA-377: Fix permissions to view unpublished paragraphs (see patch).
+- RIGA-405: Fix missing sidebar nav menus (core patch).
 
 ### Security
 
