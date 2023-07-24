@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-405: Add drupal/core patch issue 3277784 comment 2.
 - RIGA-401: Install drupal/focal_point 2.0.1.
 - RIGA-401: Install drupal/iek (Image effect kit) 1.3.0.
+- RIGA-401: Install drupal/entity_usage 2.0.0-beta12.
 
 ### Changed
 
