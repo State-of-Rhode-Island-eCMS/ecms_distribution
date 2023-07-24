@@ -5394,6 +5394,55 @@
             }
         },
         {
+            "name": "drupal/iek",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/iek.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/iek-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "043a5c7348b83f4e30173fd4626193c52cbad34b"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "ext-gd": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1674681659",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jay.Chen",
+                    "homepage": "https://www.drupal.org/user/180060"
+                },
+                {
+                    "name": "lonalore",
+                    "homepage": "https://www.drupal.org/user/1539304"
+                }
+            ],
+            "description": "Provides custom image effects.",
+            "homepage": "https://www.drupal.org/project/iek",
+            "support": {
+                "source": "https://git.drupalcode.org/project/iek"
+            }
+        },
+        {
             "name": "drupal/jquery_ui",
             "version": "1.6.0",
             "source": {
@@ -13328,7 +13377,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "014ed15a748b8392a0dd2446d51164a911df789d"
+                "reference": "b60a8ffec118a57c61114ad237db0fa8530b69be"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13364,6 +13413,7 @@
                 "drupal/google_translator": "^1.0@RC",
                 "drupal/honeypot": "^2.0",
                 "drupal/http_cache_control": "^2.0",
+                "drupal/iek": "^1.3",
                 "drupal/jsonapi_extras": "^3.16",
                 "drupal/language_cookie": "1.x-dev",
                 "drupal/language_neutral_aliases": "^3.0",
@@ -13502,7 +13552,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-07-24T09:26:31+00:00"
+            "time": "2023-07-24T09:36:35+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
