@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - RIGA-377: Add drupal/paragraphs patch issue 3095959 comment 5.
 - RIGA-405: Add drupal/core patch issue 3277784 comment 2.
+- RIGA-401: Install drupal/focal_point 2.0.1.
 
 ### Changed
 
