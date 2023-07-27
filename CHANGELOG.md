@@ -10,8 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-377: Add drupal/paragraphs patch issue 3095959 comment 5.
-- RIGA-405: Add drupal/core patch issue 3277784 comment 2.
 
 ### Changed
 
@@ -20,10 +18,20 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIGA-377: Fix permissions to view unpublished paragraphs (see patch).
-- RIGA-405: Fix missing sidebar nav menus (core patch).
 
 ### Security
+
+## [1.10.1] - 2023-07-27
+### Added
+- RIGA-377: Add drupal/paragraphs patch issue 3095959 comment 5.
+- RIGA-405: Add drupal/core patch issue 3277784 comment 2.
+
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.1.
+
+### Fixed
+- RIGA-377: Fix permissions to view unpublished paragraphs (see patch).
+- RIGA-405: Fix missing sidebar nav menus (core patch).
 
 ## [1.10.0] - 2023-07-13
 ### Changed
@@ -877,7 +885,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...HEAD
+[1.10.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.0...1.10.1
 [1.10.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.9...1.10.0
 [1.9.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.8...1.9.9
 [1.9.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.7...1.9.8
