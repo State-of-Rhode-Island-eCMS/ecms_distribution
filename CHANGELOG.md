@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-406: Add settings.php rule to set DB isolation level to READ COMMITTED.
+- RIGA-406: Add drupal/core patch issue 1650930 comment 248.
 
 ### Changed
 
