@@ -78,3 +78,10 @@ if (getenv('LANDO_INFO')) {
     }
   }
 }
+
+// Set DB transaction isolation level to 'READ COMMITTED'.
+// Mysql/MariaDB default to 'REPEATABLE READ', but it can result in deadlocks.
+// See: https://www.drupal.org/docs/getting-started/system-requirements/setting-the-mysql-transaction-isolation-level.
+$databases['default']['default']['init_commands'] = [
+  'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+];

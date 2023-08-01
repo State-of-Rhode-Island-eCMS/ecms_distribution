@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-406: Add settings.php rule to set DB isolation level to READ COMMITTED.
 
 ### Changed
 
@@ -18,6 +19,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-406: Fix "Database Isolation Level" warning.
 
 ### Security
 
