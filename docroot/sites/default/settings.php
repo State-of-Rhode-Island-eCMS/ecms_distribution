@@ -82,9 +82,9 @@ if (getenv('LANDO_INFO')) {
   }
 }
 
-$databases['default']['default']['init_commands'] = [
-  'isolation_level' => "SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED",
-];
+//$databases['default']['default']['init_commands'] = [
+//  'isolation_level' => "SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED",
+//];
 
 // Set DB transaction isolation level to 'READ COMMITTED' on Acquia environments.
 // Mysql/MariaDB default to 'REPEATABLE READ', but it can result in deadlocks.

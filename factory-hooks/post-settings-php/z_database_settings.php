@@ -22,4 +22,8 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
 //      'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
 //    ],
   );
+
+  $databases['default']['default']['init_commands'] = [
+    'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+  ];
 }
