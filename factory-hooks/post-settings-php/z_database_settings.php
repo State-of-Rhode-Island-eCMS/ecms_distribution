@@ -18,8 +18,8 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
     'port' => '3306',
     'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
     'driver' => 'mysql',
-    'init_commands' => [
-      'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
-    ],
+//    'init_commands' => [
+//      'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+//    ],
   );
 }
