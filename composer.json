@@ -173,6 +173,9 @@
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
+            },
+            "drupal/honeypot": {
+                "2943526 - Missing primary key in table `honeypot_user`": "https://www.drupal.org/files/issues/2023-07-10/honeypot-add_primary_key-2943526-64.patch"
             }
         },
         "preserve-paths": [],
