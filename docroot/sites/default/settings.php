@@ -85,17 +85,17 @@ if (getenv('LANDO_INFO')) {
 // Set DB transaction isolation level to 'READ COMMITTED' on Acquia environments.
 // Mysql/MariaDB default to 'REPEATABLE READ', but it can result in deadlocks.
 // See: https://www.drupal.org/docs/getting-started/system-requirements/setting-the-mysql-transaction-isolation-level.
-if (file_exists('/var/www/site-php')) {
-  global $conf, $databases;
-  $conf['acquia_hosting_settings_autoconnect'] = FALSE;
-  // EDIT next line to proper path to include file.
-
-  // @TO-DO: this will be a problem on site factory,
-  // Not sure how to address multisite.
-  require('/var/www/site-php/MYSITE/MYDATABASE-settings.inc');
-
-  $databases['default']['default']['init_commands'] = [
-    'isolation_level' => "SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED",
-  ];
-  acquia_hosting_db_choose_active();
-}
+//if (file_exists('/var/www/site-php')) {
+//  global $conf, $databases;
+//  $conf['acquia_hosting_settings_autoconnect'] = FALSE;
+//  // EDIT next line to proper path to include file.
+//
+//  // @TO-DO: this will be a problem on site factory,
+//  // Not sure how to address multisite.
+//  require('/var/www/site-php/MYSITE/MYDATABASE-settings.inc');
+//
+//  $databases['default']['default']['init_commands'] = [
+//    'isolation_level' => "SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED",
+//  ];
+//  acquia_hosting_db_choose_active();
+//}
