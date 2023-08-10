@@ -10,6 +10,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-408: Add hooks to set DB isolation level REPEATABLE READ => READ COMMITTED.
+- RIGA-408: Add drupal/core patch issue 1650930 comment 248.
+- RIGA-408: Add drupal/honeypot patch issue 2943526 comment 64.
 
 ### Changed
 
@@ -18,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-408: Fix "Database Isolation Level" warning.
 
 ### Security
 
