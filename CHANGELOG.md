@@ -12,10 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-406: Update drupal/admin_toolbar 3.4.0 => 3.4.1
-- RIGA-406: Update drupal/easy_breadcrumb ^2.0 => 2.0.5
-- RIGA-406: Update drupal/metatag ^1.14 => ^1.26
-- RIGA-406: Update drupal/token ^1.7 => ^1.12
 
 ### Deprecated
 
@@ -24,6 +20,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.10.2] 2023-08-10
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.2.
+- RIGA-406: Update drupal/admin_toolbar 3.4.0 => 3.4.1.
+- RIGA-406: Update drupal/easy_breadcrumb ^2.0 => 2.0.5.
+- RIGA-406: Update drupal/metatag ^1.14 => ^1.26.
+- RIGA-406: Update drupal/token ^1.7 => ^1.12.
 
 ## [1.10.1] - 2023-07-27
 ### Added
@@ -889,7 +893,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...HEAD
+[1.10.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...1.10.2
 [1.10.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.0...1.10.1
 [1.10.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.9...1.10.0
 [1.9.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.8...1.9.9
