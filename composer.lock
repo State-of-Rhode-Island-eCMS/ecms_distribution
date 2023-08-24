@@ -2131,27 +2131,28 @@
         },
         {
             "name": "drupal/acquia_connector",
-            "version": "4.0.4",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_connector.git",
-                "reference": "4.0.4"
+                "reference": "4.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.4.zip",
-                "reference": "4.0.4",
-                "shasum": "4c37d429a11c2121df00c4ff4dccead354754f0c"
+                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.5.zip",
+                "reference": "4.0.5",
+                "shasum": "047bb6a37c99089c17123507b294f42f9c459971"
             },
             "require": {
                 "drupal/core": ">=8.9 <11.0.0-stable",
-                "ext-json": "*"
+                "ext-json": "*",
+                "php": "^7.4 || ^8"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.4",
-                    "datestamp": "1680704017",
+                    "version": "4.0.5",
+                    "datestamp": "1691430065",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2174,10 +2175,6 @@
                 {
                     "name": "acquia",
                     "homepage": "https://www.drupal.org/user/1231722"
-                },
-                {
-                    "name": "Dane Powell",
-                    "homepage": "https://www.drupal.org/user/339326"
                 },
                 {
                     "name": "irek02",

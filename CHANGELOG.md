@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-409: Update drupal/acquia_search 3.1.7 => 3.1.10
+- RIGA-409: Update drupal/acquia_connector 4.0.1 => 4.0.5
 
 ### Deprecated
 
