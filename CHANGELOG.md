@@ -12,9 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-409: Update drupal/acquia_search 3.1.7 => 3.1.10.
-- RIGA-409: Update drupal/acquia_connector 4.0.1 => 4.0.5.
-- RIGA-409: Update drupal/acsf 2.73.0 => 2.75.0.
 
 ### Deprecated
 
@@ -24,7 +21,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [1.10.2] 2023-08-10
+## [1.10.3] - 2023-08-31
+### Changed
+- RIGA-409: Update drupal/acquia_search 3.1.7 => 3.1.10.
+- RIGA-409: Update drupal/acquia_connector 4.0.1 => 4.0.5.
+- RIGA-409: Update drupal/acsf 2.73.0 => 2.75.0.
+
+## [1.10.2] - 2023-08-10
 ### Changed
 - RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.2.
 - RIGA-406: Update drupal/admin_toolbar 3.4.0 => 3.4.1.
@@ -896,7 +899,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.3...HEAD
+[1.10.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...1.10.3
 [1.10.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...1.10.2
 [1.10.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.0...1.10.1
 [1.10.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.9...1.10.0
