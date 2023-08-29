@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3331f7396426aabdfbe94bc0e001fc3d",
+    "content-hash": "bb29c39610cf6b1a8654dacf3394ab97",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -2131,27 +2131,28 @@
         },
         {
             "name": "drupal/acquia_connector",
-            "version": "4.0.4",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_connector.git",
-                "reference": "4.0.4"
+                "reference": "4.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.4.zip",
-                "reference": "4.0.4",
-                "shasum": "4c37d429a11c2121df00c4ff4dccead354754f0c"
+                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.5.zip",
+                "reference": "4.0.5",
+                "shasum": "047bb6a37c99089c17123507b294f42f9c459971"
             },
             "require": {
                 "drupal/core": ">=8.9 <11.0.0-stable",
-                "ext-json": "*"
+                "ext-json": "*",
+                "php": "^7.4 || ^8"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.4",
-                    "datestamp": "1680704017",
+                    "version": "4.0.5",
+                    "datestamp": "1691430065",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2174,10 +2175,6 @@
                 {
                     "name": "acquia",
                     "homepage": "https://www.drupal.org/user/1231722"
-                },
-                {
-                    "name": "Dane Powell",
-                    "homepage": "https://www.drupal.org/user/339326"
                 },
                 {
                     "name": "irek02",
@@ -2273,17 +2270,17 @@
         },
         {
             "name": "drupal/acquia_search",
-            "version": "3.1.7",
+            "version": "3.1.10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_search.git",
-                "reference": "3.1.7"
+                "reference": "3.1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_search-3.1.7.zip",
-                "reference": "3.1.7",
-                "shasum": "ae3b99c4ab335493bde68258d566db6cf49b2069"
+                "url": "https://ftp.drupal.org/files/projects/acquia_search-3.1.10.zip",
+                "reference": "3.1.10",
+                "shasum": "7aa1a647342e1db476f241435f021d4c54a28291"
             },
             "require": {
                 "acquia/http-hmac-php": ">=5.0",
@@ -2295,7 +2292,7 @@
                 "ext-zip": "*",
                 "guzzlehttp/guzzle": "^6.5.2 || ^7.0",
                 "http-interop/http-factory-guzzle": "^1.0",
-                "php": ">=7.4",
+                "php": "^7.4 || ^8",
                 "psr/event-dispatcher": "^1.0"
             },
             "conflict": {
@@ -2307,8 +2304,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.7",
-                    "datestamp": "1680703865",
+                    "version": "3.1.10",
+                    "datestamp": "1691776007",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2353,38 +2350,39 @@
         },
         {
             "name": "drupal/acsf",
-            "version": "2.73.0",
+            "version": "2.75.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acsf.git",
-                "reference": "8.x-2.73"
+                "reference": "8.x-2.75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.73.zip",
-                "reference": "8.x-2.73",
-                "shasum": "9aeec52b48c14ab714f5265406eac23e10b347dd"
+                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.75.zip",
+                "reference": "8.x-2.75",
+                "shasum": "364875b30d153bab59f24bb3e9c5f271ce5bf7dd"
             },
             "require": {
                 "drupal/acsf_duplication": "*",
                 "drupal/acsf_theme": "*",
                 "drupal/acsf_variables": "*",
                 "drupal/core": "^8 || ^9 || ^10",
-                "ext-json": "*"
+                "ext-json": "*",
+                "symfony/process": "^4|^5|^6"
             },
             "require-dev": {
                 "acquia/coding-standards": "^1.0",
                 "drupal/acsf_variables": "*",
                 "drupal/samlauth": "^3.3",
-                "mockery/mockery": "dev-master",
-                "phpunit/phpunit": "^8.0",
-                "rector/rector": "0.13.x-dev"
+                "mockery/mockery": "dev-main",
+                "phpunit/phpunit": "9.5.*",
+                "rector/rector": "dev-main"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.73",
-                    "datestamp": "1662552839",
+                    "version": "8.x-2.75",
+                    "datestamp": "1690367720",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13214,11 +13212,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.10.2",
+            "version": "dev-RIGA-409/august-module-updates-pt2-2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "7d4fc2b41c7fdcd01c72f04eb23c78c293078b17"
+                "reference": "24b8c5eccea36ab172da7e08df0b082e755bd422"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13226,7 +13224,7 @@
                 "drupal/acquia_connector": "^4.0.1",
                 "drupal/acquia_purge": "^1.1",
                 "drupal/acquia_search": "^3.0",
-                "drupal/acsf": "2.73",
+                "drupal/acsf": "^2.75",
                 "drupal/address": "^1.8",
                 "drupal/admin_toolbar": "3.4.1",
                 "drupal/allowed_formats": "^2.0.0",
@@ -13391,7 +13389,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-08-10T06:50:29+00:00"
+            "time": "2023-08-24T13:35:42+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -19462,7 +19460,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "rhodeislandecms/ecms_profile": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
