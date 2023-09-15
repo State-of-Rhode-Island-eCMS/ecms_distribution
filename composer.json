@@ -199,9 +199,10 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^9",
-        "symfony/phpunit-bridge": "^5.1",
         "drupal/coder": "^8.3",
-        "drupal/devel": "^4.0"
+        "drupal/core-dev": "9.5.9",
+        "drupal/devel": "^4.0",
+        "phpunit/phpunit": "^9",
+        "symfony/phpunit-bridge": "^5.1"
     }
 }
