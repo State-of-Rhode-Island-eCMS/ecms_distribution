@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-322: Install drupal/upgrade_status 4.0.0.
 
 ### Changed
 
