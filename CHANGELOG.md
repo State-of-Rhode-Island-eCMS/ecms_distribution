@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Install drupal/upgrade_status 4.0.0.
 
 ### Changed
+- RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
 
 ### Deprecated
 
