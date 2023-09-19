@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/content_moderation_notifications dev-3.x => 3.5.0.
 - RIGA-322: Upgrade drupal/features 3.12.0 => 3.13.0.
 - RIGA-322: Upgrade drupal/feeds 3.0.0-beta2 => 3.0.0-beta4.
+- RIGA-322: Upgrade drupal/google_tag 1.4.0 => 2.0.2.
 
 ### Deprecated
 

@@ -4960,30 +4960,43 @@
         },
         {
             "name": "drupal/google_tag",
-            "version": "1.4.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_tag.git",
-                "reference": "8.x-1.4"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_tag-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "1bdc6f93d1c79c27738320597f2185f5de37432f"
+                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "8e5decb11784549842438bca9c47f0263f0484f7"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.5 || ^10",
+                "php": "^7.4 || ^8"
+            },
+            "require-dev": {
+                "drupal/commerce": "^2.0",
+                "drupal/commerce_wishlist": "^3.0@beta",
+                "drupal/csp": "^1.0",
+                "drupal/google_analytics": "^4.0",
+                "drupal/search_api": "^1.28.0",
+                "drupal/token": "^1.11.0",
+                "drupal/webform": "^6.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1593179846",
+                    "version": "2.0.2",
+                    "datestamp": "1684879598",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4992,11 +5005,27 @@
             ],
             "authors": [
                 {
+                    "name": "acquia",
+                    "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "kaynen",
+                    "homepage": "https://www.drupal.org/user/733308"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
                     "name": "solotandem",
                     "homepage": "https://www.drupal.org/user/240748"
                 }
             ],
-            "description": "Allows your website analytics to be managed using Google Tag Manager.",
+            "description": "Sets up Google Tag",
             "homepage": "https://www.drupal.org/project/google_tag",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_tag"
@@ -13660,7 +13689,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "897d973e995a8e4068e02733c3d6e24d7b274e16"
+                "reference": "15e22290d2a012561139fd9cf0762cd3a4e31704"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13691,7 +13720,7 @@
                 "drupal/geocoder": "^3.15",
                 "drupal/geofield": "^1.20",
                 "drupal/geolocation": "^3.2",
-                "drupal/google_tag": "^1.4",
+                "drupal/google_tag": "^2.0",
                 "drupal/google_translator": "^1.0@RC",
                 "drupal/honeypot": "^2.0",
                 "drupal/http_cache_control": "^2.0",
@@ -13833,7 +13862,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-09-19T08:00:54+00:00"
+            "time": "2023-09-19T20:33:03+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
