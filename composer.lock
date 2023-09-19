@@ -5033,26 +5033,26 @@
         },
         {
             "name": "drupal/google_translator",
-            "version": "1.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_translator.git",
-                "reference": "8.x-1.0"
+                "reference": "2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_translator-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "2a5128ffa7c3fb1ad622a8d6cdfd856df154cf74"
+                "url": "https://ftp.drupal.org/files/projects/google_translator-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "0658e5d5f9d57a467af2e112ee43af7004b3cd0e"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1649469910",
+                    "version": "2.1.0",
+                    "datestamp": "1659583639",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5065,15 +5065,15 @@
             ],
             "authors": [
                 {
-                    "name": "fxarte",
-                    "homepage": "https://www.drupal.org/user/238139"
+                    "name": "jenna.tollerson",
+                    "homepage": "https://www.drupal.org/user/147099"
                 },
                 {
                     "name": "jenna.tollerson",
                     "homepage": "https://www.drupal.org/user/147099"
                 }
             ],
-            "description": "Provides a block with configurable languages to translate the current page into.",
+            "description": "Provides a block for Google Translate's Website translator.",
             "homepage": "https://www.drupal.org/project/google_translator",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_translator"
@@ -13689,7 +13689,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "15e22290d2a012561139fd9cf0762cd3a4e31704"
+                "reference": "8892320c1688b171014d870e4925d969bcf462f0"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13721,7 +13721,7 @@
                 "drupal/geofield": "^1.20",
                 "drupal/geolocation": "^3.2",
                 "drupal/google_tag": "^2.0",
-                "drupal/google_translator": "^1.0@RC",
+                "drupal/google_translator": "^2.1",
                 "drupal/honeypot": "^2.0",
                 "drupal/http_cache_control": "^2.0",
                 "drupal/jsonapi_extras": "^3.16",
@@ -13862,7 +13862,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-09-19T20:33:03+00:00"
+            "time": "2023-09-19T20:54:36+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
