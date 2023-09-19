@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9db30d9a49a1d6bdabfea4b9e882d98",
+    "content-hash": "8d15340ac7a26b200f54fa821b137d90",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -3478,29 +3478,32 @@
         },
         {
             "name": "drupal/content_moderation_notifications",
-            "version": "dev-3.x",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/content_moderation_notifications.git",
-                "reference": "e4731cc1771056a8fe2627d95836049ad9d41444"
+                "reference": "8.x-3.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/content_moderation_notifications-8.x-3.5.zip",
+                "reference": "8.x-3.5",
+                "shasum": "aee4121e7cd4f68e88c1890b01402f1afb4120cd"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "require-dev": {
                 "drupal/token": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-3.2+6-dev",
-                    "datestamp": "1614276326",
+                    "version": "8.x-3.5",
+                    "datestamp": "1667948468",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -3510,12 +3513,12 @@
             ],
             "authors": [
                 {
-                    "name": "Rob Holmes",
-                    "homepage": "https://www.drupal.org/user/1774034"
-                },
-                {
                     "name": "jhedstrom",
                     "homepage": "https://www.drupal.org/user/208732"
+                },
+                {
+                    "name": "Rob Holmes",
+                    "homepage": "https://www.drupal.org/user/1774034"
                 }
             ],
             "description": "Manage notifications for content moderation transitions.",
