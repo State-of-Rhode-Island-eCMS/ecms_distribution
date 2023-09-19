@@ -16,6 +16,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
 - RIGA-322: Upgrade drupal/captcha 1.10.0 => 2.0.5.
 - RIGA-322: Upgrade drupal/components 2.4.0 => 3.0.0-beta3.
+- RIGA-322: Upgrade drupal/config_update 1.7.0 => 2.0.0-alpha3.
+- RIGA-322: Upgrade drupal/features 3.12.0 => 3.13.0.
 
 ### Deprecated
 
