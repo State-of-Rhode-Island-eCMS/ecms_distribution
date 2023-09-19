@@ -81,6 +81,7 @@
         "drupal/core-recommended": "^9.5.9",
         "drupal/core-vendor-hardening": "^9.5.9",
         "drupal/features": "^3.13",
+        "drupal/feeds": "^3.0@beta",
         "drupal/menu_force": "^1.2",
         "drupal/office_hours": "^1.11",
         "drupal/upgrade_status": "^4.0",
