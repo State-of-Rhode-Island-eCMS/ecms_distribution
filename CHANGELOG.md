@@ -28,6 +28,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/language_neutral_aliases 3.0.0 => 3.1.0.
 - RIGA-322: Upgrade drupal/layout_builder_modal 1.1.0 => 1.2.0.
 - RIGA-322: Upgrade drupal/media_library_theme_reset 1.1.0 => 1.5.0.
+- RIGA-322: Upgrade drupal/menu_block dev-1.x => 1.10.0.
 
 ### Deprecated
 
