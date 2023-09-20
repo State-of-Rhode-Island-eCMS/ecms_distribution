@@ -8574,27 +8574,27 @@
         },
         {
             "name": "drupal/svg_image",
-            "version": "1.16.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/svg_image.git",
-                "reference": "8.x-1.16"
+                "reference": "3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/svg_image-8.x-1.16.zip",
-                "reference": "8.x-1.16",
-                "shasum": "e29b6fff49aacfaf81e58059b09551b45325f633"
+                "url": "https://ftp.drupal.org/files/projects/svg_image-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "6e0f1f305e0db535257780e647f6163cfdda8263"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^9.3 || ^10",
                 "enshrined/svg-sanitize": ">=0.15 <1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.16",
-                    "datestamp": "1647314248",
+                    "version": "3.0.1",
+                    "datestamp": "1676292042",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13774,7 +13774,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "f25fd6783c4cfd5e49197316f7773f67a6a0e0d3"
+                "reference": "42b85e7294f4241d7b87018350703360ca3c4af2"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13850,7 +13850,7 @@
                 "drupal/simple_oauth": "^5.2",
                 "drupal/simple_sitemap": "^4.1",
                 "drupal/smart_date": "^4.0@alpha",
-                "drupal/svg_image": "^1.14",
+                "drupal/svg_image": "^3.0",
                 "drupal/token": "^1.12",
                 "drupal/twig_tweak": "^2.8",
                 "drupal/twig_vardumper": "^3.0",
@@ -13944,7 +13944,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-09-20T02:06:05+00:00"
+            "time": "2023-09-20T03:08:36+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
