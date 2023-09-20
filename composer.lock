@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69a4646feea33d801c08bb5a787eebe2",
+    "content-hash": "127dd535c9dcfb4d52d3d04fdfba02e1",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -9044,46 +9044,46 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.1.4",
+            "version": "6.2.0-beta6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.1.4"
+                "reference": "6.2.0-beta6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.1.4.zip",
-                "reference": "6.1.4",
-                "shasum": "b1c27c2a210670b6d149cdd92cbb37100b19cf64"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.2.0-beta6.zip",
+                "reference": "6.2.0-beta6",
+                "shasum": "b466ad3629c58f45994cbca55ab6bd8baaa4b838"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9.4 || ^10"
             },
             "require-dev": {
-                "drupal/address": "~1.0",
-                "drupal/bootstrap": "~3.0",
-                "drupal/captcha": "~1.0",
-                "drupal/chosen": "~3.0",
+                "drupal/address": "1.x-dev",
+                "drupal/bootstrap": "3.x-dev",
+                "drupal/captcha": "^1 || ^2",
+                "drupal/chosen": "3.0.x-dev",
+                "drupal/ckeditor": "1.0.x-dev",
                 "drupal/clientside_validation": "*",
                 "drupal/clientside_validation_jquery": "*",
                 "drupal/devel": "*",
-                "drupal/entity": "~1.0",
+                "drupal/entity": "1.x-dev",
                 "drupal/entity_print": "*",
-                "drupal/gnode": "*",
-                "drupal/group": "*",
-                "drupal/jquery_ui": "~1.0",
+                "drupal/group": "1.x-dev",
+                "drupal/hal": "1 - 2",
+                "drupal/jquery_ui": "1.x-dev",
                 "drupal/jquery_ui_checkboxradio": "*",
-                "drupal/jquery_ui_datepicker": "~1.0",
-                "drupal/lingotek": "~3.0",
-                "drupal/mailsystem": "~4.0",
-                "drupal/paragraphs": "~1.0",
-                "drupal/select2": "~1.0",
-                "drupal/smtp": "~1.0",
-                "drupal/styleguide": "~2.0",
-                "drupal/telephone_validation": "~2.0",
+                "drupal/jquery_ui_datepicker": "*",
+                "drupal/mailsystem": "4.x-dev",
+                "drupal/metatag": "1.x-dev",
+                "drupal/paragraphs": "1.x-dev",
+                "drupal/select2": "1.x-dev",
+                "drupal/smtp": "1.x-dev",
+                "drupal/styleguide": "^1 || ^2",
+                "drupal/telephone_validation": "2.x-dev",
                 "drupal/token": "*",
-                "drupal/variationcache": "~1.0",
-                "drupal/webform-webform_group": "*",
+                "drupal/variationcache": "1.x-dev",
                 "drupal/webform_access": "*",
                 "drupal/webform_attachment": "*",
                 "drupal/webform_clientside_validation": "*",
@@ -9102,16 +9102,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.1.4",
-                    "datestamp": "1673535467",
+                    "version": "6.2.0-beta6",
+                    "datestamp": "1686598812",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": ">=9"
                     }
                 }
             },
@@ -21706,6 +21706,7 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
+        "drupal/webform": 10,
         "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
