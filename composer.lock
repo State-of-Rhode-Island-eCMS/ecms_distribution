@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "127dd535c9dcfb4d52d3d04fdfba02e1",
+    "content-hash": "bcf7d9abecd46206ef6451149cac66ec",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -267,81 +267,6 @@
             },
             "license": [
                 "MIT"
-            ]
-        },
-        {
-            "name": "ckeditor/autogrow",
-            "version": "4.18.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.18.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "ckeditor.autogrow"
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ]
-        },
-        {
-            "name": "ckeditor/codemirror",
-            "version": "v1.18.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/releases/download/v1.18.3/CKEditor-CodeMirror-Plugin.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "ckeditor.codemirror"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "ckeditor/fakeobjects",
-            "version": "4.18.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.18.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "ckeditor.fakeobjects"
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ]
-        },
-        {
-            "name": "ckeditor/image",
-            "version": "4.18.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://download.ckeditor.com/image/releases/image_4.18.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "ckeditor.image"
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ]
-        },
-        {
-            "name": "ckeditor/link",
-            "version": "4.18.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://download.ckeditor.com/link/releases/link_4.18.0.zip"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "ckeditor.link"
-            },
-            "license": [
-                "GPL-2.0-or-later"
             ]
         },
         {
@@ -9154,28 +9079,31 @@
         },
         {
             "name": "drupal/webform_encrypt",
-            "version": "dev-1.x",
+            "version": "2.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform_encrypt.git",
-                "reference": "40a690c478394ddaff879c57a188c4ea6525a518"
+                "reference": "2.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform_encrypt-2.0.0-alpha1.zip",
+                "reference": "2.0.0-alpha1",
+                "shasum": "d33028a4b6cc6395ba6850144dc1cc941d390610"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^8 || ^9 || ^10",
                 "drupal/encrypt": "3.*",
-                "drupal/webform": ">=5.0.0-rc22"
+                "drupal/webform": "^6.2"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.0-alpha3+4-dev",
-                    "datestamp": "1588639948",
+                    "version": "2.0.0-alpha1",
+                    "datestamp": "1684791212",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Alpha releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -13238,6 +13166,21 @@
             "time": "2020-12-15T10:26:18+00:00"
         },
         {
+            "name": "popperjs/popperjs",
+            "version": "2.11.6",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "popperjs"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "progress-tracker/progress-tracker",
             "version": "2.0.7",
             "dist": {
@@ -13782,7 +13725,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "7d71f25363c456c94615b997d7580027fa24e2b9"
+                "reference": "200b085c49e03cba4591b32e97357f71527e0bcd"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13865,7 +13808,7 @@
                 "drupal/views_ajax_get": "1.x-dev@dev",
                 "drupal/views_database_connector": "^1.4",
                 "drupal/webform": "^6.0",
-                "drupal/webform_encrypt": "1.x-dev@dev",
+                "drupal/webform_encrypt": "^2.0@alpha",
                 "drupal/webform_views": "^5.0@beta",
                 "drupal_git/migrate_process_trim": "1.0.0",
                 "drupal_git/migration_tools": "1.0.0",
@@ -13952,7 +13895,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-09-20T03:19:56+00:00"
+            "time": "2023-09-20T03:29:38+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -17050,30 +16993,15 @@
             ]
         },
         {
-            "name": "tippyjs/5.x",
-            "version": "5.2.1",
-            "dist": {
-                "type": "file",
-                "url": "https://unpkg.com/tippy.js@5.2.1/dist/tippy-bundle.iife.min.js"
-            },
-            "type": "drupal-library",
-            "extra": {
-                "installer-name": "tippyjs/5.x"
-            },
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "tippyjs/6.x",
+            "name": "tippyjs/tippyjs",
             "version": "6.3.7",
             "dist": {
-                "type": "file",
-                "url": "https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"
+                "type": "tar",
+                "url": "https://registry.npmjs.org/tippy.js/-/tippy.js-6.3.7.tgz"
             },
             "type": "drupal-library",
             "extra": {
-                "installer-name": "tippyjs/6.x"
+                "installer-name": "tippyjs"
             },
             "license": [
                 "MIT"
@@ -21706,7 +21634,6 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
-        "drupal/webform": 10,
         "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
