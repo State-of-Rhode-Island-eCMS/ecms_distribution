@@ -32,6 +32,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/menu_force 1.2.0 => 2.0.0.
 - RIGA-322: Upgrade drupal/openid_connect dev-1.x => 3.0.0-alpha2.
 - RIGA-322: Upgrade drupal/openid_connect_windows_aad 1.4.0 => 2.0.0-beta5.
+- RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
 
 ### Deprecated
 

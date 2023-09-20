@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "69a4646feea33d801c08bb5a787eebe2",
+    "content-hash": "4604badebc81e93d3ecfe8cf58148e9d",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -7288,30 +7288,30 @@
         },
         {
             "name": "drupal/page_manager",
-            "version": "4.0.0-beta6",
+            "version": "4.0.0-rc2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/page_manager.git",
-                "reference": "8.x-4.0-beta6"
+                "reference": "8.x-4.0-rc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/page_manager-8.x-4.0-beta6.zip",
-                "reference": "8.x-4.0-beta6",
-                "shasum": "bf0ac07177b1cd6c1a3da80f727f1448221ee98a"
+                "url": "https://ftp.drupal.org/files/projects/page_manager-8.x-4.0-rc2.zip",
+                "reference": "8.x-4.0-rc2",
+                "shasum": "4a1e96284c5775343fbb4612072a2abfc83ebc33"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
-                "drupal/ctools": "^3.1"
+                "drupal/core": "^9.3 || ^10",
+                "drupal/ctools": "^3.11 || ^4.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.0-beta6",
-                    "datestamp": "1591125562",
+                    "version": "8.x-4.0-rc2",
+                    "datestamp": "1671210021",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 },
                 "branch-alias": {
@@ -7333,8 +7333,16 @@
                     "homepage": "https://www.drupal.org/user/61203"
                 },
                 {
+                    "name": "ivnish",
+                    "homepage": "https://www.drupal.org/user/3547706"
+                },
+                {
                     "name": "japerry",
                     "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
                 },
                 {
                     "name": "manuel.adan",
@@ -21688,6 +21696,7 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
+        "drupal/page_manager": 5,
         "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
