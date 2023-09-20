@@ -71,7 +71,7 @@ function drush_exec(string $site, string $env, string $domain, string $cmd) {
   $docroot = sprintf('/var/www/html/%s.%s/docroot', $site, $env);
 
   $drush_cmd = sprintf(
-    'DRUSH_PATHS_CACHE_DIRECTORY=%1$s CACHE_PREFIX=%1$s AH_SITE_ENVIRONMENT=%2$s \drush8 -r %3$s -l %4$s -y %5$s 2>&1',
+    'DRUSH_PATHS_CACHE_DIRECTORY=%1$s CACHE_PREFIX=%1$s AH_SITE_ENVIRONMENT=%2$s \drush10 -r %3$s -l %4$s -y %5$s 2>&1',
     escapeshellarg(drush_cache_path($site, $env, $domain)),
     escapeshellarg($env),
     escapeshellarg($docroot),
