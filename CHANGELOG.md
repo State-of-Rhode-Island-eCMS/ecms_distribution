@@ -18,11 +18,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/components 2.4.0 => 3.0.0-beta3.
 - RIGA-322: Upgrade drupal/config_update 1.7.0 => 2.0.0-alpha3.
 - RIGA-322: Upgrade drupal/content_moderation_notifications dev-3.x => 3.5.0.
+- RIGA-322: Upgrade drupal/ctools 3.11.0 => 3.14.0.
 - RIGA-322: Upgrade drupal/features 3.12.0 => 3.13.0.
 - RIGA-322: Upgrade drupal/feeds 3.0.0-beta2 => 3.0.0-beta4.
 - RIGA-322: Upgrade drupal/google_tag 1.4.0 => 2.0.2.
 - RIGA-322: Upgrade drupal/google_translator 1.0.0 => 2.1.0.
 - RIGA-322: Upgrade drupal/jquery_ui_datepicker 1.4.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/jquery_ui_droppable 1.2.0 => 1.5.0.
 - RIGA-322: Upgrade drupal/jquery_ui_slider 1.1.0 => 2.0.0.
 - RIGA-322: Upgrade drupal/language_cookie dev-1.x => 2.0.1.
 - RIGA-322: Upgrade drupal/language_neutral_aliases 3.0.0 => 3.1.0.
@@ -33,6 +35,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/openid_connect dev-1.x => 3.0.0-alpha2.
 - RIGA-322: Upgrade drupal/openid_connect_windows_aad 1.4.0 => 2.0.0-beta5.
 - RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
+- RIGA-322: Upgrade drupal/panels 4.6.0 => 4.7.0.
 
 ### Deprecated
 
