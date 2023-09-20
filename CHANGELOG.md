@@ -37,6 +37,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
 - RIGA-322: Upgrade drupal/panels 4.6.0 => 4.7.0.
 - RIGA-322: Upgrade drupal/paragraphs 1.15.0 => 1.16.0.
+- RIGA-322: Upgrade drupal/publishcontent 1.5.0 => 1.6.0.
 
 ### Deprecated
 

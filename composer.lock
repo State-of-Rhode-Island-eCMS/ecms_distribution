@@ -7598,26 +7598,26 @@
         },
         {
             "name": "drupal/publishcontent",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/publishcontent.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/publishcontent-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "5a38bc2a45aad9f0e6e4979cd028bbc6f1615bb3"
+                "url": "https://ftp.drupal.org/files/projects/publishcontent-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "e0bd1fad771dcb327bea05b8daa0426f9285401e"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^8.8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1650156571",
+                    "version": "8.x-1.6",
+                    "datestamp": "1674143563",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7634,10 +7634,6 @@
                     "homepage": "https://www.drupal.org/user/384578"
                 },
                 {
-                    "name": "Simon Georges",
-                    "homepage": "https://www.drupal.org/user/172312"
-                },
-                {
                     "name": "jacobroufa",
                     "homepage": "https://www.drupal.org/user/168080"
                 },
@@ -7652,6 +7648,10 @@
                 {
                     "name": "rodrigoaguilera",
                     "homepage": "https://www.drupal.org/user/408170"
+                },
+                {
+                    "name": "Simon Georges",
+                    "homepage": "https://www.drupal.org/user/172312"
                 }
             ],
             "description": "Adds a 'Publish' or 'Unpublish' link on the node edit/view pages, and a 'Publish Link' field if the Views module is enabled.",
