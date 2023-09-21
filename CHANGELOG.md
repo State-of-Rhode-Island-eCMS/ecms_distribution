@@ -12,6 +12,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-414: Upgrade drush/drush 10.3.6 => 10.6.2.
+- RIGA-414: Update lando version in oomph actions.
+- RIGA-414: Update php 8.0 => 8.1 in lando, composer, and Acquia hooks.
 
 ### Deprecated
 
