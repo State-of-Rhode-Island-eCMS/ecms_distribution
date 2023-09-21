@@ -101,7 +101,8 @@
             "drupal/core-project-message": true,
             "drupal/core-vendor-hardening": true,
             "wikimedia/composer-merge-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         },
         "process-timeout": 0
     },
