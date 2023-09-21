@@ -12,13 +12,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-420: Upgrade drupal/core (and dependencies) 9.5.9 => 9.5.11.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.10.4] - 2023-09-21
+### Changed
+- RIGA-420: Upgrade drupal/core (and dependencies) 9.5.9 => 9.5.11.
 
 ### Security
 - RIGA-420: Drupal core - Critical - Cache poisoning - SA-CORE-2023-006.
@@ -901,7 +906,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.4...HEAD
+[1.10.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.3...1.10.4
 [1.10.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...1.10.3
 [1.10.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...1.10.2
 [1.10.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.0...1.10.1
