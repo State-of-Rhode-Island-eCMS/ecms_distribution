@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-322: Install drupal/upgrade_status 4.0.0.
+- RIGA-322: Add drupal/easy_breadcrumb patch issue 3284123 comment 13.
 
 ### Changed
 - RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
