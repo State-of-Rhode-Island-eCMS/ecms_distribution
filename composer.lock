@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "581677de2b639f1efcd44194f895e63d",
+    "content-hash": "8f18c8f13483728c282bf5507b2eaaf0",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -8923,26 +8923,26 @@
         },
         {
             "name": "drupal/views_database_connector",
-            "version": "1.4.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_database_connector.git",
-                "reference": "8.x-1.4"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_database_connector-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "8c44c2954d949b17cb6f116911f52aa0032b6eaf"
+                "url": "https://ftp.drupal.org/files/projects/views_database_connector-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "68d91b3ab76345f43b87b3c368871a63e48f261d"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1591848667",
+                    "version": "2.0.1",
+                    "datestamp": "1680540184",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13727,7 +13727,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "4a1a0e1e1cceb6590ab51b5087426bba11eb4ca7"
+                "reference": "5a8ddc4d696d3163c422799fab5d3a358780ff15"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13808,7 +13808,7 @@
                 "drupal/twig_tweak": "^3.2",
                 "drupal/twig_vardumper": "^3.0",
                 "drupal/views_ajax_get": "1.x-dev@dev",
-                "drupal/views_database_connector": "^1.4",
+                "drupal/views_database_connector": "^2.0",
                 "drupal/webform": "^6.0",
                 "drupal/webform_encrypt": "^2.0@alpha",
                 "drupal/webform_views": "^5.0@beta",
@@ -13897,7 +13897,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-09-25T08:15:10+00:00"
+            "time": "2023-09-25T09:02:44+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",

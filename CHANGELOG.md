@@ -54,6 +54,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/twig_vardumper 3.0.2 => 3.1.0.
 - RIGA-322: Upgrade drupal/webform 6.1.4 => 6.2.0-beta6.
 - RIGA-322: Upgrade drupal/webform_encrypt dev-1.x => 2.0.0-alpha1.
+- RIGA-322: Upgrade drupal/views_database_connector 1.4.0 => 2.0.1.
 
 ### Deprecated
 
