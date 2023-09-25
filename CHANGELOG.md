@@ -21,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/config_update 1.7.0 => 2.0.0-alpha3.
 - RIGA-322: Upgrade drupal/content_moderation_notifications dev-3.x => 3.5.0.
 - RIGA-322: Upgrade drupal/ctools 3.11.0 => 3.14.0.
+- RIGA-322: Upgrade drupal/devel 4.0.1 => 5.1.2.
 - RIGA-322: Upgrade drupal/features 3.12.0 => 3.13.0.
 - RIGA-322: Upgrade drupal/feeds 3.0.0-beta2 => 3.0.0-beta4.
 - RIGA-322: Upgrade drupal/google_tag 1.4.0 => 2.0.2.
@@ -34,6 +35,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/media_library_theme_reset 1.1.0 => 1.5.0.
 - RIGA-322: Upgrade drupal/menu_block dev-1.x => 1.10.0.
 - RIGA-322: Upgrade drupal/menu_force 1.2.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/migrate_plus 5.3.0 => 6.0.1.
+- RIGA-322: Upgrade drupal/migrate_tools 5.1.0 => 6.0.2.
 - RIGA-322: Upgrade drupal/openid_connect dev-1.x => 3.0.0-alpha2.
 - RIGA-322: Upgrade drupal/openid_connect_windows_aad 1.4.0 => 2.0.0-beta5.
 - RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
@@ -46,8 +49,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/twig_tweak 2.10.0 => 3.2.1.
 - RIGA-322: Upgrade drupal/webform 6.1.4 => 6.2.0-beta6.
 - RIGA-322: Upgrade drupal/webform_encrypt dev-1.x => 2.0.0-alpha1.
-- RIGA-322: Upgrade drupal/migrate_plus 5.3.0 => 6.0.1.
-- RIGA-322: Upgrade drupal/migrate_tools 5.1.0 => 6.0.2.
 
 ### Deprecated
 
