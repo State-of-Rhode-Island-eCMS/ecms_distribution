@@ -181,6 +181,9 @@
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
+            },
+            "drupal/migrate_process_trim": {
+                "3288638 - Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2022-06-16/migrate_process_trim.2.0.x-dev.rector.patch"
             }
         },
         "preserve-paths": [],
