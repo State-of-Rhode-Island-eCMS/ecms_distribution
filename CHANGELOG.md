@@ -47,6 +47,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/paragraphs 1.15.0 => 1.16.0.
 - RIGA-322: Upgrade drupal/publishcontent 1.5.0 => 1.6.0.
 - RIGA-322: Upgrade drupal/rabbit_hole 1.0.0-beta10 => 1.0.0-beta11.
+- RIGA-322: Upgrade drupal/search_api_exclude 2.0.0 => 2.0.2.
 - RIGA-322: Upgrade drupal/simple_menu_permissions 1.4.0 => 2.0.0.
 - RIGA-322: Upgrade drupal/svg_image 1.16.0 => 3.0.1.
 - RIGA-322: Upgrade drupal/twig_tweak 2.10.0 => 3.2.1.
