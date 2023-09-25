@@ -29,6 +29,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/google_translator 1.0.0 => 2.1.0.
 - RIGA-322: Upgrade drupal/http_cache_control 2.0.0 => 2.1.0.
 - RIGA-322: Upgrade drupal/jquery_ui_datepicker 1.4.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/jquery_ui_draggable 1.2.0 => 2.0.0.
 - RIGA-322: Upgrade drupal/jquery_ui_droppable 1.2.0 => 1.5.0.
 - RIGA-322: Upgrade drupal/jquery_ui_slider 1.1.0 => 2.0.0.
 - RIGA-322: Upgrade drupal/language_cookie dev-1.x => 2.0.1.
