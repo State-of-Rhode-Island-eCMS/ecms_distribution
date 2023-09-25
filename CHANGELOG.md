@@ -46,6 +46,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/twig_tweak 2.10.0 => 3.2.1.
 - RIGA-322: Upgrade drupal/webform 6.1.4 => 6.2.0-beta6.
 - RIGA-322: Upgrade drupal/webform_encrypt dev-1.x => 2.0.0-alpha1.
+- RIGA-322: Upgrade drupal/migrate_plus 5.3.0 => 6.0.1.
+- RIGA-322: Upgrade drupal/migrate_tools 5.1.0 => 6.0.2.
 
 ### Deprecated
 
