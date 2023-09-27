@@ -59,6 +59,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- RIGA-322: Remove module drupal/views_ajax_get.
 
 ### Fixed
 

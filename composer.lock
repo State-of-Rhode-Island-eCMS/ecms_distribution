@@ -8808,47 +8808,6 @@
             }
         },
         {
-            "name": "drupal/views_ajax_get",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/views_ajax_get.git",
-                "reference": "eeb6b205b7ebe366ee97afb00c10c69ca9319f7c"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-rc1+5-dev",
-                    "datestamp": "1587625115",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Leon Kessler",
-                    "homepage": "https://www.drupal.org/user/595374"
-                }
-            ],
-            "description": "Overrides Views Ajax to work with GET instead of POST",
-            "homepage": "https://www.drupal.org/project/views_ajax_get",
-            "support": {
-                "source": "https://git.drupalcode.org/project/views_ajax_get"
-            }
-        },
-        {
             "name": "drupal/views_bulk_operations",
             "version": "4.1.5",
             "source": {
@@ -13727,7 +13686,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "c7e3cfbc33892d76b0c2cc8c8ed4cb433d758a85"
+                "reference": "2524b56c9dc090aa5658def9a494276214d9cea1"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13807,7 +13766,6 @@
                 "drupal/token": "^1.12",
                 "drupal/twig_tweak": "^3.2",
                 "drupal/twig_vardumper": "^3.0",
-                "drupal/views_ajax_get": "1.x-dev@dev",
                 "drupal/views_database_connector": "^2.0",
                 "drupal/webform": "^6.0",
                 "drupal/webform_encrypt": "^2.0@alpha",
@@ -13897,7 +13855,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-09-26T21:55:06+00:00"
+            "time": "2023-09-27T08:35:59+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
