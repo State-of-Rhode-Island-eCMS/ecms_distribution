@@ -12,10 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-414: Update php 8.0 => 8.1 in lando and composer.
-- RIGA-414: Upgrade drush/drush 10.3.6 => 10.6.2.
-- RIGA-414: Upgrade drush8 => drush10 in Acquia hooks.
-- RIGA-414: Update lando version 3.4.0 => 3.18.0 in oomph actions.
 
 ### Deprecated
 
@@ -24,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.10.5] - 2023-09-28
+### Changed
+- RIGA-414: Update php 8.0 => 8.1 in lando and composer.
+- RIGA-414: Upgrade drush/drush 10.3.6 => 10.6.2.
+- RIGA-414: Upgrade drush8 => drush10 in Acquia hooks.
+- RIGA-414: Update lando version 3.4.0 => 3.18.0 in oomph actions.
 
 ## [1.10.4] - 2023-09-21
 ### Changed
@@ -910,7 +913,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.5...HEAD
+[1.10.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.4...1.10.5
 [1.10.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.3...1.10.4
 [1.10.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...1.10.3
 [1.10.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...1.10.2
