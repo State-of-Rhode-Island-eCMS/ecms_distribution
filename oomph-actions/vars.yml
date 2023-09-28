@@ -11,7 +11,7 @@ run_npm_install: no
 # Use Lando for build process
 use_lando: yes
 run_lando_composer_install: no
-lando_version: "v3.4.0"
+lando_version: "v3.18.0"
 # Disable the standard Oomph lando npm install.
 run_lando_npm_install: no
 
