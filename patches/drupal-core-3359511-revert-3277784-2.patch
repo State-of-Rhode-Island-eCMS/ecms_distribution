@@ -1,0 +1,42 @@
+diff --git a/core/lib/Drupal/Core/Routing/Enhancer/ParamConversionEnhancer.php b/core/lib/Drupal/Core/Routing/Enhancer/ParamConversionEnhancer.php
+index 02c4525cee..445c4fe3f4 100644
+--- a/core/lib/Drupal/Core/Routing/Enhancer/ParamConversionEnhancer.php
++++ b/core/lib/Drupal/Core/Routing/Enhancer/ParamConversionEnhancer.php
+@@ -67,13 +67,6 @@ protected function copyRawVariables(array $defaults) {
+     foreach (array_intersect_key($defaults, $variables) as $key => $value) {
+       $raw_variables[$key] = $value;
+     }
+-    // Route defaults that do not start with a leading "_" are also
+-    // parameters, even if they are not included in path or host patterns.
+-    foreach ($route->getDefaults() as $name => $value) {
+-      if (!isset($raw_variables[$name]) && substr($name, 0, 1) !== '_') {
+-        $raw_variables[$name] = $value;
+-      }
+-    }
+     return new ParameterBag($raw_variables);
+   }
+
+diff --git a/core/tests/Drupal/Tests/Core/Enhancer/ParamConversionEnhancerTest.php b/core/tests/Drupal/Tests/Core/Enhancer/ParamConversionEnhancerTest.php
+index d94abb2dea..872ce1b7f3 100644
+--- a/core/tests/Drupal/Tests/Core/Enhancer/ParamConversionEnhancerTest.php
++++ b/core/tests/Drupal/Tests/Core/Enhancer/ParamConversionEnhancerTest.php
+@@ -75,7 +75,6 @@ public function testEnhance() {
+    */
+   public function testCopyRawVariables() {
+     $route = new Route('/test/{id}');
+-    $route->setDefault('node_type', 'page');
+     $defaults = [
+       RouteObjectInterface::ROUTE_OBJECT => $route,
+       'id' => '1',
+@@ -91,10 +90,7 @@ public function testCopyRawVariables() {
+
+         return $defaults;
+       });
+-    $expected = new ParameterBag([
+-      'id' => 1,
+-      'node_type' => 'page',
+-    ]);
++    $expected = new ParameterBag(['id' => 1]);
+     $result = $this->paramConversionEnhancer->enhance($defaults, new Request());
+     $this->assertEquals($result['_raw_variables'], $expected);
+   }
