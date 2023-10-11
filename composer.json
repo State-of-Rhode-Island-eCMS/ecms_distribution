@@ -75,15 +75,15 @@
         "drupal/ckeditor": "^1.0",
         "drupal/config_update": "^2.0@alpha",
         "drupal/content_moderation_notifications": "^3.5",
-        "drupal/core-composer-scaffold": "^9|^10",
-        "drupal/core-project-message": "^9|^10",
-        "drupal/core-recommended": "^9|^10",
-        "drupal/core-vendor-hardening": "^9|^10",
+        "drupal/core-composer-scaffold": "^10.1.5",
+        "drupal/core-project-message": "^10.1.5",
+        "drupal/core-recommended": "^10.1.5",
+        "drupal/core-vendor-hardening": "^10.1.5",
         "drupal/features": "^3.13",
         "drupal/feeds": "^3.0@beta",
         "drupal/menu_force": "^2.0",
         "drupal/office_hours": "^1.11",
-        "drush/drush": "^10.0",
+        "drush/drush": "^12.2.0",
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
@@ -106,7 +106,8 @@
             "drupal/core-vendor-hardening": true,
             "wikimedia/composer-merge-plugin": true,
             "php-http/discovery": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
         },
         "process-timeout": 0
     },
@@ -212,9 +213,9 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/core-dev": "^9|^10",
+        "drupal/core-dev": "^10.1.5",
         "drupal/devel": "^5.0",
         "phpunit/phpunit": "^9",
-        "symfony/phpunit-bridge": "^5|^6.3.2"
+        "symfony/phpunit-bridge": "^6.3.2"
     }
 }
