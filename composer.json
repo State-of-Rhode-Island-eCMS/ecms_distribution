@@ -73,7 +73,6 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/preserve-paths": "^0.1.4",
         "drupal/ckeditor": "^1.0",
-        "drupal/ckeditor_entity_link": "^1.3",
         "drupal/config_update": "^2.0@alpha",
         "drupal/content_moderation_notifications": "^3.5",
         "drupal/core-composer-scaffold": "^9|^10",
