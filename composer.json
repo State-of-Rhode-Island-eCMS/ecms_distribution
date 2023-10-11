@@ -84,6 +84,7 @@
         "drupal/menu_force": "^2.0",
         "drupal/office_hours": "^1.11",
         "drush/drush": "^12.2.0",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
@@ -107,7 +108,8 @@
             "wikimedia/composer-merge-plugin": true,
             "php-http/discovery": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "mglaman/composer-drupal-lenient": true
         },
         "process-timeout": 0
     },
@@ -209,6 +211,9 @@
             "merge-extra": false,
             "merge-extra-deep": false,
             "merge-scripts": false
+        },
+        "drupal-lenient": {
+            "allowed-list": ["drupal/ckeditor_entity_link"]
         }
     },
     "require-dev": {
