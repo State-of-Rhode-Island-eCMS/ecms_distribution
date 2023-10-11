@@ -59,6 +59,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/dynamic_entity_reference 1.16.0 => 3.1.0.
 - RIGA-322: Upgrade drupal/geocoder 3.34.0 => 4.9.0.
 - RIGA-322: Upgrade drush/drush 10.6.2 => 12.2.0.
+- RIGA-322: Update line numbers for '.htacess.patch'.
 
 ### Deprecated
 

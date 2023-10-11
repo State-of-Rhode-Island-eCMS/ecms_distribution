@@ -2,7 +2,7 @@ diff --git a/.htaccess b/.htaccess
 index 6f9123d..84ec3c6 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -107,8 +107,15 @@ AddEncoding gzip svgz
+@@ -100,8 +100,15 @@ AddEncoding gzip svgz
    # To redirect all users to access the site WITHOUT the 'www.' prefix,
    # (http://www.example.com/foo will be redirected to http://example.com/foo)
    # uncomment the following:
