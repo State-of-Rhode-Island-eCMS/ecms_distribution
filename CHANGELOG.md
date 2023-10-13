@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Add drupal/ckeditor_entity_link patch issue 3296754 comment 3.
 - RIGA-322: Add drupal/easy_breadcrumb patch issue 3284123 comment 13.
 - RIGA-322: Add drupal/migrate_process_trim patch issue 3288638 comment 2.
+- RIGA-322: Install drupal/classy 1.0.2 as contrib module.
 
 ### Changed
 - RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
