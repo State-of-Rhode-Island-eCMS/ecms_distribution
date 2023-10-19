@@ -40,8 +40,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/menu_force 1.2.0 => 2.0.0.
 - RIGA-322: Upgrade drupal/migrate_plus 5.3.0 => 6.0.1.
 - RIGA-322: Upgrade drupal/migrate_tools 5.1.0 => 6.0.2.
-- RIGA-322: Upgrade drupal/openid_connect dev-1.x => 3.0.0-alpha2.
-- RIGA-322: Upgrade drupal/openid_connect_windows_aad 1.4.0 => 2.0.0-beta5.
 - RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
 - RIGA-322: Upgrade drupal/panels 4.6.0 => 4.7.0.
 - RIGA-322: Upgrade drupal/paragraphs 1.15.0 => 1.16.0.
