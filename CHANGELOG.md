@@ -11,6 +11,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-322: Install drupal/upgrade_status 4.0.0.
+- RIGA-401: Install drupal/crop 2.3.0.
+- RIGA-401: Install drupal/entity_usage 2.0.0-beta12.
+- RIGA-401: Install drupal/focal_point 2.0.2.
+- RIGA-401: Install drupal/iek 1.3.0.
 - RIGA-322: Add drupal/ckeditor_entity_link patch issue 3296754 comment 3.
 - RIGA-322: Add drupal/easy_breadcrumb patch issue 3284123 comment 13.
 - RIGA-322: Add drupal/migrate_process_trim patch issue 3288638 comment 2.
