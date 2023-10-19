@@ -10,6 +10,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.10.6] - 2023-10-19
+### Added
 - RIGA-322: Install drupal/upgrade_status 4.0.0.
 - RIGA-401: Install drupal/crop 2.3.0.
 - RIGA-401: Install drupal/entity_usage 2.0.0-beta12.
@@ -24,6 +37,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Add drupal/migrate_process_trim patch issue 3288638 comment 2.
 
 ### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.5.
+- RIGA-6: Update state-of-rhode-island-ecms/ecms_patternlab => 0.7.4.
 - RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
 - RIGA-322: Upgrade drupal/captcha 1.10.0 => 2.0.5.
 - RIGA-322: Upgrade drupal/components 2.4.0 => 3.0.0-beta3.
@@ -62,14 +77,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/webform_encrypt dev-1.x => 2.0.0-alpha1.
 - RIGA-322: Upgrade drupal/views_database_connector 1.4.0 => 2.0.1.
 
-### Deprecated
-
 ### Removed
 - RIGA-322: Remove module drupal/views_ajax_get.
-
-### Fixed
-
-### Security
 
 ## [1.10.5] - 2023-09-28
 ### Changed
@@ -963,7 +972,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.6...HEAD
+[1.10.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.5...1.10.6
 [1.10.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.4...1.10.5
 [1.10.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.3...1.10.4
 [1.10.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...1.10.3
