@@ -10,12 +10,54 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-322: Install drupal/upgrade_status 4.0.0.
+- RIGA-322: Add drupal/ckeditor_entity_link patch issue 3296754 comment 3.
+- RIGA-322: Add drupal/easy_breadcrumb patch issue 3284123 comment 13.
+- RIGA-322: Add drupal/migrate_process_trim patch issue 3288638 comment 2.
 
 ### Changed
+- RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
+- RIGA-322: Upgrade drupal/captcha 1.10.0 => 2.0.5.
+- RIGA-322: Upgrade drupal/components 2.4.0 => 3.0.0-beta3.
+- RIGA-322: Upgrade drupal/config_update 1.7.0 => 2.0.0-alpha3.
+- RIGA-322: Upgrade drupal/content_moderation_notifications dev-3.x => 3.5.0.
+- RIGA-322: Upgrade drupal/ctools 3.11.0 => 3.14.0.
+- RIGA-322: Upgrade drupal/devel 4.0.1 => 5.1.2.
+- RIGA-322: Upgrade drupal/features 3.12.0 => 3.13.0.
+- RIGA-322: Upgrade drupal/feeds 3.0.0-beta2 => 3.0.0-beta4.
+- RIGA-322: Upgrade drupal/google_tag 1.4.0 => 2.0.2.
+- RIGA-322: Upgrade drupal/google_translator 1.0.0 => 2.1.0.
+- RIGA-322: Upgrade drupal/http_cache_control 2.0.0 => 2.1.0.
+- RIGA-322: Upgrade drupal/jquery_ui_datepicker 1.4.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/jquery_ui_draggable 1.2.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/jquery_ui_droppable 1.2.0 => 1.5.0.
+- RIGA-322: Upgrade drupal/jquery_ui_slider 1.1.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/language_cookie dev-1.x => 2.0.1.
+- RIGA-322: Upgrade drupal/language_neutral_aliases 3.0.0 => 3.1.0.
+- RIGA-322: Upgrade drupal/layout_builder_modal 1.1.0 => 1.2.0.
+- RIGA-322: Upgrade drupal/media_library_theme_reset 1.1.0 => 1.5.0.
+- RIGA-322: Upgrade drupal/menu_block dev-1.x => 1.10.0.
+- RIGA-322: Upgrade drupal/menu_force 1.2.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/migrate_plus 5.3.0 => 6.0.1.
+- RIGA-322: Upgrade drupal/migrate_tools 5.1.0 => 6.0.2.
+- RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
+- RIGA-322: Upgrade drupal/panels 4.6.0 => 4.7.0.
+- RIGA-322: Upgrade drupal/paragraphs 1.15.0 => 1.16.0.
+- RIGA-322: Upgrade drupal/publishcontent 1.5.0 => 1.6.0.
+- RIGA-322: Upgrade drupal/rabbit_hole 1.0.0-beta10 => 1.0.0-beta11.
+- RIGA-322: Upgrade drupal/search_api_exclude 2.0.0 => 2.0.2.
+- RIGA-322: Upgrade drupal/simple_menu_permissions 1.4.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/svg_image 1.16.0 => 3.0.1.
+- RIGA-322: Upgrade drupal/twig_tweak 2.10.0 => 3.2.1.
+- RIGA-322: Upgrade drupal/twig_vardumper 3.0.2 => 3.1.0.
+- RIGA-322: Upgrade drupal/webform 6.1.4 => 6.2.0-beta6.
+- RIGA-322: Upgrade drupal/webform_encrypt dev-1.x => 2.0.0-alpha1.
+- RIGA-322: Upgrade drupal/views_database_connector 1.4.0 => 2.0.1.
 
 ### Deprecated
 
 ### Removed
+- RIGA-322: Remove module drupal/views_ajax_get.
 
 ### Fixed
 
