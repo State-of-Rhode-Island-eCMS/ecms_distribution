@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-401: Add google_translator patch 3387636 to resolve HTML render error.
 
 ### Changed
 
