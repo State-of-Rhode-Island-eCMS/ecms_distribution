@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c6ece6727deb1d40493b97f7f708098",
+    "content-hash": "a33587fd910fea7d9d6806c8c4ee5a0e",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -14138,7 +14138,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "147ca3d7d6bacfcbaca02dca0218cfb0909ffb7c"
+                "reference": "82ff7d51894e5e63323d3efdd1c11851647d0f1b"
             },
             "require": {
                 "composer/installers": "^1.9",
