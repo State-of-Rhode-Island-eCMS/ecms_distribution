@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-401: Add google_translator patch 3387636 to resolve HTML render error.
 
 ### Changed
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [1.10.9] - 2023-11-02
+### Added
+- RIGA-401: Add google_translator patch 3387636 to resolve HTML render error.
 
 ## [1.10.8] - 2023-10-19
 ### Changed
@@ -981,7 +984,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.9...HEAD
+[1.10.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.8...1.10.9
 [1.10.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.7...1.10.8
 [1.10.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.6...1.10.7
 [1.10.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.5...1.10.6
