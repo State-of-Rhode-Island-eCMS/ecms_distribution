@@ -89,7 +89,7 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "0.10.7",
+        "rhodeislandecms/ecms_profile": "0.10.8",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.4",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
@@ -178,6 +178,9 @@
             },
             "drupal/feeds": {
                 "3158678 - FetcherResult::checkFile() throws \\RuntimeException, which is never caught": "https://www.drupal.org/files/issues/2022-09-27/feeds-3158678-9-catch-runtime-errors.patch"
+            },
+            "drupal/google_translator": {
+                "3387636 - Missing google_translator_disclaimer_title setting causes PHP 8.1 errors": "https://git.drupalcode.org/project/google_translator/-/merge_requests/3.diff"
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
