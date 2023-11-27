@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-433: Upgrade drupal/content_moderation_notifications 3.5.0 => 3.6.0.
+- RIGA-434: Turn off advagg module by default.
 
 ### Deprecated
 
