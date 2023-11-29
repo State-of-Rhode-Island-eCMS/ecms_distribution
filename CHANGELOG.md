@@ -12,14 +12,20 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-433: Upgrade drupal/content_moderation_notifications 3.5.0 => 3.6.0.
-- RIGA-434: Turn off advagg module by default.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [1.10.10] - 2023-11-30
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.9.
+- RIGA-433: Upgrade drupal/content_moderation_notifications 3.5.0 => 3.6.0.
+- RIGA-434: Turn off advagg module by default.
 
 ### Security
 - RIGA-433: Content Moderation Notifications - Moderately critical - Information disclosure - SA-CONTRIB-2023-047.
@@ -987,7 +993,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.10...HEAD
+[1.10.10]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.9...1.10.10
 [1.10.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.8...1.10.9
 [1.10.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.7...1.10.8
 [1.10.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.6...1.10.7
