@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4a6be7236601816e2b19ec37d279ba6",
+    "content-hash": "00b2c6908dd7c272e34deddbcf814a5e",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -3574,17 +3574,17 @@
         },
         {
             "name": "drupal/content_moderation_notifications",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/content_moderation_notifications.git",
-                "reference": "8.x-3.5"
+                "reference": "8.x-3.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/content_moderation_notifications-8.x-3.5.zip",
-                "reference": "8.x-3.5",
-                "shasum": "aee4121e7cd4f68e88c1890b01402f1afb4120cd"
+                "url": "https://ftp.drupal.org/files/projects/content_moderation_notifications-8.x-3.6.zip",
+                "reference": "8.x-3.6",
+                "shasum": "f475721b95de8d0520053d3101c35c48ea22f61c"
             },
             "require": {
                 "drupal/core": "^9 || ^10"
@@ -3595,8 +3595,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.5",
-                    "datestamp": "1667948468",
+                    "version": "8.x-3.6",
+                    "datestamp": "1695836640",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -14134,11 +14134,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.10.8",
+            "version": "dev-RIGA-434/turn-off-adv-agg-by-default",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "b9d43eebdae04e22d94c2e4a24031c96d0cbee60"
+                "reference": "6e9a6eafbb8576e3ec5408def39cf9ef8ba57558"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -14317,7 +14317,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-11-02T15:30:39+00:00"
+            "time": "2023-11-27T11:55:29+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -22042,7 +22042,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
