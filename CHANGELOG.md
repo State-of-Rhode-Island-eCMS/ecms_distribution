@@ -10,13 +10,57 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.10.10] - 2023-11-30
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.9.
+- RIGA-433: Upgrade drupal/content_moderation_notifications 3.5.0 => 3.6.0.
+- RIGA-434: Turn off advagg module by default.
+
+### Security
+- RIGA-433: Content Moderation Notifications - Moderately critical - Information disclosure - SA-CONTRIB-2023-047.
+
+## [1.10.9] - 2023-11-02
+### Added
+- RIGA-401: Add google_translator patch 3387636 to resolve HTML render error.
+
+## [1.10.8] - 2023-10-19
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.7.
+
+## [1.10.7] - 2023-10-19
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.6.
+
+## [1.10.6] - 2023-10-19
+### Added
 - RIGA-322: Install drupal/upgrade_status 4.0.0.
+- RIGA-401: Install drupal/crop 2.3.0.
+- RIGA-401: Install drupal/entity_usage 2.0.0-beta12.
+- RIGA-401: Install drupal/focal_point 2.0.2.
+- RIGA-401: Install drupal/iek 1.3.0.
+- RIGA-415: Install drupal/advagg 6.0.0-alpha1.
+- RIGA-415: Install drupal/conditional_fields 4.0.0-alpha5.
+- RIGA-415: Install drupal/field_group 3.4.0.
+- RIGA-415: Install drupal/quick_node_clone 1.16.0.
 - RIGA-322: Add drupal/ckeditor_entity_link patch issue 3296754 comment 3.
 - RIGA-322: Add drupal/easy_breadcrumb patch issue 3284123 comment 13.
 - RIGA-322: Add drupal/migrate_process_trim patch issue 3288638 comment 2.
 - RIGA-322: Install drupal/classy 1.0.2 as contrib module.
 
 ### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.5.
+- RIGA-6: Update state-of-rhode-island-ecms/ecms_patternlab => 0.7.4.
 - RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
 - RIGA-322: Upgrade drupal/captcha 1.10.0 => 2.0.5.
 - RIGA-322: Upgrade drupal/components 2.4.0 => 3.0.0-beta3.
@@ -41,8 +85,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drupal/menu_force 1.2.0 => 2.0.0.
 - RIGA-322: Upgrade drupal/migrate_plus 5.3.0 => 6.0.1.
 - RIGA-322: Upgrade drupal/migrate_tools 5.1.0 => 6.0.2.
-- RIGA-322: Upgrade drupal/openid_connect dev-1.x => 3.0.0-alpha2.
-- RIGA-322: Upgrade drupal/openid_connect_windows_aad 1.4.0 => 2.0.0-beta5.
 - RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
 - RIGA-322: Upgrade drupal/panels 4.6.0 => 4.7.0.
 - RIGA-322: Upgrade drupal/paragraphs 1.15.0 => 1.16.0.
@@ -62,14 +104,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-322: Upgrade drush/drush 10.6.2 => 12.2.0.
 - RIGA-322: Update line numbers for '.htacess.patch'.
 
-### Deprecated
-
 ### Removed
 - RIGA-322: Remove module drupal/views_ajax_get.
-
-### Fixed
-
-### Security
 
 ## [1.10.5] - 2023-09-28
 ### Changed
@@ -963,7 +999,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.10...HEAD
+[1.10.10]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.9...1.10.10
+[1.10.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.8...1.10.9
+[1.10.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.7...1.10.8
+[1.10.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.6...1.10.7
+[1.10.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.5...1.10.6
 [1.10.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.4...1.10.5
 [1.10.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.3...1.10.4
 [1.10.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...1.10.3

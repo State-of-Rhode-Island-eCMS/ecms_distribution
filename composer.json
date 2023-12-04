@@ -75,7 +75,7 @@
         "drupal/ckeditor": "^1.0",
         "drupal/ckeditor_entity_link": "^1.3",
         "drupal/config_update": "^2.0@alpha",
-        "drupal/content_moderation_notifications": "^3.5",
+        "drupal/content_moderation_notifications": "^3.6",
         "drupal/core-composer-scaffold": "^10.1.5",
         "drupal/core-project-message": "^10.1.5",
         "drupal/core-recommended": "^10.1.5",
@@ -91,6 +91,8 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "rhodeislandecms/ecms_profile": "dev-RIGA-322/drupal-10-upgrade-part2-version2",
         "state-of-rhode-island-ecms/ecms_patternlab": "dev-RIGA-322/drupal-10-upgrade",
+        "rhodeislandecms/ecms_profile": "0.10.9",
+        "state-of-rhode-island-ecms/ecms_patternlab": "0.7.4",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
@@ -180,6 +182,9 @@
             },
             "drupal/feeds": {
                 "3158678 - FetcherResult::checkFile() throws \\RuntimeException, which is never caught": "https://www.drupal.org/files/issues/2022-09-27/feeds-3158678-9-catch-runtime-errors.patch"
+            },
+            "drupal/google_translator": {
+                "3387636 - Missing google_translator_disclaimer_title setting causes PHP 8.1 errors": "https://git.drupalcode.org/project/google_translator/-/merge_requests/3.diff"
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
