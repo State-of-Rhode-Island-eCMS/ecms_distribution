@@ -81,6 +81,8 @@
         "drupal/core-vendor-hardening": "^10.1.5",
         "drupal/features": "^3.13",
         "drupal/feeds": "^3.0@beta",
+        "drupal/layout_builder_modal": "^1.2",
+        "drupal/media_library_theme_reset": "^1.5",
         "drupal/menu_force": "^2.0",
         "drupal/office_hours": "^1.11",
         "drush/drush": "^12.2.0",
@@ -108,7 +110,8 @@
             "php-http/discovery": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "mglaman/composer-drupal-lenient": true
+            "mglaman/composer-drupal-lenient": true,
+            "drupal-composer/preserve-paths": false
         },
         "process-timeout": 0
     },
