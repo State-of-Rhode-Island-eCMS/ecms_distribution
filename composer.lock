@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "639326412a408c5caf4b55f3d3c006e4",
+    "content-hash": "5ddac572f283751cafda2022b6eef071",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -13748,7 +13748,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ebe30a14b47c751231a7a62c725c6b381a4d5a57"
+                "reference": "ffeb71203cf6073b2fd9ce83ac4bd3efb32fff01"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -13872,7 +13872,7 @@
                         "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
                         "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
                         "3186034 - Prevent language fallback to happen when a translation is unpublished": "https://www.drupal.org/files/issues/2020-12-02/3186034_2_respect_empty_translation_candidates.patch",
-                        "2492171 - Provide options to sanitize filenames": "https://www.drupal.org/files/issues/2021-07-22/2492171-295_0.patch"
+                        "2492171 - Provide options to sanitize filenames": "https://www.drupal.org/files/issues/2023-08-28/2492171-404.patch"
                     },
                     "drupal/paragraphs": {
                         "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
@@ -13924,7 +13924,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-12-04T23:29:12+00:00"
+            "time": "2023-12-05T00:54:05+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
