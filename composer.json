@@ -108,7 +108,9 @@
             "drupal/core-vendor-hardening": true,
             "wikimedia/composer-merge-plugin": true,
             "php-http/discovery": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true,
+            "mglaman/composer-drupal-lenient": true
         },
         "process-timeout": 0
     },
