@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d17cdc4c7a50d263c6842a84e849984",
+    "content-hash": "11c0f61a095b15fe88977e3b7a3d2c2c",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -1876,64 +1876,6 @@
                 "source": "https://github.com/dompdf/dompdf/tree/v2.0.3"
             },
             "time": "2023-02-07T12:51:48+00:00"
-        },
-        {
-            "name": "drupal-composer/preserve-paths",
-            "version": "0.1.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal-composer/preserve-paths.git",
-                "reference": "2f86a503f1f7838f5f7f399a17edd4d16eb95034"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/preserve-paths/zipball/2f86a503f1f7838f5f7f399a17edd4d16eb95034",
-                "reference": "2f86a503f1f7838f5f7f399a17edd4d16eb95034",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0 || ^2.0"
-            },
-            "require-dev": {
-                "composer/composer": "^2.0",
-                "derhasi/tempdirectory": "0.1.*",
-                "escapestudios/symfony2-coding-standard": "2.*",
-                "phpunit/phpunit": "4.*",
-                "squizlabs/php_codesniffer": "2.*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "DrupalComposer\\PreservePaths\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "DrupalComposer\\PreservePaths\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes Haseitl",
-                    "email": "johannes@undpaul.de",
-                    "homepage": "http://www.undpaul.de"
-                }
-            ],
-            "description": "Composer plugin for preserving custom paths and supporting nested packages",
-            "homepage": "https://github.com/drupal-composer/preserve-paths",
-            "keywords": [
-                "composer-plugin",
-                "custom path",
-                "installer",
-                "nested package"
-            ],
-            "support": {
-                "issues": "https://github.com/drupal-composer/preserve-paths/issues",
-                "source": "https://github.com/drupal-composer/preserve-paths/tree/0.1.6"
-            },
-            "time": "2020-11-14T20:28:03+00:00"
         },
         {
             "name": "drupal/acquia_connector",
@@ -14134,11 +14076,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "0.10.9",
+            "version": "dev-rc/0.11.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ec381a76535fd14f27f9138ed67084fcf4964b53"
+                "reference": "dc5815cec59de5d10793d5bd15d8d5755773fb5b"
             },
             "require": {
                 "composer/installers": "^1.9",
@@ -14317,7 +14259,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2023-11-29T09:40:24+00:00"
+            "time": "2023-12-07T16:50:53+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -22042,7 +21984,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -22050,5 +21993,5 @@
         "php": ">=8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.6.0"
 }
