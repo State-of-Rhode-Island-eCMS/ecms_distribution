@@ -108,7 +108,8 @@
             "php-http/discovery": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": false,
-            "mglaman/composer-drupal-lenient": true
+            "mglaman/composer-drupal-lenient": true,
+            "drupal-composer/preserve-paths": true
         },
         "process-timeout": 0
     },
