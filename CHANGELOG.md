@@ -21,7 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [1.10.10] - 2024-01-25
+## [1.11.0] - 2024-01-25
 - RIGA-6: Update rhodeislandecms/ecms_profile => 0.11.0.
 - RIGA-6: Added DDEV local dev support.
 
