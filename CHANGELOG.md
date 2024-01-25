@@ -25,7 +25,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-6: Update rhodeislandecms/ecms_profile => 0.11.0.
 - RIGA-6: Added DDEV local dev support.
 
-
 ## [1.10.10] - 2023-11-30
 ### Changed
 - RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.9.
