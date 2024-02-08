@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupal.org/sa-contrib-2024-008).
 
 ## [1.11.0] - 2024-01-25
 - RIGA-6: Update rhodeislandecms/ecms_profile => 0.11.0.
