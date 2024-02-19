@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90a3713f72d7bb06241c3830f192a92d",
+    "content-hash": "9f8dcde5b1fa3bf6a87540381e307133",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -1854,28 +1854,29 @@
         },
         {
             "name": "drupal/acquia_purge",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_purge.git",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_purge-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "d93bc6dcee78658267d7cf5baf7d480642e1e65a"
+                "url": "https://ftp.drupal.org/files/projects/acquia_purge-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "ae2b91f37e82da1f3622c5f73b46167376bd0c1a"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
                 "drupal/purge": "^3.4",
-                "drupal/purge_queuer_coretags": "*"
+                "drupal/purge_queuer_coretags": "*",
+                "php": "^7.4 || ^8"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1663188605",
+                    "version": "8.x-1.4",
+                    "datestamp": "1706811761",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
