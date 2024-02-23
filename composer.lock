@@ -2588,6 +2588,55 @@
             }
         },
         {
+            "name": "drupal/aggregator",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/aggregator.git",
+                "reference": "2.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/aggregator-2.2.0.zip",
+                "reference": "2.2.0",
+                "shasum": "b3778588066166520d2dc531dcf8697a6d8b31fc"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10",
+                "laminas/laminas-feed": "^2.17"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.2.0",
+                    "datestamp": "1705643390",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "dcam",
+                    "homepage": "https://www.drupal.org/user/1791830"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Ingest RSS feeds into your Drupal site",
+            "homepage": "https://www.drupal.org/project/aggregator",
+            "support": {
+                "source": "https://git.drupalcode.org/project/aggregator"
+            }
+        },
+        {
             "name": "drupal/allowed_formats",
             "version": "2.0.0",
             "source": {
@@ -15091,7 +15140,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "059d7a4a676b32429fae0a3a713f1fb9352236ff"
+                "reference": "c9e88884145bd315c0bed82bfcaa1ebc3edee5f4"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -15104,6 +15153,7 @@
                 "drupal/address_phonenumber": "^10.0",
                 "drupal/admin_toolbar": "^3.4",
                 "drupal/advagg": "^6.0@alpha",
+                "drupal/aggregator": "^2.2",
                 "drupal/allowed_formats": "^2.0.0",
                 "drupal/asset_injector": "^2.7",
                 "drupal/auto_entitylabel": "^3.0@beta",
@@ -15263,7 +15313,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-02-23T15:37:34+00:00"
+            "time": "2024-02-23T15:58:22+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
