@@ -15091,7 +15091,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "2cd34d2bef286366b20975bc58063f895281e45f"
+                "reference": "829ca1bd2579ee88027fc9532dc026566e5bc818"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -15216,10 +15216,9 @@
                     "drupal/core": {
                         "3266057 - #121 - Allow profiles to define a base/parent profile [continue of #1356276]": "https://www.drupal.org/files/issues/2023-12-05/3266057-121.patch",
                         "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch",
-                        "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
+                        "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2024-01-09/drupal-core--2024-01-09--3049332-85.patch",
                         "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
-                        "3025039 - New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2023-10-25/3025039-89.patch",
-                        "3186034 - Prevent language fallback to happen when a translation is unpublished": "https://www.drupal.org/files/issues/2020-12-02/3186034_2_respect_empty_translation_candidates.patch"
+                        "3308838 - EntityRepository::getTranslationFromContext() function forcibly adds default entity language to fallback candidates": "https://www.drupal.org/files/issues/2024-02-22/drupal-3308838-fix-fallback-to-default-lang-42.patch"
                     },
                     "drupal/paragraphs": {
                         "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
@@ -15264,7 +15263,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-02-22T20:02:27+00:00"
+            "time": "2024-02-23T14:15:14+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
