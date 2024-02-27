@@ -28,7 +28,7 @@ docroot="/var/www/html/$site.$env/docroot"
 # 1. Hardcode the drush version.
 # 2. When running drush, provide the application + url, rather than relying
 #    on aliases. This can prevent some hard to trace problems.
-DRUSH_CMD="drush10 --verbose --root=$docroot --uri=https://$domain"
+DRUSH_CMD="/var/www/html/$site.$env/vendor/bin/drush --verbose --root=$docroot --uri=https://$domain"
 
 # Ensures the default email address is ecms@notification.ri.gov.
 $DRUSH_CMD cset system.site mail "ecms@notification.ri.gov" --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-install-${domain}-$(date +"%Y-%m-%d").log
