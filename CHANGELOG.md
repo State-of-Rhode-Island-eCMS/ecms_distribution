@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [2.0.0] - 2024-03-13
+### Security
+- RIGA-446: Upgraded to Drupal ^10.2
+- RIGA-446: Upgraded the ecms_profile to 1.0.0
+
 ## [1.11.1] - 2024-02-08
 ### Security
 RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupal.org/sa-contrib-2024-008).
@@ -1001,7 +1006,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.1...2.0.0
 [1.11.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.0...1.11.1
 [1.11.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.10...1.11.0
 [1.10.10]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.9...1.10.10
