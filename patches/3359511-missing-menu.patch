@@ -1,0 +1,307 @@
+diff --git a/core/core.services.yml b/core/core.services.yml
+index 746bed441ac5ce4ab6b4229a44ccbf43d57319d9..4f5420f67c13d2413372c8d954598740b44c43f8 100644
+--- a/core/core.services.yml
++++ b/core/core.services.yml
+@@ -821,7 +821,7 @@ services:
+     lazy: true
+   menu.tree_storage:
+     class: Drupal\Core\Menu\MenuTreeStorage
+-    arguments: ['@database', '@cache.menu', '@cache_tags.invalidator', 'menu_tree']
++    arguments: ['@database', '@cache.menu', '@cache_tags.invalidator', 'menu_tree', '@router.route_provider']
+     public: false  # Private to plugin.manager.menu.link and menu.link_tree
+     tags:
+       - { name: backend_overridable }
+diff --git a/core/lib/Drupal/Core/Menu/MenuTreeStorage.php b/core/lib/Drupal/Core/Menu/MenuTreeStorage.php
+index 1a035a0f729fc061548682eab32000153c2957d2..1fff04f915b80086fde085f069417654761182c3 100644
+--- a/core/lib/Drupal/Core/Menu/MenuTreeStorage.php
++++ b/core/lib/Drupal/Core/Menu/MenuTreeStorage.php
+@@ -11,6 +11,8 @@
+ use Drupal\Core\Database\Database;
+ use Drupal\Core\Database\DatabaseException;
+ use Drupal\Core\Database\Query\SelectInterface;
++use Drupal\Core\Routing\RouteProviderInterface;
++use Symfony\Component\Routing\Exception\RouteNotFoundException;
+
+ /**
+  * Provides a menu tree storage using the database.
+@@ -45,6 +47,13 @@ class MenuTreeStorage implements MenuTreeStorageInterface {
+    */
+   protected $cacheTagsInvalidator;
+
++  /**
++   * The route provider.
++   *
++   * @var \Drupal\Core\Routing\RouteProviderInterface
++   */
++  protected $routeProvider;
++
+   /**
+    * The database table name.
+    *
+@@ -86,13 +95,23 @@ class MenuTreeStorage implements MenuTreeStorageInterface {
+    *   The cache tags invalidator.
+    * @param string $table
+    *   A database table name to store configuration data in.
++   * @param \Drupal\Core\Routing\RouteProviderInterface|null $route_provider
++   *   The route provider.
+    * @param array $options
+    *   (optional) Any additional database connection options to use in queries.
+    */
+-  public function __construct(Connection $connection, CacheBackendInterface $menu_cache_backend, CacheTagsInvalidatorInterface $cache_tags_invalidator, $table, array $options = []) {
++  public function __construct(Connection $connection, CacheBackendInterface $menu_cache_backend, CacheTagsInvalidatorInterface $cache_tags_invalidator, $table, $route_provider = NULL, array $options = []) {
+     $this->connection = $connection;
+     $this->menuCacheBackend = $menu_cache_backend;
+     $this->cacheTagsInvalidator = $cache_tags_invalidator;
++    if (!$route_provider instanceof RouteProviderInterface) {
++      if (is_array($route_provider)) {
++        $options = $route_provider;
++      }
++      $route_provider = \Drupal::service('router.route_provider');
++      @trigger_error('Calling ' . __METHOD__ . '() without the $route_provider argument is deprecated in drupal:9.5.10 and will be required in drupal:11.0.0. See https://www.drupal.org/node/3364323', E_USER_DEPRECATED);
++    }
++    $this->routeProvider = $route_provider;
+     $this->table = $table;
+     $this->options = $options;
+   }
+@@ -655,17 +674,33 @@ public function loadByProperties(array $properties) {
+    * {@inheritdoc}
+    */
+   public function loadByRoute($route_name, array $route_parameters = [], $menu_name = NULL) {
++    // Also query without any default route parameters as they may not be
++    // present in the computed route_param_key.
++    $route_parameters_without_defaults = $route_parameters;
++    try {
++      $route = $this->routeProvider->getRouteByName($route_name);
++      foreach (array_keys($route_parameters_without_defaults) as $param) {
++        if ($route->hasDefault($param)) {
++          unset($route_parameters_without_defaults[$param]);
++        }
++      }
++    }
++    catch (RouteNotFoundException $e) {
++      // No such route, we cannot remove defaults from the route parameters.
++    }
+     // Sort the route parameters so that the query string will be the same.
+     asort($route_parameters);
++    asort($route_parameters_without_defaults);
+     // Since this will be urlencoded, it's safe to store and match against a
+     // text field.
+     // @todo Standardize an efficient way to load by route name and parameters
+     //   in place of system path. https://www.drupal.org/node/2302139
+     $param_key = $route_parameters ? UrlHelper::buildQuery($route_parameters) : '';
++    $param_key_without_defaults = $route_parameters_without_defaults ? UrlHelper::buildQuery($route_parameters_without_defaults) : '';
+     $query = $this->connection->select($this->table, NULL, $this->options);
+     $query->fields($this->table, $this->definitionFields());
+-    $query->condition('route_name', $route_name);
+-    $query->condition('route_param_key', $param_key);
++    $query->condition('route_name', $route_name)
++      ->condition('route_param_key', [$param_key, $param_key_without_defaults], 'IN');
+     if ($menu_name) {
+       $query->condition('menu_name', $menu_name);
+     }
+@@ -673,6 +708,7 @@ public function loadByRoute($route_name, array $route_parameters = [], $menu_nam
+     $query->orderBy('depth');
+     $query->orderBy('weight');
+     $query->orderBy('id');
++    $query->orderBy('route_param_key');
+     $loaded = $this->safeExecuteSelect($query)->fetchAllAssoc('id', \PDO::FETCH_ASSOC);
+     foreach ($loaded as $id => $link) {
+       $loaded[$id] = $this->prepareLink($link);
+diff --git a/core/modules/system/tests/src/Functional/Menu/BreadcrumbTest.php b/core/modules/system/tests/src/Functional/Menu/BreadcrumbTest.php
+index 8ef03d6a093a1862ca57180fc25e62eaa3ab393b..42815ae56dcabe9ae0f7f23799dc8ca36c15f166 100644
+--- a/core/modules/system/tests/src/Functional/Menu/BreadcrumbTest.php
++++ b/core/modules/system/tests/src/Functional/Menu/BreadcrumbTest.php
+@@ -7,6 +7,8 @@
+ use Drupal\node\Entity\NodeType;
+ use Drupal\Tests\BrowserTestBase;
+ use Drupal\user\RoleInterface;
++use Drupal\views\Entity\View;
++use Drupal\views\Tests\ViewTestData;
+ use PHPUnit\Framework\ExpectationFailedException;
+
+ /**
+@@ -18,6 +20,13 @@ class BreadcrumbTest extends BrowserTestBase {
+
+   use AssertBreadcrumbTrait;
+
++  /**
++   * Views used by this test.
++   *
++   * @var array
++   */
++  public static $testViews = ['test_menu_link'];
++
+   /**
+    * Modules to enable.
+    *
+@@ -56,6 +65,19 @@ class BreadcrumbTest extends BrowserTestBase {
+    */
+   protected function setUp(): void {
+     parent::setUp();
++    // Define the schema and views data variable before enabling the test
++    // module.
++    \Drupal::state()->set('views_test_data_schema', ViewTestData::schemaDefinition());
++    \Drupal::state()->set('views_test_data_views_data', ViewTestData::viewsData());
++
++    \Drupal::service('module_installer')->install([
++      'views_test_config',
++      'views_test_data',
++    ]);
++    $this->resetAll();
++    $this->rebuildContainer();
++    $this->container->get('module_handler')->reload();
++    ViewTestData::createTestViews(static::class, ['views_test_config']);
+
+     // Install 'claro' and configure it as administrative theme.
+     $this->container->get('theme_installer')->install(['claro']);
+@@ -226,6 +248,21 @@ public function testBreadCrumbs() {
+     $menu_links = \Drupal::entityTypeManager()->getStorage('menu_link_content')->loadByProperties(['title' => 'Root']);
+     $link = reset($menu_links);
+
++    // Add a views powered menu link under the root entry.
++    $view = View::load('test_menu_link');
++    $display = &$view->getDisplay('page_1');
++    $display['display_options']['menu'] = [
++      'type' => 'normal',
++      'title' => 'Sub views menu',
++      'menu_name' => $menu,
++      'parent' => $link->getPluginId(),
++    ];
++    $view->save();
++    \Drupal::service('plugin.manager.menu.link')->rebuild();
++
++    $this->drupalGet("admin/structure/menu/manage/{$menu}/add");
++    $this->submitForm($edit, 'Save');
++
+     $edit = [
+       'menu[menu_parent]' => $link->getMenuName() . ':' . $link->getPluginId(),
+     ];
+@@ -312,6 +349,13 @@ public function testBreadCrumbs() {
+       ];
+     }
+
++    $this->drupalGet('/node');
++    $this->assertBreadcrumb('/node', [], 'Home', ['node' => 'Root'], TRUE, 'menu__item--active-trail');
++    $this->assertBreadcrumb('/test-menu-link', ['' => 'Home'], NULL, [
++      'node' => 'Root',
++      'test-menu-link' => 'Sub views menu',
++    ], TRUE, 'menu__item--active-trail');
++
+     // Verify breadcrumbs on user and user/%.
+     // We need to log back in and out below, and cannot simply grant the
+     // 'administer users' permission, since user_page() makes your head explode.
+diff --git a/core/modules/workspaces/src/WorkspacesMenuTreeStorage.php b/core/modules/workspaces/src/WorkspacesMenuTreeStorage.php
+index 98936855598042e0378e8ff50b77c843faf547ff..6296795b2c6aa5110feeb30abf102ce4752baaad 100644
+--- a/core/modules/workspaces/src/WorkspacesMenuTreeStorage.php
++++ b/core/modules/workspaces/src/WorkspacesMenuTreeStorage.php
+@@ -8,6 +8,7 @@
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Menu\MenuTreeParameters;
+ use Drupal\Core\Menu\MenuTreeStorage as CoreMenuTreeStorage;
++use Drupal\Core\Routing\RouteProviderInterface;
+
+ /**
+  * Overrides the default menu storage to provide workspace-specific menu links.
+@@ -33,6 +34,8 @@ class WorkspacesMenuTreeStorage extends CoreMenuTreeStorage {
+    *   The cache tags invalidator.
+    * @param string $table
+    *   A database table name to store configuration data in.
++   * @param \Drupal\Core\Routing\RouteProviderInterface $route_provider
++   *   Route provider.
+    * @param array $options
+    *   (optional) Any additional database connection options to use in queries.
+    */
+@@ -44,9 +47,10 @@ public function __construct(
+     CacheBackendInterface $menu_cache_backend,
+     CacheTagsInvalidatorInterface $cache_tags_invalidator,
+     string $table,
++    RouteProviderInterface $route_provider,
+     array $options = []
+   ) {
+-    parent::__construct($connection, $menu_cache_backend, $cache_tags_invalidator, $table, $options);
++    parent::__construct($connection, $menu_cache_backend, $cache_tags_invalidator, $table, $route_provider, $options);
+   }
+
+   /**
+diff --git a/core/modules/workspaces/workspaces.services.yml b/core/modules/workspaces/workspaces.services.yml
+index 2ff3057a24789fba7d944c6ae94e4305b52a7c2c..678cc4462402f8314813299400bd856aa98f9a66 100644
+--- a/core/modules/workspaces/workspaces.services.yml
++++ b/core/modules/workspaces/workspaces.services.yml
+@@ -76,7 +76,7 @@ services:
+   workspaces.menu.tree_storage:
+     decorates: menu.tree_storage
+     class: Drupal\workspaces\WorkspacesMenuTreeStorage
+-    arguments: ['@workspaces.manager', '@workspaces.association', '@entity_type.manager', '@database', '@cache.menu', '@cache_tags.invalidator', 'menu_tree']
++    arguments: ['@workspaces.manager', '@workspaces.association', '@entity_type.manager', '@database', '@cache.menu', '@cache_tags.invalidator', 'menu_tree', '@router.route_provider']
+     public: false
+     decoration_priority: 50
+     tags:
+diff --git a/core/tests/Drupal/KernelTests/Core/Menu/MenuTreeStorageTest.php b/core/tests/Drupal/KernelTests/Core/Menu/MenuTreeStorageTest.php
+index b06eacfe638f3cc2b45682e404d758cdb6336826..c648f7c75a5ef63664e9b76b1431258ff33dedac 100644
+--- a/core/tests/Drupal/KernelTests/Core/Menu/MenuTreeStorageTest.php
++++ b/core/tests/Drupal/KernelTests/Core/Menu/MenuTreeStorageTest.php
+@@ -5,6 +5,7 @@
+ use Drupal\Component\Plugin\Exception\PluginException;
+ use Drupal\Core\Menu\MenuTreeParameters;
+ use Drupal\Core\Menu\MenuTreeStorage;
++use Drupal\Core\Routing\RouteProviderInterface;
+ use Drupal\KernelTests\KernelTestBase;
+
+ /**
+@@ -36,7 +37,7 @@ class MenuTreeStorageTest extends KernelTestBase {
+   protected function setUp(): void {
+     parent::setUp();
+
+-    $this->treeStorage = new MenuTreeStorage($this->container->get('database'), $this->container->get('cache.menu'), $this->container->get('cache_tags.invalidator'), 'menu_tree');
++    $this->treeStorage = new MenuTreeStorage($this->container->get('database'), $this->container->get('cache.menu'), $this->container->get('cache_tags.invalidator'), 'menu_tree', $this->container->get('router.route_provider'));
+     $this->connection = $this->container->get('database');
+   }
+
+@@ -61,7 +62,7 @@ protected function doTestEmptyStorage() {
+   protected function doTestTable() {
+     // Test that we can create a tree storage with an arbitrary table name and
+     // that selecting from the storage creates the table.
+-    $tree_storage = new MenuTreeStorage($this->container->get('database'), $this->container->get('cache.menu'), $this->container->get('cache_tags.invalidator'), 'test_menu_tree');
++    $tree_storage = new MenuTreeStorage($this->container->get('database'), $this->container->get('cache.menu'), $this->container->get('cache_tags.invalidator'), 'test_menu_tree', $this->container->get('router.route_provider'));
+     $this->assertFalse($this->connection->schema()->tableExists('test_menu_tree'), 'Test table is not yet created');
+     $tree_storage->countMenuLinks();
+     $this->assertTrue($this->connection->schema()->tableExists('test_menu_tree'), 'Test table was created');
+@@ -455,4 +456,38 @@ protected function assertMenuLink(string $id, array $expected_properties, array
+     $this->assertEqualsCanonicalizing($children, array_keys($this->treeStorage->loadAllChildren($id)));
+   }
+
++  /**
++   * Tests backwards compatibility layer.
++   *
++   * @group legacy
++   * @dataProvider providerBackwardsCompatibilityLayer
++   */
++  public function testBackwardsCompatibilityLayer(bool $pass_options = FALSE): void {
++    $this->expectDeprecation('Calling Drupal\Core\Menu\MenuTreeStorage::__construct() without the $route_provider argument is deprecated in drupal:9.5.10 and will be required in drupal:11.0.0. See https://www.drupal.org/node/3364323');
++    $options = ['some' => 'options'];
++    $storage = new MenuTreeStorage($this->container->get('database'), $this->container->get('cache.menu'), $this->container->get('cache_tags.invalidator'), 'menu_tree', $pass_options ? $options : NULL);
++    $reflection = new \ReflectionProperty(MenuTreeStorage::class, 'routeProvider');
++    $reflection->setAccessible(TRUE);
++    $this->assertInstanceOf(RouteProviderInterface::class, $reflection->getValue($storage));
++    if (!$pass_options) {
++      return;
++    }
++    $reflection = new \ReflectionProperty(MenuTreeStorage::class, 'options');
++    $reflection->setAccessible(TRUE);
++    $this->assertEquals($options, $reflection->getValue($storage));
++  }
++
++  /**
++   * Data provider for ::testBackwardsCompatibilityLayer.
++   *
++   * @return array
++   *   Test cases.
++   */
++  public function providerBackwardsCompatibilityLayer(): array {
++    return [
++      'Without options' => [],
++      'With options' => [TRUE],
++    ];
++  }
++
+ }
