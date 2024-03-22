@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-454: Updated Drupal Core to 10.2.4.
 
 ### Deprecated
 
