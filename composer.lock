@@ -16023,7 +16023,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "c3889e550239da69145dc79d8739c36ed32d55fc"
+                "reference": "f6458605c24ecfb6387cd48b441b4ade84e961c4"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16174,6 +16174,9 @@
                     },
                     "drupal/search_api": {
                         "3321499 - #19 - Call to a member function preExecute() on null in SearchApiTimeCache::generateResultsKey()": "https://www.drupal.org/files/issues/2023-12-05/search_api-Call_to_a_member_function_preExecute%28%29_on_null-3321499.patch"
+                    },
+                    "drupal/path_redirect_import": {
+                        "3395257 - #3 - Change CSV file upload location to private.": "https://www.drupal.org/files/issues/2023-10-19/3395257-change-csv-file-3_0.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -16204,7 +16207,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-03-25T16:42:38+00:00"
+            "time": "2024-03-26T13:30:25+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
