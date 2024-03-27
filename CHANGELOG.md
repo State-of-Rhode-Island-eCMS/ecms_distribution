@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-454: Updated Drupal Core to 10.2.4.
+- RIGA-460: Updated ecms_profile to 1.0.1
 
 ### Deprecated
 
