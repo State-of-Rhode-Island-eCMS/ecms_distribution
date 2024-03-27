@@ -12,8 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-454: Updated Drupal Core to 10.2.4.
-- RIGA-460: Updated ecms_profile to 1.0.1
 
 ### Deprecated
 
@@ -22,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [2.0.1] - 2024-03-27
+### Changed
+- RIGA-454: Updated Drupal Core to 10.2.4.
+- RIGA-460: Updated ecms_profile to 1.0.1
 
 ## [2.0.0] - 2024-03-13
 ### Security
@@ -1008,7 +1011,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.1...HEAD
+[2.0.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.1...2.0.0
 [1.11.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.0...1.11.1
 [1.11.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.10...1.11.0
