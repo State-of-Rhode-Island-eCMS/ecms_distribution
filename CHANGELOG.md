@@ -22,6 +22,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-466: Office Hours 1.12 > 1.17
 - RIGA-466: Open ID Connect 3.0.0-alpha2 > 3.0.0-alpha3
 - RIGA-466: Paragraphs 1.15 > 1.17
+- RIGA-466: Profile 1.9 > 1.10
 - RIGA-466: Quick Node Clone 1.17 > 1.18
 - RIGA-466: Scheduled Transitions 2.4.0 > 2.4.1
 - RIGA-466: Search API 1.31 > 1.34
