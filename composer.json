@@ -89,7 +89,7 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "dev-RIGA-462/update-health-migration",
+        "rhodeislandecms/ecms_profile": "dev-master",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.4",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
