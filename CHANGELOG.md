@@ -12,6 +12,23 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-466: Drupal Core 10.2.4 > 10.2.5
+- RIGA-466: Acquia Connector 4.0.5 > 4.0.6
+- RIGA-466: Acquia Search 3.1.10 > 3.1.11
+- RIGA-466: External Authentication 2.0.3 > 2.0.5
+- RIGA-466: Focal Point 2.0.2 > 2.0.3
+- RIGA-466: Google Tag 2.0.2 > 2.0.4
+- RIGA-466: Migrate Tools 6.0.3 > 6.0.4
+- RIGA-466: Office Hours 1.12 > 1.17
+- RIGA-466: Open ID Connect 3.0.0-alpha2 > 3.0.0-alpha3
+- RIGA-466: Paragraphs 1.15 > 1.17
+- RIGA-466: Quick Node Clone 1.17 > 1.18
+- RIGA-466: Scheduled Transitions 2.4.0 > 2.4.1
+- RIGA-466: Search API 1.31 > 1.34
+- RIGA-466: Search API Solr 4.3.2 > 4.3.3
+- RIGA-466: Simple XML Sitemap 4.1.8 > 4.1.9
+- RIGA-466: Token 1.13 > 1.14
+- RIGA-466: Twig Tweak 3.2.1 > 3.3.0
 
 ### Deprecated
 
@@ -20,6 +37,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-466: Google Translator 2.1.0 > 2.2.0
+- RIGA-466: Simple Menu Permissions 2.0.0 > 2.1.0
 
 ## [2.0.1] - 2024-03-27
 ### Changed
