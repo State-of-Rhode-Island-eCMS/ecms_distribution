@@ -8804,7 +8804,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.17",
-                    "datestamp": "1705234146",
+                    "datestamp": "1709804220",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
