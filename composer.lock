@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3804e9c1b577be79df3cd023ac4336c7",
+    "content-hash": "6a67f0f491af33349bcf99317e20b02a",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16025,11 +16025,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "184e3b4888b9a3ec286ffe5062a39c721aba9195"
+                "reference": "75f4fbf97241f114110adb773811fdbd74d242f4"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16161,7 +16161,8 @@
                         "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch",
                         "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2024-01-09/drupal-core--2024-01-09--3049332-85.patch",
                         "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
-                        "3308838 - EntityRepository::getTranslationFromContext() function forcibly adds default entity language to fallback candidates": "https://www.drupal.org/files/issues/2024-02-22/drupal-3308838-fix-fallback-to-default-lang-42.patch"
+                        "3308838 - EntityRepository::getTranslationFromContext() function forcibly adds default entity language to fallback candidates": "https://www.drupal.org/files/issues/2024-02-22/drupal-3308838-fix-fallback-to-default-lang-42.patch",
+                        "3413508 - 55 - Admin page access denied even when access is given to child items": "https://gist.githubusercontent.com/pfrilling/564587c071e5fe5cbbba5a8f94a7c654/raw/ac50b2bec1e85c17bf3c0e9972283aaf19cc9272/gistfile1.txt"
                     },
                     "drupal/paragraphs": {
                         "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
@@ -16212,7 +16213,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-03-27T15:45:30+00:00"
+            "time": "2024-04-24T18:51:57+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -24606,5 +24607,5 @@
         "php": ">=8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.2.0"
 }
