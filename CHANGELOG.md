@@ -1037,7 +1037,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.2...HEAD
+[2.0.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.1...2.0.0
 [1.11.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.0...1.11.1
