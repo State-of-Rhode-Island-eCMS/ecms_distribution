@@ -12,6 +12,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.2] - 2024-04-24
+### Changed
+- Updated ecms_profile to 1.0.2.
 - RIGA-466: Drupal Core 10.2.4 > 10.2.5
 - RIGA-466: Acquia Connector 4.0.5 > 4.0.6
 - RIGA-466: Acquia Search 3.1.10 > 3.1.11
@@ -30,12 +42,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-466: Simple XML Sitemap 4.1.8 > 4.1.9
 - RIGA-466: Token 1.13 > 1.14
 - RIGA-466: Twig Tweak 3.2.1 > 3.3.0
-
-### Deprecated
-
-### Removed
-
-### Fixed
 
 ### Security
 - RIGA-466: Google Translator 2.1.0 > 2.2.0
