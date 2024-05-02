@@ -29,7 +29,7 @@ docroot="/var/www/html/$site.$target_env/docroot"
 # 1. Hardcode the drush version.
 # 2. When running drush, provide the docroot + url, rather than relying on
 #    aliases. This can prevent some hard to trace problems.
-DRUSH_CMD="drush8 --root=$docroot --uri=https://$uri"
+DRUSH_CMD="drush10 --root=$docroot --uri=https://$uri"
 
 # Retrieve the site name.
 $DRUSH_CMD cget system.site name

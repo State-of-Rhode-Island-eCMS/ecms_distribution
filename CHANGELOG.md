@@ -25,6 +25,158 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [2.0.2] - 2024-04-24
+### Changed
+- Updated ecms_profile to 1.0.2.
+- RIGA-466: Drupal Core 10.2.4 > 10.2.5
+- RIGA-466: Acquia Connector 4.0.5 > 4.0.6
+- RIGA-466: Acquia Search 3.1.10 > 3.1.11
+- RIGA-466: External Authentication 2.0.3 > 2.0.5
+- RIGA-466: Focal Point 2.0.2 > 2.0.3
+- RIGA-466: Google Tag 2.0.2 > 2.0.4
+- RIGA-466: Migrate Tools 6.0.3 > 6.0.4
+- RIGA-466: Office Hours 1.12 > 1.17
+- RIGA-466: Open ID Connect 3.0.0-alpha2 > 3.0.0-alpha3
+- RIGA-466: Paragraphs 1.15 > 1.17
+- RIGA-466: Profile 1.9 > 1.10
+- RIGA-466: Quick Node Clone 1.17 > 1.18
+- RIGA-466: Scheduled Transitions 2.4.0 > 2.4.1
+- RIGA-466: Search API 1.31 > 1.34
+- RIGA-466: Search API Solr 4.3.2 > 4.3.3
+- RIGA-466: Simple XML Sitemap 4.1.8 > 4.1.9
+- RIGA-466: Token 1.13 > 1.14
+- RIGA-466: Twig Tweak 3.2.1 > 3.3.0
+
+### Security
+- RIGA-466: Google Translator 2.1.0 > 2.2.0
+- RIGA-466: Simple Menu Permissions 2.0.0 > 2.1.0
+
+## [2.0.1] - 2024-03-27
+### Changed
+- RIGA-454: Updated Drupal Core to 10.2.4.
+- RIGA-460: Updated ecms_profile to 1.0.1
+
+## [2.0.0] - 2024-03-13
+### Security
+- RIGA-446: Upgraded to Drupal ^10.2
+- RIGA-446: Upgraded the ecms_profile to 1.0.0
+
+## [1.11.1] - 2024-02-08
+### Security
+RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupal.org/sa-contrib-2024-008).
+
+## [1.11.0] - 2024-01-25
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.11.0.
+- RIGA-6: Added DDEV local dev support.
+
+## [1.10.10] - 2023-11-30
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.9.
+- RIGA-433: Upgrade drupal/content_moderation_notifications 3.5.0 => 3.6.0.
+- RIGA-434: Turn off advagg module by default.
+
+### Security
+- RIGA-433: Content Moderation Notifications - Moderately critical - Information disclosure - SA-CONTRIB-2023-047.
+
+## [1.10.9] - 2023-11-02
+### Added
+- RIGA-401: Add google_translator patch 3387636 to resolve HTML render error.
+
+## [1.10.8] - 2023-10-19
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.7.
+
+## [1.10.7] - 2023-10-19
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.6.
+
+## [1.10.6] - 2023-10-19
+### Added
+- RIGA-322: Install drupal/upgrade_status 4.0.0.
+- RIGA-401: Install drupal/crop 2.3.0.
+- RIGA-401: Install drupal/entity_usage 2.0.0-beta12.
+- RIGA-401: Install drupal/focal_point 2.0.2.
+- RIGA-401: Install drupal/iek 1.3.0.
+- RIGA-415: Install drupal/advagg 6.0.0-alpha1.
+- RIGA-415: Install drupal/conditional_fields 4.0.0-alpha5.
+- RIGA-415: Install drupal/field_group 3.4.0.
+- RIGA-415: Install drupal/quick_node_clone 1.16.0.
+- RIGA-322: Add drupal/ckeditor_entity_link patch issue 3296754 comment 3.
+- RIGA-322: Add drupal/easy_breadcrumb patch issue 3284123 comment 13.
+- RIGA-322: Add drupal/migrate_process_trim patch issue 3288638 comment 2.
+
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.5.
+- RIGA-6: Update state-of-rhode-island-ecms/ecms_patternlab => 0.7.4.
+- RIGA-322: Upgrade drupal/better_exposed_filters 5.0.0 => 6.0.2.
+- RIGA-322: Upgrade drupal/captcha 1.10.0 => 2.0.5.
+- RIGA-322: Upgrade drupal/components 2.4.0 => 3.0.0-beta3.
+- RIGA-322: Upgrade drupal/config_update 1.7.0 => 2.0.0-alpha3.
+- RIGA-322: Upgrade drupal/content_moderation_notifications dev-3.x => 3.5.0.
+- RIGA-322: Upgrade drupal/ctools 3.11.0 => 3.14.0.
+- RIGA-322: Upgrade drupal/devel 4.0.1 => 5.1.2.
+- RIGA-322: Upgrade drupal/features 3.12.0 => 3.13.0.
+- RIGA-322: Upgrade drupal/feeds 3.0.0-beta2 => 3.0.0-beta4.
+- RIGA-322: Upgrade drupal/google_tag 1.4.0 => 2.0.2.
+- RIGA-322: Upgrade drupal/google_translator 1.0.0 => 2.1.0.
+- RIGA-322: Upgrade drupal/http_cache_control 2.0.0 => 2.1.0.
+- RIGA-322: Upgrade drupal/jquery_ui_datepicker 1.4.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/jquery_ui_draggable 1.2.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/jquery_ui_droppable 1.2.0 => 1.5.0.
+- RIGA-322: Upgrade drupal/jquery_ui_slider 1.1.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/language_cookie dev-1.x => 2.0.1.
+- RIGA-322: Upgrade drupal/language_neutral_aliases 3.0.0 => 3.1.0.
+- RIGA-322: Upgrade drupal/layout_builder_modal 1.1.0 => 1.2.0.
+- RIGA-322: Upgrade drupal/media_library_theme_reset 1.1.0 => 1.5.0.
+- RIGA-322: Upgrade drupal/menu_block dev-1.x => 1.10.0.
+- RIGA-322: Upgrade drupal/menu_force 1.2.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/migrate_plus 5.3.0 => 6.0.1.
+- RIGA-322: Upgrade drupal/migrate_tools 5.1.0 => 6.0.2.
+- RIGA-322: Upgrade drupal/page_manager 4.0.0-beta6 => 4.0.0-rc2.
+- RIGA-322: Upgrade drupal/panels 4.6.0 => 4.7.0.
+- RIGA-322: Upgrade drupal/paragraphs 1.15.0 => 1.16.0.
+- RIGA-322: Upgrade drupal/publishcontent 1.5.0 => 1.6.0.
+- RIGA-322: Upgrade drupal/rabbit_hole 1.0.0-beta10 => 1.0.0-beta11.
+- RIGA-322: Upgrade drupal/search_api_exclude 2.0.0 => 2.0.2.
+- RIGA-322: Upgrade drupal/simple_menu_permissions 1.4.0 => 2.0.0.
+- RIGA-322: Upgrade drupal/svg_image 1.16.0 => 3.0.1.
+- RIGA-322: Upgrade drupal/twig_tweak 2.10.0 => 3.2.1.
+- RIGA-322: Upgrade drupal/twig_vardumper 3.0.2 => 3.1.0.
+- RIGA-322: Upgrade drupal/webform 6.1.4 => 6.2.0-beta6.
+- RIGA-322: Upgrade drupal/webform_encrypt dev-1.x => 2.0.0-alpha1.
+- RIGA-322: Upgrade drupal/views_database_connector 1.4.0 => 2.0.1.
+
+### Removed
+- RIGA-322: Remove module drupal/views_ajax_get.
+
+## [1.10.5] - 2023-09-28
+### Changed
+- RIGA-414: Update php 8.0 => 8.1 in lando and composer.
+- RIGA-414: Upgrade drush/drush 10.3.6 => 10.6.2.
+- RIGA-414: Upgrade drush8 => drush10 in Acquia hooks.
+- RIGA-414: Update lando version 3.4.0 => 3.18.0 in oomph actions.
+
+## [1.10.4] - 2023-09-21
+### Changed
+- RIGA-420: Upgrade drupal/core (and dependencies) 9.5.9 => 9.5.11.
+
+### Security
+- RIGA-420: Drupal core - Critical - Cache poisoning - SA-CORE-2023-006.
+
+## [1.10.3] - 2023-08-31
+### Changed
+- RIGA-409: Update drupal/acquia_search 3.1.7 => 3.1.10.
+- RIGA-409: Update drupal/acquia_connector 4.0.1 => 4.0.5.
+- RIGA-409: Update drupal/acsf 2.73.0 => 2.75.0.
+
+## [1.10.2] - 2023-08-10
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 0.10.2.
+- RIGA-406: Update drupal/admin_toolbar 3.4.0 => 3.4.1.
+- RIGA-406: Update drupal/easy_breadcrumb ^2.0 => 2.0.5.
+- RIGA-406: Update drupal/metatag ^1.14 => ^1.26.
+- RIGA-406: Update drupal/token ^1.7 => ^1.12.
+
 ## [1.10.1] - 2023-07-27
 ### Added
 - RIGA-377: Add drupal/paragraphs patch issue 3095959 comment 5.
@@ -889,7 +1041,21 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.2...HEAD
+[2.0.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.1...2.0.2
+[2.0.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.0...2.0.1
+[2.0.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.1...2.0.0
+[1.11.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.0...1.11.1
+[1.11.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.10...1.11.0
+[1.10.10]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.9...1.10.10
+[1.10.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.8...1.10.9
+[1.10.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.7...1.10.8
+[1.10.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.6...1.10.7
+[1.10.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.5...1.10.6
+[1.10.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.4...1.10.5
+[1.10.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.3...1.10.4
+[1.10.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.2...1.10.3
+[1.10.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.1...1.10.2
 [1.10.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.10.0...1.10.1
 [1.10.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.9...1.10.0
 [1.9.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.9.8...1.9.9

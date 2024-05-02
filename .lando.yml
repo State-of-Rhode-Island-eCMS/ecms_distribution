@@ -1,11 +1,13 @@
 name: ecms-distribution
-recipe: drupal9
+recipe: drupal10
 
 config:
-  php: "8.0"
+  php: "8.1"
   webroot: docroot
-  xdebug: false
   database: mariadb:10.3
+  config:
+    php: '.lando/php.ini'
+  xdebug: false
 
 events:
   # Clear cache after a database import
@@ -52,11 +54,15 @@ tooling:
   # Xdebug toggle switches.
   xdebug-on:
     service: appserver
-    description: Enable xdebug for apache.
-    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    description: Enable Xdebug.
     user: root
+    cmd:
+      - docker-php-ext-enable xdebug && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 2 && echo "Xdebug On" && tput sgr 0 && echo
   xdebug-off:
     service: appserver
-    description: Disable xdebug for apache.
-    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    description: Disable Xdebug.
     user: root
+    cmd:
+      - rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && kill -USR2 $(pgrep -o php-fpm) > /dev/null || /etc/init.d/apache2 reload
+      - tput setaf 1 && echo "Xdebug Off" && tput sgr 0 && echo

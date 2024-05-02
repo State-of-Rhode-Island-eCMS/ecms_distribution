@@ -28,7 +28,7 @@ docroot="/var/www/html/$site.$env/docroot"
 # 1. Hardcode the drush version.
 # 2. When running drush, provide the application + url, rather than relying
 #    on aliases. This can prevent some hard to trace problems.
-DRUSH_CMD="drush10 --verbose --root=$docroot --uri=https://$domain"
+DRUSH_CMD="/var/www/html/$site.$env/vendor/bin/drush --verbose --root=$docroot --uri=https://$domain"
 
 # Run drush commands to reset the solr config.
 $DRUSH_CMD sdel search_api_solr.site_hash --yes  >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-duplication-solr-config${domain}-$(date +"%Y-%m-%d").log
