@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-408: Add hooks to set DB isolation level REPEATABLE READ => READ COMMITTED.
 - RIGA-408: Add drupal/core patch issue 1650930 comment 248.
 - RIGA-408: Add drupal/honeypot patch issue 2943526 comment 64.
+- RIGA-475: Add Media Pdf Thumbnail module.
 
 ### Changed
 
