@@ -7220,26 +7220,26 @@
         },
         {
             "name": "drupal/layout_builder_tabs",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/layout_builder_tabs.git",
-                "reference": "1.0.0"
+                "reference": "1.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_tabs-1.0.0.zip",
-                "reference": "1.0.0",
-                "shasum": "65a575f31035b07616943bc70dd3d97fb0058950"
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_tabs-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "a8ef9cd3e30b8d783098550d16694ca382d45e1e"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0",
-                    "datestamp": "1659608469",
+                    "version": "1.0.1",
+                    "datestamp": "1713024091",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
