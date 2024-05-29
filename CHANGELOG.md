@@ -10,6 +10,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.3] - 2024-05-29
+### Added
 - RIGA-408: Add hooks to set DB isolation level REPEATABLE READ => READ COMMITTED.
 - RIGA-408: Add drupal/core patch issue 1650930 comment 248.
 - RIGA-408: Add drupal/honeypot patch issue 2943526 comment 64.
@@ -17,14 +30,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-490: Update Layout Builder Tabs 1.0.0 > 1.0.1
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 - RIGA-408: Fix "Database Isolation Level" warning.
-
-### Security
 
 ## [2.0.2] - 2024-04-24
 ### Changed
@@ -1042,7 +1049,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.3...HEAD
+[2.0.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/1.11.1...2.0.0
