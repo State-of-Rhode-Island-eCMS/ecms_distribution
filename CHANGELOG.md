@@ -15,6 +15,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-408: Add drupal/honeypot patch issue 2943526 comment 64.
 
 ### Changed
+- RIGA-490: Update Layout Builder Tabs 1.0.0 > 1.0.1
 
 ### Deprecated
 
