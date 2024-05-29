@@ -89,7 +89,7 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "1.0.2",
+        "rhodeislandecms/ecms_profile": "1.0.3",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.4",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
@@ -165,7 +165,8 @@
             "drupal/core": {
                 "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2023-12-01/2259567-179.patch",
                 "3301239 - PoStreamReader::readLine() throws an error on module install": "https://www.drupal.org/files/issues/2023-01-17/drupal_core-PoStreamReader_readLine_throws_an_error_on_module_install-3301239-7.patch",
-                "3359511 - [regression] missing menu active trail in Drupal 9.5.9": "patches/3359511-missing-menu.patch"
+                "3359511 - [regression] missing menu active trail in Drupal 9.5.9": "https://www.drupal.org/files/issues/2023-05-10/3359511-revert-3277784-2.patch",
+                "1650930 - Use READ COMMITTED by default for MySQL transactions": "https://www.drupal.org/files/issues/2023-04-25/1650930-248.patch"
             },
             "drupal/media_revisions_ui": {
                 "3247661 - Add filename to output": "patches/3247661-media-revisions-filename.patch"
@@ -186,6 +187,9 @@
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
+            },
+            "drupal/honeypot": {
+                "2943526 - Missing primary key in table `honeypot_user`": "https://www.drupal.org/files/issues/2023-07-10/honeypot-add_primary_key-2943526-64.patch"
             },
             "drupal/migrate_process_trim": {
                 "3288638 - Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2022-06-16/migrate_process_trim.2.0.x-dev.rector.patch"

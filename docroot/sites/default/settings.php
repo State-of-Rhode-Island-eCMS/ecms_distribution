@@ -62,6 +62,9 @@ if (getenv('LANDO_INFO')) {
     'port' => $lando_info['database']['internal_connection']['port'],
     'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
     'driver' => 'mysql',
+    'init_commands' => [
+      'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+    ],
   ];
 
   // Check for PHP Memcached libraries.
