@@ -7,15 +7,6 @@ const stylelint = require('gulp-stylelint');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
-// Directories to search ES6 JavaScript files to compile. Files will be compiled
-// to a .js file extension.
-const javascriptFilePaths = [
-  "docroot/modules/custom/**/*.es6.js",
-  "docroot/themes/custom/**/*.es6.js",
-  "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.es6.js",
-  "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.es6.js",
-];
-
 // Directories to search SCSS files to compile. By default, node-sass does not
 // compile files that begin with _.
 const scssFilePaths = [
@@ -23,6 +14,17 @@ const scssFilePaths = [
   "docroot/themes/custom/**/*.scss",
   "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.scss",
   "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.scss",
+  "!docroot/profiles/contrib/ecms_profile/*/themes/custom/**/ecms_patternlab/**/*",
+];
+
+// Directories to search ES6 JavaScript files to compile. Files will be compiled
+// to a .js file extension.
+const javascriptFilePaths = [
+  "docroot/modules/custom/**/*.es6.js",
+  "docroot/themes/custom/**/*.es6.js",
+  "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.es6.js",
+  "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.es6.js",
+  "!docroot/profiles/contrib/ecms_profile/*/themes/custom/**/ecms_patternlab/**/*",
 ];
 
 // Build tasks.
