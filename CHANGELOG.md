@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-478: Updated google_tag to ^2.0.5.
+- RIGA-506: Updated drupal/core to 10.2.7.
 
 ### Deprecated
 
