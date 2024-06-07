@@ -166,8 +166,7 @@
             "drupal/core": {
                 "2259567 - Unnecessary restrictions on logo format: Can't upload replacement SVG logo": "https://www.drupal.org/files/issues/2023-12-01/2259567-179.patch",
                 "3301239 - PoStreamReader::readLine() throws an error on module install": "https://www.drupal.org/files/issues/2023-01-17/drupal_core-PoStreamReader_readLine_throws_an_error_on_module_install-3301239-7.patch",
-                "3359511 - [regression] missing menu active trail in Drupal 9.5.9": "https://www.drupal.org/files/issues/2023-05-10/3359511-revert-3277784-2.patch",
-                "1650930 - Use READ COMMITTED by default for MySQL transactions": "https://www.drupal.org/files/issues/2023-04-25/1650930-248.patch"
+                "3359511 - [regression] missing menu active trail in Drupal 9.5.9": "https://www.drupal.org/files/issues/2023-05-10/3359511-revert-3277784-2.patch"
             },
             "drupal/media_revisions_ui": {
                 "3247661 - Add filename to output": "patches/3247661-media-revisions-filename.patch"
