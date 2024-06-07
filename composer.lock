@@ -4856,20 +4856,20 @@
         },
         {
             "name": "drupal/entity_print",
-            "version": "2.13.0",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_print.git",
-                "reference": "8.x-2.13"
+                "reference": "8.x-2.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_print-8.x-2.13.zip",
-                "reference": "8.x-2.13",
-                "shasum": "7ed305a9bfaf76adefe780bb8da382fd5bc8e475"
+                "url": "https://ftp.drupal.org/files/projects/entity_print-8.x-2.14.zip",
+                "reference": "8.x-2.14",
+                "shasum": "5ecc2c11ed839dd870ab5127e5e83cc4c3783801"
             },
             "require": {
-                "dompdf/dompdf": "^2.0.0",
+                "dompdf/dompdf": ">=2.0.7",
                 "drupal/core": "^9.4 || ^10.0"
             },
             "suggest": {
@@ -4878,8 +4878,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.13",
-                    "datestamp": "1688453967",
+                    "version": "8.x-2.14",
+                    "datestamp": "1713939908",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
