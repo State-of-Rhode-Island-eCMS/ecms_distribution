@@ -81,6 +81,7 @@
         "drupal/core-vendor-hardening": "^10.2",
         "drupal/features": "^3.13",
         "drupal/feeds": "^3.0@beta",
+        "drupal/google_tag": "^2.0.5",
         "drupal/menu_force": "^2.0",
         "drupal/migrate_devel": "^2.3",
         "drupal/office_hours": "^1.11",
