@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-478: Updated google_tag to ^2.0.5.
 
 ### Deprecated
 
