@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef8f3a3b6b6d22367a72fa31cca9c582",
+    "content-hash": "2cc76a02f8d980c61685e4158671f1ac",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16675,7 +16675,7 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "dev-rc/0.7.5",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
