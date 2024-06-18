@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef8f3a3b6b6d22367a72fa31cca9c582",
+    "content-hash": "19b6ed3b80cc75b31963c3c3a52d133e",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -9924,6 +9924,67 @@
             }
         },
         {
+            "name": "drupal/seckit",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/seckit.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/seckit-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "2eee3b9719bdd5951c2b78f419c86f4765010439"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1671195208",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "badjava",
+                    "homepage": "https://www.drupal.org/user/83372"
+                },
+                {
+                    "name": "jweowu",
+                    "homepage": "https://www.drupal.org/user/152788"
+                },
+                {
+                    "name": "mcdruid",
+                    "homepage": "https://www.drupal.org/user/255969"
+                },
+                {
+                    "name": "p0deje",
+                    "homepage": "https://www.drupal.org/user/529960"
+                }
+            ],
+            "description": "SecKit provides Drupal with various security-hardening options.",
+            "homepage": "https://www.drupal.org/project/seckit",
+            "keywords": [
+                "Drupal",
+                "security"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/seckit",
+                "issues": "http://drupal.org/project/issues/seckit"
+            }
+        },
+        {
             "name": "drupal/simple_menu_permissions",
             "version": "2.1.0",
             "source": {
@@ -16096,11 +16157,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.0.3",
+            "version": "dev-rc/1.0.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "a57b7218ea60a607c1403a13f3170d2227608107"
+                "reference": "169a3d10bbd65fc01a80a26da7270dfe2062f161"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16190,6 +16251,7 @@
                 "drupal/search_api": "^1.18",
                 "drupal/search_api_exclude": "^2.0",
                 "drupal/search_api_solr": "^4.2",
+                "drupal/seckit": "^2.0",
                 "drupal/simple_menu_permissions": "^2.0",
                 "drupal/simple_oauth": "^5.2",
                 "drupal/simple_sitemap": "^4.1",
@@ -16234,7 +16296,8 @@
                         "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2024-01-09/drupal-core--2024-01-09--3049332-85.patch",
                         "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
                         "3308838 - EntityRepository::getTranslationFromContext() function forcibly adds default entity language to fallback candidates": "https://www.drupal.org/files/issues/2024-02-22/drupal-3308838-fix-fallback-to-default-lang-42.patch",
-                        "3413508 - 55 - Admin page access denied even when access is given to child items": "https://gist.githubusercontent.com/pfrilling/564587c071e5fe5cbbba5a8f94a7c654/raw/ac50b2bec1e85c17bf3c0e9972283aaf19cc9272/gistfile1.txt"
+                        "3413508 - 55 - Admin page access denied even when access is given to child items": "https://gist.githubusercontent.com/pfrilling/564587c071e5fe5cbbba5a8f94a7c654/raw/ac50b2bec1e85c17bf3c0e9972283aaf19cc9272/gistfile1.txt",
+                        "2741187 - 39 - Allow usage of WYSIWYG in views text area fields": "https://gist.githubusercontent.com/pfrilling/91262eb9ca72ec66704027344ebc0e56/raw/cba7ef0284684d1db59c193e5a06968a36b73a02/gistfile1.txt"
                     },
                     "drupal/paragraphs": {
                         "2901390 - Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
@@ -16282,7 +16345,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-05-29T22:16:29+00:00"
+            "time": "2024-06-17T18:07:41+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -24742,6 +24805,7 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20,
         "state-of-rhode-island-ecms/ecms_patternlab": 20
     },
     "prefer-stable": true,
