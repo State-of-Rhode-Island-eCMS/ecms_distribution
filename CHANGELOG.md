@@ -12,10 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-478: Updated google_tag to ^2.0.5.
-- RIGA-506: Updated drupal/core to 10.2.7.
-- RIGA-507: Updated drupal/vbo_export and dependencies.
-- RIGA-507: Updated drupal/entity_print and dependencies.
 
 ### Deprecated
 
@@ -24,6 +20,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [2.0.4] - 2024-06-24
+### Changed
+- RIGA-478: Updated google_tag to ^2.0.5.
+- RIGA-506: Updated drupal/core to 10.2.7.
+- RIGA-507: Updated drupal/vbo_export and dependencies.
+- RIGA-507: Updated drupal/entity_print and dependencies.
 
 ## [2.0.3] - 2024-05-29
 ### Added
@@ -1053,7 +1056,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.4...HEAD
+[2.0.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.0...2.0.1
