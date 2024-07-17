@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-523: Update Webform to 6.2.5 to remove the ployfill.io references.
 
 ## [2.0.4] - 2024-06-24
 ### Changed
