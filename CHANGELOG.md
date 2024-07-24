@@ -20,6 +20,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [2.0.5] - 2024-07-25
+### Security
 - RIGA-523: Update Webform to 6.2.5 to remove the ployfill.io references.
 
 ## [2.0.4] - 2024-06-24
@@ -1057,7 +1060,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.5...HEAD
+[2.0.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.1...2.0.2
