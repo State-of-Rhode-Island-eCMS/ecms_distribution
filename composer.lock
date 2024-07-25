@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc21879d1dc77afecc22af7b3452d68b",
+    "content-hash": "e307fa3b3233450e7c2f2957cbd20f97",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16806,11 +16806,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.7.8",
+            "version": "0.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "79aed50cb585c186f63ca4d0d2bddfd7119f6b3e"
+                "reference": "a83a68fe131f7324eb9a04dc9b06b04c62d23caf"
             },
             "type": "pattern-lab",
             "license": [
@@ -16824,7 +16824,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2024-07-25T15:28:27+00:00"
+            "time": "2024-06-24T18:24:21+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
