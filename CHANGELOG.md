@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [2.0.6] - 2024-07-25
+### Removed
+RIGA-483: Reverted language selector to settings menu. (this is a patternlab change)
+
 ## [2.0.5] - 2024-07-25
 ### Security
 - RIGA-523: Update Webform to 6.2.5 to remove the ployfill.io references.
