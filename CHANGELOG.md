@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [2.0.9] - 2024-07-26
+### Changed
+- Revert the master branch to match 2.0.7
+
 ## [2.0.8] - 2024-07-25
 ### Changed
 - Revert `ecms_patternlab` to 0.7.5
@@ -1072,7 +1076,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.9...HEAD
+[2.0.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.8...2.0.9
 [2.0.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.7...2.0.8
 [2.0.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.6...2.0.7
 [2.0.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.5...2.0.6
