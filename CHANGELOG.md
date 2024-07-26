@@ -21,17 +21,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [2.0.8] - 2024-07-25
-### Changed
-- Revert `ecms_patternlab` to 0.7.5
-
 ## [2.0.7] - 2024-07-25
 ### Changed
-- RIGA-483: Compiled patternlab
+RIGA-483: Compiled patternlab)
 
 ## [2.0.6] - 2024-07-25
 ### Removed
-- RIGA-483: Reverted language selector to settings menu. (this is a patternlab change)
+RIGA-483: Reverted language selector to settings menu. (this is a patternlab change)
 
 ## [2.0.5] - 2024-07-25
 ### Security
@@ -1073,7 +1069,6 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 - Initial Release of the site.
 
 [Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.7...HEAD
-[2.0.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.7...2.0.8
 [2.0.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.6...2.0.7
 [2.0.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.5...2.0.6
 [2.0.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.4...2.0.5
