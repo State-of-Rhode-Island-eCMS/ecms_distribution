@@ -44,6 +44,12 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Prepare access to the profile repository
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ECMS_PROFILE_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
       - name: Install Composer dependencies
         run: composer install --no-interaction --no-progress
 
@@ -82,6 +88,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Prepare access to the profile repository
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ECMS_PROFILE_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Set ephemeral encryption key
+        run: echo -e  "ENCRYPTION_PRIVATE_KEY=$(dd if=/dev/urandom bs=32 count=1 | base64 -i -)" >> $GITHUB_ENV
 
       - name: Install Composer dependencies
         run: composer install --no-interaction --no-progress --no-dev
