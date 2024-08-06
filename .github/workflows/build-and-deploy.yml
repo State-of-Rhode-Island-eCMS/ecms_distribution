@@ -50,6 +50,9 @@ jobs:
           echo "${{ secrets.ECMS_PROFILE_DEPLOY_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
+      - name: Set ephemeral encryption key
+        run: echo -e  "ENCRYPTION_PRIVATE_KEY=$(dd if=/dev/urandom bs=32 count=1 | base64 -i -)" >> $GITHUB_ENV
+
       - name: Install Composer dependencies
         run: composer install --no-interaction --no-progress
 
