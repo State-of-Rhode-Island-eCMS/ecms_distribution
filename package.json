@@ -31,5 +31,8 @@
     "stylelint-config-sass-guidelines": "^5.0.0",
     "stylelint-scss": "^3.3.0",
     "yargs": "^15.4.0"
+  },
+  "scripts": {
+    "build": "gulp build"
   }
 }
