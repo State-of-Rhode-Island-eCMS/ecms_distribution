@@ -121,3 +121,77 @@ jobs:
         with:
           name: drupal
           path: drupal.tar.gz
+
+  deploy:
+    name: Deploy to Acquia
+    needs: [test, build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure SSH directory exists
+        run: mkdir -p ~/.ssh && chmod 700 ~/.ssh
+
+      - name: Add Acquia SSH host key to known hosts
+        run: ssh-keyscan -p 22 -H svn-2398.enterprise-g1.hosting.acquia.com >> ~/.ssh/known_hosts
+
+      - name: Create SSH key file
+        run: echo "${{ secrets.ACQUIA_SSH_KEY }}" > ~/.ssh/id_acquia
+
+      - name: Set permissions on SSH key file
+        run: chmod 600 ~/.ssh/id_acquia
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "Host svn-2398.enterprise-g1.hosting.acquia.com" >> ~/.ssh/config
+          echo "  Port 22" >> ~/.ssh/config
+          echo "  User riecms" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/id_acquia" >> ~/.ssh/config
+
+      - name: Configure git identity
+        run: |
+          git config --global user.email "devops@oomphinc.com"
+          git config --global user.name "Oomph DevOps"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # TODO: pull requests may be in a detached head state (no branch checked out), so we need
+      # to check if a branch is checked out and if not create a new, temporary branch to use
+
+      - name: Download Drupal archive
+        uses: actions/download-artifact@v3
+        id: download
+        with:
+          name: drupal
+
+      - name: Unarchive Drupal
+        run: tar -xzf drupal.tar.gz
+
+      # This deletes all files in the repository except for those listed in inputs.drupal-archive-contents
+      # and a few other necessary files
+      - name: Trim repository contents
+        run: |
+          shopt -s extglob dotglob
+          rm -rf !($(echo "${{ inputs.drupal-archive-contents }}" | tr ' ' '|')|.git|.gitignore|.gitattributes|.|..)
+
+      - name: Remove embedded git repositories
+        run: find ${{ inputs.drupal-archive-contents }} -name .git -type d -exec rm -rf {} +
+
+      - name: Add all changes to git
+        run: git add --force .
+
+      - name: Commit build artifact files to git
+        run: git commit -m "Automated build from GitHub Actions"
+
+      - name: Add Acquia repository as remote
+        run: git remote add acquia riecms@svn-2398.enterprise-g1.hosting.acquia.com:riecms.git
+
+      - name: Force push branch to Acquia
+        if: github.ref_type == 'branch'
+        run: git push --force acquia HEAD:refs/heads/${{ github.ref_name }}
+
+      - name: Force push tag to Acquia
+        if: github.ref_type == 'tag'
+        run: git push --force acquia HEAD:refs/tags/${{ github.ref_name }}
