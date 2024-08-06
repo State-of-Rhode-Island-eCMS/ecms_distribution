@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc21879d1dc77afecc22af7b3452d68b",
+    "content-hash": "bbdc93ea23241393559fb8997968448d",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16212,11 +16212,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.0.5",
+            "version": "dev-RIGA-266/update-consumer-install",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ae57a462f070b1353114bc08edc5124a292f8c7c"
+                "reference": "35887e5bdbdfb7d06b1ef5dd811c6e3161981997"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16371,6 +16371,9 @@
                     },
                     "drupal/path_redirect_import": {
                         "3395257 - #3 - Change CSV file upload location to private.": "https://www.drupal.org/files/issues/2023-10-19/3395257-change-csv-file-3_0.patch"
+                    },
+                    "drupal/consumer": {
+                        "Consumer list not working": "https://www.drupal.org/files/issues/2023-06-23/consumer_clinet_id.patch"
                     }
                 },
                 "preserve-paths": [],
@@ -16401,7 +16404,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-07-24T17:34:14+00:00"
+            "time": "2024-08-06T13:12:28+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -24860,7 +24863,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
