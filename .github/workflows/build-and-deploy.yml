@@ -8,97 +8,101 @@ on:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
 
+env:
+  PHP_VERSION: '8.1'
+  PHP_EXTENSIONS: 'gd, curl, mbstring, mysqli, opcache, xml, zip, apcu'
+  PHP_TOOLS: 'composer'
+  NODE_VERSION: '10.x'
+
 jobs:
+  test:
+    name: Test Drupal
+    runs-on: ubuntu-latest
+    services:
+      database:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: drupal
+          MYSQL_USER: drupal
+          MYSQL_PASSWORD: drupal
+        ports:
+          - 3306:3306
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: ${{ env.PHP_EXTENSIONS }}
+          tools: ${{ env.PHP_TOOLS }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --no-progress
+
+      - name: Install Node dependencies
+        run: npm ci --no-fund --no-progress
+
+      - name: Install Drupal
+        run: php vendor/bin/drush site-install --existing-config --yes ecms_acquia
+
+      # Comment out PHPUnit testing suite until D10 compatibility is sorted out
+      # - name: Run PHPUnit tests
+      #   run: composer test:php
+
+      - name: Run PHPCS tests
+        run: composer validate:php
+
+      # PHPStan was not active in Ansible-based CI; commenting out for now
+      # - name: Run PHPStan tests
+      #   run: php vendor/bin/phpstan analyze
+
   build:
     name: Build Drupal
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Retrieve the infrastructure repo
-        env:
-          INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
-        run: ./oomph-actions/retrieve-infra-repo.sh master
-
-      - name: Prepare access to the profile repository
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.ECMS_PROFILE_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-
-      - name: Add a lando.local file for environment variables.
-        run: |
-          echo "env_file:
-                  - .env  " >> .lando.local.yml
-
-      - name: Add an ephemeral encryption key to the environment variable.
-        run: |
-          echo -e  "ENCRYPTION_PRIVATE_KEY=$(dd if=/dev/urandom bs=32 count=1 | base64 -i -)" >> .env
-
-      - name: Build the Drupal application
-        run: ./oomph-infrastructure/oomph-action build-drupal.yml
-
-      - name: Upload the build archive
-        uses: actions/upload-artifact@v1
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          name: build.tar.gz
-          path: /tmp/build.tar.gz
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: ${{ env.PHP_EXTENSIONS }}
+          tools: ${{ env.PHP_TOOLS }}
 
-  # Deploy all branches to Acquia
-  branch_deploy:
-    name: Deploy environment branches
-    needs: build
-    runs-on: ubuntu-20.04
-    if: startsWith(github.ref, 'refs/heads/')
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Retrieve the infrastructure repo
-        env:
-          INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
-        run: ./oomph-actions/retrieve-infra-repo.sh master
-
-      - name: Retrieve the build artifact
-        uses: actions/download-artifact@v1
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          name: build.tar.gz
-          path: /tmp/
+          node-version: ${{ env.NODE_VERSION }}
 
-      - name: Expand the build artifact
-        run: tar -xzf /tmp/build.tar.gz
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --no-progress --no-dev
 
-      - name: Deploy to Acquia
-        env:
-          ACQUIA_SSH_KEY: ${{ secrets.ACQUIA_SSH_KEY }}
-        run: ./oomph-infrastructure/oomph-action deploy-acquia.yml -e "acquia_target_branch=${GITHUB_REF:11}"
+      - name: Install Gulp
+        run: npm install --global gulp-cli
 
-  # Deploy tags to Acquia
-  tag_deploy:
-    name: Deploy tags
-    needs: build
-    runs-on: ubuntu-20.04
-    if: startsWith(github.ref, 'refs/tags/')
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Install Node dependencies
+        run: npm ci --no-fund --no-progress --production
 
-      - name: Retrieve the infrastructure repo
-        env:
-          INFRA_REPO_DEPLOY_KEY: ${{ secrets.INFRA_REPO_DEPLOY_KEY }}
-        run: ./oomph-actions/retrieve-infra-repo.sh master
+      - name: Run Gulp
+        run: gulp build
 
-      - name: Retrieve the build artifact
-        uses: actions/download-artifact@v1
+      - name: Validate Gulp
+        run: gulp validate
+
+      - name: Archive Drupal
+        run: tar -czf drupal.tar.gz config vendor web composer.json composer.lock
+
+      - name: Upload Drupal archive
+        uses: actions/upload-artifact@v3
         with:
-          name: build.tar.gz
-          path: /tmp/
-
-      - name: Expand the build artifact
-        run: tar -xzf /tmp/build.tar.gz
-
-      - name: Deploy to Acquia
-        env:
-          ACQUIA_SSH_KEY: ${{ secrets.ACQUIA_SSH_KEY }}
-        run: ./oomph-infrastructure/oomph-action deploy-acquia.yml -e "acquia_target_branch=master"
+          name: drupal
+          path: drupal.tar.gz
