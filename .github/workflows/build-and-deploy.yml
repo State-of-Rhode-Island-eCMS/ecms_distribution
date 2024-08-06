@@ -114,7 +114,7 @@ jobs:
         run: gulp validate
 
       - name: Archive Drupal
-        run: tar -czf drupal.tar.gz config vendor web composer.json composer.lock
+        run: tar -czf drupal.tar.gz config vendor docroot composer.json composer.lock
 
       - name: Upload Drupal archive
         uses: actions/upload-artifact@v3
