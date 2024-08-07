@@ -13,6 +13,7 @@ env:
   PHP_EXTENSIONS: 'gd, curl, mbstring, mysqli, opcache, xml, zip, apcu'
   PHP_TOOLS: 'composer'
   NODE_VERSION: '10.x'
+  DRUPAL_ARCHIVE_CONTENTS: 'config vendor docroot composer.json composer.lock'
 
 jobs:
   test:
@@ -117,7 +118,7 @@ jobs:
         run: gulp validate
 
       - name: Archive Drupal
-        run: tar -czf drupal.tar.gz config vendor docroot composer.json composer.lock
+        run: tar -czf drupal.tar.gz ${{ env.DRUPAL_ARCHIVE_CONTENTS }}
 
       - name: Upload Drupal archive
         uses: actions/upload-artifact@v3
@@ -177,10 +178,10 @@ jobs:
       - name: Trim repository contents
         run: |
           shopt -s extglob dotglob
-          rm -rf !($(echo "${{ inputs.drupal-archive-contents }}" | tr ' ' '|')|.git|.gitignore|.gitattributes|.|..)
+          rm -rf !($(echo "${{ env.DRUPAL_ARCHIVE_CONTENTS }}" | tr ' ' '|')|.git|.gitignore|.gitattributes|.|..)
 
       - name: Remove embedded git repositories
-        run: find ${{ inputs.drupal-archive-contents }} -name .git -type d -exec rm -rf {} +
+        run: find ${{ env.DRUPAL_ARCHIVE_CONTENTS }} -name .git -type d -exec rm -rf {} +
 
       - name: Add all changes to git
         run: git add --force .
