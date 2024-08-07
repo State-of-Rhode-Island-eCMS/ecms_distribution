@@ -60,7 +60,7 @@ jobs:
         run: npm ci --no-fund --no-progress
 
       - name: Install Drupal
-        run: php vendor/bin/drush site-install --existing-config --yes ecms_acquia
+        run: php vendor/bin/drush site-install --yes ecms_acquia
 
       # Comment out PHPUnit testing suite until D10 compatibility is sorted out
       # - name: Run PHPUnit tests
