@@ -13,7 +13,7 @@ env:
   PHP_EXTENSIONS: 'gd, curl, mbstring, mysqli, opcache, xml, zip, apcu'
   PHP_TOOLS: 'composer'
   NODE_VERSION: '10.x'
-  DRUPAL_ARCHIVE_CONTENTS: 'config vendor docroot composer.json composer.lock'
+  DRUPAL_ARCHIVE_CONTENTS: 'config vendor docroot composer.json composer.lock hooks'
 
 jobs:
   test:
@@ -110,6 +110,11 @@ jobs:
 
       - name: Install Node dependencies
         run: npm ci --no-fund --no-progress --production
+
+      - name: Prepare distribution for deployment to Site Factory
+        run: |
+          vendor/bin/drush acsf-init --include="docroot/modules/contrib/acsf/acsf_init" --root="docroot" -y
+          vendor/bin/drush --include=docroot/modules/contrib/acsf/acsf_init acsf-init-verify
 
       - name: Run Gulp
         run: gulp build
