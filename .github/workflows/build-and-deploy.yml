@@ -13,7 +13,7 @@ env:
   PHP_EXTENSIONS: 'gd, curl, mbstring, mysqli, opcache, xml, zip, apcu'
   PHP_TOOLS: 'composer'
   NODE_VERSION: '10.x'
-  DRUPAL_ARCHIVE_CONTENTS: 'config vendor docroot composer.json composer.lock, hooks'
+  DRUPAL_ARCHIVE_CONTENTS: 'config vendor docroot composer.json composer.lock hooks'
 
 jobs:
   test:
