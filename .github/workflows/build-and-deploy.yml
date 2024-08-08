@@ -129,7 +129,7 @@ jobs:
       - name: Prepare distribution for deployment to Site Factory
         run: |
           vendor/bin/drush acsf-init --include="docroot/modules/contrib/acsf/acsf_init" --root="docroot" -y
-          vendor/bin/drush acsf-init-verify
+          vendor/bin/drush --include=docroot/modules/contrib/acsf/acsf_init acsf-init-verify
 
   deploy:
     name: Deploy to Acquia
