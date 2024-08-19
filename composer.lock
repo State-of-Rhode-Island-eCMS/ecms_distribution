@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77d97c9ac2c29a07463016e8c5e429c4",
+    "content-hash": "dae9fc997de0a64fc6c4dcd8fe8aaa26",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16207,11 +16207,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.0.5",
+            "version": "dev-RIGA-526/patch-update",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ae57a462f070b1353114bc08edc5124a292f8c7c"
+                "reference": "1d1a31c28217d9e44d79cfa0c00dfb1c263639b4"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16342,12 +16342,11 @@
             "extra": {
                 "patches": {
                     "drupal/core": {
-                        "3266057 - #121 - Allow profiles to define a base/parent profile [continue of #1356276]": "https://www.drupal.org/files/issues/2023-12-05/3266057-121.patch",
+                        "3266057 - #129 - Allow profiles to define a base/parent profile [continue of #1356276]": "https://www.drupal.org/files/issues/2024-07-03/3266057-129.patch",
                         "2794431 - [META] Formalize translations support (#102)": "https://www.drupal.org/files/issues/2020-09-29/jsonapi_add_and_update_translations_support-2794431-102.patch",
                         "3049332 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2024-01-09/drupal-core--2024-01-09--3049332-85.patch",
                         "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
                         "3308838 - EntityRepository::getTranslationFromContext() function forcibly adds default entity language to fallback candidates": "https://www.drupal.org/files/issues/2024-02-22/drupal-3308838-fix-fallback-to-default-lang-42.patch",
-                        "3413508 - 55 - Admin page access denied even when access is given to child items": "https://gist.githubusercontent.com/pfrilling/564587c071e5fe5cbbba5a8f94a7c654/raw/ac50b2bec1e85c17bf3c0e9972283aaf19cc9272/gistfile1.txt",
                         "2741187 - 39 - Allow usage of WYSIWYG in views text area fields": "https://gist.githubusercontent.com/pfrilling/91262eb9ca72ec66704027344ebc0e56/raw/cba7ef0284684d1db59c193e5a06968a36b73a02/gistfile1.txt"
                     },
                     "drupal/paragraphs": {
@@ -16396,7 +16395,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-07-24T17:34:14+00:00"
+            "time": "2024-08-19T19:34:21+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -24842,7 +24841,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
