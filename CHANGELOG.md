@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - Add the ecms_emergency_notification feature to site-update
 
 ### Changed
+- RIGA-526: Update core to 10.3
 
 ### Deprecated
 
