@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- Add the ecms_emergency_notification feature to site-update
 
 ### Changed
 
@@ -18,6 +19,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- Switched from Ansible-based CI workflow to direct Actions workflow
 
 ### Security
 
