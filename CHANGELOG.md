@@ -21,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Fixed
 - Switched from Ansible-based CI workflow to direct Actions workflow
+- RIGA-544: Fix the missing secrets.php file.
 
 ### Security
 
