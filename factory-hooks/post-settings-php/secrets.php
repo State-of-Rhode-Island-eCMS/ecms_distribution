@@ -8,8 +8,3 @@ if (file_exists($secrets_file)) {
   require $secrets_file;
 }
 
-$cloudNextSecretsFile = sprintf('%s/secrets.settings.php', $_ENV['HOME']);
-
-if (file_exists($cloudNextSecretsFile)) {
-  require $cloudNextSecretsFile;
-}
