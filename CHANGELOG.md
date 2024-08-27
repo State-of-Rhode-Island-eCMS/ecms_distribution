@@ -10,7 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- Add the ecms_emergency_notification feature to site-update
+- RIGA-511: Add the ecms_emergency_notification feature to site-update
 
 ### Changed
 - RIGA-526: Update core to 10.3
@@ -20,7 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- Switched from Ansible-based CI workflow to direct Actions workflow
+- RIGA-536: Switched from Ansible-based CI workflow to direct Actions workflow
 - RIGA-544: Fix the missing factory-hooks from the deployment.
 
 ### Security
