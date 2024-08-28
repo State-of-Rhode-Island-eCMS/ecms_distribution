@@ -27,6 +27,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-526: Update core to 10.3
+- Update `ecms_profile` to 1.0.6
+- Update `patternlab` to 0.7.9
 
 ### Fixed
 - RIGA-536: Switched from Ansible-based CI workflow to direct Actions workflow
