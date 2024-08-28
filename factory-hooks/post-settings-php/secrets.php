@@ -7,3 +7,4 @@ $secrets_file = sprintf('/mnt/files/%s.%s/secrets.settings.php', $_ENV['AH_SITE_
 if (file_exists($secrets_file)) {
   require $secrets_file;
 }
+

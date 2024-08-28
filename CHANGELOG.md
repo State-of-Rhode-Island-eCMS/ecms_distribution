@@ -18,9 +18,21 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- Switched from Ansible-based CI workflow to direct Actions workflow
 
 ### Security
+
+## [2.1.0] - 2024-08-29
+### Added
+- RIGA-511: Add the ecms_emergency_notification feature to site-update
+
+### Changed
+- RIGA-526: Update core to 10.3
+- Update `ecms_profile` to 1.0.6
+- Update `patternlab` to 0.7.9
+
+### Fixed
+- RIGA-536: Switched from Ansible-based CI workflow to direct Actions workflow
+- RIGA-544: Fix the missing factory-hooks from the deployment.
 
 ## [2.0.9] - 2024-07-26
 ### Changed
@@ -1077,7 +1089,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.0...HEAD
+[2.1.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.9...2.1.0
 [2.0.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.8...2.0.9
 [2.0.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.7...2.0.8
 [2.0.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.6...2.0.7
