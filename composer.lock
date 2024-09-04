@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be361c257aed99972023258a72fc73c7",
+    "content-hash": "afcd304eac46e14fb9ea65d4ee7312c0",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -7549,29 +7549,26 @@
         },
         {
             "name": "drupal/media_library_form_element",
-            "version": "2.0.6",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_library_form_element.git",
-                "reference": "2.0.6"
+                "reference": "2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_library_form_element-2.0.6.zip",
-                "reference": "2.0.6",
-                "shasum": "91363cbea0d1895fbf0fbb9640d70fee47775111"
+                "url": "https://ftp.drupal.org/files/projects/media_library_form_element-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "4e4ebb8a4642f3cfe700c8cac0009db1f7d3cb99"
             },
             "require": {
-                "drupal/core": "^9.2 || ^10"
-            },
-            "require-dev": {
-                "drupal/webform": "6.2.x-dev@dev"
+                "drupal/core": "^10.3 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.6",
-                    "datestamp": "1674069446",
+                    "version": "2.1.1",
+                    "datestamp": "1724676084",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
