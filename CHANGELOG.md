@@ -12,8 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- `ecms_profile` to rc/1.0.7
-- RIGA-546: Upgraded media_library_form_element to 2.1.1
 
 ### Deprecated
 
@@ -22,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [2.1.1] - 2024-09-05
+### Changed
+- `ecms_profile` to rc/1.0.7
+- RIGA-546: Upgraded media_library_form_element to 2.1.1
 
 ## [2.1.0] - 2024-08-29
 ### Added
@@ -1091,7 +1094,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.1...HEAD
+[2.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.0...2.1.1
 [2.1.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.9...2.1.0
 [2.0.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.8...2.0.9
 [2.0.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.7...2.0.8
