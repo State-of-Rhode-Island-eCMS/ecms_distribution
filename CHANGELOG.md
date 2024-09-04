@@ -12,6 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- `ecms_profile` to rc/1.0.7
+- RIGA-546: Upgraded media_library_form_element to 2.1.1
 
 ### Deprecated
 

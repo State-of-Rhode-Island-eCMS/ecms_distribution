@@ -82,6 +82,7 @@
         "drupal/features": "^3.13",
         "drupal/feeds": "^3.0@beta",
         "drupal/google_tag": "^2.0.5",
+        "drupal/media_library_form_element": "^2.1",
         "drupal/menu_force": "^2.0",
         "drupal/migrate_devel": "^2.3",
         "drupal/office_hours": "^1.11",
@@ -90,7 +91,7 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "1.0.6",
+        "rhodeislandecms/ecms_profile": "1.0.7",
         "state-of-rhode-island-ecms/ecms_patternlab": "0.7.9",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
