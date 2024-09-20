@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b80f49a2e2410e06a2284538daa4a00f",
+    "content-hash": "9dfd598cdb190145e2b2d505abe6763d",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16204,11 +16204,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.0.7",
+            "version": "dev-test",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ff46df40258c80b1c79a6a4038064eafcea5a26a"
+                "reference": "55f4aa68dd7dff1523afa03847a412d5a3810900"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16222,27 +16222,27 @@
                 "drupal/admin_toolbar": "^3.4",
                 "drupal/advagg": "^6.0@alpha",
                 "drupal/aggregator": "^2.2",
-                "drupal/allowed_formats": "^2.0.0",
+                "drupal/allowed_formats": "^2.0.0 || ^3.0.0",
                 "drupal/asset_injector": "^2.7",
-                "drupal/auto_entitylabel": "^3.0@beta",
-                "drupal/autologout": "^1.4",
+                "drupal/auto_entitylabel": "^3.0@beta || ^3.3",
+                "drupal/autologout": "^1.4 || ^2.0.0",
                 "drupal/better_exposed_filters": "^6.0",
                 "drupal/bigmenu": "^2.0@RC",
                 "drupal/captcha": "^2.0",
                 "drupal/classy": "^1.0",
                 "drupal/commerce": "^2.13",
                 "drupal/commerce_stock": "^1.3",
-                "drupal/components": "^3.0@beta",
+                "drupal/components": "^3.0@beta || ^3.1",
                 "drupal/conditional_fields": "^4.0@alpha",
                 "drupal/content_moderation_notifications": "^3.2",
                 "drupal/core-recommended": "^9.5 || ^10.0",
                 "drupal/easy_breadcrumb": "2.0.5",
-                "drupal/entity_print": "^2.5",
+                "drupal/entity_print": "^2.5 || ^2.15",
                 "drupal/entity_usage": "^2.0@beta",
-                "drupal/extlink": "^1.5",
+                "drupal/extlink": "^1.5 || ^2.0",
                 "drupal/facets": "^2.0",
                 "drupal/features": "^3.11",
-                "drupal/feeds": "^3.0@alpha",
+                "drupal/feeds": "^3.0@alpha || ^3.0@RC",
                 "drupal/feeds_ex": "^1.0@beta",
                 "drupal/field_group": "^3.4",
                 "drupal/file_delete": "^2.0",
@@ -16261,7 +16261,7 @@
                 "drupal/language_neutral_aliases": "^3.0",
                 "drupal/layout_builder_iframe_modal": "^1.3",
                 "drupal/layout_builder_modal": "^1.1",
-                "drupal/layout_builder_restrictions": "^2.17",
+                "drupal/layout_builder_restrictions": "^2.17 || ^3.0",
                 "drupal/layout_builder_tabs": "^1.0",
                 "drupal/linkit": "^6.1",
                 "drupal/media_entity_download": "^2.0",
@@ -16283,7 +16283,7 @@
                 "drupal/office_hours": "^1.3",
                 "drupal/openid_connect": "^3.0",
                 "drupal/openid_connect_windows_aad": "^2.0@beta",
-                "drupal/page_manager": "^4.0@beta",
+                "drupal/page_manager": "^4.0@beta || ^4.0@RC",
                 "drupal/panels": "^4.6.0",
                 "drupal/paragraphs": "^1.15",
                 "drupal/path_redirect_import": "^2.0",
@@ -16392,7 +16392,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-09-04T21:49:42+00:00"
+            "time": "2024-09-20T19:40:06+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -24838,7 +24838,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
