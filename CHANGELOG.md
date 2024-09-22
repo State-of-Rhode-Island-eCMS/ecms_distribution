@@ -21,7 +21,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-549: Update Configuration Update Manager module (2.0.0-alpha3 => 2.0.0.-alpha4)
 - RIGA-549: Update Consumers module (8.x-1.17 => 8.x-1.19)
 - RIGA-549: Update Crop API module (8.x-2.3 =>8.x-2.4)
-RIGA-549: Update Easy Breadcrumb module (2.0.5 => 2.0.8)
 - RIGA-549: Update Entity Print module (8.x-2.14 => 8.x-2.15)
 - RIGA-549: Update Entity Reference Revisions module (8.x-1.11 => 8.x-1.12)
 - RIGA-549: Update External Authentication module (2.0.5 => 2.0.6)
