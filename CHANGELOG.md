@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- Updating the `ecms_profile` to 1.0.8
 - RIGA-549: Update Admin Toolbar module (3.4.2 => 3.5.0)
 - RIGA-549: Update Allowed Formats module (2.0.0 => 3.0.1)
 - RIGA-549: Update Automated Logout module (8.x-1.4 => 2.0.0)
