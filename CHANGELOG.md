@@ -12,6 +12,58 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- Updating the `ecms_profile` to 1.0.8
+- RIGA-549: Update Admin Toolbar module (3.4.2 => 3.5.0)
+- RIGA-549: Update Allowed Formats module (2.0.0 => 3.0.1)
+- RIGA-549: Update Automated Logout module (8.x-1.4 => 2.0.0)
+- RIGA-549: Update Automatic Entity Label module (8.x-3.0 => 8.x-3.3)
+- RIGA-549: Update Chaos Tools Suite module (8.x-3.14 => 4.1.0)
+- RIGA-549: Update Components! module (3.0.0.-beta => 3.1.0)
+- RIGA-549: Update Configuration Update Manager module (2.0.0-alpha3 => 2.0.0.-alpha4)
+- RIGA-549: Update Consumers module (8.x-1.17 => 8.x-1.19)
+- RIGA-549: Update Crop API module (8.x-2.3 =>8.x-2.4)
+- RIGA-549: Update Entity Print module (8.x-2.14 => 8.x-2.15)
+- RIGA-549: Update Entity Reference Revisions module (8.x-1.11 => 8.x-1.12)
+- RIGA-549: Update External Authentication module (2.0.5 => 2.0.6)
+- RIGA-549: Update External Links module (8.x-1.7 => 2.0.2)
+- RIGA-549: Update Feeds module (8.x-3.0-beta4 => 8.x-3.0-rc2)
+- RIGA-549: Update Focal Point module (2.0.3 => 2.1.1)
+- RIGA-549: Update Geocoder module (8.x-4.21 => 8.x-4.25)
+- RIGA-549: Update Geofield module (8.x-1.57 => 8.x-1.61)
+- RIGA-549: Update Geolocation Field module (8.x-3.12 => 8.x-3.13)
+- RIGA-549: Update Google Tag module (2.0.5 => 2.0.6)
+- RIGA-549: Update Honeypot module (2.1.3 => 2.2.0)
+- RIGA-549: Update jQuery UI module (8.x-1.6 => 8.x-1.7)
+- RIGA-549: Update jQuery UI Autocomplete module (2.0.0 => 2.1.0)
+- RIGA-549: Update jQuery UI Menu module (2.0.0 => 2.1.0)
+- RIGA-549: Update JSON:API Extras (8.x-3.24 => 8.x-3.25)
+- RIGA-549: Update Key (8.x-1.17 => 8.x-1.19)
+- RIGA-549: Update Language Cookie (2.0.1 => 2.0.2)
+- RIGA-549: Update Layout Builder Restrictions module (8.x-2.19 => 3.0.0)
+- RIGA-549: Update Media Entity Download module (8.x-2.2 => 8.x-2.3)
+- RIGA-549: Update Media Entity File Replace module (8.x-1.2 => 8.x-1.3)
+- RIGA-549: Update Media File Delete module (1.3.0 => 1.3.1)
+- RIGA-549: Update Memcache API and Integration module (8.x-2.5 => 8.x-2.7)
+- RIGA-549: Update Menu Admin per Menu module (8.x-1.5 => 8.x-1.6)
+- RIGA-549: Update Menu Block module (8.x-1.10 => 8.x-1.13)
+- RIGA-549: Update Moderated Content Bulk Publish module (2.0.31 => 2.0.32)
+- RIGA-549: Update Office Hours module (8.x-1.17 => 8.x-1.19)
+- RIGA-549: Update Page Manager module (8.x-4.0-rc2 => 8.x-4.0-rc3)
+- RIGA-549: Update Panels module (8.x-4.7 => 8.x-4.8)
+- RIGA-549: Update Paragraphs module (8.x-1.15 => 8.x-1.18)
+- RIGA-549: Update Pathauto module (8.x-1.12 => 8.x-1.13)
+- RIGA-549: Update Rabbit Hole module (8.x-1.0-beta11 => 8.x-1.0)
+- RIGA-549: Update Real AES module (8.x-2.5 => 8.x-2.6)
+- RIGA-549: Update Redirect module (8.x-1.9 => 8.x-1.10)
+- RIGA-549: Update RobotsTxt module (8.x-1.5 => 8.x-1.6)
+- RIGA-549: Update Role Delegation module (8.x-1.2 => 8.x-1.3)
+- RIGA-549: Update Scheduled Transitions module (2.4.1 => 2.5.0)
+- RIGA-549: Update Search API module (8.x-1.34 => 8.x-1.35)
+- RIGA-549: Update Simple XML Sitemap module (4.1.9 => 4.2.1)
+- RIGA-549: Update Smart Date module (4.0.3 => 4.1.6)
+- RIGA-549: Update Token module (8.x-1.14 => 8.x-1.15)
+- RIGA-549: Update Twig Tweak module (3.3.0 => 3.4.0)
+- RIGA-549: Update Webform module (6.2.5 => 6.2.7)
 
 ### Deprecated
 
@@ -20,6 +72,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-552: Update Security Kit (Denial of Service - SA-CONTRIB-2024-039)
 
 ## [2.1.1] - 2024-09-05
 ### Changed
