@@ -12,7 +12,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- Updating the `ecms_profile` to 1.0.8
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.1.2] - 2024-10-03
+### Changed
+- Update the `ecms_profile` to 1.0.8
 - RIGA-549: Update Admin Toolbar module (3.4.2 => 3.5.0)
 - RIGA-549: Update Allowed Formats module (2.0.0 => 3.0.1)
 - RIGA-549: Update Automated Logout module (8.x-1.4 => 2.0.0)
@@ -65,14 +76,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-549: Update Twig Tweak module (3.3.0 => 3.4.0)
 - RIGA-549: Update Webform module (6.2.5 => 6.2.7)
 
-### Deprecated
-
-### Removed
-
-### Fixed
-
 ### Security
 - RIGA-552: Update Security Kit (Denial of Service - SA-CONTRIB-2024-039)
+
 
 ## [2.1.1] - 2024-09-05
 ### Changed
@@ -1147,7 +1153,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.2...HEAD
+[2.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.1...2.1.2
 [2.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.0...2.1.1
 [2.1.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.9...2.1.0
 [2.0.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.0.8...2.0.9
