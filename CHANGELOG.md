@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- Update the `ecms_profile` to 1.0.9
 
 ### Deprecated
 
