@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d950733f6b63321961071b7bf2d81180",
+    "content-hash": "66fa5b6f6b4ea6c07e744ef33c9d343a",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16148,7 +16148,7 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.0.9",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
@@ -16737,7 +16737,7 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.7.9",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
@@ -24769,7 +24769,9 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20,
+        "state-of-rhode-island-ecms/ecms_patternlab": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
