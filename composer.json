@@ -179,9 +179,6 @@
                 "Re-save string config values as arrays": "patches/easy_breadcrumb-install.patch",
                 "3284123 - explode(): Passing null to parameter #2 ($string) of type string is deprecated": "https://www.drupal.org/files/issues/2022-09-20/fix_php81_explode-3284123-13.patch"
             },
-            "drupal/feeds": {
-                "3158678 - FetcherResult::checkFile() throws \\RuntimeException, which is never caught": "https://www.drupal.org/files/issues/2022-09-27/feeds-3158678-9-catch-runtime-errors.patch"
-            },
             "drupal/google_translator": {
                 "3387636 - Missing google_translator_disclaimer_title setting causes PHP 8.1 errors": "https://git.drupalcode.org/project/google_translator/-/merge_requests/3.diff"
             },
