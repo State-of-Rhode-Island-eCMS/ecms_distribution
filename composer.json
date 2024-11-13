@@ -92,8 +92,8 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "dev-dev",
-        "state-of-rhode-island-ecms/ecms_patternlab": "dev-dev",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-555/update-patternlab-version",
+        "state-of-rhode-island-ecms/ecms_patternlab": "dev-RIGA-555/update-misquamicut-theme",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
