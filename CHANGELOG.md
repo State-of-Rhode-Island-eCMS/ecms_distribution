@@ -16,10 +16,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- RIGA-566: Removed an unnecessary patch to the feeds module.
 
 ### Fixed
 
 ### Security
+- RIGA-565: Added post install script to block user/1.
 
 ## [2.1.3] - 2024-10-29
 ### Changed
