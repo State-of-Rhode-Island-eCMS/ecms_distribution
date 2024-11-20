@@ -12,14 +12,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 1.1.0.
+- RIGA-6: Update state-of-rhode-island-ecms/ecms_patternlab => 0.8.0.
 
 ### Deprecated
 
 ### Removed
+- RIGA-566: Removed an unnecessary patch to the feeds module.
 
 ### Fixed
 
 ### Security
+- RIGA-565: Added post install script to block user/1.
 
 ## [2.1.3] - 2024-10-29
 ### Changed

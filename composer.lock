@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d950733f6b63321961071b7bf2d81180",
+    "content-hash": "5097137fe912a26c790d317c8c9d673a",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -3536,7 +3536,7 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
+                    "name": "centarro",
                     "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
@@ -3584,7 +3584,7 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
+                    "name": "centarro",
                     "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
@@ -3626,7 +3626,7 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
+                    "name": "centarro",
                     "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
@@ -3670,7 +3670,7 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
+                    "name": "centarro",
                     "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
@@ -3784,7 +3784,7 @@
             ],
             "authors": [
                 {
-                    "name": "Centarro",
+                    "name": "centarro",
                     "homepage": "https://www.drupal.org/user/3661446"
                 },
                 {
@@ -16148,11 +16148,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.0.9",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "fb0e83ef76ec9e649d448555585d621f87fc19e6"
+                "reference": "6c2c29458e6a4a44dc79e66280dad009611ab3af"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16332,7 +16332,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-10-28T18:36:31+00:00"
+            "time": "2024-11-20T13:33:42+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -16737,11 +16737,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "0.7.9",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "c5df759e2b4fc410764c43fa8ea0bb4b70a3b7b6"
+                "reference": "ff5ca358e798c321d8489f0d70daaa3a5f1a4599"
             },
             "type": "pattern-lab",
             "license": [
@@ -16755,7 +16755,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2024-08-28T19:21:22+00:00"
+            "time": "2024-11-19T12:07:44+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",

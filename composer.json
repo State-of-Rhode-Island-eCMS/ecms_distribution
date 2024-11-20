@@ -92,8 +92,8 @@
         "nnnick/chartjs": "^3.9",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "1.0.9",
-        "state-of-rhode-island-ecms/ecms_patternlab": "0.7.9",
+        "rhodeislandecms/ecms_profile": "1.1.0",
+        "state-of-rhode-island-ecms/ecms_patternlab": "0.8.0",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
@@ -178,9 +178,6 @@
             "drupal/easy_breadcrumb": {
                 "Re-save string config values as arrays": "patches/easy_breadcrumb-install.patch",
                 "3284123 - explode(): Passing null to parameter #2 ($string) of type string is deprecated": "https://www.drupal.org/files/issues/2022-09-20/fix_php81_explode-3284123-13.patch"
-            },
-            "drupal/feeds": {
-                "3158678 - FetcherResult::checkFile() throws \\RuntimeException, which is never caught": "https://www.drupal.org/files/issues/2022-09-27/feeds-3158678-9-catch-runtime-errors.patch"
             },
             "drupal/google_translator": {
                 "3387636 - Missing google_translator_disclaimer_title setting causes PHP 8.1 errors": "https://git.drupalcode.org/project/google_translator/-/merge_requests/3.diff"
