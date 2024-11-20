@@ -20,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- [SA-CORE-2024-003](https://www.drupal.org/sa-core-2024-003)
+- [SA-CORE-2024-004](https://www.drupal.org/sa-core-2024-004)
+- [SA-CORE-2024-006](https://www.drupal.org/sa-core-2024-006)
+- [SA-CORE-2024-007](https://www.drupal.org/sa-core-2024-007)
+- [SA-CORE-2024-008](https://www.drupal.org/sa-core-2024-008)
 
 ## [2.1.4] - 2024-11-20
 ### Changed
