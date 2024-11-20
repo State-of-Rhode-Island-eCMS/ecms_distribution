@@ -104,16 +104,17 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
-            "oomphinc/composer-installers-extender": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal-composer/preserve-paths": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "drupal/core-vendor-hardening": true,
-            "wikimedia/composer-merge-plugin": true,
-            "php-http/discovery": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": false,
             "mglaman/composer-drupal-lenient": true,
-            "drupal-composer/preserve-paths": true
+            "oomphinc/composer-installers-extender": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": false,
+            "tbachert/spi": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "process-timeout": 0
     },
