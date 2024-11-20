@@ -12,15 +12,22 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-6: Update rhodeislandecms/ecms_profile => 1.1.0.
-- RIGA-6: Update state-of-rhode-island-ecms/ecms_patternlab => 0.8.0.
 
 ### Deprecated
 
 ### Removed
-- RIGA-566: Removed an unnecessary patch to the feeds module.
 
 ### Fixed
+
+### Security
+
+## [2.1.4] - 2024-11-20
+### Changed
+- RIGA-6: Update rhodeislandecms/ecms_profile => 1.1.0.
+- RIGA-6: Update state-of-rhode-island-ecms/ecms_patternlab => 0.8.0.
+
+### Removed
+- RIGA-566: Removed an unnecessary patch to the feeds module.
 
 ### Security
 - RIGA-565: Added post install script to block user/1.
@@ -1161,7 +1168,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.4...HEAD
+[2.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.3...2.1.4
 [2.1.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.2...2.1.3
 [2.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.1...2.1.2
 [2.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.0...2.1.1
