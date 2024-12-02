@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-582: Update drupal/webform to 6.2.8.
 
 ### Deprecated
 
