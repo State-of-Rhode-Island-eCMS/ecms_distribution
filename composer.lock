@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ca16349ce00a62136d2c9ead531feba",
+    "content-hash": "66283d2b6525a0f968dc80ccf3fa1af4",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16148,11 +16148,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.1.0",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "6c2c29458e6a4a44dc79e66280dad009611ab3af"
+                "reference": "142240548537f5bf739bce01b836426374ff9a25"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16332,7 +16332,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-11-20T13:33:42+00:00"
+            "time": "2024-12-03T10:56:50+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -16741,7 +16741,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "fc42c9bbbf4f524e37ceb1a464b3c04d15b1b4be"
+                "reference": "94a0a5d1c116a9b729a6cc4dd5f5b0b3628afba3"
             },
             "type": "pattern-lab",
             "license": [
@@ -16755,7 +16755,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2024-12-02T16:51:11+00:00"
+            "time": "2024-12-03T10:31:37+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
@@ -25140,6 +25140,7 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20,
         "state-of-rhode-island-ecms/ecms_patternlab": 20
     },
     "prefer-stable": true,
