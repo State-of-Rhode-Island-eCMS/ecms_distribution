@@ -16152,7 +16152,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "5aca3cd7fdd9ca50185347cbf0e04cfcf1a5b98f"
+                "reference": "dfbc1db3b354c7c5dfbe117050d95eb44a9746fd"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16260,7 +16260,7 @@
                 "drupal/webform_encrypt": "^2.0@alpha",
                 "drupal/webform_views": "^5.0@beta",
                 "drupal_git/migrate_process_trim": "2.0.0",
-                "drush/drush": "^10.0 || ^11 || ^12",
+                "drush/drush": "^10.0 || ^11 || ^12 || ^13",
                 "geocoder-php/arcgis-online-provider": "^4.3",
                 "geocoder-php/google-maps-provider": "^4.6",
                 "geocoder-php/ipstack-provider": "^0.3.0",
@@ -16332,7 +16332,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2024-12-03T14:55:23+00:00"
+            "time": "2024-12-03T15:29:13+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25148,6 +25148,6 @@
     "platform": {
         "php": ">=8.1"
     },
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
