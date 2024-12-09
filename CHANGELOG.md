@@ -12,17 +12,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-582: Update drupal/webform to 6.2.8.
+- RIGA-580: Updated Drupal Core to 10.3.10.
 
 ### Deprecated
 
 ### Removed
-- RIGA-566: Removed an unnecessary patch to the feeds module.
 
 ### Fixed
 
 ### Security
-- RIGA-565: Added post install script to block user/1.
 
 ## [2.1.5] - 2024-11-20
 ### Security
