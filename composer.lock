@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67852114725ee4303eb110ab05d960fa",
+    "content-hash": "275cdafebaf7e46fb00035f17c6aa9f0",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -12809,7 +12809,7 @@
             "version": "1.0.2 ",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drgullin/icheck/zipball/8a6eb37bd7dab1e843c1b630c91c6398ff409d05"
+                "url": "https://github.com/dargullin/icheck/archive/refs/tags/1.0.2.zip"
             },
             "type": "drupal-library",
             "extra": {
