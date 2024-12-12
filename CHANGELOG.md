@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-580: Updated Drupal Core to 10.3.10.
+- RIGA-582: Update drupal/webform to 6.2.8.
 
 ### Deprecated
 
