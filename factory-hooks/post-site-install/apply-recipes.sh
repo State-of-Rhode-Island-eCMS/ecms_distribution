@@ -30,5 +30,5 @@ docroot="/var/www/html/$site.$env/docroot"
 DRUSH_CMD="/var/www/html/$site.$env/vendor/bin/drush --verbose --root=$docroot --uri=https://$domain"
 
 # Apply the hub connection recipe to all new sites
-$DRUSH_CMD recipe profiles/contrib/ecms_profile/ecms_base/recipes/ecms_api_hub_connect >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-install-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD recipe profiles/contrib/ecms_profile/ecms_base/recipes/ecms_api_press_release_publisher >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-install-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD cache:rebuild
