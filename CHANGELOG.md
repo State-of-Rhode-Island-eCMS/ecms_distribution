@@ -14,6 +14,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-580: Updated Drupal Core to 10.3.10.
 - RIGA-582: Update drupal/webform to 6.2.8.
+- RIGA-584: Update rhodeislandecms/ecms_profile => 1.1.1.
+- RIGA-584: Update state-of-rhode-island-ecms/ecms_patternlab => 0.8.1.
 
 ### Deprecated
 
