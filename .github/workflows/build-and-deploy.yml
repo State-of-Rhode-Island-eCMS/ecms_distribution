@@ -9,7 +9,7 @@ on:
       - '[0-9]+.[0-9]+.[0-9]+'
 
 env:
-  PHP_VERSION: '8.2'
+  PHP_VERSION: '8.3'
   PHP_EXTENSIONS: 'gd, curl, mbstring, mysqli, opcache, xml, zip, apcu'
   PHP_TOOLS: 'composer'
   NODE_VERSION: '10.x'
@@ -64,8 +64,8 @@ jobs:
         run: php vendor/bin/drush site-install --yes ecms_acquia
 
       # Comment out PHPUnit testing suite until D10 compatibility is sorted out
-      # - name: Run PHPUnit tests
-      #   run: composer test:php
+      - name: Run PHPUnit tests
+        run: composer test:php
 
       - name: Run PHPCS tests
         run: composer validate:php
