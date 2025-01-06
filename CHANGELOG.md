@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-595: Updated phpoffice/phpspreadsheet and dependencies [CVE-2024-56408](https://github.com/advisories/GHSA-x88g-h956-m5xg).
 
 ## [2.1.6] - 2024-12-18
 ### Changed
