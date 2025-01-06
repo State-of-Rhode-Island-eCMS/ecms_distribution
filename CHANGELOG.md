@@ -20,6 +20,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [2.1.7] - 2025-01-06
+### Security
 - RIGA-595: Updated phpoffice/phpspreadsheet and dependencies [CVE-2024-56408](https://github.com/advisories/GHSA-x88g-h956-m5xg).
 
 ## [2.1.6] - 2024-12-18
@@ -1184,7 +1187,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.7...HEAD
+[2.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.6...2.1.7
 [2.1.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.5...2.1.6
 [2.1.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.4...2.1.5
 [2.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.3...2.1.4
