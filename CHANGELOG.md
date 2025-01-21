@@ -12,6 +12,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-529: Updated drupal/simple_oauth to 5.2.5
+- RIGA-529: Updated local php to 8.3
+- RIGA-529: Updated CI to php 8.3
 
 ### Deprecated
 

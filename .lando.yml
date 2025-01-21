@@ -2,7 +2,7 @@ name: ecms-distribution
 recipe: drupal10
 
 config:
-  php: "8.2"
+  php: "8.3"
   webroot: docroot
   database: mariadb:10.3
   config:
