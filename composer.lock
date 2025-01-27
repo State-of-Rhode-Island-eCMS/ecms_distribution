@@ -16729,7 +16729,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "7b893fc4cc303eadc6ee6588bbc9a6a16e200090"
+                "reference": "0ae72aebbd064a3d722ea4539940d6c2d5f57b99"
             },
             "type": "pattern-lab",
             "license": [
@@ -16743,7 +16743,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2025-01-23T20:19:30+00:00"
+            "time": "2025-01-24T14:23:55+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
