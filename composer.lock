@@ -16140,7 +16140,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "1ae97909c7d4eb9c6fad122ce8c8bff752dbf74e"
+                "reference": "ce8026839fe23773044d6fb0c086eb1522c2a3c5"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16320,7 +16320,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-01-27T16:26:24+00:00"
+            "time": "2025-01-27T18:17:07+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -16729,7 +16729,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "0ae72aebbd064a3d722ea4539940d6c2d5f57b99"
+                "reference": "48894bdbb7042bddf484ad78e6dace211a0582fe"
             },
             "type": "pattern-lab",
             "license": [
@@ -16743,7 +16743,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2025-01-24T14:23:55+00:00"
+            "time": "2025-01-27T18:07:37+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
