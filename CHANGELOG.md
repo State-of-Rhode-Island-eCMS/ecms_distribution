@@ -20,6 +20,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-608: [sa-contrib-2025-011](https://www.drupal.org/sa-contrib-2025-011)
+- RIGA-608: [sa-contrib-2025-012](https://www.drupal.org/sa-contrib-2025-012)
+- RIGA-608: [CVE-2025-22131](https://github.com/advisories/GHSA-79xx-vf93-p7cx)
 
 ## [2.1.8] - 2025-01-30
 ### Added
