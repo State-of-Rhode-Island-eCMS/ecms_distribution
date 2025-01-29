@@ -21,6 +21,21 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [2.1.8] - 2025-01-30
+### Added
+- RIGA-571: Added new display mode for press releases.
+
+### Changed
+- RIGA-529: Updated drupal/simple_oauth to 5.2.5
+- RIGA-529: Updated local php to 8.3
+- RIGA-529: Updated CI to php 8.3
+- RIGA-527: Updated search related modules
+- RIGA-485: Theme emergency notifications
+
+
+### Fixed
+- RIGA-596: Fixed malformed html in the menu.
+
 ## [2.1.7] - 2025-01-06
 ### Security
 - RIGA-595: Updated phpoffice/phpspreadsheet and dependencies [CVE-2024-56408](https://github.com/advisories/GHSA-x88g-h956-m5xg).
