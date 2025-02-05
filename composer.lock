@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91c957db54591c959fa878d57d18cf1f",
+    "content-hash": "470081c3a652770e453efb62a934f3e4",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16208,11 +16208,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.1.2",
+            "version": "dev-RIGA-512/emergency-notification-syndication-script",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "6ad6c8c33710d08440d413eda8ea78dd445beb4e"
+                "reference": "aa6fba0e7b8ea29d29e975d7737695752df3bc4b"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16392,7 +16392,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-01-29T15:28:53+00:00"
+            "time": "2025-02-05T19:51:05+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25119,7 +25119,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
