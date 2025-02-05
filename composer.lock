@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91c957db54591c959fa878d57d18cf1f",
+    "content-hash": "52768e9f2747ea8deb77f586b9e0fbee",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -8788,6 +8788,50 @@
             }
         },
         {
+            "name": "drupal/mysql57",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/mysql57.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mysql57-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "3d733fd6b0116999b110965d6dbf1c0f763d3f23"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1722631498",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "effulgentsia",
+                    "homepage": "https://www.drupal.org/user/78040"
+                }
+            ],
+            "description": "Database driver for MySQL with compatibility for MySQL 5.7.8 or higher and MariaDB 10.3.7 or higher.",
+            "homepage": "https://www.drupal.org/project/mysql57",
+            "support": {
+                "source": "https://git.drupalcode.org/project/mysql57"
+            }
+        },
+        {
             "name": "drupal/office_hours",
             "version": "1.19.0",
             "source": {
@@ -16208,11 +16252,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.1.2",
+            "version": "dev-RIGA-601/mysql-upgrade",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "6ad6c8c33710d08440d413eda8ea78dd445beb4e"
+                "reference": "5e8aa83f1b879774c5a4a660569aaa3e8e66986f"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16285,6 +16329,7 @@
                 "drupal/migration_tools": "^2.8",
                 "drupal/moderated_content_bulk_publish": "^2.0",
                 "drupal/moderation_dashboard": "^2.0",
+                "drupal/mysql57": "^1.0",
                 "drupal/office_hours": "^1.3",
                 "drupal/openid_connect": "^3.0",
                 "drupal/openid_connect_windows_aad": "^2.0@beta",
@@ -16392,7 +16437,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-01-29T15:28:53+00:00"
+            "time": "2025-02-05T14:23:20+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25119,7 +25164,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
