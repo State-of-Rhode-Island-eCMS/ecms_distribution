@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-612: [sa-contrib-2024-047](https://www.drupal.org/sa-contrib-2024-047)
 
 ## [2.1.9] - 2025-01-30
 - RIGA-608: [sa-contrib-2025-011](https://www.drupal.org/sa-contrib-2025-011)
