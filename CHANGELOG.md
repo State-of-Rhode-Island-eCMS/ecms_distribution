@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- RIGA-602: Remove ckeditor_entity_link & ckeditor module
 
 ### Fixed
 
