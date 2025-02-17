@@ -16,10 +16,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- RIGA-602: Remove ckeditor_entity_link & ckeditor module
 
 ### Fixed
 
 ### Security
+- RIGA-612: [sa-contrib-2024-047](https://www.drupal.org/sa-contrib-2024-047)
 - RIGA-621: Updated OpenID Connect to 3.x-Alpha6
 
 ## [2.1.9] - 2025-01-30
