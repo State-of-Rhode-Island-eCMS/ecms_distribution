@@ -10,6 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-601: Added MySQL 5.7 backports
+- RIGA-601: Added state_cache to settings.php
 
 ### Changed
 
