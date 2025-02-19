@@ -25,6 +25,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Security
 - RIGA-612: [sa-contrib-2024-047](https://www.drupal.org/sa-contrib-2024-047)
 - RIGA-621: Updated OpenID Connect to 3.x-Alpha6
+- RIGA-623 [SA-CORE-20205-001](https://www.drupal.org/sa-core-2025-001)
+- RIGA-623 [SA-CORE-20205-002](https://www.drupal.org/sa-core-2025-002)
+- RIGA-623 [SA-CORE-20205-003](https://www.drupal.org/sa-core-2025-003)
 
 ## [2.1.9] - 2025-01-30
 - RIGA-608: [sa-contrib-2025-011](https://www.drupal.org/sa-contrib-2025-011)
