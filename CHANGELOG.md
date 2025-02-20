@@ -26,6 +26,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-612: [sa-contrib-2024-047](https://www.drupal.org/sa-contrib-2024-047)
 - RIGA-621: Updated OpenID Connect to 3.x-Alpha6
 
+## [2.2.0] - 2025-02-19
+### Security
+- RIGA-623 [SA-CORE-20205-001](https://www.drupal.org/sa-core-2025-001)
+- RIGA-623 [SA-CORE-20205-002](https://www.drupal.org/sa-core-2025-002)
+- RIGA-623 [SA-CORE-20205-003](https://www.drupal.org/sa-core-2025-003)
+
 ## [2.1.9] - 2025-01-30
 - RIGA-608: [sa-contrib-2025-011](https://www.drupal.org/sa-contrib-2025-011)
 - RIGA-608: [sa-contrib-2025-012](https://www.drupal.org/sa-contrib-2025-012)
@@ -1212,7 +1218,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.0...HEAD
+[2.2.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.9...2.2.0
 [2.1.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.8...2.1.9
 [2.1.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.7...2.1.8
 [2.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.6...2.1.7
