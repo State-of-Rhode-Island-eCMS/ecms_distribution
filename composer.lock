@@ -9467,6 +9467,52 @@
             }
         },
         {
+            "name": "drupal/purge_file",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/purge_file.git",
+                "reference": "1.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge_file-1.1.2.zip",
+                "reference": "1.1.2",
+                "shasum": "e71bcdbad7be93c5d3c2a653fb747dc00b6828e5"
+            },
+            "require": {
+                "drupal/core": ">=8",
+                "drupal/purge": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.2",
+                    "datestamp": "1737990384",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "omarlopesino",
+                    "homepage": "https://www.drupal.org/u/omarlopesino"
+                }
+            ],
+            "description": "Purge files from external caches.",
+            "homepage": "https://www.drupal.org/project/purge_file",
+            "support": {
+                "source": "https://git.drupal.org/project/purge_file.git",
+                "issues": "https://www.drupal.org/project/issues/purge_file"
+            }
+        },
+        {
             "name": "drupal/purge_queuer_coretags",
             "version": "3.6.0",
             "require": {
@@ -16122,7 +16168,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "2390e88870484894b3aee7a43f1045c974460421"
+                "reference": "a39c65607d2c6f75350ebb51242d48f636bdac8c"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16205,6 +16251,7 @@
                 "drupal/path_redirect_import": "^2.0",
                 "drupal/pathauto": "^1.8",
                 "drupal/publishcontent": "^1.3",
+                "drupal/purge_file": "^1.1",
                 "drupal/quick_node_clone": "^1.16",
                 "drupal/rabbit_hole": "^1.0",
                 "drupal/real_aes": "^2.3",
@@ -16303,7 +16350,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-02-21T11:31:51+00:00"
+            "time": "2025-02-21T17:42:18+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
