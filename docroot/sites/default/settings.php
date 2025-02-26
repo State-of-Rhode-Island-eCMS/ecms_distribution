@@ -37,6 +37,8 @@ if (getenv('LANDO_INFO')) {
   // Generic hash salt for all local environments.
   $settings['hash_salt'] = 'BfHE?EG)vJPa3uikBCZWW#ATbDLijMFRZgfkyayYcZYoy>eC7QhdG7qaB4hcm4x$';
 
+  $settings['state_cache'] = TRUE;
+
   // Allow any domains to access the site with Lando.
   $settings['trusted_host_patterns'] = [
     '^(.+)$',
@@ -66,6 +68,8 @@ if (getenv('LANDO_INFO')) {
       'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
     ],
   ];
+
+  require DRUPAL_ROOT . '/modules/contrib/mysql57/settings.inc';
 
   // Check for PHP Memcached libraries.
   $memcache_exists = class_exists('Memcache', FALSE);

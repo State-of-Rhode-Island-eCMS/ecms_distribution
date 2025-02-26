@@ -10,16 +10,21 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-601: Added MySQL 5.7 backports
+- RIGA-601: Added state_cache to settings.php
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
+- RIGA-602: Remove ckeditor_entity_link & ckeditor module
 
 ### Fixed
 
 ### Security
+- RIGA-612: [sa-contrib-2024-047](https://www.drupal.org/sa-contrib-2024-047)
+- RIGA-621: Updated OpenID Connect to 3.x-Alpha6
 
 ## [2.2.0] - 2025-02-19
 ### Security
