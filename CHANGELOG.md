@@ -10,17 +10,24 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-601: Added MySQL 5.7 backports
-- RIGA-601: Added state_cache to settings.php
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
-- RIGA-602: Remove ckeditor_entity_link & ckeditor module
 
 ### Fixed
+
+### Security
+
+## [2.2.1] - 2025-02-26
+### Added
+- RIGA-601: Added MySQL 5.7 backports
+- RIGA-601: Added state_cache to settings.php
+
+### Removed
+- RIGA-602: Remove ckeditor_entity_link & ckeditor module
 
 ### Security
 - RIGA-612: [sa-contrib-2024-047](https://www.drupal.org/sa-contrib-2024-047)
@@ -1218,7 +1225,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.1...HEAD
+[2.2.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.0...2.2.1
 [2.2.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.9...2.2.0
 [2.1.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.8...2.1.9
 [2.1.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.1.7...2.1.8
