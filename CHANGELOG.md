@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-648: [SA-CORE-2025-001](https://www.drupal.org/sa-core-2025-001)
 
 ## [2.2.1] - 2025-02-26
 ### Added
