@@ -1,8 +1,19 @@
 diff --git a/.htaccess b/.htaccess
-index 6f9123d..84ec3c6 100644
+index 4031da475c..d66a3d1827 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -107,8 +107,15 @@ AddEncoding gzip svgz
+@@ -46,6 +46,10 @@ AddEncoding gzip svgz
+     # problems if a non-Drupal PHP file is installed in a subdirectory.
+     ExpiresActive Off
+   </FilesMatch>
++
++  <FilesMatch "\.(pdf|txt|doc|docx|xls|xlsx)$">
++    ExpiresDefault "access plus 5 minutes"
++  </FilesMatch>
+ </IfModule>
+
+ # Set a fallback resource if mod_rewrite is not enabled. This allows Drupal to
+@@ -100,8 +104,15 @@ AddEncoding gzip svgz
    # To redirect all users to access the site WITHOUT the 'www.' prefix,
    # (http://www.example.com/foo will be redirected to http://example.com/foo)
    # uncomment the following:
