@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-646: [SA-CONTRIB-2025-033](https://www.drupal.org/sa-contrib-2025-033)
 
 ## [2.2.2] - 2025-03-20
 ### Security
