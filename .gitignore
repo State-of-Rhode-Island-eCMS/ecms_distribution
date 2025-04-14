@@ -40,3 +40,6 @@
 
 # PHPStorm
 /.idea
+/private/
+!/private/files/.gitkeep
+!/private/files/.htaccess
