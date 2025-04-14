@@ -1,7 +1,0 @@
-# Copy this file to `.lando.local.yml` and rebuild.
-# This will allow you toggle xdebug
-services:
-  appserver:
-    overrides:
-      environment:
-        XDEBUG_MODE: 'debug'
