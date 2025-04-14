@@ -32,6 +32,17 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   // Enable memcache servers for ddev. This will be automatically
   // set for the Acquia environments.
   $settings['memcache']['servers'] = ['memcached:11211' => 'default'];
+
+  // SOLR override for local development.
+  $config['search_api.server.acquia_search_server']['backend'] = 'search_api_solr';
+  $config['search_api.server.acquia_search_server']['backend_config']['connector'] = 'solr_cloud_basic_auth';
+  $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['scheme'] = 'http';
+  $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['host'] = 'solr';
+  $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['core'] = 'ecms';
+  $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['context'] = 'solr';
+  $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['username'] = 'solr';
+  $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['password'] = 'SolrRocks';
+
 }
 
 // Memcached settings.
