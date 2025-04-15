@@ -12,6 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- Updated `ecms_patternlab` to 0.8.3
+- Updated `ecms_profile` to 1.1.4
 
 ### Deprecated
 
