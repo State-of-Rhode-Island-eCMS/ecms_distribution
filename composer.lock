@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa6493219bc4f206d7017d11362dc7c3",
+    "content-hash": "2c2956b9dffd3bf3198f7d7d8cbde60f",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16164,11 +16164,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.1.3",
+            "version": "dev-RIGA-645/ddev-switch",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "b5b04a21701780357358c543d19b771a0cee6c13"
+                "reference": "73e98fd3774f081a7cd50c40bcc274016db9dc32"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16278,25 +16278,23 @@
                 "drupal/webform_encrypt": "^2.0@alpha",
                 "drupal/webform_views": "^5.0@beta",
                 "drupal_git/migrate_process_trim": "2.0.0",
-                "drush/drush": "^10.0 || ^11 || ^12 || ^13",
+                "drush/drush": "^12 || ^13",
                 "geocoder-php/arcgis-online-provider": "^4.3",
                 "geocoder-php/google-maps-provider": "^4.6",
                 "geocoder-php/ipstack-provider": "^0.3.0",
                 "gravitypdf/querypath": "^3.2",
                 "johngrogg/ics-parser": "^2",
                 "oomphinc/composer-installers-extender": "^2.0",
-                "softcreatr/jsonpath": "^0.5 || ^0.7 || ^0.8"
+                "softcreatr/jsonpath": "^0.5 || ^0.7 || ^0.8",
+                "state-of-rhode-island-ecms/ecms_patternlab": "dev-master || ^0.8.2"
             },
             "require-dev": {
-                "behat/mink-goutte-driver": "^1.2",
                 "drupal/coder": "^8.3",
-                "drupal/migrate_devel": "^2.0@alpha",
-                "liuggio/fastest": "^1.6",
+                "drupal/core-dev": "^10 || ^11 || ^12",
+                "liuggio/fastest": "^1.13",
                 "php-mock/php-mock": "^2.2",
                 "php-mock/php-mock-phpunit": "^2.6",
-                "phpunit/phpunit": "^9",
-                "symfony/phpunit-bridge": "^5.1 || ^6.4",
-                "weitzman/drupal-test-traits": "^1.5"
+                "weitzman/drupal-test-traits": "^2.5"
             },
             "type": "drupal-profile",
             "extra": {
@@ -16323,7 +16321,15 @@
                     }
                 },
                 "preserve-paths": [],
-                "drupal-scaffold": []
+                "drupal-scaffold": [],
+                "installer-types": [
+                    "pattern-lab"
+                ],
+                "installer-paths": {
+                    "web/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": [
+                        "type:pattern-lab"
+                    ]
+                }
             },
             "scripts": {
                 "develop": [
@@ -16331,12 +16337,6 @@
                 ],
                 "clean-config": [
                     "scripts/clean-config.sh"
-                ],
-                "post-package-install": [
-                    "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
-                ],
-                "post-package-update": [
-                    "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
                 ]
             },
             "license": [
@@ -16350,7 +16350,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-02-26T20:42:18+00:00"
+            "time": "2025-04-21T18:21:03+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25001,7 +25001,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
