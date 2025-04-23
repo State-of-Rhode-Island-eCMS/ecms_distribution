@@ -21,6 +21,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [2.2.4] - 2025-04-23
+### Changed
+- Updated `ecms_patternlab` to 0.8.3
+- Updated `ecms_profile` to 1.1.4
+
+### Security
+- RIGA-657: Search API Solr - [sa-contrib-2025-046](https://www.drupal.org/sa-contrib-2025-046)
+
 ## [2.2.3] - 2025-04-10
 ### Security
 - RIGA-646: [SA-CONTRIB-2025-033](https://www.drupal.org/sa-contrib-2025-033)
@@ -1233,7 +1241,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.4...HEAD
+[2.2.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.3...2.2.4
 [2.2.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.2...2.2.3
 [2.2.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.1...2.2.2
 [2.2.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.0...2.2.1
