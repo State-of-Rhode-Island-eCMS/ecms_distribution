@@ -22,6 +22,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIGA-657: Search API Solr - [sa-contrib-2025-046](https://www.drupal.org/sa-contrib-2025-046)
 
 ## [2.2.3] - 2025-04-10
 ### Security
