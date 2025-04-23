@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "696832a25da73515b964c4956b02fc36",
+    "content-hash": "33d71af20a15ef50c7c9f763660e5cb8",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16765,11 +16765,11 @@
         },
         {
             "name": "state-of-rhode-island-ecms/ecms_patternlab",
-            "version": "dev-rc/0.8.3",
+            "version": "0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git",
-                "reference": "0e9f4e05d2a0cfb6251c9b4017b097c9d90a3f61"
+                "reference": "27ec0601263aec0bad96a27179bf468a0945b473"
             },
             "type": "pattern-lab",
             "license": [
@@ -16783,7 +16783,7 @@
                 }
             ],
             "description": "Pattern Lab for the State of Rhode Island's eCMS system",
-            "time": "2025-04-14T20:08:22+00:00"
+            "time": "2025-04-23T17:56:19+00:00"
         },
         {
             "name": "steverhoades/oauth2-openid-connect-server",
@@ -25088,8 +25088,7 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
-        "rhodeislandecms/ecms_profile": 20,
-        "state-of-rhode-island-ecms/ecms_patternlab": 20
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
