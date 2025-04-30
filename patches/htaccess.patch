@@ -7,7 +7,7 @@ index 4031da475c..d66a3d1827 100644
      ExpiresActive Off
    </FilesMatch>
 +
-+  <FilesMatch "\.(pdf|txt|doc|docx|xls|xlsx)$">
++  <FilesMatch "\.(pdf|csv|xlsx|xls|doc|docx|txt)$">
 +    ExpiresDefault "access plus 5 minutes"
 +  </FilesMatch>
  </IfModule>
