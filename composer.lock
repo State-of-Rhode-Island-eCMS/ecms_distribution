@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6750819d9153369bc91d04aff179192f",
+    "content-hash": "50bbbd1495c9ec5281bc7b643c1a2479",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16185,11 +16185,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.1.4",
+            "version": "dev-RIGA-603/update-module-patch",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "3b59e285917376d395d2a6d85e243cfad3d14521"
+                "reference": "0fd3d15e1150a1e547478036b6efb838305dc8af"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16333,9 +16333,6 @@
                         "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch",
                         "2887353 - Paragraph Translation Sync": "https://www.drupal.org/files/issues/2023-09-07/paragraphs-translation-sync-2887353-58.patch"
                     },
-                    "drupal/layout_builder_iframe_modal": {
-                        "3344339 - Hide the ‘Rebuild layout’ link in the layout builder actions area": "https://gist.githubusercontent.com/pfrilling/cce2cd4ce1f24e2c91a15fed0ce95412/raw/9058159f7ca199485692d3b4d1f052809ca8619d/3344339-hide-rebuild-layout-button.patch"
-                    },
                     "drupal/search_api": {
                         "3321499 - #19 - Call to a member function preExecute() on null in SearchApiTimeCache::generateResultsKey()": "https://www.drupal.org/files/issues/2023-12-05/search_api-Call_to_a_member_function_preExecute%28%29_on_null-3321499.patch"
                     },
@@ -16371,7 +16368,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-04-23T18:13:03+00:00"
+            "time": "2025-04-30T21:15:49+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25098,7 +25095,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
