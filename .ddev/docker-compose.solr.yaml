@@ -1,9 +1,16 @@
 #ddev-generated
-
 services:
   solr:
-    build: 
-      context: ./solr
+    build:
+      dockerfile_inline: |
+        ARG SOLR_BASE_IMAGE="scratch"
+        FROM $$SOLR_BASE_IMAGE
+        # Fix HTTPS redirect to HTTP which breaks URL for Solr Admin UI.
+        # The reason for this problem is that Solr uses Jetty as a webserver.
+        # Jetty has X-Forwarded- headers disabled by default, enable them here:
+        USER root
+        RUN sed -i '/X-Forwarded-/,/-->/ {/<!--/d; /-->/d}' /opt/solr/server/etc/jetty.xml
+        USER solr
       args:
         SOLR_BASE_IMAGE: ${SOLR_BASE_IMAGE:-solr:9.6}
     container_name: ddev-${DDEV_SITENAME}-solr
@@ -25,6 +32,7 @@ services:
       HTTPS_EXPOSE: 8943:8983
     volumes:
       - .:/mnt/ddev_config
+      - ddev-global-cache:/mnt/ddev-global-cache
       - ./solr/lib:/opt/solr/modules/ddev/lib
       - solr:/var/solr
     command: bash -c "set -eu;
@@ -46,10 +54,6 @@ services:
       "
     healthcheck:
       test: ["CMD-SHELL", "curl --fail -s localhost:8983/solr/"]
-
-  web:
-    links:
-      - solr:solr
 
 volumes:
   solr:
