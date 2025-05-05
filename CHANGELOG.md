@@ -31,6 +31,22 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-603: Updated drupal/extlink (2.0.2 => 2.0.4)
 - RIGA-603: Updated drupal/entity_usage (2.0.0-beta14 => 2.0.0-beta24)
 - RIGA-603: Updated drupal/content_moderation_notifications (3.6.0 => 3.7.0)
+- RIGA-603: Updated drupal/webform (6.2.8 => 6.2.9)
+- RIGA-603: Updated drupal/svg_image (3.0.2 => 3.2.1)
+- RIGA-603: Updated drupal/smart_date (4.1.6 => 4.2.3)
+- RIGA-603: Updated drupal/simple_sitemap (4.2.1 => 4.2.2)
+- RIGA-603: Updated drupal/redirect (1.10.0 => 1.11.0)
+- RIGA-603: Updated drupal/quick_node_clone (1.18.0 => 1.22.0)
+- RIGA-603: Updated drupal/publishcontent (1.6.0 => 1.7.0)
+- RIGA-603: Updated drupal/migrate_tools (6.0.4 => 6.0.5)
+- RIGA-603: Updated drupal/paragraphs (1.18.0 => 1.19.0)
+- RIGA-603: Updated drupal/openid_connect_windows_aad (2.0.0-beta7 => 2.0.0-beta9)
+- RIGA-603: Updated drupal/office_hours (1.19.0 => 1.28.0)
+- RIGA-603: Updated drupal/moderated_content_bulk_publish (2.0.32 => 2.0.35)
+- RIGA-603: Updated drupal/migrate_plus (6.0.4 => 6.0.5)
+- RIGA-603: Updated drupal/migration_tools (2.8.0 => 2.9.0)
+- RIGA-603: Updated drupal/menu_block (1.13.0 => 1.14.0)
+- RIGA-603: Updated drupal/media_entity_download (2.3.0 => 2.4.0)
 
 ### Deprecated
 
