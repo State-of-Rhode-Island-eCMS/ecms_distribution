@@ -12,6 +12,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-603: Updated drupal/acsf (2.80.0 => 2.81.0)
+- RIGA-603: Updated drupal/conditional_fields (4.0.0-alpha5 => 4.0.0-alpha6)
+- RIGA-603: Updated drupal/autologout (2.0.0 => 2.0.1)
+- RIGA-603: Updated drupal/auto_entitylabel (3.3.0 => 3.4.0)
+- RIGA-603: Updated drupal/admin_toolbar (3.5.0 => 3.5.3)
 - RIGA-603: Updated drupal/dynamic_entity_reference (3.2.0 => 3.2.1)
 - RIGA-603: Updated drupal/key (1.19.0 => 1.20.0)
 - RIGA-603: Updated drupal/encrypt (3.1.0 => 3.2.0)

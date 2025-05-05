@@ -2172,17 +2172,17 @@
         },
         {
             "name": "drupal/acsf",
-            "version": "2.80.0",
+            "version": "2.81.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acsf.git",
-                "reference": "8.x-2.80"
+                "reference": "8.x-2.81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.80.zip",
-                "reference": "8.x-2.80",
-                "shasum": "6119edb0a768a4d134ba47af1076c496dc14c1aa"
+                "url": "https://ftp.drupal.org/files/projects/acsf-8.x-2.81.zip",
+                "reference": "8.x-2.81",
+                "shasum": "d5414de8973f5cc16dc8208246f29aa5bec0c715"
             },
             "require": {
                 "drupal/acsf_duplication": "*",
@@ -2202,8 +2202,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.80",
-                    "datestamp": "1729073171",
+                    "version": "8.x-2.81",
+                    "datestamp": "1739185345",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2603,17 +2603,17 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.5.0",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.5.0"
+                "reference": "3.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.5.0.zip",
-                "reference": "3.5.0",
-                "shasum": "099e8d4dc98e1d551b4f9cffdc39599eb8ad04e8"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.5.3.zip",
+                "reference": "3.5.3",
+                "shasum": "363cdd6e6ca47983900f40793edf9a8b26f132bb"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -2624,8 +2624,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.5.0",
-                    "datestamp": "1722639094",
+                    "version": "3.5.3",
+                    "datestamp": "1740156799",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2657,6 +2657,10 @@
                     "name": "Mohamed Anis Taktak (matio89)",
                     "homepage": "https://www.drupal.org/u/matio89",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "fethi.krout",
+                    "homepage": "https://www.drupal.org/user/3206765"
                 },
                 {
                     "name": "japerry",
@@ -2934,29 +2938,30 @@
         },
         {
             "name": "drupal/auto_entitylabel",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/auto_entitylabel.git",
-                "reference": "8.x-3.3"
+                "reference": "8.x-3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/auto_entitylabel-8.x-3.3.zip",
-                "reference": "8.x-3.3",
-                "shasum": "38fd79973a7b49441bf622a1429a7c6623b93035"
+                "url": "https://ftp.drupal.org/files/projects/auto_entitylabel-8.x-3.4.zip",
+                "reference": "8.x-3.4",
+                "shasum": "9b3d7bc8e450ae008b3f48fed0dd9dace03ddbb5"
             },
             "require": {
                 "drupal/core": "^10.1 || ^11"
             },
             "require-dev": {
+                "drupal/book": "^1.0",
                 "drupal/token": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.3",
-                    "datestamp": "1723462798",
+                    "version": "8.x-3.4",
+                    "datestamp": "1736308389",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2989,7 +2994,7 @@
                     "homepage": "https://www.drupal.org/user/52136"
                 },
                 {
-                    "name": "Pravin Ajaaz",
+                    "name": "pravin ajaaz",
                     "homepage": "https://www.drupal.org/user/2910049"
                 },
                 {
@@ -3014,17 +3019,17 @@
         },
         {
             "name": "drupal/autologout",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/autologout.git",
-                "reference": "2.0.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/autologout-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "e9a1d4846cc323eef2eb54a0276023b1f0ff8bd2"
+                "url": "https://ftp.drupal.org/files/projects/autologout-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "61407ffa8b857b1e5d22d03ededac94b5119bd60"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10 || ^11",
@@ -3033,8 +3038,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1716413762",
+                    "version": "2.0.1",
+                    "datestamp": "1732235105",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3097,6 +3102,10 @@
                 {
                     "name": "str8",
                     "homepage": "https://www.drupal.org/user/2865063"
+                },
+                {
+                    "name": "the_g_bomb",
+                    "homepage": "https://www.drupal.org/user/492012"
                 }
             ],
             "description": "Adds automated timed logout.",
@@ -3795,29 +3804,30 @@
         },
         {
             "name": "drupal/conditional_fields",
-            "version": "4.0.0-alpha5",
+            "version": "4.0.0-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/conditional_fields.git",
-                "reference": "4.0.0-alpha5"
+                "reference": "4.0.0-alpha6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/conditional_fields-4.0.0-alpha5.zip",
-                "reference": "4.0.0-alpha5",
-                "shasum": "f0788b3cc91b390c3ebbdf544ecb2e78c57eb183"
+                "url": "https://ftp.drupal.org/files/projects/conditional_fields-4.0.0-alpha6.zip",
+                "reference": "4.0.0-alpha6",
+                "shasum": "0438e4e0e372cd68578679dfce3c990f8a12a4d7"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^9 || ^10 || ^11"
             },
             "require-dev": {
-                "drupal/paragraphs": "*"
+                "drupal/entity_reference_revisions": "1.x-dev",
+                "drupal/paragraphs": "^1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0-alpha5",
-                    "datestamp": "1695850051",
+                    "version": "4.0.0-alpha6",
+                    "datestamp": "1733933531",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -3882,10 +3892,11 @@
                     "homepage": "https://www.drupal.org/user/3589086"
                 }
             ],
-            "description": "Define dependencies between fields based on their states and values.",
+            "description": "Enables conditional field behaviors.",
             "homepage": "https://www.drupal.org/project/conditional_fields",
             "support": {
-                "source": "https://git.drupalcode.org/project/conditional_fields"
+                "source": "https://git.drupalcode.org/project/conditional_fields",
+                "issues": "https://www.drupal.org/project/issues/conditional_fields"
             }
         },
         {
