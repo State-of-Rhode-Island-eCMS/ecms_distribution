@@ -30,4 +30,5 @@ DRUSH_CMD="/var/www/html/$site.$env/vendor/bin/drush --verbose --root=$docroot -
 
 # Apply the hub connection requirements to all new sites
 $DRUSH_CMD ecms:save-publishing-consumer --yes  >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-staging-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD ecms:save-recipient-consumer --yes  >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-staging-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD ecms:update-syndicates $env --yes  >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-staging-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD ecms:save-recipient-consumer  --yes  >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/post-staging-${domain}-$(date +"%Y-%m-%d").log
