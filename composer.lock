@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b495770d557d3450ed454d9bf89a3516",
+    "content-hash": "6750819d9153369bc91d04aff179192f",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16174,11 +16174,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-643/staging-script",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "8ab31181f866d024220bcb6278496852cdc7e5dc"
+                "reference": "3b59e285917376d395d2a6d85e243cfad3d14521"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16288,23 +16288,25 @@
                 "drupal/webform_encrypt": "^2.0@alpha",
                 "drupal/webform_views": "^5.0@beta",
                 "drupal_git/migrate_process_trim": "2.0.0",
-                "drush/drush": "^12 || ^13",
+                "drush/drush": "^10.0 || ^11 || ^12 || ^13",
                 "geocoder-php/arcgis-online-provider": "^4.3",
                 "geocoder-php/google-maps-provider": "^4.6",
                 "geocoder-php/ipstack-provider": "^0.3.0",
                 "gravitypdf/querypath": "^3.2",
                 "johngrogg/ics-parser": "^2",
                 "oomphinc/composer-installers-extender": "^2.0",
-                "softcreatr/jsonpath": "^0.5 || ^0.7 || ^0.8",
-                "state-of-rhode-island-ecms/ecms_patternlab": "dev-master || ^0.8.2"
+                "softcreatr/jsonpath": "^0.5 || ^0.7 || ^0.8"
             },
             "require-dev": {
+                "behat/mink-goutte-driver": "^1.2",
                 "drupal/coder": "^8.3",
-                "drupal/core-dev": "^10 || ^11 || ^12",
-                "liuggio/fastest": "^1.13",
+                "drupal/migrate_devel": "^2.0@alpha",
+                "liuggio/fastest": "^1.6",
                 "php-mock/php-mock": "^2.2",
                 "php-mock/php-mock-phpunit": "^2.6",
-                "weitzman/drupal-test-traits": "^2.5"
+                "phpunit/phpunit": "^9",
+                "symfony/phpunit-bridge": "^5.1 || ^6.4",
+                "weitzman/drupal-test-traits": "^1.5"
             },
             "type": "drupal-profile",
             "extra": {
@@ -16331,15 +16333,7 @@
                     }
                 },
                 "preserve-paths": [],
-                "drupal-scaffold": [],
-                "installer-types": [
-                    "pattern-lab"
-                ],
-                "installer-paths": {
-                    "web/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": [
-                        "type:pattern-lab"
-                    ]
-                }
+                "drupal-scaffold": []
             },
             "scripts": {
                 "develop": [
@@ -16347,6 +16341,12 @@
                 ],
                 "clean-config": [
                     "scripts/clean-config.sh"
+                ],
+                "post-package-install": [
+                    "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+                ],
+                "post-package-update": [
+                    "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
                 ]
             },
             "license": [
@@ -16360,7 +16360,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-05-15T17:36:07+00:00"
+            "time": "2025-04-23T18:13:03+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25087,8 +25087,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10,
-        "rhodeislandecms/ecms_profile": 20
+        "drupal/feeds": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
