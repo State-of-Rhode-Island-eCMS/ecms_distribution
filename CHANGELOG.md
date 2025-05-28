@@ -21,6 +21,47 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [2.2.5] - 2025-05-28
+### Changed
+- RIGA-603: Updated drupal/acsf (2.80.0 => 2.81.0)
+- RIGA-603: Updated drupal/conditional_fields (4.0.0-alpha5 => 4.0.0-alpha6)
+- RIGA-603: Updated drupal/autologout (2.0.0 => 2.0.1)
+- RIGA-603: Updated drupal/auto_entitylabel (3.3.0 => 3.4.0)
+- RIGA-603: Updated drupal/admin_toolbar (3.5.0 => 3.5.3)
+- RIGA-603: Updated drupal/dynamic_entity_reference (3.2.0 => 3.2.1)
+- RIGA-603: Updated drupal/key (1.19.0 => 1.20.0)
+- RIGA-603: Updated drupal/encrypt (3.1.0 => 3.2.0)
+- RIGA-603: Updated drupal/externalauth (2.0.7 => 2.0.8)
+- RIGA-603: Updated drupal/layout_builder_restrictions (3.0.0 => 3.0.3)
+- RIGA-603: Updated drupal/language_neutral_aliases (3.1.1 => 3.2.1)
+- RIGA-603: Updated drupal/jsonapi_extras (3.25.0 => 3.26.0)
+- RIGA-603: Updated drupal/honeypot (2.2.0 => 2.2.2)
+- RIGA-603: Updated drupal/google_translator (2.2.0 => 2.3.0)
+- RIGA-603: Updated drupal/focal_point (2.1.1 => 2.1.2)
+- RIGA-603: Updated drupal/feeds (3.0.0- Rc2 => 3.0.0)
+- RIGA-603: Updated drupal/extlink (2.0.2 => 2.0.4)
+- RIGA-603: Updated drupal/entity_usage (2.0.0-beta14 => 2.0.0-beta24)
+- RIGA-603: Updated drupal/content_moderation_notifications (3.6.0 => 3.7.0)
+- RIGA-603: Updated drupal/webform (6.2.8 => 6.2.9)
+- RIGA-603: Updated drupal/svg_image (3.0.2 => 3.2.1)
+- RIGA-603: Updated drupal/smart_date (4.1.6 => 4.2.3)
+- RIGA-603: Updated drupal/simple_sitemap (4.2.1 => 4.2.2)
+- RIGA-603: Updated drupal/redirect (1.10.0 => 1.11.0)
+- RIGA-603: Updated drupal/quick_node_clone (1.18.0 => 1.22.0)
+- RIGA-603: Updated drupal/publishcontent (1.6.0 => 1.7.0)
+- RIGA-603: Updated drupal/migrate_tools (6.0.4 => 6.0.5)
+- RIGA-603: Updated drupal/paragraphs (1.18.0 => 1.19.0)
+- RIGA-603: Updated drupal/openid_connect_windows_aad (2.0.0-beta7 => 2.0.0-beta9)
+- RIGA-603: Updated drupal/office_hours (1.19.0 => 1.28.0)
+- RIGA-603: Updated drupal/moderated_content_bulk_publish (2.0.32 => 2.0.35)
+- RIGA-603: Updated drupal/migrate_plus (6.0.4 => 6.0.5)
+- RIGA-603: Updated drupal/migration_tools (2.8.0 => 2.9.0)
+- RIGA-603: Updated drupal/menu_block (1.13.0 => 1.14.0)
+- RIGA-603: Updated drupal/media_entity_download (2.3.0 => 2.4.0)
+
+### Fixed
+- RIGA-632: Updated caching for certain file types.
+
 ## [2.2.4] - 2025-04-23
 ### Changed
 - Updated `ecms_patternlab` to 0.8.3
@@ -1241,7 +1282,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.5...HEAD
+[2.2.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.4...2.2.5
 [2.2.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.3...2.2.4
 [2.2.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.2...2.2.3
 [2.2.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.1...2.2.2
