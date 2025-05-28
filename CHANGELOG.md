@@ -12,6 +12,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.2.5] - 2025-05-28
+### Changed
 - RIGA-603: Updated drupal/acsf (2.80.0 => 2.81.0)
 - RIGA-603: Updated drupal/conditional_fields (4.0.0-alpha5 => 4.0.0-alpha6)
 - RIGA-603: Updated drupal/autologout (2.0.0 => 2.0.1)
@@ -48,14 +59,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-603: Updated drupal/menu_block (1.13.0 => 1.14.0)
 - RIGA-603: Updated drupal/media_entity_download (2.3.0 => 2.4.0)
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 - RIGA-632: Updated caching for certain file types.
-
-### Security
 
 ## [2.2.4] - 2025-04-23
 ### Changed
@@ -1277,7 +1282,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.5...HEAD
+[2.2.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.4...2.2.5
 [2.2.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.3...2.2.4
 [2.2.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.2...2.2.3
 [2.2.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.1...2.2.2
