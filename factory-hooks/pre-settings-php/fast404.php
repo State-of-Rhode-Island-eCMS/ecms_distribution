@@ -1,0 +1,10 @@
+<?php
+
+
+/**
+ * @file
+ * Add settings for the Fast 404 module.
+ */
+
+ $settings['fast404_exts'] =
+'/^(?!\/robots)^(?!\/system\/files).*\.(txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i';
