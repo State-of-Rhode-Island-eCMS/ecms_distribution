@@ -21,6 +21,9 @@ $settings['file_public_path'] = 'sites/default/files';
 // Private files directory path. Uncomment this and set for hosting environment.
 //$settings['file_private_path'] = 'sites/default/files/private';
 
+$settings['fast404_exts'] = '/^(?!\/robots)^(?!\/system\/files).*\.(txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i';
+$settings['fast404_not_found_exception'] = TRUE;
+
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
