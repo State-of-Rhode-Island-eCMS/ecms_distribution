@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-670: Added D11 Patch: Migrate Process Trim
+- RIGA-583: Added settings file for fast404 module
 
 ### Changed
 

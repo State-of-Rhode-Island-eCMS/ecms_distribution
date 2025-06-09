@@ -51,6 +51,12 @@ if (file_exists($memcacheSettings)) {
   require($memcacheSettings);
 }
 
+// Fast404 settings.
+$fast404Settings = sprintf('%s/factory-hooks/post-settings-php/fast404.php', PROJECT_ROOT);
+if (file_exists($fast404Settings)) {
+  require($fast404Settings);
+}
+
 /**
  * Load local development override configuration, if available.
  *
