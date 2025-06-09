@@ -21,9 +21,6 @@ $settings['file_public_path'] = 'sites/default/files';
 // Private files directory path. Uncomment this and set for hosting environment.
 //$settings['file_private_path'] = 'sites/default/files/private';
 
-$settings['fast404_exts'] = '/^(?!\/robots)^(?!\/system\/files).*\.(txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i';
-$settings['fast404_not_found_exception'] = TRUE;
-
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
@@ -52,6 +49,12 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
 $memcacheSettings = sprintf('%s/factory-hooks/post-settings-php/acsfd8+.memcache.settings.php', PROJECT_ROOT);
 if (file_exists($memcacheSettings)) {
   require($memcacheSettings);
+}
+
+// Fast404 settings.
+$fast404Settings = sprintf('%s/factory-hooks/post-settings-php/fast404.php', PROJECT_ROOT);
+if (file_exists($fast404Settings)) {
+  require($fast404Settings);
 }
 
 /**
