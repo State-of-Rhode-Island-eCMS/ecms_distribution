@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bd165276a9b0bb73dde87a86482dc76",
+    "content-hash": "cd0cab3b84c56b9a35428ec6feec83f0",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
-            "version": "6.1.1",
+            "version": "6.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/http-hmac-php.git",
-                "reference": "48b8a9a6e6984ab6a19f432849b6cfb5a5a42a59"
+                "reference": "b5eedcf5c4d26f001a7de5e3d5cd4f34e74d0e8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/http-hmac-php/zipball/48b8a9a6e6984ab6a19f432849b6cfb5a5a42a59",
-                "reference": "48b8a9a6e6984ab6a19f432849b6cfb5a5a42a59",
+                "url": "https://api.github.com/repos/acquia/http-hmac-php/zipball/b5eedcf5c4d26f001a7de5e3d5cd4f34e74d0e8b",
+                "reference": "b5eedcf5c4d26f001a7de5e3d5cd4f34e74d0e8b",
                 "shasum": ""
             },
             "require": {
