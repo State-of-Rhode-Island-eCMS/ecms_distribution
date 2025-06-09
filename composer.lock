@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e221b468e87867dc20e6987459f73001",
+    "content-hash": "6bd165276a9b0bb73dde87a86482dc76",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -2688,90 +2688,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            }
-        },
-        {
-            "name": "drupal/advagg",
-            "version": "6.0.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/advagg.git",
-                "reference": "6.0.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/advagg-6.0.0-alpha1.zip",
-                "reference": "6.0.0-alpha1",
-                "shasum": "cadfe490b2b0c3fe099087f1c767ab7eaa73160a"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10",
-                "tubalmartin/cssmin": "^4.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "6.0.0-alpha1",
-                    "datestamp": "1672698356",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Carper (mikeytown2)",
-                    "homepage": "https://www.drupal.org/u/mikeytown2",
-                    "role": "Creator, Maintainer"
-                },
-                {
-                    "name": "Nick Wilde (nickwilde)",
-                    "homepage": "https://www.drupal.org/u/nickwilde",
-                    "email": "design@briarmoon.ca",
-                    "role": "Drupal 8 Port/maintainer"
-                },
-                {
-                    "name": "Other Contributors",
-                    "homepage": "https://www.drupal.org/node/1066416/committers",
-                    "role": "Contributors"
-                },
-                {
-                    "name": "nickdickinsonwilde",
-                    "homepage": "https://www.drupal.org/user/3094661"
-                },
-                {
-                    "name": "poker10",
-                    "homepage": "https://www.drupal.org/user/272316"
-                },
-                {
-                    "name": "rupl",
-                    "homepage": "https://www.drupal.org/user/411999"
-                },
-                {
-                    "name": "thalles",
-                    "homepage": "https://www.drupal.org/user/3589086"
-                },
-                {
-                    "name": "wim leers",
-                    "homepage": "https://www.drupal.org/user/99777"
-                }
-            ],
-            "description": "Improved aggregation of CSS/JS files to speed up page load times.",
-            "homepage": "https://drupal.org/project/advagg",
-            "support": {
-                "source": "https://git.drupalcode.org/project/advagg",
-                "issues": "https://drupal.org/project/issues/advagg",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -8401,6 +8317,55 @@
             }
         },
         {
+            "name": "drupal/migrate_process_trim",
+            "version": "dev-2.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_process_trim.git",
+                "reference": "4bbec87f0ecdb6d49f9ff2d763ba4f40f5d63d5c"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
+                "drupal": {
+                    "version": "2.0.0+1-dev",
+                    "datestamp": "1687973907",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "hinte",
+                    "homepage": "https://www.drupal.org/user/3276368"
+                },
+                {
+                    "name": "socketwench",
+                    "homepage": "https://www.drupal.org/user/65793"
+                }
+            ],
+            "description": "Provides trim, ltrim, and rtrim process plugins for migrations",
+            "homepage": "https://www.drupal.org/project/migrate_process_trim",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/migrate_process_trim",
+                "issues": "https://www.drupal.org/project/issues/migrate_process_trim"
+            }
+        },
+        {
             "name": "drupal/migrate_source_csv",
             "version": "3.6.0",
             "source": {
@@ -11565,16 +11530,6 @@
                 "source": "https://git.drupalcode.org/project/webform_views",
                 "issues": "https://www.drupal.org/project/issues/webform_views"
             }
-        },
-        {
-            "name": "drupal_git/migrate_process_trim",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/migrate_process_trim.git",
-                "reference": "4bbec87f0ecdb6d49f9ff2d763ba4f40f5d63d5c"
-            },
-            "type": "drupal-module"
         },
         {
             "name": "drush/drush",
@@ -16355,11 +16310,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.1.5",
+            "version": "dev-RIGA-670/d-11-patch-migrate-process-trim",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "ff3d876ffa56f539e16de58488d01270e84334f6"
+                "reference": "17df486b17cc9413c2a0e31155db1778cbb395dd"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16371,7 +16326,6 @@
                 "drupal/address": "^1.8",
                 "drupal/address_phonenumber": "^10.0",
                 "drupal/admin_toolbar": "^3.4",
-                "drupal/advagg": "^6.0@alpha",
                 "drupal/aggregator": "^2.2",
                 "drupal/allowed_formats": "^3.0.0",
                 "drupal/asset_injector": "^2.7",
@@ -16428,6 +16382,7 @@
                 "drupal/menu_block": "^1.10",
                 "drupal/metatag": "^1.26",
                 "drupal/migrate_plus": "^6.0",
+                "drupal/migrate_process_trim": "^2.0",
                 "drupal/migrate_tools": "^6.0",
                 "drupal/migration_tools": "^2.8",
                 "drupal/moderated_content_bulk_publish": "^2.0",
@@ -16470,7 +16425,6 @@
                 "drupal/webform": "^6.0",
                 "drupal/webform_encrypt": "^2.0@alpha",
                 "drupal/webform_views": "^5.0@beta",
-                "drupal_git/migrate_process_trim": "2.0.0",
                 "drush/drush": "^12 || ^13",
                 "geocoder-php/arcgis-online-provider": "^4.3",
                 "geocoder-php/google-maps-provider": "^4.6",
@@ -16501,6 +16455,9 @@
                     },
                     "drupal/layout_builder_iframe_modal": {
                         "3344339 - Patternlab causing Regression in ^1.3.5. Temporary fix and should be fixed in the theme css": "https://gist.githubusercontent.com/pfrilling/bfcc11f173c0f5e697557f70ea087612/raw/2531994d06daf867d3735f33786280186d800108/riga-hide-rebuild-layout.patch"
+                    },
+                    "drupal/migrate_process_trim": {
+                        "3288638 - Automated Drupal 11 compatibility fixes": "https://gist.githubusercontent.com/juniabiswas/f1d012dbfe5d83d2738cc8e0f84c8570/raw/f13d1ca37b8b39190972fcda84d8aded9c5521e2/migrate-process-trim-d11.diff"
                     },
                     "drupal/paragraphs": {
                         "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch",
@@ -16543,7 +16500,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-05-28T18:28:27+00:00"
+            "time": "2025-06-09T15:58:47+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -19693,63 +19650,6 @@
             "license": [
                 "MIT"
             ]
-        },
-        {
-            "name": "tubalmartin/cssmin",
-            "version": "v4.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git",
-                "reference": "3cbf557f4079d83a06f9c3ff9b957c022d7805cf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tubalmartin/YUI-CSS-compressor-PHP-port/zipball/3cbf557f4079d83a06f9c3ff9b957c022d7805cf",
-                "reference": "3cbf557f4079d83a06f9c3ff9b957c022d7805cf",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pcre": "*",
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "cogpowered/finediff": "0.3.*",
-                "phpunit/phpunit": "4.8.*"
-            },
-            "bin": [
-                "cssmin"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "tubalmartin\\CssMin\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Túbal Martín",
-                    "homepage": "http://tubalmartin.me/"
-                }
-            ],
-            "description": "A PHP port of the YUI CSS compressor",
-            "homepage": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port",
-            "keywords": [
-                "compress",
-                "compressor",
-                "css",
-                "cssmin",
-                "minify",
-                "yui"
-            ],
-            "support": {
-                "issues": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port/issues",
-                "source": "https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port"
-            },
-            "time": "2018-01-15T15:26:51+00:00"
         },
         {
             "name": "twig/twig",
@@ -25270,7 +25170,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
