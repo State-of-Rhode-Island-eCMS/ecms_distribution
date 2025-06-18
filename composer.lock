@@ -6137,30 +6137,29 @@
         },
         {
             "name": "drupal/honeypot",
-            "version": "2.2.2",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/honeypot.git",
-                "reference": "2.2.2"
+                "reference": "2.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/honeypot-2.2.2.zip",
-                "reference": "2.2.2",
-                "shasum": "828872d31d1a2c37a818cacae7fcd77a60996c66"
+                "url": "https://ftp.drupal.org/files/projects/honeypot-2.1.4.zip",
+                "reference": "2.1.4",
+                "shasum": "adf76c3520c0e458177dbe6d638aa2d6ae40a95b"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11"
+                "drupal/core": "^9.2 || ^10"
             },
             "require-dev": {
-                "drupal/rules": "^4.0",
-                "drupal/webform": "^6.2"
+                "drupal/rules": "^3.x-dev"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.2.2",
-                    "datestamp": "1739854442",
+                    "version": "2.1.4",
+                    "datestamp": "1739061992",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16396,7 +16395,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "59398454483ae541ff51281641d3967f3197caf1"
+                "reference": "0e104f2a5838f453d56efbe760bf28fd231070ee"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16441,7 +16440,7 @@
                 "drupal/google_tag": "^2.0",
                 "drupal/google_translator": "^2.1",
                 "drupal/hal": "^2.0",
-                "drupal/honeypot": "^2.0",
+                "drupal/honeypot": "2.1.4",
                 "drupal/http_cache_control": "^2.0",
                 "drupal/iek": "^1.3",
                 "drupal/inline_entity_form": "^3.0.0-rc21",
@@ -16597,7 +16596,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-06-11T11:25:37+00:00"
+            "time": "2025-06-18T10:16:37+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
