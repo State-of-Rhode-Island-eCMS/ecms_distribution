@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "491b44b1bae3ea1997c9f387a4ea3078",
+    "content-hash": "d34cf602e68e74759c4aa1d706112f73",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -14535,10 +14535,10 @@
         },
         {
             "name": "nnnick/chartjs",
-            "version": "v3.9.1",
+            "version": "v4.4.1",
             "dist": {
-                "type": "tar",
-                "url": "https://github.com/chartjs/Chart.js/releases/download/v3.9.1/chart.js-3.9.1.tgz"
+                "type": "file",
+                "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"
             },
             "type": "drupal-library"
         },
