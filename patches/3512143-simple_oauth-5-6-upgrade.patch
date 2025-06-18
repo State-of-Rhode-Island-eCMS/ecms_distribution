@@ -1,0 +1,89 @@
+diff --git a/simple_oauth.install b/simple_oauth.install
+index 67c13b2ee9f1d2c4eefd2cd31460bc95d222e212..e234d3c4f3015d89939b0a10138bc87754b42c97 100644
+--- a/simple_oauth.install
++++ b/simple_oauth.install
+@@ -280,7 +280,6 @@ function simple_oauth_update_8603() {
+  * Migrate roles used as scope and migrate settings to the consumer.
+  */
+ function simple_oauth_update_8604() {
+-  $scopes = [];
+   $consumers = \Drupal::entityTypeManager()->getStorage('consumer')->loadMultiple();
+   $grant_types = array_keys(Oauth2GrantManager::getAvailablePluginsAsOptions());
+   $config = \Drupal::configFactory()->get('simple_oauth.settings');
+@@ -291,27 +290,31 @@ function simple_oauth_update_8604() {
+     ->execute()
+     ->fetchAll();
+
+-  $scopes = [];
+   foreach ($role_values as $role_value) {
+     /** @var \Drupal\user\RoleInterface $role */
+     $role = \Drupal::entityTypeManager()->getStorage('user_role')->load($role_value->roles_target_id);
+-    // Scope doesn't exist, so we need to create one.
+-    if (!isset($scopes[$role->id()])) {
+-      $scope = Oauth2Scope::create([
+-        'name' => $role->id(),
+-        'description' => $role->label(),
+-        'grant_types' => [
+-          'authorization_code' => ['status' => TRUE],
+-          'client_credentials' => ['status' => TRUE],
+-          'refresh_token' => ['status' => TRUE],
+-        ],
+-        'granularity' => Oauth2ScopeInterface::GRANULARITY_ROLE,
+-        'role' => $role->id(),
+-      ]);
+-      $scope->save();
+-      $scopes[$role->id()] = $scope;
++    // Role doesn't exist, so don't do anything.
++    if (!$role) {
++      continue;
++    }
++    // Scope already exist.
++    if (\Drupal::entityTypeManager()->getStorage('oauth2_scope')->load($role->id())) {
++      continue;
+     }
+
++    // Scope doesn't exist, so we need to create one.
++    Oauth2Scope::create([
++      'name' => $role->id(),
++      'description' => $role->label(),
++      'grant_types' => [
++        'authorization_code' => ['status' => TRUE],
++        'client_credentials' => ['status' => TRUE],
++        'refresh_token' => ['status' => TRUE],
++      ],
++      'granularity' => Oauth2ScopeInterface::GRANULARITY_ROLE,
++      'role' => $role->id(),
++    ])->save();
++
+     $insert_query = $database->insert('consumer__scopes')
+       ->fields([
+         'bundle',
+@@ -336,6 +339,17 @@ function simple_oauth_update_8604() {
+
+   foreach ($consumers as $consumer) {
+     foreach ($grant_types as $delta => $grant_type) {
++      $grant_type_exist = $database->select('consumer__grant_types', 'gc')
++        ->fields('gc', ['entity_id'])
++        ->condition('gc.entity_id', $consumer->id())
++        ->condition('gc.langcode', $consumer->language()->getId())
++        ->condition('gc.grant_types_value', $grant_type)
++        ->execute()
++        ->fetchField();
++      // Grant type already exist.
++      if ($grant_type_exist) {
++        continue;
++      }
+       $insert_query = $database->insert('consumer__grant_types')
+         ->fields([
+           'bundle',
+@@ -371,7 +385,9 @@ function simple_oauth_update_8604() {
+   // Remove roles field.
+   $entity_definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+   $roles_field_definition = $entity_definition_update_manager->getFieldStorageDefinition('roles', 'consumer');
+-  $entity_definition_update_manager->uninstallFieldStorageDefinition($roles_field_definition);
++  if ($roles_field_definition) {
++    $entity_definition_update_manager->uninstallFieldStorageDefinition($roles_field_definition);
++  }
+ }
+
+ /**
