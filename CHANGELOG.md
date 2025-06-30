@@ -10,8 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-670: Added D11 Patch: Migrate Process Trim
-- RIGA-583: Added settings file for fast404 module
 
 ### Changed
 
@@ -22,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [2.2.6] - 2025-06-30
+### Added
+- RIGA-670: Added D11 Patch: Migrate Process Trim
+- RIGA-583: Added settings file for fast404 module
 
 ## [2.2.5] - 2025-05-28
 ### Changed
@@ -1284,7 +1287,8 @@ RIGA-453: Updated migrate_tools to 6.0.3 [sa-contrib-2024-008](https://www.drupa
 ### Added
 - Initial Release of the site.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.6...HEAD
+[2.2.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.5...2.2.6
 [2.2.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.4...2.2.5
 [2.2.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.3...2.2.4
 [2.2.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_distribution/compare/2.2.2...2.2.3
