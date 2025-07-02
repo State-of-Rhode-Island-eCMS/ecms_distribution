@@ -13,9 +13,9 @@ const fileArgs = require('yargs').argv;
 const scssFilePaths = [
   "docroot/modules/custom/**/*.scss",
   "docroot/themes/custom/**/*.scss",
-  "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.scss",
-  "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.scss",
-  "!docroot/profiles/contrib/ecms_profile/*/themes/custom/**/ecms_patternlab/**/*",
+  // "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.scss",
+  // "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.scss",
+  // "!docroot/profiles/contrib/ecms_profile/*/themes/custom/**/ecms_patternlab/**/*",
 ];
 
 // Directories to search ES6 JavaScript files to compile. Files will be compiled
@@ -23,9 +23,9 @@ const scssFilePaths = [
 const javascriptFilePaths = [
   "docroot/modules/custom/**/*.es6.js",
   "docroot/themes/custom/**/*.es6.js",
-  "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.es6.js",
-  "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.es6.js",
-  "!docroot/profiles/contrib/ecms_profile/*/themes/custom/**/ecms_patternlab/**/*",
+  // "docroot/profiles/contrib/ecms_profile/*/modules/custom/**/*.es6.js",
+  // "docroot/profiles/contrib/ecms_profile/*/themes/custom/**/*.es6.js",
+  // "!docroot/profiles/contrib/ecms_profile/*/themes/custom/**/ecms_patternlab/**/*",
 ];
 
 // Default task.
