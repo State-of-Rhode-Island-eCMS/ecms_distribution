@@ -125,14 +125,6 @@ jobs:
         run: gulp build
         working-directory: 'docroot/profiles/contrib/ecms_profile'
 
-      - name: Install Node dependencies for ecms custom theme
-        run: npm ci --no-fund --no-progress --production
-        working-directory: 'docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms'
-
-      - name: Run gulp build for the ecms custom theme
-        run: gulp build
-        working-directory: 'docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms'
-
       - name: Prepare distribution for deployment to Site Factory
         run: |
           vendor/bin/drush acsf-init --include="docroot/modules/contrib/acsf/acsf_init" --root="docroot" -y
