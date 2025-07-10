@@ -1,0 +1,41 @@
+# Security Policy for Rhode Island Government Website
+# This file follows RFC 9116: https://datatracker.ietf.org/doc/html/rfc9116
+
+# Primary security contact
+Contact: mailto:security@ri.gov
+
+# Security team contact (alternative)
+Contact: mailto:it.security@ri.gov
+
+# Preferred languages for security reports
+Preferred-Languages: en
+
+# Policy for security researchers
+Policy: https://ri.gov/security-policy
+
+# Security acknowledgments page
+Acknowledgments: https://ri.gov/security-acknowledgments
+
+# Hiring information for security researchers
+Hiring: https://ri.gov/careers
+
+# Canonical security.txt location
+Canonical: https://ri.gov/.well-known/security.txt
+
+# Expiration date (recommended: 1 year from creation)
+Expires: 2025-12-31T23:59:59.000Z
+
+# Encryption key for secure communications (if available)
+# Encryption: https://ri.gov/.well-known/pgp-key.txt
+
+# Security team public key (if available)
+# PGP-Key: https://ri.gov/.well-known/pgp-key.txt
+
+# Additional security resources
+# More-Info: https://ri.gov/security
+
+# Security team contact hours (if applicable)
+# Contact-Hours: Monday-Friday 9:00-17:00 EST
+
+# Security team timezone
+# Contact-Timezone: America/New_York
