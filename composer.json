@@ -24,23 +24,6 @@
             "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git"
         },
         {
-            "type": "git",
-            "url": "https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab.git"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "drupal_git/migration_tools",
-                "type": "drupal-module",
-                "version": "1.0.0",
-                "source": {
-                    "type": "git",
-                    "url": "https://git.drupalcode.org/project/migration_tools.git",
-                    "reference": "3e193bc97d127ea2cff6b80f9509bc161bdee19f"
-                }
-            }
-        },
-        {
             "type": "package",
             "package": {
                 "name": "nnnick/chartjs",
@@ -75,8 +58,7 @@
         "nnnick/chartjs": "^4.4",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "1.1.6",
-        "state-of-rhode-island-ecms/ecms_patternlab": "0.8.4",
+        "rhodeislandecms/ecms_profile": "1.1.7",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
@@ -120,8 +102,7 @@
     "extra": {
         "installer-types": [
             "bower-asset",
-            "npm-asset",
-            "pattern-lab"
+            "npm-asset"
         ],
         "installer-paths": {
             "docroot/core": [
@@ -143,9 +124,6 @@
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
-            ],
-            "docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/{$name}": [
-                "type:pattern-lab"
             ]
         },
         "patches": {

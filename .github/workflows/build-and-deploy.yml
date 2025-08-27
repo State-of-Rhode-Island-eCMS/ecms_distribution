@@ -111,19 +111,31 @@ jobs:
       - name: Install Node dependencies
         run: npm ci --no-fund --no-progress --production
 
+      - name: Run Gulp for the distribution
+        run: gulp build
+
+      - name: Validate Gulp for the distribution
+        run: gulp validate
+
+      - name: Install Node dependencies for ecms_profile
+        run: npm ci --no-fund --no-progress --production
+        working-directory: 'docroot/profiles/contrib/ecms_profile'
+
+      - name: Run gulp build for ecms_profile
+        run: gulp build
+        working-directory: 'docroot/profiles/contrib/ecms_profile'
+
       - name: Prepare distribution for deployment to Site Factory
         run: |
           vendor/bin/drush acsf-init --include="docroot/modules/contrib/acsf/acsf_init" --root="docroot" -y
           vendor/bin/drush --include=docroot/modules/contrib/acsf/acsf_init acsf-init-verify
 
-      - name: Run Gulp
-        run: gulp build
-
-      - name: Validate Gulp
-        run: gulp validate
-
       - name: Archive Drupal
-        run: tar -czf drupal.tar.gz ${{ env.DRUPAL_ARCHIVE_CONTENTS }}
+        run: |
+          tar -cz \
+          --exclude=docroot/profiles/contrib/ecms_profile/node_modules \
+          --exclude=docroot/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/node_modules \
+          -f drupal.tar.gz ${{ env.DRUPAL_ARCHIVE_CONTENTS }}
 
       - name: Upload Drupal archive
         uses: actions/upload-artifact@v4
