@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6deaeb78cd7d38afaedfe61ce1432cc9",
+    "content-hash": "490c6fd74c84a9f3e06a51ffe5fe3c43",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -16469,11 +16469,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-RIGA-652/component-audit",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "497dab4a64d87d85e43a948dd25331e43cb438a6"
+                "reference": "fcc87414d44a28f4770f6d8b5df531d144ce5b8b"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16668,7 +16668,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-07-28T19:23:46+00:00"
+            "time": "2025-08-27T17:42:09+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25257,8 +25257,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10,
-        "rhodeislandecms/ecms_profile": 20
+        "drupal/feeds": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
