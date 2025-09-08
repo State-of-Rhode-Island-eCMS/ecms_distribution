@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c9838e5ae44ca57e1674594e89ea4a3",
+    "content-hash": "512763f6587d2887bf5097dfa6dec29e",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -7830,62 +7830,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/media_pdf_thumbnail",
                 "issues": "http://drupal.org/project/issues/media_pdf_thumbnail"
-            }
-        },
-        {
-            "name": "drupal/media_revisions_ui",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/media_revisions_ui.git",
-                "reference": "2.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_revisions_ui-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "fab967dbaebc96350d2334d8ff09e257f943b4e0"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1663070347",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "acbramley",
-                    "homepage": "https://www.drupal.org/user/1036766"
-                },
-                {
-                    "name": "bcizej",
-                    "homepage": "https://www.drupal.org/user/3612191"
-                },
-                {
-                    "name": "mstrelan",
-                    "homepage": "https://www.drupal.org/user/314289"
-                }
-            ],
-            "description": "Adds admin interface to handle media revisions.",
-            "homepage": "https://www.drupal.org/project/media_revisions_ui",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/media_revisions_ui",
-                "issues": "https://www.drupal.org/project/issues/media_revisions_ui"
             }
         },
         {
@@ -16475,7 +16419,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "7d12fb471c53608c56987167a3883ea2c032d45d"
+                "reference": "1e653d7f04c570c7a7d2b060cfa9b0476f372f68"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16542,7 +16486,6 @@
                 "drupal/media_library_form_element": "^2.0.4",
                 "drupal/media_library_theme_reset": "^2.0.0-beta1",
                 "drupal/media_pdf_thumbnail": "^6.1@RC",
-                "drupal/media_revisions_ui": "^2.1",
                 "drupal/memcache": "^2.2",
                 "drupal/menu_admin_per_menu": "^1.7",
                 "drupal/menu_block": "^1.10",
@@ -16675,7 +16618,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-09-08T15:27:38+00:00"
+            "time": "2025-09-08T15:50:38+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
