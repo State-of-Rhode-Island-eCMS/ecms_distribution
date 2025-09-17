@@ -1,0 +1,11 @@
+# Security Policy for Rhode Island Government Website
+
+Contact:  https://etss.ri.gov/contact
+
+Expires: 2025-12-31T12:00:00.000Z
+
+Policy: https://www.ri.gov/app/doa/policies/policies?utf8=%E2%9C%93&search%5Bquery%5D=security&search%5Bdivision%5D=1&commit=Search
+
+Acknowledgments: https://etss.ri.gov/cybersecurity
+
+Hiring: https://apply.ri.gov

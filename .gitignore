@@ -11,6 +11,7 @@
 !/docroot/sites/default
 /docroot/sites/default/*
 !/docroot/sites/default/settings.php
+!/docroot/.well-known
 
 /config/**/.htaccess
 !/config/default/.htaccess
