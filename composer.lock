@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "314509b55e06ea848410b48f078388ce",
+    "content-hash": "27a4289018f6265dd4b5458b6bf14540",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -6115,6 +6115,50 @@
             "homepage": "https://www.drupal.org/project/google_translator",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_translator"
+            }
+        },
+        {
+            "name": "drupal/gtranslate",
+            "version": "3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gtranslate.git",
+                "reference": "3.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gtranslate-3.0.4.zip",
+                "reference": "3.0.4",
+                "shasum": "8817f12cd7abadd5da619f621995b5115b7765e0"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.4",
+                    "datestamp": "1734974789",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "edo888",
+                    "homepage": "https://www.drupal.org/user/291183"
+                }
+            ],
+            "description": "Uses Google power to translate your website.",
+            "homepage": "https://www.drupal.org/project/gtranslate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gtranslate"
             }
         },
         {
@@ -16337,11 +16381,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "1.1.8",
+            "version": "dev-RIGA-714/gtranslate",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "5d5381579b7d636b281f4352364c52dde30aca98"
+                "reference": "a0526d344e311e34f76fce70d6782be4aa56c05f"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16387,6 +16431,7 @@
                 "drupal/geolocation": "^3.2",
                 "drupal/google_tag": "^2.0",
                 "drupal/google_translator": "^2.1",
+                "drupal/gtranslate": "^3.0",
                 "drupal/hal": "^2.0",
                 "drupal/honeypot": "^2.2",
                 "drupal/http_cache_control": "^2.0",
@@ -16539,7 +16584,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-09-17T18:49:48+00:00"
+            "time": "2025-09-27T00:06:23+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25343,7 +25388,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_update": 15,
-        "drupal/feeds": 10
+        "drupal/feeds": 10,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
