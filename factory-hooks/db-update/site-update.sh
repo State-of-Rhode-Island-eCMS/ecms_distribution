@@ -40,9 +40,9 @@ docroot="/var/www/html/$site.$env/docroot"
 #    on aliases. This can prevent some hard to trace problems.
 DRUSH_CMD="/var/www/html/$site.$env/vendor/bin/drush --verbose --root=$docroot --uri=https://$domain"
 
-# Run profile conversion script if custom argument is "profile-upgrade".
-if [ "$custom_argument" = "profile-upgrade" ]; then
-  php $docroot/profiles/contrib/ecms_profile/scripts/drush_profile_convert.php >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-profile-convert-${domain}-$(date +"%Y-%m-%d").log
+# Run profile conversion script if custom argument is "drupal-11-upgrade".
+if [ "$custom_argument" = "drupal-11-upgrade" ]; then
+  $DRUSH_CMD scr $docroot/profiles/contrib/ecms_profile/scripts/drush_profile_convert.php >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-profile-convert-${domain}-$(date +"%Y-%m-%d").log
 fi
 
 # Run `drush updatedb`.
