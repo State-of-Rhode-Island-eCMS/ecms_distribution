@@ -29,7 +29,7 @@ domain="$4"
 
 # Custom argument passed with the code update UI.
 # Custom argument.
-# custom_argument="$5"
+custom_argument="$5"
 
 # The websites' document root can be derived from the site/env:
 docroot="/var/www/html/$site.$env/docroot"
@@ -39,6 +39,11 @@ docroot="/var/www/html/$site.$env/docroot"
 # 2. When running drush, provide the application + url, rather than relying
 #    on aliases. This can prevent some hard to trace problems.
 DRUSH_CMD="/var/www/html/$site.$env/vendor/bin/drush --verbose --root=$docroot --uri=https://$domain"
+
+# Run profile conversion script if custom argument is "drupal11upgrade".
+if [ "$custom_argument" = "drupal11upgrade" ]; then
+  $DRUSH_CMD scr $docroot/profiles/contrib/ecms_profile/scripts/drush_profile_convert.php --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-profile-convert-${domain}-$(date +"%Y-%m-%d").log
+fi
 
 # Run `drush updatedb`.
 $DRUSH_CMD updatedb --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update-${domain}-$(date +"%Y-%m-%d").log
