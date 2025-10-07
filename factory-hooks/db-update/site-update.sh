@@ -42,7 +42,7 @@ DRUSH_CMD="/var/www/html/$site.$env/vendor/bin/drush --verbose --root=$docroot -
 
 # Run profile conversion script if custom argument is "drupal11upgrade".
 if [ "$custom_argument" = "drupal11upgrade" ]; then
-  $DRUSH_CMD scr docroot/profiles/contrib/ecms_profile/scripts/drush_profile_convert.php --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-profile-convert-${domain}-$(date +"%Y-%m-%d").log
+  $DRUSH_CMD scr $docroot/profiles/contrib/ecms_profile/scripts/drush_profile_convert.php --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-profile-convert-${domain}-$(date +"%Y-%m-%d").log
 fi
 
 # Run `drush updatedb`.
