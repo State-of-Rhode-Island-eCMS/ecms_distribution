@@ -53,6 +53,7 @@
         "drupal/menu_force": "^2.0",
         "drupal/migrate_devel": "^2.3",
         "drupal/office_hours": "^1.11",
+        "drupal/publishcontent": "1.x-dev@dev",
         "drupal/upgrade_status": "^4.0",
         "drush/drush": "^12 || ^13",
         "mglaman/composer-drupal-lenient": "^1.0",
