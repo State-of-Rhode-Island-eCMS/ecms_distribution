@@ -49,6 +49,7 @@
         "drupal/core-recommended": "^11.2",
         "drupal/feeds": "^3.0@beta",
         "drupal/google_tag": "^2.0.5",
+        "drupal/jsonapi_extras": "3.x-dev@dev",
         "drupal/media_library_form_element": "^2.1",
         "drupal/menu_force": "^2.0",
         "drupal/migrate_devel": "^2.3",
