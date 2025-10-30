@@ -43,29 +43,29 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/config_update": "^2.0@alpha",
         "drupal/content_moderation_notifications": "^3.6",
-        "drupal/core-composer-scaffold": "^10.5",
-        "drupal/core-project-message": "^10.5",
-        "drupal/core-recommended": "^10.5",
-        "drupal/core-vendor-hardening": "^10.2",
+        "drupal/core-composer-scaffold": "^11.2",
+        "drupal/core-project-message": "^11.2",
+        "drupal/core-recipe-unpack": "^11.2",
+        "drupal/core-recommended": "^11.2",
         "drupal/feeds": "^3.0@beta",
         "drupal/google_tag": "^2.0.5",
+        "drupal/jsonapi_extras": "3.x-dev@dev",
         "drupal/media_library_form_element": "^2.1",
         "drupal/menu_force": "^2.0",
         "drupal/migrate_devel": "^2.3",
         "drupal/office_hours": "^1.11",
         "drupal/upgrade_status": "^4.0",
-        "drush/drush": "^12.0",
+        "drush/drush": "^12 || ^13",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "nnnick/chartjs": "^4.4",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "1.2.0",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-732/d11-upgrade",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true,
-        "discard-changes": true,
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
@@ -73,14 +73,17 @@
             "drupal-composer/preserve-paths": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
+            "drupal/core-recipe-unpack": true,
             "drupal/core-vendor-hardening": true,
             "mglaman/composer-drupal-lenient": true,
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
-            "phpstan/extension-installer": false,
+            "php-tuf/composer-integration": true,
+            "phpstan/extension-installer": true,
             "tbachert/spi": true,
             "wikimedia/composer-merge-plugin": true
         },
+        "sort-packages": true,
         "process-timeout": 0
     },
     "scripts": {
@@ -100,18 +103,20 @@
         ]
     },
     "extra": {
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
+            }
+        },
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
+                "type:drupal-library"
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -122,8 +127,41 @@
             "docroot/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
-            "drush/contrib/{$name}": [
+            "drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/recipes/{$name}": [
+                "type:drupal-recipe"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/installing-drupal",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
             ]
         },
         "patches": {
@@ -142,20 +180,12 @@
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
-            },
-            "drush/drush": {
-                "Drush apply recipe": "https://patch-diff.githubusercontent.com/raw/drush-ops/drush/pull/5997.diff"
-            }
-        },
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "docroot"
-            },
-            "file-mapping": {
-                "[web-root]/robots.txt": false
             }
         },
         "enable-patching": "true",
+        "drupal-lenient": {
+            "allowed-list": ["drupal/address_phonenumber", "drupal/iek", "drupal/migrate_process_trim", "drupal/webform_encrypt"]
+        },
         "merge-plugin": {
             "require": [
                 "docroot/modules/contrib/webform/composer.libraries.json"
@@ -171,9 +201,8 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/core-dev": "^10.2",
-        "drupal/devel": "^5.0",
-        "phpunit/phpunit": "^9",
-        "symfony/phpunit-bridge": "^6.4"
+        "drupal/core-dev": "^10 || ^11 || ^12",
+        "php-mock/php-mock": "^2.2",
+        "php-mock/php-mock-phpunit": "^2.6"
     }
 }
