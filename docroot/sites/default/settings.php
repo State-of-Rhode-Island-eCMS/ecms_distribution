@@ -45,6 +45,11 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
 
 }
 
+$mysql57Settings = sprintf('%s/modules/contrib/mysql57/settings.inc', DRUPAL_ROOT);
+if (file_exists($mysql57Settings)) {
+  require($mysql57Settings);
+}
+
 // Memcached settings.
 $memcacheSettings = sprintf('%s/factory-hooks/post-settings-php/acsfd8+.memcache.settings.php', PROJECT_ROOT);
 if (file_exists($memcacheSettings)) {
