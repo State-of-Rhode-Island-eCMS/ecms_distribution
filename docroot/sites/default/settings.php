@@ -42,7 +42,19 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['context'] = 'solr';
   $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['username'] = 'solr';
   $config['search_api.server.acquia_search_server']['backend_config']['connector_config']['password'] = 'SolrRocks';
+}
 
+// GitHub Actions environment database settings.
+if (getenv('GITHUB_ACTIONS')) {
+  $databases['default']['default'] = [
+    'database' => 'drupal',
+    'username' => 'drupal',
+    'password' => 'drupal',
+    'host' => '127.0.0.1',
+    'port' => '3306',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
+  ];
 }
 
 $mysql57Settings = sprintf('%s/modules/contrib/mysql57/settings.inc', DRUPAL_ROOT);
