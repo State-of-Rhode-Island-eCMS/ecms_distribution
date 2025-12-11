@@ -45,6 +45,13 @@ if [ "$custom_argument" = "drupal11upgrade" ]; then
   $DRUSH_CMD scr $docroot/profiles/contrib/ecms_profile/scripts/drush_profile_convert.php --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-profile-convert-${domain}-$(date +"%Y-%m-%d").log
 fi
 
+# Install the asset_injector module if the argument is release301.
+# Required as the ecms_profile update hook 11208 is throwing a php error
+# during the module installation that prevents recipes from applying.
+if [ "$custom_argument" = "release301" ]; then
+  $DRUSH_CMD pm:install asset_injector --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/asset-injector-install-${domain}-$(date +"%Y-%m-%d").log
+fi
+
 # Run `drush updatedb`.
 $DRUSH_CMD updatedb --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update-${domain}-$(date +"%Y-%m-%d").log
 
