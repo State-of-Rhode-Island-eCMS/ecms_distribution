@@ -49,6 +49,7 @@ fi
 # Required as the ecms_profile update hook 11208 is throwing a php error
 # during the module installation that prevents recipes from applying.
 if [ "$custom_argument" = "release301" ]; then
+  $DRUSH_CMD cache-rebuild >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-cache.log
   $DRUSH_CMD pm:install asset_injector --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/asset-injector-install-${domain}-$(date +"%Y-%m-%d").log
 fi
 
