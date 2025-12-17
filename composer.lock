@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbf91d23e7931a59ef448ea6aa88fa88",
+    "content-hash": "cf379f661b577800569ac7600f0590df",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -6132,6 +6132,50 @@
             "homepage": "https://www.drupal.org/project/google_translator",
             "support": {
                 "source": "https://git.drupalcode.org/project/google_translator"
+            }
+        },
+        {
+            "name": "drupal/gtranslate",
+            "version": "3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gtranslate.git",
+                "reference": "3.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gtranslate-3.0.4.zip",
+                "reference": "3.0.4",
+                "shasum": "8817f12cd7abadd5da619f621995b5115b7765e0"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.4",
+                    "datestamp": "1734974789",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "edo888",
+                    "homepage": "https://www.drupal.org/user/291183"
+                }
+            ],
+            "description": "Uses Google power to translate your website.",
+            "homepage": "https://www.drupal.org/project/gtranslate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gtranslate"
             }
         },
         {
@@ -16709,11 +16753,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "5a4eb6c381d3165e88144952c4c6b9762b7f8833"
+                "reference": "8d7415bd6d684a274c40b3ca8776de3c5f7d82ba"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16759,6 +16803,7 @@
                 "drupal/geolocation": "^3.2",
                 "drupal/google_tag": "^2.0",
                 "drupal/google_translator": "^2.1",
+                "drupal/gtranslate": "^3.0",
                 "drupal/hal": "^2.0",
                 "drupal/honeypot": "^2.2",
                 "drupal/http_cache_control": "^2.0",
@@ -16834,6 +16879,7 @@
                 "gravitypdf/querypath": "^3.2",
                 "johngrogg/ics-parser": "^2",
                 "oomphinc/composer-installers-extender": "^2.0",
+                "sabberworm/php-css-parser": "^8.4",
                 "softcreatr/jsonpath": "^0.5 || ^0.7 || ^0.8"
             },
             "require-dev": {
@@ -16854,6 +16900,10 @@
                         "3049332 - #134 - PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2025-07-09/drupal-core--2025-07-09--3049332--mr-12460.patch",
                         "2827921 - Exception thrown by responsive srcset images when the image is not yet in the file system (such as with Stage File Proxy)": "https://www.drupal.org/files/issues/2827921-remove-missing-responsive-image-width-exception.patch",
                         "2741187 - 39 - Allow usage of WYSIWYG in views text area fields": "https://gist.githubusercontent.com/pfrilling/91262eb9ca72ec66704027344ebc0e56/raw/cba7ef0284684d1db59c193e5a06968a36b73a02/gistfile1.txt"
+                    },
+                    "drupal/gtranslate": {
+                        "3375925 - TypeError: array_values(): Argument #1 ($array) must be of type array": "https://www.drupal.org/files/issues/2023-08-31/gtranslate-3375925-update-default-config-11.diff",
+                        "3555400: Add schema for gtranslate.settings ": "https://www.drupal.org/files/issues/2025-10-31/3555400-add-schema-gtranslate-6.patch"
                     },
                     "drupal/iek": {
                         "3430975 - #7 Drupal 11 upgrade": "https://www.drupal.org/files/issues/2025-04-10/iek.1.x-dev.rector.patch",
@@ -16903,7 +16953,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2025-11-17T14:14:11+00:00"
+            "time": "2025-12-17T19:04:35+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
