@@ -60,7 +60,7 @@
         "nnnick/chartjs": "^4.4",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "2.0.2",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-779/module-update",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
@@ -150,7 +150,7 @@
             ],
             "post-create-project-cmd-message": [
                 "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
                 "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
                 "<bg=blue;fg=white>                                                         </>",
                 "",
@@ -184,7 +184,12 @@
         },
         "enable-patching": "true",
         "drupal-lenient": {
-            "allowed-list": ["drupal/address_phonenumber", "drupal/iek", "drupal/migrate_process_trim", "drupal/webform_encrypt"]
+            "allowed-list": [
+                "drupal/address_phonenumber",
+                "drupal/iek",
+                "drupal/migrate_process_trim",
+                "drupal/webform_encrypt"
+            ]
         },
         "merge-plugin": {
             "require": [
