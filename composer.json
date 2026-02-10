@@ -60,7 +60,7 @@
         "nnnick/chartjs": "^4.4",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "dev-RIGA-779/module-update",
+        "rhodeislandecms/ecms_profile": "2.0.2",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
