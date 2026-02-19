@@ -16757,7 +16757,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "639a46181fcad0fb052198591325824ec632b36f"
+                "reference": "26c602194f7f06e21d7e3c0da744694ab1efc11f"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
