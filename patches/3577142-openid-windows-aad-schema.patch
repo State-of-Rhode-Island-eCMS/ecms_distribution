@@ -1,0 +1,108 @@
+diff --git a/config/schema/openid_connect_windows_aad.schema.yml b/config/schema/openid_connect_windows_aad.schema.yml
+index 8960bfba8f05e59ba8e379f810452d6ae29a056c..01a9d9759fcea0202b922ac64333040ffea29a60 100644
+--- a/config/schema/openid_connect_windows_aad.schema.yml
++++ b/config/schema/openid_connect_windows_aad.schema.yml
+@@ -53,8 +53,11 @@ openid_connect.client.plugin.windows_aad:
+       type: boolean
+       label: 'Hide missing email address warning'
+     prompt:
+-      type: string
+-      label: 'The prompt parameter used during authentication'
++      type: sequence
++      label: 'Prompt'
++      sequence:
++        type: string
++        label: 'Prompt option'
+     subject_key:
+       type: string
+       label: 'Subject key'
+diff --git a/openid_connect_windows_aad.install b/openid_connect_windows_aad.install
+index fd7cb1ce9a076139ee4029e06a657929e37fa43c..192ca80399565a1b7efecff6b4c322292dce97a1 100644
+--- a/openid_connect_windows_aad.install
++++ b/openid_connect_windows_aad.install
+@@ -125,3 +125,23 @@ function openid_connect_windows_aad_update_9206() {
+     }
+   }
+ }
++
++/**
++ * Convert prompt setting to an array.
++ */
++function openid_connect_windows_aad_update_9207() {
++  $ids = \Drupal::entityQuery('openid_connect_client')
++    ->condition('plugin', 'windows_aad')
++    ->execute();
++
++  foreach ($ids as $id) {
++    /** @var \Drupal\openid_connect\Entity\OpenIDConnectClientEntity $client */
++    $client = OpenIDConnectClientEntity::load($id);
++    $settings = $client->get('settings');
++    if (isset($settings['prompt']) && !is_array($settings['prompt'])) {
++      $settings['prompt'] = !empty($settings['prompt']) ? [$settings['prompt']] : [];
++      $client->set('settings', $settings)->save();
++    }
++  }
++}
++
+diff --git a/src/Plugin/OpenIDConnectClient/WindowsAad.php b/src/Plugin/OpenIDConnectClient/WindowsAad.php
+index 26210050e2fc3021ed9d59c41c99653f9a28ee7e..14054f9fc5ec0e18320c6f56e9eb6e9beaaaa5fc 100644
+--- a/src/Plugin/OpenIDConnectClient/WindowsAad.php
++++ b/src/Plugin/OpenIDConnectClient/WindowsAad.php
+@@ -4,7 +4,6 @@ namespace Drupal\openid_connect_windows_aad\Plugin\OpenIDConnectClient;
+
+ use Drupal\Component\Datetime\TimeInterface;
+ use Drupal\Core\Form\FormStateInterface;
+-use Drupal\Core\GeneratedUrl;
+ use Drupal\Core\Language\LanguageInterface;
+ use Drupal\Core\Language\LanguageManagerInterface;
+ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+@@ -242,22 +241,15 @@ class WindowsAad extends OpenIDConnectClientBase {
+       '#default_value' => $this->configuration['client_secret'],
+     ];
+
+-    $form['prompt'] = [
+-      '#title' => $this->t('Authorization prompt'),
+-      '#type' => 'radios',
+-      '#options' => [
+-        '<noprompt>' => $this->t('No prompt (default behavior) - Let the identity service decide'),
+-        'login' => $this->t('Force login - The user will be prompted for credentials for force sign in'),
+-        'consent' => $this->t('Consent - The user will be prompted to consent, even if consent was granted before'),
+-        'select_account' => $this->t('Select account - Present user a list of accounts from which one can be selected for authentication.'),
+-        'create' => $this->t('Create - Trigger a sign-up experience.'),
+-      ],
+-      '#default_value' => $this->configuration['prompt'] ?? '<noprompt>',
+-      '#description' => $this->t('Choose which prompt to use during login.<br/>
+-See <a href=":url">:url</a> for further details.',
+-      [':url' => 'https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.prompt']),
+-      '#required' => TRUE,
+-    ];
++    $form['prompt']['#options']['none'] = $this->t('No prompt (default behavior) - Let the identity service decide');
++    $form['prompt']['#options']['login'] = $this->t('Force login - The user will be prompted for credentials for force sign in');
++    $form['prompt']['#options']['consent'] = $this->t('Consent - The user will be prompted to consent, even if consent was granted before');
++    $form['prompt']['#options']['select_account'] = $this->t('Select account - Present user a list of accounts from which one can be selected for authentication.');
++    $form['prompt']['#options']['create'] = $this->t('Create - Trigger a sign-up experience.');
++    $form['prompt']['#description'] .= $this->t(
++      '<br />Choose which prompt to use during login.<br/>See <a href=":url">:url</a> for further details.',
++      [':url' => 'https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.prompt']
++    );
+
+     $form['subject_key'] = [
+       '#title' => $this->t('Subject key'),
+@@ -596,17 +588,4 @@ as the mapping between Azure AD accounts and Drupal users.<br/>
+     return $group_data;
+   }
+
+-  /**
+-   * {@inheritdoc}
+-   */
+-  protected function getUrlOptions(string $scope, GeneratedUrl $redirect_uri): array {
+-    $options = parent::getUrlOptions($scope, $redirect_uri);
+-
+-    $prompt = $this->configuration['prompt'] ?? '<noprompt>';
+-    if ($prompt != '<noprompt>') {
+-      $options['query']['prompt'] = $prompt;
+-    }
+-    return $options;
+-  }
+-
+ }

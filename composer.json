@@ -180,6 +180,9 @@
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
+            },
+            "drupal/openid_connect_windows_aad": {
+                "3577142: Schema change": "patches/3577142-openid-windows-aad-schema.patch"
             }
         },
         "enable-patching": "true",

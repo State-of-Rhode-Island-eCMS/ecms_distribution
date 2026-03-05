@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec8e816a9c9fd9f90dd6fd2d5f0f5ebf",
+    "content-hash": "f2792fc5939f25e98cb401c95fe4e606",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -8542,17 +8542,17 @@
         },
         {
             "name": "drupal/openid_connect",
-            "version": "3.0.0-alpha6",
+            "version": "3.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openid_connect.git",
-                "reference": "3.0.0-alpha6"
+                "reference": "3.0.0-alpha7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openid_connect-3.0.0-alpha6.zip",
-                "reference": "3.0.0-alpha6",
-                "shasum": "ae9b7a24d8ad2534756e5b2689fad6688e6b3cb0"
+                "url": "https://ftp.drupal.org/files/projects/openid_connect-3.0.0-alpha7.zip",
+                "reference": "3.0.0-alpha7",
+                "shasum": "b7e1b38c9e01948489dad17c5af7b823b274713a"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -8563,8 +8563,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-alpha6",
-                    "datestamp": "1739445531",
+                    "version": "3.0.0-alpha7",
+                    "datestamp": "1772658173",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
