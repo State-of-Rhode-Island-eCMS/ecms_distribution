@@ -54,6 +54,8 @@
         "drupal/menu_force": "^2.0",
         "drupal/migrate_devel": "^2.3",
         "drupal/office_hours": "^1.11",
+        "drupal/openid_connect": "^3.0@alpha",
+        "drupal/openid_connect_windows_aad": "2.0.x-dev@dev",
         "drupal/upgrade_status": "^4.0",
         "drush/drush": "^12 || ^13",
         "mglaman/composer-drupal-lenient": "^1.0",
@@ -180,9 +182,6 @@
             },
             "drupal/paragraphs": {
                 "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
-            },
-            "drupal/openid_connect_windows_aad": {
-                "3577142: Schema change": "patches/3577142-openid-windows-aad-schema.patch"
             }
         },
         "enable-patching": "true",

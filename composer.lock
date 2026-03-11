@@ -8542,17 +8542,17 @@
         },
         {
             "name": "drupal/openid_connect",
-            "version": "3.0.0-alpha7",
+            "version": "3.0.0-alpha8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openid_connect.git",
-                "reference": "3.0.0-alpha7"
+                "reference": "3.0.0-alpha8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openid_connect-3.0.0-alpha7.zip",
-                "reference": "3.0.0-alpha7",
-                "shasum": "b7e1b38c9e01948489dad17c5af7b823b274713a"
+                "url": "https://ftp.drupal.org/files/projects/openid_connect-3.0.0-alpha8.zip",
+                "reference": "3.0.0-alpha8",
+                "shasum": "d35402dcbc2f14d3057c482b307d93938b0ad63e"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
