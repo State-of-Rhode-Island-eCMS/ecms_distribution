@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b91296735474e2cc5a024c7a98cd759a",
+    "content-hash": "ec8e816a9c9fd9f90dd6fd2d5f0f5ebf",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -25501,9 +25501,7 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
-        "drupal/jsonapi_extras": 20,
-        "drupal/openid_connect": 15,
-        "drupal/openid_connect_windows_aad": 20
+        "drupal/jsonapi_extras": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
