@@ -8613,11 +8613,17 @@
         },
         {
             "name": "drupal/openid_connect_windows_aad",
-            "version": "dev-2.0.x",
+            "version": "2.0.0-beta10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openid_connect_windows_aad.git",
-                "reference": "dded0f1cb532eb02aa949c37cd64d16d7059e130"
+                "reference": "2.0.0-beta10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/openid_connect_windows_aad-2.0.0-beta10.zip",
+                "reference": "2.0.0-beta10",
+                "shasum": "ba9f365217009741aafbf0d2430c1434ed34a2b9"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -8628,15 +8634,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.0.x": "2.0.x-dev"
-                },
                 "drupal": {
-                    "version": "2.0.0-beta9+3-dev",
-                    "datestamp": "1773239554",
+                    "version": "2.0.0-beta10",
+                    "datestamp": "1773263222",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
