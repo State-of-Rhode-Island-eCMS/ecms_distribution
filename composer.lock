@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec8e816a9c9fd9f90dd6fd2d5f0f5ebf",
+    "content-hash": "5102c5598ae5733a4cbaa1bafd7acdd2",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -8485,17 +8485,17 @@
         },
         {
             "name": "drupal/openid_connect",
-            "version": "3.0.0-alpha6",
+            "version": "3.0.0-alpha8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openid_connect.git",
-                "reference": "3.0.0-alpha6"
+                "reference": "3.0.0-alpha8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openid_connect-3.0.0-alpha6.zip",
-                "reference": "3.0.0-alpha6",
-                "shasum": "ae9b7a24d8ad2534756e5b2689fad6688e6b3cb0"
+                "url": "https://ftp.drupal.org/files/projects/openid_connect-3.0.0-alpha8.zip",
+                "reference": "3.0.0-alpha8",
+                "shasum": "d35402dcbc2f14d3057c482b307d93938b0ad63e"
             },
             "require": {
                 "drupal/core": "^10.2 || ^11",
@@ -8506,8 +8506,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-alpha6",
-                    "datestamp": "1739445531",
+                    "version": "3.0.0-alpha8",
+                    "datestamp": "1773253373",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -8556,30 +8556,30 @@
         },
         {
             "name": "drupal/openid_connect_windows_aad",
-            "version": "2.0.0-beta9",
+            "version": "2.0.0-beta10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/openid_connect_windows_aad.git",
-                "reference": "2.0.0-beta9"
+                "reference": "2.0.0-beta10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/openid_connect_windows_aad-2.0.0-beta9.zip",
-                "reference": "2.0.0-beta9",
-                "shasum": "77bc3ba2272876b1890adce22396c9c5638459c0"
+                "url": "https://ftp.drupal.org/files/projects/openid_connect_windows_aad-2.0.0-beta10.zip",
+                "reference": "2.0.0-beta10",
+                "shasum": "ba9f365217009741aafbf0d2430c1434ed34a2b9"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
                 "drupal/key": "^1.0",
-                "drupal/openid_connect": "^3.0",
+                "drupal/openid_connect": "^3.0.0-alpha7",
                 "lcobucci/jwt": "^4.3.0 || ^5.3.0",
                 "php": ">=8.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-beta9",
-                    "datestamp": "1740753682",
+                    "version": "2.0.0-beta10",
+                    "datestamp": "1773263222",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -16445,11 +16445,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "2.0.3",
+            "version": "dev-rc/2.0.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "b7440dbb61dc2334a83ef968debcd1f80f194587"
+                "reference": "c8a20d8da16865bd966397fbf3bb106add80b127"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16642,7 +16642,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2026-02-18T20:03:02+00:00"
+            "time": "2026-03-11T19:44:07+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25447,7 +25447,8 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
-        "drupal/jsonapi_extras": 20
+        "drupal/jsonapi_extras": 20,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
