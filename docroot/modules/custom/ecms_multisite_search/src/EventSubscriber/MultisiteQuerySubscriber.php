@@ -4,21 +4,28 @@ declare(strict_types=1);
 
 namespace Drupal\ecms_multisite_search\EventSubscriber;
 
+use Drupal\search_api_solr\Event\PostFieldMappingEvent;
 use Drupal\search_api_solr\Event\PreQueryEvent;
 use Drupal\search_api_solr\Event\SearchApiSolrEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Fixes the Solr index_id filter for the solr_multisite_all datasource.
+ * Fixes Solr field mapping and index_id filter for solr_multisite_all indexes.
  *
  * SearchApiSolrBackend::getDatasourceConfig() only recognises
  * 'solr_document' and 'solr_multisite_document' plugin IDs. For any other
- * Solr datasource, getTargetedIndexId() falls back to the index's own machine
- * name instead of the configured target index. This produces a filter query
- * like '+index_id:multisite_test_all' which matches nothing in Solr.
+ * Solr datasource two problems occur:
  *
- * We intercept the PreQueryEvent and replace that filter with the correct
- * target index machine name from the datasource configuration.
+ * 1. formatSolrFieldNames() reads $config['id_field'] and
+ *    $config['language_field'] from the empty array getDatasourceConfig()
+ *    returns, producing PHP warnings and an empty search_api_id mapping that
+ *    causes "The result does not contain the essential ID field" errors.
+ *
+ * 2. getTargetedIndexId() falls back to the index's own machine name, so the
+ *    backend emits '+index_id:multisite_test_all' which matches nothing in
+ *    Solr (the stored value is the target index name, e.g. acquia_search_index).
+ *
+ * We subscribe to both PostFieldMappingEvent and PreQueryEvent to fix these.
  */
 class MultisiteQuerySubscriber implements EventSubscriberInterface {
 
@@ -27,8 +34,42 @@ class MultisiteQuerySubscriber implements EventSubscriberInterface {
    */
   public static function getSubscribedEvents(): array {
     return [
+      SearchApiSolrEvents::POST_FIELD_MAPPING => 'onPostFieldMapping',
       SearchApiSolrEvents::PRE_QUERY => 'onPreQuery',
     ];
+  }
+
+  /**
+   * Supplies the id_field and language_field mappings for solr_multisite_all.
+   *
+   * getDatasourceConfig() returns an empty array for unknown plugin IDs,
+   * leaving search_api_id and search_api_language unmapped. Read the values
+   * directly from the datasource configuration and inject them here.
+   *
+   * @param \Drupal\search_api_solr\Event\PostFieldMappingEvent $event
+   *   The post-field-mapping event.
+   */
+  public function onPostFieldMapping(PostFieldMappingEvent $event): void {
+    $index = $event->getIndex();
+
+    if (!$index->isValidDatasource('solr_multisite_all')) {
+      return;
+    }
+
+    try {
+      $config = $index->getDatasource('solr_multisite_all')->getConfiguration();
+    }
+    catch (\Exception $e) {
+      return;
+    }
+
+    $id_field = $config['id_field'] ?? 'id';
+    $language_field = $config['language_field'] ?? 'ss_search_api_language';
+
+    $mapping = $event->getFieldMapping();
+    $mapping['search_api_id'] = $id_field;
+    $mapping['search_api_language'] = $language_field;
+    $event->setFieldMapping($mapping);
   }
 
   /**
