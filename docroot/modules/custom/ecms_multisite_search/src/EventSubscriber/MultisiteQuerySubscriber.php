@@ -23,7 +23,8 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  *
  * 2. getTargetedIndexId() falls back to the index's own machine name, so the
  *    backend emits '+index_id:multisite_test_all' which matches nothing in
- *    Solr (the stored value is the target index name, e.g. acquia_search_index).
+ *    Solr (the stored value is the target index name
+ *    e.g. acquia_search_index).
  *
  * We subscribe to both PostFieldMappingEvent and PreQueryEvent to fix these.
  */
@@ -42,7 +43,7 @@ class MultisiteQuerySubscriber implements EventSubscriberInterface {
   /**
    * Supplies the id_field and language_field mappings for solr_multisite_all.
    *
-   * getDatasourceConfig() returns an empty array for unknown plugin IDs,
+   * The getDatasourceConfig() returns an empty array for unknown plugin IDs,
    * leaving search_api_id and search_api_language unmapped. Read the values
    * directly from the datasource configuration and inject them here.
    *
