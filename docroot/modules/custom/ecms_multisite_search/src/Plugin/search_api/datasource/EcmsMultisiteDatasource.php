@@ -42,6 +42,13 @@ class EcmsMultisiteDatasource extends SolrMultisiteDocument {
     $form['target_hash']['#required'] = FALSE;
     $form['target_hash']['#description'] = $this->t('Leave empty to search across all factory sites sharing this Solr core. Enter a specific 6-character site hash to restrict results to a single site. The attached server must have site_hash disabled.');
 
+    // SolrMultisiteDocument defines target_index_machine_name as #type
+    // 'machine_name' without an #exists callback, causing a TypeError in
+    // MachineName::validateMachineName() when the form is submitted. Change it
+    // to a plain textfield since we are referencing an existing index, not
+    // creating a new one.
+    $form['target_index_machine_name']['#type'] = 'textfield';
+
     return $form;
   }
 
