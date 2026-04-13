@@ -80,6 +80,17 @@ field_settings:
   url:
     label: URL
     datasource_id: solr_multisite_all
+    # ss_url is the canonical item URL stored by the add_url processor on
+    # acquia_search_index. Requires a full re-index of acquia_search_index
+    # after that config deploys. Used to link search results to the item's
+    # path on the originating site.
+    property_path: ss_url
+    type: string
+  site:
+    label: 'Site URL'
+    datasource_id: solr_multisite_all
+    # The base URL of the originating site (e.g. https://tax.example.com/).
+    # Used to filter search results by origin site.
     property_path: site
     type: string
 datasource_settings:
@@ -87,7 +98,7 @@ datasource_settings:
     id_field: id
     label_field: ''
     language_field: ss_search_api_language
-    url_field: site
+    url_field: ss_url
     request_handler: ''
     default_query: '*:*'
     target_index: acquia_search_index
