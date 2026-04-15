@@ -1,8 +1,8 @@
 diff --git a/.htaccess b/.htaccess
-index 4031da475c..d66a3d1827 100644
+index 1ac01a117b2..f7f2a5fea1c 100644
 --- a/.htaccess
 +++ b/.htaccess
-@@ -46,6 +46,10 @@ AddEncoding gzip svgz
+@@ -49,6 +49,10 @@ AddType image/webp .webp
      # problems if a non-Drupal PHP file is installed in a subdirectory.
      ExpiresActive Off
    </FilesMatch>
@@ -11,9 +11,24 @@ index 4031da475c..d66a3d1827 100644
 +    ExpiresDefault "access plus 5 minutes"
 +  </FilesMatch>
  </IfModule>
-
+ 
  # Set a fallback resource if mod_rewrite is not enabled. This allows Drupal to
-@@ -100,8 +104,15 @@ AddEncoding gzip svgz
+@@ -89,6 +93,14 @@ AddType image/webp .webp
+   # downloaded.
+   RewriteRule "/\.|^\.(?!well-known/)" - [F]
+ 
++  # Block /oauth/token requests that are missing the required ECMS authentication headers.
++  # Applies universally - no domain check. HMAC validation is handled by the EventSubscriber.
++  # Legitimate publishers (including local dev) always send both headers via EcmsApiBase.
++  RewriteCond %{REQUEST_URI} ^/oauth/token
++  RewriteCond %{HTTP:X-ECMS-Origin} ^$ [OR]
++  RewriteCond %{HTTP:X-ECMS-Env} ^$
++  RewriteRule ^ - [F,L]
++
+   # If your site can be accessed both with and without the 'www.' prefix, you
+   # can use one of the following settings to redirect users to your preferred
+   # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
+@@ -103,8 +115,15 @@ AddType image/webp .webp
    # To redirect all users to access the site WITHOUT the 'www.' prefix,
    # (http://www.example.com/foo will be redirected to http://example.com/foo)
    # uncomment the following:
@@ -28,6 +43,11 @@ index 4031da475c..d66a3d1827 100644
 +  RewriteCond %{HTTP_HOST} \.ecms\.ri\.gov$ [NC]
 +  RewriteCond %{REQUEST_URI} /robots.txt [NC]
 +  RewriteRule ^ no_robots.txt [L]
-
+ 
    # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
    # VirtualDocumentRoot and the rewrite rules are not working properly.
+@@ -183,3 +202,4 @@ AddType image/webp .webp
+   # Disable Proxy header, since it's an attack vector.
+   RequestHeader unset Proxy
+ </IfModule>
++
