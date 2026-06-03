@@ -41,6 +41,7 @@
         "behat/mink": "^1.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
+        "drupal/canvas": "^1.4",
         "drupal/config_update": "^2.0@alpha",
         "drupal/content_moderation_notifications": "^3.6",
         "drupal/core-composer-scaffold": "^11.2",
@@ -60,7 +61,7 @@
         "nnnick/chartjs": "^4.4",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "2.0.6",
+        "rhodeislandecms/ecms_profile": "dev-rigov26/integration",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
