@@ -16718,7 +16718,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "14bbaae4487dad9ba21a8ca751e3ce60700b3b00"
+                "reference": "1dc8dad2035a29476a039d3ca88c7086ab56d426"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -25730,7 +25730,8 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
-        "drupal/jsonapi_extras": 20
+        "drupal/jsonapi_extras": 20,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
