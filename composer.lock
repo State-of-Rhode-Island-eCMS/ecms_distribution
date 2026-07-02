@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ee69366abe538d4ba450bd4806165ae",
+    "content-hash": "a05d729ed76c91dda14766953d4fd9d0",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -2979,6 +2979,55 @@
             "homepage": "https://www.drupal.org/project/book",
             "support": {
                 "source": "https://git.drupalcode.org/project/book"
+            }
+        },
+        {
+            "name": "drupal/cache_control_override",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cache_control_override.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cache_control_override-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "383f85e313296f2da1315a0b58f82e389f903718"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11",
+                "php": ">=8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1724222747",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "asgorobets",
+                    "homepage": "https://www.drupal.org/user/1399950"
+                },
+                {
+                    "name": "dpi",
+                    "homepage": "https://www.drupal.org/user/81431"
+                }
+            ],
+            "description": "Override page Cache-Control header based on bubbled cacheability metadata.",
+            "homepage": "https://www.drupal.org/project/cache_control_override",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cache_control_override"
             }
         },
         {
@@ -16524,11 +16573,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "2.0.6",
+            "version": "dev-RIGA-867/views-cache",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "c392f94ae89025e2a9debbccaa8f0685714ab887"
+                "reference": "8c98b2886d492276cd2ecdff7ef6f65dbad753b4"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16548,6 +16597,7 @@
                 "drupal/better_exposed_filters": "^7.0.5",
                 "drupal/bigmenu": "^2.0@RC",
                 "drupal/book": "^1.0.0",
+                "drupal/cache_control_override": "^2.0",
                 "drupal/captcha": "^2.0",
                 "drupal/classy": "^2.0",
                 "drupal/commerce": "^3.1",
@@ -16724,7 +16774,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2026-05-27T18:38:52+00:00"
+            "time": "2026-07-02T14:51:49+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
@@ -25540,7 +25590,8 @@
     "stability-flags": {
         "drupal/config_update": 15,
         "drupal/feeds": 10,
-        "drupal/jsonapi_extras": 20
+        "drupal/jsonapi_extras": 20,
+        "rhodeislandecms/ecms_profile": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
