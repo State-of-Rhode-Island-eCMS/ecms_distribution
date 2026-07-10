@@ -16714,11 +16714,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "dev-rigov26/integration",
+            "version": "dev-rc/2.0.8",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "173780ca15bcf6bcf639e1ecb8682bb5c417aab6"
+                "reference": "95f80b983fb0e863fb8b8ed6f7404185f617b1d5"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
