@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5149656fa685e102cfcc1991cc966808",
+    "content-hash": "a7dbce63134500fbbc4ca080c677d4d0",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -21312,16 +21312,16 @@
         },
         {
             "name": "drupal/core-dev",
-            "version": "11.4.4",
+            "version": "11.3.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
-                "reference": "3b8bea2ec1dd9353a4d5280e69911992b2b079b7"
+                "reference": "f2b3cde9cbfff14223fd7dfab99121c6e4f292fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-dev/zipball/3b8bea2ec1dd9353a4d5280e69911992b2b079b7",
-                "reference": "3b8bea2ec1dd9353a4d5280e69911992b2b079b7",
+                "url": "https://api.github.com/repos/drupal/core-dev/zipball/f2b3cde9cbfff14223fd7dfab99121c6e4f292fb",
+                "reference": "f2b3cde9cbfff14223fd7dfab99121c6e4f292fb",
                 "shasum": ""
             },
             "require": {
@@ -21330,9 +21330,10 @@
                 "colinodell/psr-testlogger": "^1.2",
                 "composer/composer": "^2.8.1",
                 "drupal/coder": "^8.3.30",
+                "justinrainbow/json-schema": "^5.2 || ^6.5.2",
                 "lullabot/mink-selenium2-driver": "^1.7.3",
                 "lullabot/php-webdriver": "^2.0.7",
-                "mglaman/phpstan-drupal": "^1.3.9 || ^2.0.15",
+                "mglaman/phpstan-drupal": "^1.3.9 || ^2.0.9",
                 "micheh/phpcs-gitlab": "^1.1 || ^2.0",
                 "mikey179/vfsstream": "^1.6.11",
                 "open-telemetry/exporter-otlp": "^1",
@@ -21341,8 +21342,8 @@
                 "phpspec/prophecy": "^1.23",
                 "phpspec/prophecy-phpunit": "^2",
                 "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^1.12.27 || ^2.2.0",
-                "phpstan/phpstan-phpunit": "^1.4.2 || ^2.0.16",
+                "phpstan/phpstan": "^1.12.27 || ^2.1.26",
+                "phpstan/phpstan-phpunit": "^1.4.2 || ^2.0.7",
                 "phpunit/phpunit": "^11.5.50",
                 "symfony/browser-kit": "^7.4",
                 "symfony/css-selector": "^7.4",
@@ -21355,18 +21356,15 @@
                 "webflo/drupal-core-require-dev": "*"
             },
             "type": "metapackage",
-            "extra": {
-                "branch-alias": []
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-dev/tree/11.4.4"
+                "source": "https://github.com/drupal/core-dev/tree/11.3.14"
             },
-            "time": "2026-07-15T18:02:21+00:00"
+            "time": "2026-05-20T15:34:10+00:00"
         },
         {
             "name": "google/protobuf",

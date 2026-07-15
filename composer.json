@@ -202,7 +202,7 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/core-dev": "^10 || ^11 || ^12",
+        "drupal/core-dev": "~11.3.0",
         "php-mock/php-mock": "^2.2",
         "php-mock/php-mock-phpunit": "^2.6"
     }
