@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7dbce63134500fbbc4ca080c677d4d0",
+    "content-hash": "54e0c6343c708f6de8167b94df30a11b",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -2979,6 +2979,55 @@
             "homepage": "https://www.drupal.org/project/book",
             "support": {
                 "source": "https://git.drupalcode.org/project/book"
+            }
+        },
+        {
+            "name": "drupal/cache_control_override",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cache_control_override.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cache_control_override-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "383f85e313296f2da1315a0b58f82e389f903718"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11",
+                "php": ">=8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1724222747",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "asgorobets",
+                    "homepage": "https://www.drupal.org/user/1399950"
+                },
+                {
+                    "name": "dpi",
+                    "homepage": "https://www.drupal.org/user/81431"
+                }
+            ],
+            "description": "Override page Cache-Control header based on bubbled cacheability metadata.",
+            "homepage": "https://www.drupal.org/project/cache_control_override",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cache_control_override"
             }
         },
         {
@@ -8841,17 +8890,17 @@
         },
         {
             "name": "drupal/paragraphs",
-            "version": "1.20.0",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8.x-1.20"
+                "reference": "8.x-1.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.20.zip",
-                "reference": "8.x-1.20",
-                "shasum": "68051cc8c025aa3f62fd44a219d158361928a4ad"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.21.zip",
+                "reference": "8.x-1.21",
+                "shasum": "5638fab65f5c9cf954ef369411b2ee64d41e21f9"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -8864,7 +8913,7 @@
                 "drupal/entity_usage": "2.x-dev",
                 "drupal/feeds": "^3",
                 "drupal/field_group": "3.x-dev",
-                "drupal/inline_entity_form": "3.x-dev",
+                "drupal/inline_entity_form": "^3",
                 "drupal/paragraphs-paragraphs_library": "*",
                 "drupal/replicate": "1.x-dev",
                 "drupal/search_api": "^1",
@@ -8876,8 +8925,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.20",
-                    "datestamp": "1767269542",
+                    "version": "8.x-1.21",
+                    "datestamp": "1782326108",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16528,11 +16577,11 @@
         },
         {
             "name": "rhodeislandecms/ecms_profile",
-            "version": "2.0.6",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "c392f94ae89025e2a9debbccaa8f0685714ab887"
+                "reference": "5b561de7b3dc48da89d2408b6e927e6a19e1ce49"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -16552,6 +16601,7 @@
                 "drupal/better_exposed_filters": "^7.0.5",
                 "drupal/bigmenu": "^2.0@RC",
                 "drupal/book": "^1.0.0",
+                "drupal/cache_control_override": "^2.0",
                 "drupal/captcha": "^2.0",
                 "drupal/classy": "^2.0",
                 "drupal/commerce": "^3.1",
@@ -16694,7 +16744,7 @@
                         "3288638 - Automated Drupal 11 compatibility fixes": "https://gist.githubusercontent.com/pfrilling/0c65512c56ade5d240d7af025ae4938a/raw/0c2b363a9ab493ffccf10ce10c6ade1215b689e0/gistfile1.txt"
                     },
                     "drupal/paragraphs": {
-                        "3090200 - Paragraphs do not render: access check for 'view' fail when using layout builder": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch",
+                        "3090200 - Paragraph access check uses default revision instead of referencing revision": "https://www.drupal.org/files/issues/2026-07-06/paragraphs-parent-access-block-content-skip-3090200-97.patch",
                         "2887353 - Paragraph Translation Sync": "https://gist.githubusercontent.com/pfrilling/87798df963feab76fbef5f4abe65fa10/raw/76c8f8cd06574b16b7da71ea2a0c1708d6d21871/paragraphs-translation-sync-2887353-60.patch"
                     },
                     "drupal/seckit": {
@@ -16728,7 +16778,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2026-05-27T18:38:52+00:00"
+            "time": "2026-07-15T19:32:37+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
