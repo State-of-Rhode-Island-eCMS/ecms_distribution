@@ -16,7 +16,10 @@ use Psr\Http\Message\ResponseInterface;
  *
  * This client is intentionally separate from AcsfClient: the ACSF factory
  * Basic auth credentials must never be sent to an arbitrary site domain, so
- * this class builds its own client with no 'auth' option at all.
+ * this class builds its own client with no 'auth' option at all. Because
+ * no credentials are ever sent here, this is the one client in the tool
+ * allowed to skip TLS verification (via $skipTlsVerification) — unlike
+ * AcsfClient, which must always verify.
  */
 final class SiteHealthChecker {
 
@@ -25,13 +28,30 @@ final class SiteHealthChecker {
    */
   private readonly Client $httpClient;
 
+  /**
+   * Constructs a SiteHealthChecker.
+   *
+   * @param int $timeoutSeconds
+   *   The per-request timeout, in seconds.
+   * @param int $concurrency
+   *   The maximum number of sites to check at once.
+   * @param string|null $caBundle
+   *   Path to an alternate CA bundle, or NULL to use the system default.
+   *   Ignored when $skipTlsVerification is TRUE.
+   * @param bool $skipTlsVerification
+   *   Skips TLS certificate verification entirely when TRUE. Only intended
+   *   for troubleshooting a site with a known, temporary certificate
+   *   problem — takes precedence over $caBundle when both are given.
+   * @param \GuzzleHttp\HandlerStack|callable|null $handler
+   *   Accepts a pre-built handler (e.g. a Guzzle MockHandler) so tests can
+   *   exercise pooling/concurrency without any real network access.
+   *   Production code should never pass this.
+   */
   public function __construct(
     private readonly int $timeoutSeconds = 15,
     private readonly int $concurrency = 10,
     ?string $caBundle = NULL,
-    // Accepts a pre-built handler (e.g. a Guzzle MockHandler) so tests can
-    // exercise pooling/concurrency without any real network access.
-    // Production code should never pass this.
+    bool $skipTlsVerification = FALSE,
     HandlerStack|callable|null $handler = NULL,
   ) {
     $options = [
@@ -42,7 +62,10 @@ final class SiteHealthChecker {
       // followed so a scheme/www redirect isn't mistaken for an outage.
       'allow_redirects' => TRUE,
     ];
-    if ($caBundle !== NULL) {
+    if ($skipTlsVerification) {
+      $options['verify'] = FALSE;
+    }
+    elseif ($caBundle !== NULL) {
       $options['verify'] = $caBundle;
     }
     if ($handler !== NULL) {

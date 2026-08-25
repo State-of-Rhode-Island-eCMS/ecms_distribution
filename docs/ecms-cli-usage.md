@@ -32,6 +32,7 @@ Read this list before you use the eCMS tool.
 | retention period | The number of days the eCMS tool keeps a backup. |
 | dry run | A command that shows what will happen. A dry run does not change data. |
 | API key | A secret code. The eCMS tool uses the API key to connect to ACSF. |
+| TLS certificate | A file that proves a site is the correct site. A browser or tool checks this file before it trusts a site. |
 
 ## 3. Safety Rules
 
@@ -130,6 +131,27 @@ To check specific sites only, add the `--sites` option:
 ```
 deployment-scripts/bin/ecms ecms:site:status --sites=111,222
 ```
+
+### 6.1 How to Check a Site With a Certificate Problem
+
+Sometimes a site has a TLS certificate problem. Example: the
+certificate is new and has not finished setup. In this case, the
+command shows an error for that site.
+
+To skip the certificate check for this command only, add the
+`--insecure` option:
+
+```
+deployment-scripts/bin/ecms ecms:site:status --sites=111 --insecure
+```
+
+**WARNING: The `--insecure` option turns off a safety check. Use this
+option only to find a known, temporary problem. Do not use this
+option for a normal check.**
+
+The `--insecure` option does not change how the eCMS tool connects to
+the ACSF API. The eCMS tool always checks the certificate for the
+ACSF API.
 
 ## 7. How to Start a Backup
 
@@ -236,6 +258,10 @@ greater than zero.
 
 You tried to delete backups in `prod` without the
 `--i-know-this-is-production` option. Go to section 8.2.
+
+**A site shows "DOWN" with an SSL or certificate error**
+
+The site has a TLS certificate problem. Go to section 6.1.
 
 ## 10. Where to Find More Information
 

@@ -30,7 +30,13 @@ final class SiteStatusCommand extends AbstractAcsfCommand {
     $this
       ->addOption('path', NULL, InputOption::VALUE_REQUIRED, 'The path to request on each site.', '/user')
       ->addOption('concurrency', NULL, InputOption::VALUE_REQUIRED, 'Maximum number of sites to check at once.', '10')
-      ->addOption('format', NULL, InputOption::VALUE_REQUIRED, 'Output format: table or json.', 'table');
+      ->addOption('format', NULL, InputOption::VALUE_REQUIRED, 'Output format: table or json.', 'table')
+      ->addOption(
+        'insecure',
+        NULL,
+        InputOption::VALUE_NONE,
+        'Skip TLS certificate verification for this check. Only affects this command; the authenticated ACSF API client always verifies TLS. Use only to troubleshoot a site with a known, temporary certificate problem.'
+      );
   }
 
   /**
@@ -41,10 +47,19 @@ final class SiteStatusCommand extends AbstractAcsfCommand {
     $path = (string) $input->getOption('path');
     $concurrency = max(1, (int) $input->getOption('concurrency'));
     $format = (string) $input->getOption('format');
+    $insecure = (bool) $input->getOption('insecure');
+
+    if ($insecure) {
+      $this->io->warning('--insecure: skipping TLS certificate verification for this check.');
+    }
 
     // Deliberately built without factory API credentials: a site's own
     // domain must never see the ACSF Basic auth used against the API.
-    $checker = new SiteHealthChecker(concurrency: $concurrency, caBundle: $input->getOption('ca-bundle'));
+    $checker = new SiteHealthChecker(
+      concurrency: $concurrency,
+      caBundle: $input->getOption('ca-bundle'),
+      skipTlsVerification: $insecure,
+    );
     $results = $checker->checkAll($sites, $path);
 
     $unhealthy = array_filter($results, static fn ($r) => !$r->healthy);

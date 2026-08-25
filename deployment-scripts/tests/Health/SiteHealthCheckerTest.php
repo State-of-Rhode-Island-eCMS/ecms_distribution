@@ -44,6 +44,24 @@ final class SiteHealthCheckerTest extends TestCase {
     $this->assertNotSame(FALSE, $config['verify'] ?? TRUE);
   }
 
+  public function testSkipTlsVerificationDisablesVerifyOnlyWhenRequested(): void {
+    $checker = new SiteHealthChecker(skipTlsVerification: TRUE);
+
+    $client = (new \ReflectionProperty(SiteHealthChecker::class, 'httpClient'))->getValue($checker);
+    $config = (new \ReflectionProperty(\GuzzleHttp\Client::class, 'config'))->getValue($client);
+
+    $this->assertSame(FALSE, $config['verify']);
+  }
+
+  public function testSkipTlsVerificationTakesPrecedenceOverCaBundle(): void {
+    $checker = new SiteHealthChecker(caBundle: '/some/bundle.pem', skipTlsVerification: TRUE);
+
+    $client = (new \ReflectionProperty(SiteHealthChecker::class, 'httpClient'))->getValue($checker);
+    $config = (new \ReflectionProperty(\GuzzleHttp\Client::class, 'config'))->getValue($client);
+
+    $this->assertSame(FALSE, $config['verify']);
+  }
+
   public function testHealthyOn2xx(): void {
     $mock = new MockHandler([new Response(200)]);
     $checker = new SiteHealthChecker(handler: HandlerStack::create($mock));

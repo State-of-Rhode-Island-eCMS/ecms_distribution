@@ -60,14 +60,18 @@ deployment-scripts/bin/ecms list
   deployment-scripts/bin/ecms ecms:backup:prune --prod --force --i-know-this-is-production
   ```
 
-- **`ecms:site:status [--sites=all] [--path=/user] [--format=table|json]`**
+- **`ecms:site:status [--sites=all] [--path=/user] [--format=table|json] [--insecure]`**
   Checks that sites respond; useful as a post-upgrade smoke test. Exits
   non-zero if any site is unhealthy, so it can gate a deployment. Built
   with no ACSF API credentials at all — a site's own domain never sees the
-  factory API key.
+  factory API key. `--insecure` skips TLS certificate verification for this
+  check only (e.g. to troubleshoot a site with a known, temporary
+  certificate problem); the authenticated ACSF API client always verifies
+  TLS regardless of this flag.
 
   ```
   deployment-scripts/bin/ecms ecms:site:status --prod
+  deployment-scripts/bin/ecms ecms:site:status --sites=111 --insecure
   ```
 
 Composer alias: `composer ecms -- <command> [options]`.
