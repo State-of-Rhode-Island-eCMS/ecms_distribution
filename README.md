@@ -25,6 +25,12 @@ $ lando drush site-install standard --account-pass=admin
 The command above will  install Drupal with the standard installation profile.
 You can then log into Drupal as User 1 with `admin` / `admin` as the credentials.
 
+## Documentation
+
+Additional documentation is in the [docs](docs/) directory, including
+[how to use the eCMS tool](docs/ecms-cli-usage.md) to manage Site Factory
+sites and backups.
+
 ## Lando
 
 You can type `lando` inside of the newly created project to see the available

@@ -101,7 +101,8 @@
         ],
         "validate:php": [
             "vendor/bin/phpcs"
-        ]
+        ],
+        "ecms": "@php deployment-scripts/bin/ecms"
     },
     "extra": {
         "drupal-scaffold": {
@@ -185,7 +186,12 @@
         },
         "enable-patching": "true",
         "drupal-lenient": {
-            "allowed-list": ["drupal/address_phonenumber", "drupal/iek", "drupal/migrate_process_trim", "drupal/webform_encrypt"]
+            "allowed-list": [
+                "drupal/address_phonenumber",
+                "drupal/iek",
+                "drupal/migrate_process_trim",
+                "drupal/webform_encrypt"
+            ]
         },
         "merge-plugin": {
             "require": [
@@ -203,7 +209,16 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/core-dev": "~11.3.0",
+        "guzzlehttp/guzzle": "^7.9",
         "php-mock/php-mock": "^2.2",
-        "php-mock/php-mock-phpunit": "^2.6"
+        "php-mock/php-mock-phpunit": "^2.6",
+        "symfony/console": "^7.4",
+        "symfony/dotenv": "^7.4"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ecms\\Deployment\\": "deployment-scripts/src/",
+            "Ecms\\Deployment\\Tests\\": "deployment-scripts/tests/"
+        }
     }
 }

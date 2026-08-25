@@ -39,6 +39,9 @@
 /.gitattributes
 /.env
 
+# ACSF ops console app (deployment-scripts/); see .env.example.
+/deployment-scripts/.env
+
 # PHPStorm
 /.idea
 /private/
