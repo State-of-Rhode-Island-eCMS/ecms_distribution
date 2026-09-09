@@ -43,10 +43,10 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/config_update": "^2.0@alpha",
         "drupal/content_moderation_notifications": "^3.6",
-        "drupal/core-composer-scaffold": "~11.3.0",
-        "drupal/core-project-message": "~11.3.0",
-        "drupal/core-recipe-unpack": "~11.3.0",
-        "drupal/core-recommended": "~11.3.0",
+        "drupal/core-composer-scaffold": "~11.4.0",
+        "drupal/core-project-message": "~11.4.0",
+        "drupal/core-recipe-unpack": "~11.4.0",
+        "drupal/core-recommended": "~11.4.0",
         "drupal/feeds": "^3.0@beta",
         "drupal/google_tag": "^2.0.5",
         "drupal/jsonapi_extras": "3.x-dev@dev",
@@ -60,7 +60,7 @@
         "nnnick/chartjs": "^4.4",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "2.0.10",
+        "rhodeislandecms/ecms_profile": "dev-RIGA-901/core-update-to-11-4",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
@@ -151,7 +151,7 @@
             ],
             "post-create-project-cmd-message": [
                 "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
                 "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
                 "<bg=blue;fg=white>                                                         </>",
                 "",
@@ -185,7 +185,12 @@
         },
         "enable-patching": "true",
         "drupal-lenient": {
-            "allowed-list": ["drupal/address_phonenumber", "drupal/iek", "drupal/migrate_process_trim", "drupal/webform_encrypt"]
+            "allowed-list": [
+                "drupal/address_phonenumber",
+                "drupal/iek",
+                "drupal/migrate_process_trim",
+                "drupal/webform_encrypt"
+            ]
         },
         "merge-plugin": {
             "require": [
