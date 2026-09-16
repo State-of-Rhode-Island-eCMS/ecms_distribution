@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Ecms\Deployment\Command\BackupCreateCommand;
+use Ecms\Deployment\Command\BackupPruneCommand;
+use Ecms\Deployment\Command\SiteStatusCommand;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Dotenv\Dotenv;
+
+// Resolved relative to this file, not the current working directory, so
+// the tool runs the same way no matter where it's invoked from.
+require __DIR__ . '/../../vendor/autoload.php';
+
+// Loads deployment-scripts/.env if present, without overriding any
+// variable already set in the real environment (e.g. by CI secrets).
+// The file itself is gitignored; see .env.example for the expected shape.
+$envFile = __DIR__ . '/../.env';
+if (is_file($envFile)) {
+  (new Dotenv())->usePutenv()->load($envFile);
+}
+
+$application = new Application('ecms', 'internal');
+$application->addCommands([
+  new BackupCreateCommand(),
+  new BackupPruneCommand(),
+  new SiteStatusCommand(),
+]);
+
+exit($application->run());

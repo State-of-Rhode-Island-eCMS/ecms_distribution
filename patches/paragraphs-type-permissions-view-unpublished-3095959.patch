@@ -1,0 +1,125 @@
+diff --git a/modules/paragraphs_type_permissions/src/Hook/ParagraphsTypePermissionsHooks.php b/modules/paragraphs_type_permissions/src/Hook/ParagraphsTypePermissionsHooks.php
+index e971da0ffcdf4d5405af91a8426f14a6fbe042ab..7fb250837973c7c0b142daa9b6f609628128447c 100644
+--- a/modules/paragraphs_type_permissions/src/Hook/ParagraphsTypePermissionsHooks.php
++++ b/modules/paragraphs_type_permissions/src/Hook/ParagraphsTypePermissionsHooks.php
+@@ -45,7 +45,6 @@ class ParagraphsTypePermissionsHooks {
+    */
+   #[Hook('paragraph_access')]
+   public static function paragraphAccess(ParagraphInterface $entity, $operation, AccountInterface $account) {
+-    $permissions =& drupal_static('paragraphs_type_permissions_paragraph_access', []);
+     if (!in_array($operation, [
+       'view',
+       'update',
+@@ -55,25 +54,20 @@ class ParagraphsTypePermissionsHooks {
+       // supported ones, we return access denied.
+       return AccessResult::neutral();
+     }
+-    // Set static cache id to use the type machine name.
+     $type = $entity->getType();
+-    if ($operation == 'view' && !$entity->status->value) {
+-      return AccessResult::forbidden();
+-    }
+-    // If we've already checked access for this type, user and op, return from
+-    // cache.
+-    if (isset($permissions[$account->id()][$type][$operation])) {
+-      return $permissions[$account->id()][$type][$operation];
++    if (
++      !$account->hasPermission('bypass paragraphs type content access') &&
++      !$account->hasPermission($operation . ' paragraph content ' . $type)
++    ) {
++      return AccessResult::forbidden()->cachePerPermissions();
+     }
+-    // If the current user has access to this type/operation, return access
+-    // allowed, forbidden otherwise.
+-    if ($account->hasPermission('bypass paragraphs type content access') || $account->hasPermission($operation . ' paragraph content ' . $type)) {
+-      $permissions[$account->id()][$type][$operation] = AccessResult::allowed()->cachePerPermissions();
+-    }
+-    else {
+-      $permissions[$account->id()][$type][$operation] = AccessResult::forbidden()->cachePerPermissions();
++
++    // Let Paragraph's normal access handler decide unpublished view access.
++    if ($operation === 'view' && !$entity->isPublished()) {
++      return AccessResult::neutral()->cachePerPermissions();
+     }
+-    return $permissions[$account->id()][$type][$operation];
++
++    return AccessResult::allowed()->cachePerPermissions();
+   }
+ 
+   /**
+diff --git a/modules/paragraphs_type_permissions/tests/src/Functional/ParagraphsTypePermissionsTest.php b/modules/paragraphs_type_permissions/tests/src/Functional/ParagraphsTypePermissionsTest.php
+index f32f1918ccb4640864c6686460daf92e58cb0c4c..c5e588b2daaa517b45364276cc68d11c0b9cc546 100644
+--- a/modules/paragraphs_type_permissions/tests/src/Functional/ParagraphsTypePermissionsTest.php
++++ b/modules/paragraphs_type_permissions/tests/src/Functional/ParagraphsTypePermissionsTest.php
+@@ -151,6 +151,7 @@ class ParagraphsTypePermissionsTest extends BrowserTestBase {
+     $this->submitForm([], 'Add text_image');
+     $this->submitForm([], 'Add images');
+     $this->submitForm([], 'Add text');
++    $this->submitForm([], 'Add text_image');
+ 
+     $image_text = $this->getTestFiles('image')[0];
+     $this->submitForm([
+@@ -164,6 +165,7 @@ class ParagraphsTypePermissionsTest extends BrowserTestBase {
+       'title[0][value]' => 'paragraph node title',
+       'field_paragraphs_demo[0][subform][field_text_demo][0][value]' => 'Paragraph type Image + Text',
+       'field_paragraphs_demo[2][subform][field_text_demo][0][value]' => 'Paragraph type Text',
++      'field_paragraphs_demo[3][subform][field_text_demo][0][value]' => 'Paragraph existing type',
+     ];
+     $this->submitForm($edit, 'Save');
+ 
+@@ -256,6 +258,55 @@ class ParagraphsTypePermissionsTest extends BrowserTestBase {
+     $this->assertSession()->pageTextNotContains('Paragraph type Image + Text');
+     $this->assertSession()->pageTextNotContains('Paragraph type Text');
+ 
++    $authenticated_role->grantPermission('view unpublished paragraphs');
++    $authenticated_role->save();
++
++    // Check that now authenticated user has access to unpublished image_text
++    // paragraph.
++    $this->drupalGet('node/' . $node->id());
++    $this->assertSession()->pageTextContains('Paragraph type Image + Text');
++
++    $authenticated_role->revokePermission('view paragraph content text_image');
++    $authenticated_role->save();
++
++    // Check that permission to view unpublished paragraphs doesn't conflict
++    // with per type view permission.
++    $this->drupalGet('node/' . $node->id());
++    $this->assertSession()->pageTextNotContains('Paragraph type Image + Text');
++
++    // Check that an unpublished Paragraph is not shown after a published
++    // Paragraph of the same type.
++    $this->drupalLogin($admin_user);
++    $this->drupalGet('node/' . $node->id() . '/edit');
++    $edit = [
++      'field_paragraphs_demo[0][subform][status][value]' => TRUE,
++      'field_paragraphs_demo[3][subform][status][value]' => FALSE,
++    ];
++    $this->submitForm($edit, 'Save');
++
++    $this->drupalLogout();
++    $this->drupalGet('node/' . $node->id());
++    $this->assertSession()->pageTextContains('Paragraph type Image + Text');
++    $this->assertSession()->pageTextNotContains('Paragraph existing type');
++
++    // Check that a published Paragraph is shown after an unpublished Paragraph
++    // of the same type.
++    $this->drupalLogin($admin_user);
++    $this->drupalGet('node/' . $node->id() . '/edit');
++    $edit = [
++      'field_paragraphs_demo[0][subform][status][value]' => FALSE,
++      'field_paragraphs_demo[3][subform][status][value]' => TRUE,
++    ];
++    $this->submitForm($edit, 'Save');
++
++    $this->drupalLogout();
++    $this->drupalGet('node/' . $node->id());
++    $this->assertSession()->pageTextNotContains('Paragraph type Image + Text');
++    $this->assertSession()->pageTextContains('Paragraph existing type');
++
++    // Restore permissions for further tests.
++    $authenticated_role->revokePermission('view unpublished paragraphs');
++    $authenticated_role->grantPermission('view paragraph content text_image');
+     // Check the authenticated user with edit permission.
+     $authenticated_role->grantPermission('update paragraph content text_image');
+     $authenticated_role->grantPermission('bypass node access');

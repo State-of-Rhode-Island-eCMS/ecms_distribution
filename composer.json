@@ -37,16 +37,16 @@
         }
     ],
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.3",
         "behat/mink": "^1.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6",
         "drupal/config_update": "^2.0@alpha",
         "drupal/content_moderation_notifications": "^3.6",
-        "drupal/core-composer-scaffold": "~11.3.0",
-        "drupal/core-project-message": "~11.3.0",
-        "drupal/core-recipe-unpack": "~11.3.0",
-        "drupal/core-recommended": "~11.3.0",
+        "drupal/core-composer-scaffold": "~11.4.0",
+        "drupal/core-project-message": "~11.4.0",
+        "drupal/core-recipe-unpack": "~11.4.0",
+        "drupal/core-recommended": "~11.4.0",
         "drupal/feeds": "^3.0@beta",
         "drupal/google_tag": "^2.0.5",
         "drupal/jsonapi_extras": "3.x-dev@dev",
@@ -60,7 +60,7 @@
         "nnnick/chartjs": "^4.4",
         "npm-asset/jquery-ui-touch-punch": "^0.2.3",
         "oomphinc/composer-installers-extender": "^2.0",
-        "rhodeislandecms/ecms_profile": "2.0.10",
+        "rhodeislandecms/ecms_profile": "dev-rc/2.0.11",
         "wikimedia/composer-merge-plugin": "^2.0.1"
     },
     "minimum-stability": "dev",
@@ -101,7 +101,8 @@
         ],
         "validate:php": [
             "vendor/bin/phpcs"
-        ]
+        ],
+        "ecms": "@php deployment-scripts/bin/ecms"
     },
     "extra": {
         "drupal-scaffold": {
@@ -151,7 +152,7 @@
             ],
             "post-create-project-cmd-message": [
                 "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
                 "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
                 "<bg=blue;fg=white>                                                         </>",
                 "",
@@ -166,6 +167,9 @@
             ]
         },
         "patches": {
+            "drupal/acquia_search": {
+                "Endpoint::$options must be typed array for solarium/solarium 7": "patches/acquia_search-solarium7-typed-options-3554806.patch"
+            },
             "drupal/core": {
                 "3301239 - PoStreamReader::readLine() throws an error on module install": "https://www.drupal.org/files/issues/2023-01-17/drupal_core-PoStreamReader_readLine_throws_an_error_on_module_install-3301239-7.patch"
             },
@@ -180,12 +184,17 @@
                 "3387636 - Missing google_translator_disclaimer_title setting causes PHP 8.1 errors": "https://git.drupalcode.org/project/google_translator/-/merge_requests/3.diff"
             },
             "drupal/paragraphs": {
-                "3095959 - Paragraph type permissions conflicts with view unpublished paragraph permission": "https://www.drupal.org/files/issues/2019-11-22/paragraphs_type_permissions_view_unpublished_3095959-5.patch"
+                "3095959 - 23 - Paragraph type permissions conflicts with view unpublished paragraph permission": "patches/paragraphs-type-permissions-view-unpublished-3095959.patch"
             }
         },
         "enable-patching": "true",
         "drupal-lenient": {
-            "allowed-list": ["drupal/address_phonenumber", "drupal/iek", "drupal/migrate_process_trim", "drupal/webform_encrypt"]
+            "allowed-list": [
+                "drupal/address_phonenumber",
+                "drupal/iek",
+                "drupal/migrate_process_trim",
+                "drupal/webform_encrypt"
+            ]
         },
         "merge-plugin": {
             "require": [
@@ -202,8 +211,17 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/core-dev": "~11.3.0",
+        "drupal/core-dev": "~11.4.0",
+        "guzzlehttp/guzzle": "^7.9",
         "php-mock/php-mock": "^2.2",
-        "php-mock/php-mock-phpunit": "^2.6"
+        "php-mock/php-mock-phpunit": "^2.6",
+        "symfony/console": "^7.4",
+        "symfony/dotenv": "^7.4"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ecms\\Deployment\\": "deployment-scripts/src/",
+            "Ecms\\Deployment\\Tests\\": "deployment-scripts/tests/"
+        }
     }
 }
