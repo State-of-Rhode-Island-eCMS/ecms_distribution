@@ -71,6 +71,12 @@ $DRUSH_CMD features:import ecms_promotions --yes >> /var/log/sites/${AH_SITE_NAM
 $DRUSH_CMD features:import ecms_publications --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_publications-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_solr_search --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_solr_search-${domain}-$(date +"%Y-%m-%d").log
 $DRUSH_CMD features:import ecms_emergency_notification --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_emergency_notification-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_executive_orders --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_executive_orders-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_speeches --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_speeches-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_vaccination_site --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_vaccination_site-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_projects --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_projects-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_migration_file --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_migration_file-${domain}-$(date +"%Y-%m-%d").log
+$DRUSH_CMD features:import ecms_database_search --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_database_search-${domain}-$(date +"%Y-%m-%d").log
 
 # Send email about features status.
 $DRUSH_CMD features-list --bundle=ecms | mail -s "Features deploy status for ${domain}" bhamelin@oomphinc.com
