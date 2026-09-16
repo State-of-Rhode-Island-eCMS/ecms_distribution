@@ -10557,6 +10557,72 @@
             }
         },
         {
+            "name": "drupal/searchstax",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/searchstax.git",
+                "reference": "1.12.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/searchstax-1.12.0.zip",
+                "reference": "1.12.0",
+                "shasum": "e916ac0b9a2a068682b241da256370e5a89e0248"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11",
+                "drupal/search_api": "^1",
+                "ext-libxml": "*"
+            },
+            "require-dev": {
+                "drupal/acquia_search": "3.1.x-dev||3.1.11",
+                "drupal/eu_cookie_compliance": "1.x-dev",
+                "drupal/facets": "3.0.x-dev||1.x-dev",
+                "drupal/key": "1.20.0||1.x-dev||2.x-dev",
+                "drupal/search_api_attachments": ">=10||1.0.0-beta19",
+                "drupal/search_api_autocomplete": "1.x-dev||1.6.0",
+                "drupal/search_api_page": "1.x-dev||1.0.0-beta3",
+                "drupal/search_api_solr": "4.x-dev||4.2.1",
+                "drush/drush": "13.x||12.x||10.6.2",
+                "phpcompatibility/php-compatibility": "^9.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.12.0",
+                    "datestamp": "1782552106",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "azovsky",
+                    "homepage": "https://www.drupal.org/user/330533"
+                },
+                {
+                    "name": "drunken monkey",
+                    "homepage": "https://www.drupal.org/user/205582"
+                },
+                {
+                    "name": "searchstax",
+                    "homepage": "https://www.drupal.org/user/3557783"
+                }
+            ],
+            "description": "Integrates with SearchStax and SearchStudio.",
+            "homepage": "https://www.drupal.org/project/searchstax",
+            "support": {
+                "source": "https://git.drupalcode.org/project/searchstax"
+            }
+        },
+        {
             "name": "drupal/seckit",
             "version": "2.0.3",
             "source": {
@@ -16981,7 +17047,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "bb691bb738e0690ff126b38d850290aa70d0de07"
+                "reference": "48d305911e1be03e249982b5ac462a14a34b930a"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -17083,6 +17149,7 @@
                 "drupal/search_api": "^1.18",
                 "drupal/search_api_exclude": "^2.0",
                 "drupal/search_api_solr": "~4.3.0",
+                "drupal/searchstax": "^1.11",
                 "drupal/seckit": "^2.0",
                 "drupal/simple_menu_permissions": "^3.0.1",
                 "drupal/simple_oauth": "^6.0",
@@ -17179,7 +17246,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2026-09-16T14:25:44+00:00"
+            "time": "2026-09-16T17:05:43+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
