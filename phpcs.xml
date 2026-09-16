@@ -6,6 +6,8 @@
   <file>docroot/modules/custom</file>
   <file>docroot/profiles/custom</file>
   <file>docroot/themes/custom</file>
+  <file>deployment-scripts/src</file>
+  <file>deployment-scripts/bin</file>
 
   <!-- Excluded patterns -->
   <exclude-pattern>*.css</exclude-pattern>
