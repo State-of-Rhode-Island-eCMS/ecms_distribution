@@ -208,7 +208,7 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/core-dev": "~11.3.0",
+        "drupal/core-dev": "~11.4.0",
         "guzzlehttp/guzzle": "^7.9",
         "php-mock/php-mock": "^2.2",
         "php-mock/php-mock-phpunit": "^2.6",
