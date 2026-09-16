@@ -167,6 +167,9 @@
             ]
         },
         "patches": {
+            "drupal/acquia_search": {
+                "Endpoint::$options must be typed array for solarium/solarium 7": "patches/acquia_search-solarium7-typed-options-3554806.patch"
+            },
             "drupal/core": {
                 "3301239 - PoStreamReader::readLine() throws an error on module install": "https://www.drupal.org/files/issues/2023-01-17/drupal_core-PoStreamReader_readLine_throws_an_error_on_module_install-3301239-7.patch"
             },
