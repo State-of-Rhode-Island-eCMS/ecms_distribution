@@ -76,7 +76,9 @@ import_feature() {
     return
   fi
 
-  $DRUSH_CMD features:import "$feature" --yes >> "$log"
+  # Capture stderr too: Drush writes its warnings, errors, and stack traces
+  # there, so stdout alone would leave a failed import without any detail.
+  $DRUSH_CMD features:import "$feature" --yes >> "$log" 2>&1
 }
 
 import_feature ecms_basic_page
