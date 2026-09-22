@@ -17047,7 +17047,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:State-of-Rhode-Island-eCMS/ecms_profile.git",
-                "reference": "48d305911e1be03e249982b5ac462a14a34b930a"
+                "reference": "c4ee08026260a27e8e8066bd664ed7c42a7cbd99"
             },
             "require": {
                 "composer/installers": "^1.9 || ^2.0",
@@ -17186,6 +17186,9 @@
             "type": "drupal-profile",
             "extra": {
                 "patches": {
+                    "drupal/acquia_search": {
+                        "Endpoint::$options must be typed array for solarium/solarium 7": "patches/acquia_search-solarium7-typed-options-3554806.patch"
+                    },
                     "drupal/address_phonenumber": {
                         "3428745 - Drupal 11 Support": "https://www.drupal.org/files/issues/2024-03-16/address_phonenumber.10.0.0.rector.patch"
                     },
@@ -17246,7 +17249,7 @@
                 }
             ],
             "description": "Drupal installation profile for the State of Rhode Island's eCMS system",
-            "time": "2026-09-16T17:05:43+00:00"
+            "time": "2026-09-22T10:03:01+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",
