@@ -33,6 +33,15 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   // set for the Acquia environments.
   $settings['memcache']['servers'] = ['memcached:11211' => 'default'];
 
+  // Cloudflare — local dev stubs so the Key module resolves without error.
+  // Replace with a real token + zone to test live purging against the CF API.
+  if (!getenv('CLOUDFLARE_API_TOKEN')) {
+    putenv('CLOUDFLARE_API_TOKEN=ddev-placeholder-token');
+  }
+  if (!getenv('CLOUDFLARE_ZONE_ID')) {
+    putenv('CLOUDFLARE_ZONE_ID=ddev-placeholder-zone-id');
+  }
+
   // SOLR override for local development.
   $config['search_api.server.acquia_search_server']['backend'] = 'search_api_solr';
   $config['search_api.server.acquia_search_server']['backend_config']['connector'] = 'solr_cloud_basic_auth';
@@ -72,6 +81,12 @@ if (file_exists($memcacheSettings)) {
 $fast404Settings = sprintf('%s/factory-hooks/post-settings-php/fast404.php', PROJECT_ROOT);
 if (file_exists($fast404Settings)) {
   require($fast404Settings);
+}
+
+// Cloudflare purger — per-environment zone_id / cache-tag-prefix overrides.
+$cloudflareSettings = sprintf('%s/factory-hooks/post-settings-php/cloudflare.php', PROJECT_ROOT);
+if (file_exists($cloudflareSettings)) {
+  require($cloudflareSettings);
 }
 
 /**
