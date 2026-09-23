@@ -11487,7 +11487,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "a7f2649ebb95a313fafcf13a765d2ed0b28111f6"
+                "reference": "19b86bcb011c857f67d7898929df98d58db95c4e"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11.0"
@@ -11502,6 +11502,7 @@
                 "drupal/entity": "^1.0",
                 "drupal/entity_print": "^2.0",
                 "drupal/hal": "^2.0",
+                "drupal/honeypot": "^2.0",
                 "drupal/jquery_ui": "^1.0",
                 "drupal/jquery_ui_button": "^2.0",
                 "drupal/jquery_ui_checkboxradio": "^2.0",
@@ -11535,8 +11536,8 @@
                     "dev-6.3.x": "6.3.x-dev"
                 },
                 "drupal": {
-                    "version": "6.3.0-beta7+4-dev",
-                    "datestamp": "1769536835",
+                    "version": "6.3.0+27-dev",
+                    "datestamp": "1790174621",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
