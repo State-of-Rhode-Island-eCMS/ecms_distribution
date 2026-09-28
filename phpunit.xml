@@ -24,6 +24,9 @@
     <testsuite name="unit">
       <directory>./docroot/modules/custom/*/tests/src/Unit</directory>
     </testsuite>
+    <testsuite name="deployment">
+      <directory>./deployment-scripts/tests</directory>
+    </testsuite>
   </testsuites>
   <listeners>
     <listener class="Drupal\Tests\Listeners\DrupalListener">

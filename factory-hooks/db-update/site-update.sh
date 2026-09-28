@@ -57,20 +57,49 @@ fi
 $DRUSH_CMD updatedb --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-update-${domain}-$(date +"%Y-%m-%d").log
 
 # Run features import. Run on individual features so we can identify issues easily.
-# $DRUSH_CMD features:import:all --bundle=ecms --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_basic_page --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_basic_page-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_event --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_event-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_hotel --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_hotel-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_landing_page --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_landing_page-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_location --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_location-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_notification --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_notification-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_paragraphs --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_paragraphs-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_person --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_person-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_press_release --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_press_release-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_promotions --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_promotions-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_publications --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_publications-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_solr_search --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_solr_search-${domain}-$(date +"%Y-%m-%d").log
-$DRUSH_CMD features:import ecms_emergency_notification --yes >> /var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)/drush-features-ecms_emergency_notification-${domain}-$(date +"%Y-%m-%d").log
+# Several features are optional and only enabled on the sites that need them
+# (search, migrations, and the site-specific content types). Importing a feature
+# whose module is not enabled fails, so collect the enabled modules up front and
+# only import the features that are actually in use on this site.
+log_dir="/var/log/sites/${AH_SITE_NAME}/logs/$(hostname -s)"
+log_date=$(date +"%Y-%m-%d")
+enabled_modules=$($DRUSH_CMD pm:list --type=module --status=enabled --field=name 2>/dev/null)
+
+import_feature() {
+  feature="$1"
+  log="$log_dir/drush-features-$feature-$domain-$log_date.log"
+
+  # If the module list could not be read, fall back to importing the feature so
+  # a failed lookup does not silently skip every import.
+  if [ -n "$enabled_modules" ] && ! echo "$enabled_modules" | grep -qx "$feature"; then
+    echo "Skipping $feature: the feature is not enabled on $domain." >> "$log"
+    return
+  fi
+
+  # Capture stderr too: Drush writes its warnings, errors, and stack traces
+  # there, so stdout alone would leave a failed import without any detail.
+  $DRUSH_CMD features:import "$feature" --yes >> "$log" 2>&1
+}
+
+import_feature ecms_basic_page
+import_feature ecms_event
+import_feature ecms_hotel
+import_feature ecms_landing_page
+import_feature ecms_location
+import_feature ecms_notification
+import_feature ecms_paragraphs
+import_feature ecms_person
+import_feature ecms_press_release
+import_feature ecms_promotions
+import_feature ecms_publications
+import_feature ecms_solr_search
+import_feature ecms_emergency_notification
+import_feature ecms_executive_orders
+import_feature ecms_speeches
+import_feature ecms_vaccination_site
+import_feature ecms_projects
+import_feature ecms_migration_file
+import_feature ecms_database_search
 
 # Send email about features status.
 $DRUSH_CMD features-list --bundle=ecms | mail -s "Features deploy status for ${domain}" bhamelin@oomphinc.com
