@@ -46,7 +46,14 @@ final class SiteRepository {
   public function find(int $siteId): Site {
     $response = $this->client->requestOrFail('GET', sprintf('sites/%d', $siteId));
     $body = json_decode((string) $response->getBody(), FALSE);
-    return Site::fromApiResponse($body->site ?? $body);
+
+    // Unwrap a {"site": {...}} envelope, but only when it really is one.
+    // The site payload itself carries a "site" key holding the machine
+    // name as a *string*, so an unconditional $body->site would hand a
+    // string to fromApiResponse() and fatal against the real API.
+    $payload = isset($body->site) && is_object($body->site) ? $body->site : $body;
+
+    return Site::fromApiResponse($payload);
   }
 
 }

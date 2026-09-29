@@ -1,0 +1,4 @@
+'*':
+  uri: https://${env-name}.example.invalid
+  root: /var/www/html/examplegroup.01live/docroot
+  user: examplegroup.01live
