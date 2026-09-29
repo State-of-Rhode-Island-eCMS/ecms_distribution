@@ -711,9 +711,10 @@ final class DrushRunCommand extends AbstractAcsfCommand {
   /**
    * Creates the 0700 control socket directory.
    *
-   * mkdir() fails if the path already exists, so a directory pre-created
-   * by another user is never reused. On failure the path is forgotten, so
-   * cleanUpControlDirectory() does not touch a directory it did not create.
+   * The mkdir() call fails if the path already exists, so a directory
+   * pre-created by another user is never reused. On failure the path is
+   * forgotten, so cleanUpControlDirectory() does not touch a directory it
+   * did not create.
    */
   private function createControlDirectory(): void {
     $directory = (string) $this->controlDirectory;
