@@ -73,8 +73,9 @@ final class SiteAliasLoader {
    * per site in load().
    *
    * @throws \InvalidArgumentException
-   *   If the file is missing, unreadable, unparseable, or defines no group
-   *   with the required keys.
+   *   If the file is missing, unreadable, unparseable, defines no group
+   *   with the required keys, or has a group whose ac-env names a
+   *   different environment.
    */
   public function assertUsable(FactoryEnvironment $environment): void {
     $groups = $this->read($environment);
@@ -83,6 +84,7 @@ final class SiteAliasLoader {
     $usable = [];
     $problems = [];
     foreach ($groups as $name => $group) {
+      $this->assertEnvironmentMatches($group, $environment, $path, (string) $name);
       $missing = $this->missingKeys($group);
       if ($missing === []) {
         $usable[] = $name;

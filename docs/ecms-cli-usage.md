@@ -440,6 +440,12 @@ missing key. Download the file again from Acquia. Go to section 4.1.
 You copied the wrong environment's file. For example, the `01test` file is
 saved as `01live.site.yml`. Go to section 4.1 and copy the correct file.
 
+**A site shows "unresolved"**
+
+The eCMS tool cannot find a site alias for that site. Read the line
+"Site ... unresolved:" under the plan table for the reason. Nothing runs on
+that site.
+
 **Error: "Could not parse site alias"**
 
 The alias file is damaged. Download it again from Acquia.

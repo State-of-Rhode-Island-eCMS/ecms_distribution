@@ -18,9 +18,12 @@ use Ecms\Deployment\Remote\ProcessRunnerInterface;
 final class FakeProcessRunner implements ProcessRunnerInterface {
 
   /**
-   * Every recorded invocation: ['argv' => string[], 'kind' => string].
+   * Every recorded invocation.
    *
-   * @var array<int, array{argv: string[], kind: string, timeout: int}>
+   * 'controlDirectoryExists' records whether the directory of the argv's
+   * ControlPath existed at call time, or NULL if the argv has none.
+   *
+   * @var array<int, array{argv: string[], kind: string, timeout: int, controlDirectoryExists: bool|null}>
    */
   public array $invocations = [];
 
@@ -55,7 +58,12 @@ final class FakeProcessRunner implements ProcessRunnerInterface {
    */
   public function run(array $command, int $timeoutSeconds, ?callable $onOutput = NULL): ProcessOutcome {
     $kind = $this->classify($command);
-    $this->invocations[] = ['argv' => $command, 'kind' => $kind, 'timeout' => $timeoutSeconds];
+    $this->invocations[] = [
+      'argv' => $command,
+      'kind' => $kind,
+      'timeout' => $timeoutSeconds,
+      'controlDirectoryExists' => $this->controlDirectoryExists($command),
+    ];
 
     if ($kind === 'probe' && $this->probeOutcome !== NULL) {
       return $this->probeOutcome;
@@ -89,6 +97,18 @@ final class FakeProcessRunner implements ProcessRunnerInterface {
    */
   public function countOfKind(string $kind): int {
     return count($this->argvsOfKind($kind));
+  }
+
+  /**
+   * Whether the directory of the argv's ControlPath exists, or NULL.
+   */
+  private function controlDirectoryExists(array $command): ?bool {
+    foreach ($command as $argument) {
+      if (str_starts_with((string) $argument, 'ControlPath=')) {
+        return is_dir(dirname(substr((string) $argument, strlen('ControlPath='))));
+      }
+    }
+    return NULL;
   }
 
   /**

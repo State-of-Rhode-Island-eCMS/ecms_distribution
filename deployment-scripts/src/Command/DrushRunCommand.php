@@ -204,12 +204,12 @@ final class DrushRunCommand extends AbstractAcsfCommand {
     $resolved = [];
     $unresolved = [];
     foreach ($sites as $site) {
-      $target = $this->resolveTarget($site);
-      if ($target === NULL) {
-        $unresolved[] = $site;
-        continue;
+      try {
+        $resolved[] = $this->resolveTarget($site);
       }
-      $resolved[] = $target;
+      catch (\InvalidArgumentException $e) {
+        $unresolved[] = ['site' => $site, 'reason' => $e->getMessage()];
+      }
     }
 
     $this->printPlan($output, $aliasPath, $resolved, $unresolved);
@@ -220,17 +220,21 @@ final class DrushRunCommand extends AbstractAcsfCommand {
       return Command::SUCCESS;
     }
 
-    if (!$this->confirm($input, count($resolved))) {
+    // With no targetable site there is nothing to confirm.
+    if ($resolved !== [] && !$this->confirm($input, count($resolved))) {
       $this->io->warning('Aborted; nothing was run.');
       return Command::SUCCESS;
     }
 
     $results = [];
-    foreach ($unresolved as $site) {
-      $results[] = SiteRunResult::unresolved($site, $this->unresolvedReason($site), $this->commands);
+    foreach ($unresolved as $entry) {
+      $results[] = SiteRunResult::unresolved($entry['site'], $entry['reason'], $this->commands);
     }
 
     try {
+      // Created only now, so a dry run, a declined prompt or a refusal
+      // leaves nothing behind in the temp directory.
+      $this->createControlDirectory();
       if ($resolved !== [] && !$this->preflight($runner, $resolved)) {
         return Command::FAILURE;
       }
@@ -289,24 +293,23 @@ final class DrushRunCommand extends AbstractAcsfCommand {
   }
 
   /**
-   * Resolves one site's alias and uri, or NULL if it cannot be targeted.
+   * Resolves one site's alias and uri.
    *
-   * @return array{site: Site, alias: SiteAlias, uri: string}|null
-   *   The resolved target, or NULL.
+   * @return array{site: Site, alias: SiteAlias, uri: string}
+   *   The resolved target.
+   *
+   * @throws \InvalidArgumentException
+   *   If the site cannot be targeted. The message is the operator-facing
+   *   reason, taken from the alias loader where it has one.
    */
-  private function resolveTarget(Site $site): ?array {
+  private function resolveTarget(Site $site): array {
     $name = $this->siteNameFor($site);
     if ($name === NULL) {
-      return NULL;
+      throw new \InvalidArgumentException($this->unresolvedReason($site));
     }
 
-    try {
-      $alias = $this->aliasLoader->load($this->environment, $name);
-      return ['site' => $site, 'alias' => $alias, 'uri' => $alias->uriFor($name)];
-    }
-    catch (\InvalidArgumentException) {
-      return NULL;
-    }
+    $alias = $this->aliasLoader->load($this->environment, $name);
+    return ['site' => $site, 'alias' => $alias, 'uri' => $alias->uriFor($name)];
   }
 
   /**
@@ -334,7 +337,7 @@ final class DrushRunCommand extends AbstractAcsfCommand {
    */
   private function unresolvedReason(Site $site): string {
     return sprintf(
-      'Cannot resolve a site name: the ACSF API returned no "site" for site %d and its domain "%s" is outside this factory, or the alias file has no matching group.',
+      'Cannot resolve a site name: the ACSF API returned no "site" for site %d and its domain "%s" is outside this factory.',
       $site->id,
       $site->domain
     );
@@ -349,8 +352,8 @@ final class DrushRunCommand extends AbstractAcsfCommand {
    *   The alias file this run resolved its connections from.
    * @param array<int, array{site: Site, alias: \Ecms\Deployment\Remote\SiteAlias, uri: string}> $resolved
    *   The targetable sites.
-   * @param \Ecms\Deployment\Api\Site[] $unresolved
-   *   Sites that will be failed without an SSH attempt.
+   * @param array<int, array{site: Site, reason: string}> $unresolved
+   *   Sites that will be failed without an SSH attempt, with the reason.
    */
   private function printPlan(OutputInterface $output, string $aliasPath, array $resolved, array $unresolved): void {
     $this->write($output, sprintf("Site alias: %s\n", $aliasPath));
@@ -365,10 +368,14 @@ final class DrushRunCommand extends AbstractAcsfCommand {
     foreach ($resolved as $target) {
       $rows[] = [$target['site']->id, $target['site']->siteName ?? '—', $target['uri']];
     }
-    foreach ($unresolved as $site) {
-      $rows[] = [$site->id, '—', '<fg=red>unresolved</>'];
+    foreach ($unresolved as $entry) {
+      $rows[] = [$entry['site']->id, $entry['site']->siteName ?? '—', '<fg=red>unresolved</>'];
     }
     $this->io->table(['Site ID', 'Site name', 'URI'], $rows);
+
+    foreach ($unresolved as $entry) {
+      $this->write($output, sprintf("Site %d unresolved: %s\n", $entry['site']->id, $entry['reason']), raw: TRUE);
+    }
 
     $hosts = array_unique(array_map(static fn (array $t): string => $t['alias']->userAtHost(), $resolved));
     if (count($hosts) > 1) {
@@ -594,7 +601,7 @@ final class DrushRunCommand extends AbstractAcsfCommand {
     if ($chunk === '') {
       return;
     }
-    $this->write($output, $chunk);
+    $this->write($output, $chunk, raw: TRUE);
     $this->atLineStart = str_ends_with($chunk, "\n");
   }
 
@@ -611,14 +618,16 @@ final class DrushRunCommand extends AbstractAcsfCommand {
    * Writes to the console and, when --log is set, to the log file.
    *
    * Console colour tags are stripped before anything reaches disk, so the
-   * log stays greppable plain text.
+   * log stays greppable plain text. Raw text, such as drush output, is
+   * written to the console unformatted and to the log with only ANSI
+   * escapes removed, so markup-like text in it survives.
    */
-  private function write(OutputInterface $output, string $text, int $verbosity = OutputInterface::VERBOSITY_NORMAL): void {
+  private function write(OutputInterface $output, string $text, int $verbosity = OutputInterface::VERBOSITY_NORMAL, bool $raw = FALSE): void {
     if (!$output->isQuiet()) {
-      $output->write($text, FALSE, $verbosity);
+      $output->write($text, FALSE, $verbosity | ($raw ? OutputInterface::OUTPUT_RAW : OutputInterface::OUTPUT_NORMAL));
     }
     if ($this->logHandle !== NULL) {
-      fwrite($this->logHandle, $this->stripFormatting($text));
+      fwrite($this->logHandle, $raw ? $this->stripAnsi($text) : $this->stripFormatting($text));
     }
     if ($text !== '') {
       $this->atLineStart = str_ends_with($text, "\n");
@@ -626,10 +635,20 @@ final class DrushRunCommand extends AbstractAcsfCommand {
   }
 
   /**
-   * Removes console tags and ANSI escapes for the log file.
+   * Removes console style tags and ANSI escapes for the log file.
+   *
+   * Only Symfony console style tags are removed, so other text in angle
+   * brackets, such as a command's own arguments, is kept.
    */
   private function stripFormatting(string $text): string {
-    $text = (string) preg_replace('/<\/?[a-z][^>]*>/i', '', $text);
+    $text = (string) preg_replace('#</?(?:info|comment|error|question|(?:fg|bg|options|href)=[^<>]*)?>#', '', $text);
+    return $this->stripAnsi($text);
+  }
+
+  /**
+   * Removes ANSI colour escapes.
+   */
+  private function stripAnsi(string $text): string {
     return (string) preg_replace('/\e\[[0-9;]*m/', '', $text);
   }
 
@@ -676,20 +695,32 @@ final class DrushRunCommand extends AbstractAcsfCommand {
   }
 
   /**
-   * Creates the 0700 directory that holds the ssh control sockets.
+   * Picks the path of the directory that holds the ssh control sockets.
    *
    * A directory, not a bare predictable socket path: on a shared host a
    * guessable path in the temp directory could be pre-created by another
    * user. The socket basenames inside are short hashes, because the
-   * AF_UNIX path limit is around 104 bytes.
+   * AF_UNIX path limit is around 104 bytes. The directory is created by
+   * createControlDirectory() just before the first connection.
    */
   private function controlPathDirectory(): string {
-    $directory = sprintf('%s/ecms-ssh-%s', sys_get_temp_dir(), bin2hex(random_bytes(4)));
-    if (!is_dir($directory) && !mkdir($directory, 0700, TRUE) && !is_dir($directory)) {
+    $this->controlDirectory = sprintf('%s/ecms-ssh-%s', sys_get_temp_dir(), bin2hex(random_bytes(4)));
+    return $this->controlDirectory;
+  }
+
+  /**
+   * Creates the 0700 control socket directory.
+   *
+   * mkdir() fails if the path already exists, so a directory pre-created
+   * by another user is never reused. On failure the path is forgotten, so
+   * cleanUpControlDirectory() does not touch a directory it did not create.
+   */
+  private function createControlDirectory(): void {
+    $directory = (string) $this->controlDirectory;
+    if (!@mkdir($directory, 0700)) {
+      $this->controlDirectory = NULL;
       throw new \RuntimeException(sprintf('Could not create ssh control directory "%s".', $directory));
     }
-    $this->controlDirectory = $directory;
-    return $directory;
   }
 
   /**

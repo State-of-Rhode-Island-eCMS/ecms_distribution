@@ -88,6 +88,12 @@ final class SiteAliasLoaderTest extends TestCase {
     $this->loader('wrong-ac-env')->load(FactoryEnvironment::Prod);
   }
 
+  public function testAssertUsableRefusesAcEnvMismatch(): void {
+    $this->expectException(\InvalidArgumentException::class);
+    $this->expectExceptionMessageMatches('#group "\*" declares ac-env "01test" but the target is "01live"#');
+    $this->loader('wrong-ac-env')->assertUsable(FactoryEnvironment::Prod);
+  }
+
   public function testPerSiteGroupWinsOverWildcard(): void {
     $loader = $this->loader('per-site-group');
 

@@ -27,6 +27,8 @@ final class DrushRunCommandTest extends TestCase {
 
   private const FIXTURES = __DIR__ . '/../fixtures/drush-sites/valid';
 
+  private const FIXTURES_ROOT = __DIR__ . '/../fixtures/drush-sites';
+
   private function tester(MockHandler $mock, FakeProcessRunner $runner): CommandTester {
     return new CommandTester(new DrushRunCommand($this->mockedClient($mock, FactoryEnvironment::Prod), $runner));
   }
@@ -40,6 +42,16 @@ final class DrushRunCommandTest extends TestCase {
       'domain' => $name . '.example.invalid',
       'site' => $name,
     ]));
+  }
+
+  /**
+   * The ssh control directories currently in the temp directory.
+   *
+   * @return string[]
+   *   The directory paths.
+   */
+  private function controlDirectories(): array {
+    return glob(sys_get_temp_dir() . '/ecms-ssh-*', GLOB_ONLYDIR) ?: [];
   }
 
   /**
@@ -131,6 +143,21 @@ final class DrushRunCommandTest extends TestCase {
     }
   }
 
+  public function testWrongEnvironmentAliasFileIsRefusedBeforeAnyApiCall(): void {
+    $runner = new FakeProcessRunner();
+    $tester = $this->tester(new MockHandler([]), $runner);
+
+    $this->expectException(\InvalidArgumentException::class);
+    $this->expectExceptionMessageMatches('#declares ac-env "01test" but the target is "01live"#');
+    try {
+      $tester->execute($this->options(['--drush-sites-dir' => self::FIXTURES_ROOT . '/wrong-ac-env']), ['interactive' => FALSE]);
+    }
+    finally {
+      $this->assertSame([], $this->recordedMethods(), 'The ac-env check runs ahead of site resolution.');
+      $this->assertSame([], $runner->invocations);
+    }
+  }
+
   public function testNonInteractiveWithoutForceIsRefused(): void {
     // The confirm gate sits AFTER resolveSites() so the prompt can name real
     // sites, so read-only GETs before the refusal are expected and harmless.
@@ -138,6 +165,8 @@ final class DrushRunCommandTest extends TestCase {
     // "Mock queue is empty" and the test passes for the wrong reason.
     $runner = new FakeProcessRunner();
     $tester = $this->tester(new MockHandler([$this->siteResponse()]), $runner);
+
+    $before = $this->controlDirectories();
 
     $this->expectException(\InvalidArgumentException::class);
     $this->expectExceptionMessageMatches('#without --force#');
@@ -149,7 +178,24 @@ final class DrushRunCommandTest extends TestCase {
     finally {
       $this->assertSame(['GET'], $this->recordedMethods());
       $this->assertSame([], $runner->invocations, 'No SSH before the operator has confirmed.');
+      $this->assertSame($before, $this->controlDirectories(), 'A refused run must not leave a control directory.');
     }
+  }
+
+  public function testDeclinedPromptLeavesNoControlDirectory(): void {
+    $runner = new FakeProcessRunner();
+    $tester = $this->tester(new MockHandler([$this->siteResponse()]), $runner);
+    $before = $this->controlDirectories();
+
+    $options = $this->options();
+    unset($options['--force']);
+    $tester->setInputs(['no']);
+    $exit = $tester->execute($options, ['interactive' => TRUE]);
+
+    $this->assertSame(Command::SUCCESS, $exit);
+    $this->assertStringContainsString('Aborted; nothing was run.', $tester->getDisplay());
+    $this->assertSame([], $runner->invocations);
+    $this->assertSame($before, $this->controlDirectories(), 'A declined run must not leave a control directory.');
   }
 
   public function testDryRunResolvesSitesButOpensNoConnection(): void {
@@ -165,6 +211,33 @@ final class DrushRunCommandTest extends TestCase {
     $this->assertSame([], $runner->invocations, 'A dry run must not connect to anything.');
     $this->assertStringContainsString('01live.site.yml', $tester->getDisplay());
     $this->assertStringContainsString('Dry run', $tester->getDisplay());
+  }
+
+  public function testDryRunLeavesNoControlDirectory(): void {
+    $runner = new FakeProcessRunner();
+    $tester = $this->tester(new MockHandler([$this->siteResponse()]), $runner);
+    $before = $this->controlDirectories();
+
+    $options = $this->options(['--dry-run' => TRUE]);
+    unset($options['--force'], $options['--i-know-this-is-production']);
+    $tester->execute($options, ['interactive' => FALSE]);
+
+    $this->assertSame($before, $this->controlDirectories(), 'A dry run must not leave a control directory.');
+  }
+
+  public function testControlDirectoryExistsForEveryConnectionAndIsRemovedAfter(): void {
+    $runner = new FakeProcessRunner();
+    $tester = $this->tester(new MockHandler([$this->siteResponse()]), $runner);
+    $before = $this->controlDirectories();
+
+    $exit = $tester->execute($this->options(), ['interactive' => FALSE]);
+
+    $this->assertSame(Command::SUCCESS, $exit);
+    $this->assertNotSame([], $runner->invocations);
+    foreach ($runner->invocations as $invocation) {
+      $this->assertTrue($invocation['controlDirectoryExists'], sprintf('The control directory must exist for the %s call.', $invocation['kind']));
+    }
+    $this->assertSame($before, $this->controlDirectories(), 'The control directory must be removed after the run.');
   }
 
   public function testDryRunPrintsTheExactSshCommand(): void {
@@ -270,6 +343,25 @@ final class DrushRunCommandTest extends TestCase {
     $this->assertStringContainsString('Cannot resolve a site name', $tester->getDisplay());
   }
 
+  public function testSiteWithNoMatchingGroupReportsTheAliasLoaderReason(): void {
+    // The file has only "abc" and "zyx" groups and no "*" wildcard.
+    $runner = new FakeProcessRunner();
+    $tester = $this->tester(new MockHandler([$this->siteResponse(1, 'nosuchsite')]), $runner);
+
+    // No --force: with no targetable site, the run must not reach the
+    // confirmation gate, which would refuse a non-interactive run.
+    $options = $this->options(['--drush-sites-dir' => self::FIXTURES_ROOT . '/named-groups-only']);
+    unset($options['--force']);
+    $exit = $tester->execute($options, ['interactive' => FALSE]);
+
+    $this->assertSame(Command::FAILURE, $exit);
+    $this->assertSame([], $runner->invocations, 'An unresolved site must not be connected to.');
+    $display = preg_replace('/\s+/', ' ', $tester->getDisplay());
+    $this->assertStringContainsString('Site 1 unresolved:', $display);
+    $this->assertStringContainsString('defines no group for site "nosuchsite"', $display);
+    $this->assertStringNotContainsString('Cannot resolve a site name', $display);
+  }
+
   public function testAuditLineIsEmittedAtVerbose(): void {
     $runner = new FakeProcessRunner();
     $tester = $this->tester(new MockHandler([$this->siteResponse()]), $runner);
@@ -303,6 +395,27 @@ final class DrushRunCommandTest extends TestCase {
       $this->assertStringContainsString('Commands (1), in order:', $contents);
       $this->assertStringNotContainsString('<fg=', $contents, 'Console markup must be stripped from the log.');
       $this->assertStringNotContainsString("\e[", $contents, 'ANSI escapes must be stripped from the log.');
+    }
+    finally {
+      @unlink($log);
+    }
+  }
+
+  public function testDrushOutputReachesConsoleAndLogUnchanged(): void {
+    $log = sys_get_temp_dir() . '/ecms-drush-run-test-' . bin2hex(random_bytes(4)) . '.log';
+    $chunk = "Deleted <em class=\"placeholder\">abc</em>; a <b and c> d; <info>kept</info>\n";
+    $runner = new FakeProcessRunner([], $chunk . "\e[32mgreen\e[0m\n");
+    $tester = $this->tester(new MockHandler([$this->siteResponse()]), $runner);
+
+    try {
+      $tester->execute($this->options(['--log' => $log]), ['interactive' => FALSE]);
+
+      $contents = (string) file_get_contents($log);
+      $this->assertStringContainsString($chunk, $contents, 'Drush output must reach the log unchanged.');
+      $this->assertStringContainsString("green\n", $contents);
+      $this->assertStringNotContainsString("\e[", $contents, 'ANSI escapes must be stripped from the log.');
+      $this->assertStringNotContainsString('<fg=', $contents, 'Console markup must be stripped from the log.');
+      $this->assertStringContainsString($chunk, $tester->getDisplay(), 'Drush output must not be formatted on the console.');
     }
     finally {
       @unlink($log);
