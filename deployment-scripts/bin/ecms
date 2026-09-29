@@ -5,6 +5,7 @@ declare(strict_types=1);
 
 use Ecms\Deployment\Command\BackupCreateCommand;
 use Ecms\Deployment\Command\BackupPruneCommand;
+use Ecms\Deployment\Command\DrushRunCommand;
 use Ecms\Deployment\Command\SiteStatusCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Dotenv\Dotenv;
@@ -26,6 +27,7 @@ $application->addCommands([
   new BackupCreateCommand(),
   new BackupPruneCommand(),
   new SiteStatusCommand(),
+  new DrushRunCommand(),
 ]);
 
 exit($application->run());

@@ -19,6 +19,12 @@
 # Drush
 /drush/contrib
 
+# Drush site aliases — downloaded per operator from the Acquia Cloud UI.
+# These name SSH hosts and server paths; this project is open source, so
+# they are never committed.
+/drush/sites/*.site.yml
+!/drush/sites/self.site.yml
+
 # Compiled assets
 /docroot/**/*.css
 /docroot/**/*.js

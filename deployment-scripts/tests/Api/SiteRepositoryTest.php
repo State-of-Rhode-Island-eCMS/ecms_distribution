@@ -52,4 +52,25 @@ final class SiteRepositoryTest extends TestCase {
     $this->assertSame('found.example.com', $site->domain);
   }
 
+
+  public function testFindAcceptsARealPayloadCarryingItsOwnSiteKey(): void {
+    // ACSF returns the site object directly, with "site" holding the machine
+    // name as a string. An unconditional $body->site unwrap would hand that
+    // string to Site::fromApiResponse() and fatal.
+    $mock = new MockHandler([
+      new Response(200, [], (string) json_encode([
+        'id' => 42,
+        'domain' => 'abc.example.invalid',
+        'site' => 'abc',
+      ])),
+    ]);
+    $repository = new SiteRepository($this->mockedClient($mock));
+
+    $site = $repository->find(42);
+
+    $this->assertSame(42, $site->id);
+    $this->assertSame('abc.example.invalid', $site->domain);
+    $this->assertSame('abc', $site->siteName);
+  }
+
 }
