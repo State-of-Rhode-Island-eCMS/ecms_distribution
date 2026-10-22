@@ -1,0 +1,10 @@
+'*':
+  uri: https://${env-name}.test-example.invalid
+  root: /var/www/html/examplegroup.01test/docroot
+  ac-site: examplegroup
+  ac-env: 01test
+  ac-realm: example-realm
+  host: examplegroup01test.ssh.example-realm.example.invalid
+  user: examplegroup.01test
+  paths:
+    drush-script: /var/www/html/examplegroup.01test/vendor/bin/drush

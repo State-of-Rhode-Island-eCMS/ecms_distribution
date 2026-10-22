@@ -149,6 +149,27 @@ explicitly.
 Get your API key from the ACSF dashboard: Account Settings > API Key, e.g.
 https://www.riecms.acsitefactory.com/user/{uid}/api-key
 
+### Running drush across sites after a release
+
+Some releases need a drush command run on every site — most recently the
+SearchStax migration, which needs each site's index repointed at the new
+server and rebuilt. `ecms:drush:run` does that in one invocation instead of
+site-by-site SSH:
+
+```
+deployment-scripts/bin/ecms ecms:drush:run --prod --sites=all \
+  --cmd="sapi-sis acquia_search_index searchstax" \
+  --cmd="sapi-rt acquia_search_index" \
+  --cmd="sapi-i acquia_search_index" \
+  --force --i-know-this-is-production --log=/tmp/reindex-prod.log
+```
+
+Run it with `--dry-run` first, and against `--env=test` before production.
+Unlike the other commands this one needs an Acquia SSH key **and** the
+downloaded drush site aliases in `drush/sites/` — see
+`docs/ecms-cli-usage.md` section 4.1. Those alias files are gitignored and
+must never be committed.
+
 ```
 cp deployment-scripts/.env.example deployment-scripts/.env
 # edit deployment-scripts/.env with your ACSF_API_USER / ACSF_API_KEY
