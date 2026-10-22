@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "523718dcdf4789c03abd9d5b16e92cad",
+    "content-hash": "801e98b93f8da707667dbe720f97695a",
     "packages": [
         {
             "name": "acquia/http-hmac-php",
@@ -2251,7 +2251,7 @@
                     "homepage": "https://www.drupal.org/user/3285763"
                 },
                 {
-                    "name": "Alan Evans",
+                    "name": "alan evans",
                     "homepage": "https://www.drupal.org/user/14023"
                 },
                 {
@@ -2321,7 +2321,7 @@
                     "homepage": "https://www.drupal.org/user/3285763"
                 },
                 {
-                    "name": "Alan Evans",
+                    "name": "alan evans",
                     "homepage": "https://www.drupal.org/user/14023"
                 },
                 {
