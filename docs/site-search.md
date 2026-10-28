@@ -1,8 +1,26 @@
 ## Site Search
 
 Site search is available in two optional methods, database site search
-and Solr search, driven by Acquia Search, using Solr 7. Each option
-is made available as a feature which can be enabled manually.
+and Solr search. Each option is made available as a feature which can be
+enabled manually.
+
+> **Solr search now targets the `searchstax` server.** The
+> `ecms_solr_search` recipe ships `search_api.server.searchstax.yml` and
+> points `search_api.index.acquia_search_index` at it. Sites created before
+> that change still hold `server: acquia_search_server` in *active* config,
+> so the switch has to be applied per site at runtime and the index
+> rebuilt:
+>
+> ```
+> deployment-scripts/bin/ecms ecms:drush:run --prod --sites=all \
+>   --cmd="sapi-sis acquia_search_index searchstax" \
+>   --cmd="sapi-rt acquia_search_index" \
+>   --cmd="sapi-i acquia_search_index" \
+>   --force --i-know-this-is-production
+> ```
+>
+> See `docs/ecms-cli-usage.md` section 9.3. The sections below still
+> describe the older Acquia Search setup.
 
 ## Solr Search
 The Solr servers must be defined in a post-settings-php factory hook.
