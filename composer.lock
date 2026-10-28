@@ -349,16 +349,16 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v2.3.1",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "504ed1765d7a6788830c197390879d677f54d868"
+                "reference": "e3ce66714cfa181b848533d926e8583261253c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/504ed1765d7a6788830c197390879d677f54d868",
-                "reference": "504ed1765d7a6788830c197390879d677f54d868",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/e3ce66714cfa181b848533d926e8583261253c9e",
+                "reference": "e3ce66714cfa181b848533d926e8583261253c9e",
                 "shasum": ""
             },
             "require": {
@@ -407,22 +407,22 @@
             ],
             "support": {
                 "issues": "https://github.com/commerceguys/addressing/issues",
-                "source": "https://github.com/commerceguys/addressing/tree/v2.3.1"
+                "source": "https://github.com/commerceguys/addressing/tree/v2.3.2"
             },
-            "time": "2026-08-23T14:17:54+00:00"
+            "time": "2026-10-09T10:50:35+00:00"
         },
         {
             "name": "commerceguys/intl",
-            "version": "v2.0.8",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/intl.git",
-                "reference": "f5c5ecb1ec2ed7e258c22f7db73e25c1a589f9c5"
+                "reference": "53c23d309739d2f460da4832517473fe3eee8036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/intl/zipball/f5c5ecb1ec2ed7e258c22f7db73e25c1a589f9c5",
-                "reference": "f5c5ecb1ec2ed7e258c22f7db73e25c1a589f9c5",
+                "url": "https://api.github.com/repos/commerceguys/intl/zipball/53c23d309739d2f460da4832517473fe3eee8036",
+                "reference": "53c23d309739d2f460da4832517473fe3eee8036",
                 "shasum": ""
             },
             "require": {
@@ -458,9 +458,9 @@
             "description": "Internationalization library powered by CLDR data.",
             "support": {
                 "issues": "https://github.com/commerceguys/intl/issues",
-                "source": "https://github.com/commerceguys/intl/tree/v2.0.8"
+                "source": "https://github.com/commerceguys/intl/tree/v2.1.0"
             },
-            "time": "2026-08-21T08:01:00+00:00"
+            "time": "2026-09-23T09:38:12+00:00"
         },
         {
             "name": "composer/installers",
@@ -3490,20 +3490,20 @@
         },
         {
             "name": "drupal/commerce",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce.git",
-                "reference": "3.3.9"
+                "reference": "3.3.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.9.zip",
-                "reference": "3.3.9",
-                "shasum": "223e929fc851ce83e38be9d818c3c3ec503f96c4"
+                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.13.zip",
+                "reference": "3.3.13",
+                "shasum": "94e00c20f6a8133a30a613b54cc5239eaea77a5e"
             },
             "require": {
-                "commerceguys/intl": "^2.0.6",
+                "commerceguys/intl": "^2.1.0",
                 "drupal/address": "^2.0",
                 "drupal/core": "^10.3 || ^11",
                 "drupal/entity": "^1.0",
@@ -3536,8 +3536,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3560,6 +3560,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Drupal Commerce is a flexible eCommerce solution.",
@@ -9560,22 +9568,22 @@
         },
         {
             "name": "drupal/profile",
-            "version": "1.14.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/profile.git",
-                "reference": "8.x-1.14"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "eda73cb55a9034b318fb87bc9f8db4b778c4fdd6"
+                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "a2d993414cf3644a21e9ff8d6904306114cd42c5"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/core": "^10.3 || ^11",
                 "drupal/entity": "^1.0",
-                "php": "^7.4 || ^8.0"
+                "php": "^8.1"
             },
             "require-dev": {
                 "drupal/search_api": "~1.30",
@@ -9584,8 +9592,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1765287779",
+                    "version": "8.x-1.16",
+                    "datestamp": "1792489590",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -12735,16 +12743,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.16.0",
+            "version": "7.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ffb62ec787050ae4fa9449cdd6b80335db69bda2"
+                "reference": "81755d989b3007ca7f88a069857553cd08e7dc2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ffb62ec787050ae4fa9449cdd6b80335db69bda2",
-                "reference": "ffb62ec787050ae4fa9449cdd6b80335db69bda2",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/81755d989b3007ca7f88a069857553cd08e7dc2e",
+                "reference": "81755d989b3007ca7f88a069857553cd08e7dc2e",
                 "shasum": ""
             },
             "require": {
@@ -12843,7 +12851,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.16.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.16.1"
             },
             "funding": [
                 {
@@ -12859,7 +12867,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-18T13:38:36+00:00"
+            "time": "2026-10-25T21:35:21+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -18987,16 +18995,16 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.43.0",
+            "version": "v1.43.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "5cac8f4db97208823aa353f59a01faad2da52c75"
+                "reference": "5a8f33c87aeecffce24e721b5064fab05f4becf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/5cac8f4db97208823aa353f59a01faad2da52c75",
-                "reference": "5cac8f4db97208823aa353f59a01faad2da52c75",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/5a8f33c87aeecffce24e721b5064fab05f4becf8",
+                "reference": "5a8f33c87aeecffce24e721b5064fab05f4becf8",
                 "shasum": ""
             },
             "require": {
@@ -19045,7 +19053,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.43.0"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.43.3"
             },
             "funding": [
                 {
@@ -19065,7 +19073,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-25T15:46:47+00:00"
+            "time": "2026-10-15T09:18:53+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -19241,16 +19249,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.43.0",
+            "version": "v1.43.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72"
+                "reference": "122889ed24dc000165bcbfd77ec412f15cbdfc6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
-                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/122889ed24dc000165bcbfd77ec412f15cbdfc6a",
+                "reference": "122889ed24dc000165bcbfd77ec412f15cbdfc6a",
                 "shasum": ""
             },
             "require": {
@@ -19302,7 +19310,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.43.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.43.3"
             },
             "funding": [
                 {
@@ -19322,7 +19330,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-24T15:19:04+00:00"
+            "time": "2026-10-28T09:35:49+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -23624,16 +23632,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.3.6",
+            "version": "2.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "1427af4647235b4a73b13940b1f1258d3584f36e"
+                "reference": "c9fb3e1560c6a33eca59c9a2fcb4d9925445a0a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/1427af4647235b4a73b13940b1f1258d3584f36e",
-                "reference": "1427af4647235b4a73b13940b1f1258d3584f36e",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/c9fb3e1560c6a33eca59c9a2fcb4d9925445a0a4",
+                "reference": "c9fb3e1560c6a33eca59c9a2fcb4d9925445a0a4",
                 "shasum": ""
             },
             "require": {
@@ -23665,9 +23673,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.6"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.11"
             },
-            "time": "2026-09-27T20:07:45+00:00"
+            "time": "2026-10-28T10:46:50+00:00"
         },
         {
             "name": "phpstan/phpstan-phpunit",
